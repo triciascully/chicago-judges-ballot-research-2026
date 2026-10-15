@@ -206,6 +206,20 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
     <details class="more"><summary>Show all judges as a table</summary><div class="table-wrap" id="pop-table"></div></details>
   </section>
 
+  <section class="compare" id="campaign" aria-labelledby="campaign-h">
+    <h2 id="campaign-h">Campaign money</h2>
+    <p class="intro">What each judge's own campaign committee reported taking in since January 2020, from the Illinois State Board of Elections. Most of this money is from the 2020 elections, when many of these judges first won their seats. Judges running only for retention usually raise money together through the Committee for Retention of Judges in Cook County, which can't be split by judge, so a short or missing bar doesn't mean a judge raised nothing at all.</p>
+    <div class="legend" aria-hidden="true">
+      <span><i class="k-others"></i>Raised from others</span>
+      <span><i class="k-self"></i>Judge's own money (contributions and loans)</span>
+    </div>
+    <div class="chart" id="money"><div class="tip" id="money-tip" hidden></div></div>
+    <p class="note" id="money-note"></p>
+    <h3>Where each judge's money came from</h3>
+    <p class="note">Money raised from others, by donor group. Donors are grouped by the employer they reported or by organization name. Illinois reports employers mainly for larger gifts, so "Employer not reported" is often the largest share. Groups are assigned by rules and are approximate: a firm whose donors listed only a title like "Partner" can land under businesses. Law firms aren't split into plaintiffs' and defense firms.</p>
+    <div class="table-wrap" id="money-groups"></div>
+  </section>
+
   <section class="compare" id="feedback" aria-labelledby="feedback-h">
     <h2 id="feedback-h">What attorneys say about each judge</h2>
     <p class="intro">From the Illinois State Bar Association evaluations, which interview attorneys who appear before each judge. Each mark stands for a quote from the evaluation; hover or focus a mark to read it. Topics are assigned by the words in the quote. Praise is common and criticism is rare, so a criticism stands out.</p>
@@ -220,19 +234,6 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
     <div class="fb-wrap" id="fb-wrap"><div class="tip" id="fb-tip" hidden></div></div>
   </section>
 
-  <section class="compare" id="campaign" aria-labelledby="campaign-h">
-    <h2 id="campaign-h">Campaign money</h2>
-    <p class="intro">What each judge's own campaign committee reported taking in since January 2020, from the Illinois State Board of Elections. Most of this money is from the 2020 elections, when many of these judges first won their seats. Judges running only for retention usually raise money together through the Committee for Retention of Judges in Cook County, which can't be split by judge, so a short or missing bar doesn't mean a judge raised nothing at all.</p>
-    <div class="legend" aria-hidden="true">
-      <span><i class="k-others"></i>Raised from others</span>
-      <span><i class="k-self"></i>Judge's own money (contributions and loans)</span>
-    </div>
-    <div class="chart" id="money"><div class="tip" id="money-tip" hidden></div></div>
-    <p class="note" id="money-note"></p>
-    <h3>Where each judge's money came from</h3>
-    <p class="note">Money raised from others, by donor group. Donors are grouped by the employer they reported or by organization name. Illinois reports employers mainly for larger gifts, so "Employer not reported" is often the largest share. Groups are assigned by rules and are approximate: a firm whose donors listed only a title like "Partner" can land under businesses. Law firms aren't split into plaintiffs' and defense firms.</p>
-    <div class="table-wrap" id="money-groups"></div>
-  </section>
 
   <section class="controls" aria-label="Find a judge">
     <input class="search" id="q" type="search" placeholder="Search by name, ballot number, or courtroom" autocomplete="off">
