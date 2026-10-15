@@ -1,0 +1,15 @@
+# Re-downloadable source data (the sentencing CSV alone is 175 MB, over GitHub's file limit)
+data/raw/
+
+# Local environment and secrets
+.venv/
+.env
+*.token
+
+# Python and OS clutter
+__pycache__/
+*.pyc
+.DS_Store
+
+# Pre-git copies of the label sheets (git history replaces them)
+data/eval/backup/

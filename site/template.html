@@ -1,0 +1,563 @@
+<title>Cook County Judges 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700&family=IBM+Plex+Mono:wght@500;600&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<style>
+/* Layout: a single reading column like the ballot itself; each judge is one ballot line that opens into a sourced profile. */
+:root {
+  --paper: #eef1f4;
+  --card: #ffffff;
+  --ink: #18212e;
+  --muted: #586374;
+  --rule: #d3d9e1;
+  --accent: #1d4b9b;
+  --accent-soft: #e2e9f6;
+  --flag: #9a3d12;
+  --flag-soft: #f7e6dc;
+  --quote: #f5f7fa;
+  --series: #2a78d6;
+  --other: #a3acb9;
+  --display: "Bitter", Georgia, "Times New Roman", serif;
+  --body: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0f141b; --card: #161d27; --ink: #e5e9ef; --muted: #9ba6b6; --rule: #2a3442;
+    --accent: #8db0f0; --accent-soft: #1c2a42; --flag: #f29a6b; --flag-soft: #3a2418; --quote: #1b2330;
+    --series: #3987e5; --other: #56606f;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0f141b; --card: #161d27; --ink: #e5e9ef; --muted: #9ba6b6; --rule: #2a3442;
+  --accent: #8db0f0; --accent-soft: #1c2a42; --flag: #f29a6b; --flag-soft: #3a2418; --quote: #1b2330;
+  --series: #3987e5; --other: #56606f;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { background: var(--paper); color: var(--ink); font: 400 1rem/1.55 var(--body); }
+.wrap { max-width: 52rem; margin: 0 auto; padding-inline: 16px; padding-block: 2rem 4rem; display: grid; gap: 2rem; }
+a { color: var(--accent); }
+a:focus-visible, summary:focus-visible, input:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; line-height: 1.2; }
+h1 { font-size: clamp(1.9rem, 5vw, 2.6rem); }
+h2 { font-size: 1.35rem; }
+h3 { font-size: 0.8rem; font-family: var(--body); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+p { margin: 0; max-width: 65ch; }
+.eyebrow { font: 600 0.8rem/1 var(--mono); letter-spacing: 0.06em; color: var(--accent); text-transform: uppercase; }
+
+header { display: grid; gap: 0.9rem; }
+.lede { font-size: 1.08rem; }
+.howto { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 0.75rem; }
+.howto div { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 0.85rem 1rem; display: grid; gap: 0.25rem; min-width: 0; }
+.howto strong { font-family: var(--display); font-size: 1.05rem; }
+.howto span { color: var(--muted); font-size: 0.92rem; }
+.lookup { font-size: 0.95rem; color: var(--muted); }
+
+.controls { display: grid; gap: 0.75rem; position: sticky; top: env(safe-area-inset-top, 0px); z-index: 2; background: var(--paper); padding-block: 0.75rem; border-bottom: 1px solid var(--rule); }
+.search { width: 100%; font: inherit; padding: 0.65rem 0.8rem; border: 1px solid var(--rule); border-radius: 6px; background: var(--card); color: var(--ink); }
+.filters { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+.filters label { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.88rem; background: var(--card); border: 1px solid var(--rule); border-radius: 999px; padding: 0.3rem 0.75rem; cursor: pointer; }
+.filters input { accent-color: var(--accent); margin: 0; }
+.count { font-size: 0.85rem; color: var(--muted); margin-left: auto; font-variant-numeric: tabular-nums; }
+
+.list { display: grid; gap: 0.5rem; }
+.judge { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; }
+.judge[open] { border-color: var(--accent); }
+.judge > summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 4.2rem 1fr auto; gap: 0.9rem; align-items: center; padding: 0.8rem 1rem; }
+.judge > summary::-webkit-details-marker { display: none; }
+.num { font: 600 1.15rem/1 var(--mono); color: var(--accent); border: 1.5px solid var(--accent); border-radius: 4px; padding: 0.45rem 0; text-align: center; font-variant-numeric: tabular-nums; }
+.num.none { color: var(--muted); border-color: var(--rule); font-size: 0.75rem; }
+.who { min-width: 0; display: grid; gap: 0.3rem; }
+.name { font-weight: 700; font-size: 1.05rem; }
+.assign { color: var(--muted); font-size: 0.88rem; }
+.chips { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.chip { font-size: 0.75rem; line-height: 1; padding: 0.3rem 0.5rem; border-radius: 4px; background: var(--accent-soft); color: var(--ink); white-space: nowrap; }
+.chip.flag { background: var(--flag-soft); color: var(--flag); font-weight: 600; }
+.chip.quiet { background: transparent; border: 1px solid var(--rule); color: var(--muted); }
+.ovals { display: flex; gap: 0.5rem; font: 500 0.7rem/1 var(--mono); color: var(--muted); }
+.ovals span { display: inline-flex; align-items: center; gap: 0.25rem; }
+.ovals span::before { content: ""; width: 0.95rem; height: 0.6rem; border: 1.5px solid var(--muted); border-radius: 50%; }
+
+.profile { border-top: 1px solid var(--rule); padding: 1rem; display: grid; gap: 1.25rem; }
+.section { display: grid; gap: 0.5rem; min-width: 0; }
+.finding { padding-left: 0.9rem; border-left: 3px solid var(--accent); }
+.finding.flagged { border-left-color: var(--flag); }
+.note { font-size: 0.88rem; color: var(--muted); }
+blockquote { margin: 0; background: var(--quote); border-radius: 4px; padding: 0.55rem 0.8rem; font-style: italic; font-size: 0.95rem; max-width: 65ch; }
+.bg-item { display: grid; gap: 0.35rem; }
+.bg-item strong { font-weight: 600; }
+.ratings { display: grid; gap: 0.4rem; }
+.rating { display: grid; grid-template-columns: 12rem 1fr; gap: 0.75rem; font-size: 0.93rem; }
+.rating b { font-weight: 600; }
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; font-size: 0.88rem; font-variant-numeric: tabular-nums; min-width: 28rem; }
+th, td { text-align: left; padding: 0.35rem 0.9rem 0.35rem 0; border-bottom: 1px solid var(--rule); }
+th { font-weight: 600; color: var(--muted); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; }
+details.more > summary { cursor: pointer; color: var(--accent); font-size: 0.9rem; }
+details.more > div { margin-top: 0.5rem; display: grid; gap: 0.5rem; }
+
+.compare { display: grid; gap: 1rem; background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 1.25rem; min-width: 0; }
+.compare .intro { color: var(--muted); font-size: 0.95rem; }
+.chart-controls { display: flex; flex-wrap: wrap; gap: 0.6rem 1rem; align-items: center; font-size: 0.88rem; }
+.chart-controls select { font: inherit; padding: 0.3rem 0.4rem; border: 1px solid var(--rule); border-radius: 4px; background: var(--card); color: var(--ink); max-width: 100%; }
+.chart-controls label { display: inline-flex; align-items: center; gap: 0.35rem; }
+.legend { display: flex; flex-wrap: wrap; gap: 1rem; font-size: 0.82rem; color: var(--muted); }
+.legend span { display: inline-flex; align-items: center; gap: 0.4rem; }
+.legend i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.legend .k-ballot { background: var(--series); }
+.legend .k-other { background: var(--other); }
+.legend .k-spec { border: 1.5px solid var(--other); background: var(--card); }
+.legend .k-band { border-radius: 2px; width: 16px; background: var(--accent-soft); }
+.chart { position: relative; min-width: 0; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart text { fill: var(--muted); font: 11px var(--body); }
+.chart .lbl { fill: var(--ink); font-weight: 600; }
+.chart .axis-title { fill: var(--ink); font-size: 12px; font-weight: 600; }
+.chart .quad { fill: var(--muted); font-size: 13px; font-weight: 600; opacity: 0.7; pointer-events: none; }
+.chart .quad.narrow { font-size: 11px; }
+.chart .grid { stroke: var(--rule); stroke-width: 1; }
+.chart .zero { stroke: var(--muted); stroke-width: 1; }
+.chart circle.pt { cursor: default; }
+.chart circle.pt.ballot { cursor: pointer; }
+.chart circle.pt:focus { outline: none; stroke: var(--ink); stroke-width: 2; }
+.tip { position: absolute; pointer-events: none; background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 0.5rem 0.65rem; font-size: 0.8rem; box-shadow: 0 4px 14px rgba(0,0,0,0.12); max-width: 17rem; z-index: 3; display: grid; gap: 0.2rem; }
+.tip strong { font-size: 0.88rem; }
+.tip .v { font-variant-numeric: tabular-nums; }
+.tip .m { color: var(--muted); }
+.method { display: grid; gap: 1rem; background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 1.25rem; }
+.method ul { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.45rem; max-width: 65ch; }
+footer { color: var(--muted); font-size: 0.85rem; display: grid; gap: 0.4rem; }
+
+@media (max-width: 34rem) {
+  .judge > summary { grid-template-columns: 3.4rem 1fr; }
+  .ovals { display: none; }
+  .rating { grid-template-columns: 1fr; gap: 0.1rem; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .judge { transition: border-color 0.15s; }
+}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Cook County · General election · Nov 3, 2026</div>
+    <h1>Judges on your retention ballot</h1>
+    <p class="lede">Every Cook County voter decides whether 61 sitting judges keep their seats. This page gathers what public records and bar associations say about each one, with the source for every claim, so you can decide for yourself.</p>
+    <div class="howto">
+      <div><strong>Yes or No, judge by judge</strong><span>Each judge is a separate question. You can vote on any or all of them.</span></div>
+      <div><strong>60% Yes to stay</strong><span>A judge needs at least 60% Yes votes. Leaving a judge blank is not the same as voting No.</span></div>
+      <div><strong>Ballot numbers</strong><span>The number beside each name is the one printed on the ballot (from the Chicago Bar Association guide).</span></div>
+    </div>
+    <p class="lookup">Find your polling place and sample ballot: <a href="https://chicagoelections.gov/en/your-voter-information.html">Chicago Board of Elections</a> (Chicago) or <a href="https://www.cookcountyclerkil.gov/elections/your-voter-information">Cook County Clerk</a> (suburbs).</p>
+  </header>
+
+  <section class="compare" id="compare" aria-labelledby="compare-h">
+    <h2 id="compare-h">How these judges compare with every Cook County judge</h2>
+    <p class="intro">Each dot is a judge with at least 100 sentences from 2019 to 2024. Zero means the judge did what the court as a whole did with the same charges; the farther a dot sits from zero, the more the judge differs. The corner labels say what each quadrant means compared with those same charges. Dots near each other can still overlap once you account for chance, so turn on the 95% ranges before reading much into a gap.</p>
+    <div class="chart-controls">
+      <label for="xm">Across</label><select id="xm"></select>
+      <label for="ym">Up</label><select id="ym"></select>
+      <label><input type="checkbox" id="show-ci"> Show 95% ranges for ballot judges</label>
+      <label><input type="checkbox" id="hide-spec" checked> Hide likely specialty courts</label>
+    </div>
+    <div class="legend" aria-hidden="true">
+      <span><i class="k-ballot"></i>On your ballot</span>
+      <span><i class="k-other"></i>Other Cook County judges</span>
+      <span><i class="k-spec"></i>Likely specialty court</span>
+    </div>
+    <div class="chart" id="scatter"><div class="tip" id="tip" hidden></div></div>
+    <p class="note" id="scatter-note" aria-live="polite"></p>
+    <h3 id="forest-h">Ballot judges, ranked</h3>
+    <div class="legend" aria-hidden="true">
+      <span><i class="k-ballot"></i>Estimate with 95% range</span>
+      <span><i class="k-band"></i>Middle half of all judges</span>
+    </div>
+    <div class="chart" id="forest"></div>
+    <details class="more"><summary>Show all judges as a table</summary><div class="table-wrap" id="pop-table"></div></details>
+  </section>
+
+  <section class="controls" aria-label="Find a judge">
+    <input class="search" id="q" type="search" placeholder="Search by name, ballot number, or courtroom" autocomplete="off">
+    <div class="filters">
+      <label><input type="checkbox" id="f-sentencing"> Has a sentencing record</label>
+      <label><input type="checkbox" id="f-criticism"> Criticized by attorneys</label>
+      <label><input type="checkbox" id="f-barno"> A bar group said No</label>
+      <label><input type="checkbox" id="f-criminal"> Criminal court experience</label>
+      <span class="count" id="count"></span>
+    </div>
+  </section>
+
+  <section class="list" id="list" aria-live="polite"></section>
+
+  <section class="method" id="method">
+    <h2>How to read this</h2>
+    <ul>
+      <li><strong>Sentencing</strong> compares each judge with what the whole court did in cases with the same charge class and offense type, using Cook County State's Attorney records from <span data-since></span> through <span data-through></span>. A finding appears only when its 95% range rules out "no difference."</li>
+      <li><strong>The comparison chart</strong> places each ballot judge among all 85 Cook County judges with enough sentences. Hover or tap a dot for its numbers, and click a ballot judge to open their profile.</li>
+      <li><strong>Sentencing data has limits.</strong> It ends in 2024. It doesn't record criminal history. Most cases end in plea deals, so prosecutors shape many sentences. Judges assigned to specialty courts aren't comparable to general courtrooms. With dozens of judges and several measures each, a few results will look notable by chance.</li>
+      <li><strong>Bar ratings</strong> come from the Alliance of Bar Associations (13 groups), the Illinois State Bar Association, and the Chicago Bar Association. Nearly every judge is rated Yes, so a No from any group stands out.</li>
+      <li><strong>Background and attorney criticism</strong> are quotes from each judge's ISBA evaluation. A local AI model pulled them out, and code accepts a quote only if it appears word for word in the evaluation. Checked against 30 hand-labeled evaluations, it made no false claims; it occasionally misses an assignment.</li>
+      <li><strong>Nothing here is an endorsement.</strong> The page shows what the records say. How to weigh them is up to you.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <div>Sources: <a href="" data-src="sao">Cook County State's Attorney sentencing data</a> · <a href="https://www.isba.org/judicial-elections/counties/cook">ISBA evaluations</a> · <a href="https://www.chicagobar.org/CBA/CBA/JEC/Judicial_Voters_Guide.aspx">CBA voters guide</a> · <a href="https://www.voteforjudges.org/">Alliance ratings</a>. For reporting on these judges, see the <a href="https://2026retention.injusticewatch.org/">Injustice Watch guide</a>.</div>
+    <div>Built <span data-built></span>. Independent volunteer project, not affiliated with any campaign, court, or bar association.</div>
+  </footer>
+</div>
+
+<script type="application/json" id="data">/*DATA*/</script>
+<script>
+(function () {
+  const DATA = JSON.parse(document.getElementById("data").textContent);
+  const judges = DATA.judges;
+  const $ = (s) => document.querySelector(s);
+  const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const pts = (x) => (x >= 0 ? "+" : "−") + Math.abs(100 * x).toFixed(1) + " pts";
+  const pct = (x, d = 0) => (100 * x).toFixed(d) + "%";
+
+  document.querySelectorAll("[data-since]").forEach((e) => (e.textContent = DATA.since.slice(0, 4)));
+  document.querySelectorAll("[data-through]").forEach((e) => (e.textContent = DATA.data_through.slice(0, 7)));
+  document.querySelectorAll("[data-built]").forEach((e) => (e.textContent = DATA.built));
+  document.querySelector('[data-src="sao"]').href = DATA.source;
+
+  const barNo = (j) => j.bar_ratings.some((r) => r.rating === "No" || r.rating === "Not Recommended" || /say no/.test(r.rating));
+  const hasRecord = (j) => j.sentencing.status !== "no record";
+
+  function chips(j) {
+    const out = [];
+    const alliance = j.bar_ratings.find((r) => r.source.startsWith("Alliance"));
+    const isba = j.bar_ratings.find((r) => r.source.startsWith("Illinois"));
+    if (!j.bar_ratings.length) out.push('<span class="chip quiet">No bar ratings found</span>');
+    else if (barNo(j)) {
+      const parts = [];
+      if (alliance && /say no/.test(alliance.rating)) parts.push(alliance.rating.replace("say no", "bars say No"));
+      if (isba && isba.rating === "No") parts.push("ISBA says No");
+      out.push(`<span class="chip flag">${esc(parts.join(" · "))}</span>`);
+    } else out.push('<span class="chip">All bar groups say Yes</span>');
+    if (j.attorney_criticism.length) out.push('<span class="chip flag">Criticized by attorneys</span>');
+    if (hasRecord(j)) out.push(`<span class="chip">${j.sentencing.n_sentences.toLocaleString()} sentences on record</span>`);
+    return out.join("");
+  }
+
+  function sentencingHTML(s) {
+    if (s.status === "no record") return `<p class="note">${esc(s.summary)}</p>`;
+    const d = s.details;
+    const rows = [
+      ["Sent to prison", pct(d.prison.rate), pct(d.prison.expected), `${pts(d.prison.diff)} (${pts(d.prison.lo)} to ${pts(d.prison.hi)})`, d.prison.n],
+      ["Treatment-based sentence", pct(d.treatment.rate, 1), pct(d.treatment.expected, 1), `${pts(d.treatment.diff)} (${pts(d.treatment.lo)} to ${pts(d.treatment.hi)})`, d.treatment.n],
+    ];
+    for (const [race, r] of Object.entries(d.prison_by_race)) {
+      rows.push([`Sent to prison: ${race} defendants`, pct(r.rate), pct(r.expected), `${pts(r.diff)} (${pts(r.lo)} to ${pts(r.hi)})`, r.n]);
+    }
+    const len = d.prison_length_ratio
+      ? `<p class="note">Prison terms: ${d.prison_length_ratio.ratio.toFixed(2)}× comparable terms (95% range ${d.prison_length_ratio.lo.toFixed(2)}–${d.prison_length_ratio.hi.toFixed(2)}×, ${d.prison_length_ratio.n.toLocaleString()} prison sentences).</p>` : "";
+    return `
+      <p class="note">${s.n_sentences.toLocaleString()} sentences, ${esc(s.period)}, ${pct(d.felony_share)} felonies.</p>
+      ${s.findings.map((f) => `<p class="finding${/more often than expected for comparable|went to prison more often|longer/.test(f) ? " flagged" : ""}">${esc(f)}</p>`).join("")}
+      ${s.notes.map((n) => `<p class="note">${esc(n)}</p>`).join("")}
+      <details class="more"><summary>All sentencing numbers</summary><div>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Measure</th><th>This judge</th><th>Expected</th><th>Difference (95% range)</th><th>Cases</th></tr></thead>
+          <tbody>${rows.map((r) => `<tr><td>${r.slice(0, 4).map(esc).join("</td><td>")}</td><td>${r[4].toLocaleString()}</td></tr>`).join("")}</tbody>
+        </table></div>
+        ${len}
+        <p class="note">"Expected" is what the court as a whole did with the same mix of charges. Treatment-based sentences are mental health, drug, or veterans court probation and second-chance probation.</p>
+      </div></details>`;
+  }
+
+  function profileHTML(j) {
+    const ratings = j.bar_ratings.map((r) => `
+      <div class="rating"><b>${esc(r.source)}</b><span>${esc(r.rating)}${r.bars_saying_no ? `: ${esc(r.bars_saying_no)}` : ""}</span></div>`).join("");
+    const crim = j.criminal_court_experience;
+    const crimHTML = crim.value
+      ? crim.basis.map((b) => `<div class="bg-item"><strong>${esc(b.source)}</strong>${b.source.startsWith("ISBA") ? b.evidence.map((q) => `<blockquote>${esc(q)}</blockquote>`).join("") : `<span>${esc(b.evidence[0])}</span>`}</div>`).join("")
+      : '<p class="note">Neither the ISBA evaluation nor county sentencing records show criminal cases.</p>';
+    const bg = j.background.length
+      ? j.background.map((b) => `<div class="bg-item"><strong>${esc(b.label)}</strong>${b.evidence.map((q) => `<blockquote>${esc(q)}</blockquote>`).join("")}</div>`).join("")
+      : '<p class="note">The ISBA evaluation doesn\'t describe prosecution, criminal defense, or work for vulnerable clients.</p>';
+    const crit = j.attorney_criticism.length
+      ? j.attorney_criticism.map((q) => `<blockquote>${esc(q)}</blockquote>`).join("")
+      : '<p class="note">None in the ISBA evaluation.</p>';
+    return `
+      <div class="profile">
+        <div class="section"><h3>Bar association ratings</h3>${ratings || '<p class="note">Not found in any bar rating source. Check your sample ballot to confirm this judge is listed.</p>'}</div>
+        <div class="section"><h3>Sentencing record</h3>${sentencingHTML(j.sentencing)}</div>
+        <div class="section"><h3>Attorney criticism (ISBA)</h3>${crit}</div>
+        <div class="section"><h3>Criminal court experience</h3>${crimHTML}</div>
+        <div class="section"><h3>Career background (ISBA)</h3>${bg}</div>
+        ${j.isba_evaluation ? `<details class="more"><summary>Read the full ISBA evaluation</summary><div><p>${esc(j.isba_evaluation)}</p></div></details>` : ""}
+      </div>`;
+  }
+
+  const list = $("#list");
+  list.innerHTML = judges.map((j, i) => `
+    <details class="judge" id="${j.ballot_number ? "b" + j.ballot_number : "j" + i}" data-i="${i}">
+      <summary>
+        <span class="num${j.ballot_number ? "" : " none"}">${j.ballot_number ?? "not listed"}</span>
+        <span class="who">
+          <span class="name">${esc(j.name)}</span>
+          <span class="assign">${esc(j.court === "Circuit Court of Cook County" ? (j.assignment || "Circuit Court") + " · Circuit Court" : j.court)}</span>
+          <span class="chips">${chips(j)}</span>
+        </span>
+        <span class="ovals" aria-hidden="true"><span>YES</span><span>NO</span></span>
+      </summary>
+    </details>`).join("");
+
+  list.addEventListener("toggle", (e) => {
+    const el = e.target;
+    if (el.classList?.contains("judge") && el.open && !el.dataset.rendered) {
+      el.insertAdjacentHTML("beforeend", profileHTML(judges[+el.dataset.i]));
+      el.dataset.rendered = "1";
+    }
+  }, true);
+
+  const ids = ["f-sentencing", "f-criticism", "f-barno", "f-criminal"];
+  function apply() {
+    const q = $("#q").value.trim().toLowerCase();
+    const on = Object.fromEntries(ids.map((id) => [id, $("#" + id).checked]));
+    let shown = 0;
+    list.querySelectorAll(".judge").forEach((el) => {
+      const j = judges[+el.dataset.i];
+      const text = `${j.name} ${j.ballot_number ?? ""} ${j.assignment} ${j.court}`.toLowerCase();
+      const ok = (!q || text.includes(q))
+        && (!on["f-sentencing"] || hasRecord(j))
+        && (!on["f-criticism"] || j.attorney_criticism.length)
+        && (!on["f-barno"] || barNo(j))
+        && (!on["f-criminal"] || j.criminal_court_experience.value);
+      el.hidden = !ok;
+      if (ok) shown++;
+    });
+    $("#count").textContent = `Showing ${shown} of ${judges.length}`;
+  }
+  $("#q").addEventListener("input", apply);
+  ids.forEach((id) => $("#" + id).addEventListener("change", apply));
+  apply();
+
+  const target = location.hash && document.getElementById(location.hash.slice(1));
+  if (target && target.classList.contains("judge")) { target.open = true; target.scrollIntoView(); }
+})();
+</script>
+<script>
+(function () {
+  const DATA = JSON.parse(document.getElementById("data").textContent);
+  const pop = DATA.population;
+  const MEASURES = {
+    // hi / lo describe a judge above or below zero on that measure, for the quadrant labels.
+    prison: { label: "Prison vs comparable cases", unit: "pts", axis: "Sent to prison: points above or below expected",
+      hi: "More prison", lo: "Less prison" },
+    treatment: { label: "Treatment sentences vs comparable cases", unit: "pts", axis: "Treatment sentences: points above or below expected",
+      hi: "More treatment sentences", lo: "Fewer treatment sentences", short: ["More treatment", "Less treatment"] },
+    length: { label: "Prison-term length vs comparable cases", unit: "%", axis: "Prison terms: % longer or shorter than expected",
+      hi: "Longer prison terms", lo: "Shorter prison terms", short: ["Longer terms", "Shorter terms"] },
+    gap: { label: "Black–white prison gap, same charges", unit: "pts", axis: "Black defendants sent to prison: points more than white",
+      hi: "Black defendants imprisoned more", lo: "White defendants imprisoned more", short: ["Gap against Black defendants", "Gap against white defendants"] },
+  };
+  const quadText = (k, side, narrow) => {
+    const M = MEASURES[k];
+    return narrow && M.short ? M.short[side === "hi" ? 0 : 1] : M[side];
+  };
+  const NS = "http://www.w3.org/2000/svg";
+  const $ = (s) => document.querySelector(s);
+  const fmt = (v, u) => (v > 0 ? "+" : v < 0 ? "−" : "") + Math.abs(v).toFixed(1) + (u === "%" ? "%" : " pts");
+  const el = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
+  const lastName = (n) => n.replace(/,? (Jr\.?|III|II)$/i, "").split(" ").pop();
+
+  for (const id of ["xm", "ym"]) {
+    const sel = $("#" + id);
+    for (const [k, m] of Object.entries(MEASURES)) { const o = document.createElement("option"); o.value = k; o.textContent = m.label; sel.appendChild(o); }
+  }
+  $("#xm").value = "prison"; $("#ym").value = "treatment";
+
+  function niceTicks(lo, hi) {
+    const span = hi - lo, raw = span / 5, mag = Math.pow(10, Math.floor(Math.log10(raw)));
+    const step = [1, 2, 2.5, 5, 10].map((m) => m * mag).find((s) => span / s <= 6);
+    const ticks = []; for (let t = Math.ceil(lo / step) * step; t <= hi + 1e-9; t += step) ticks.push(+t.toFixed(6));
+    return ticks;
+  }
+  function domain(vals) {
+    let lo = Math.min(0, ...vals), hi = Math.max(0, ...vals); const pad = (hi - lo) * 0.08 || 1;
+    return [lo - pad, hi + pad];
+  }
+
+  const tip = $("#tip");
+  function showTip(d, x, y, host) {
+    tip.replaceChildren();
+    const add = (cls, text) => { const s = document.createElement("span"); if (cls) s.className = cls; s.textContent = text; tip.appendChild(s); };
+    const title = document.createElement("strong"); title.textContent = d.name + (d.ballot_number ? `  ·  ballot #${d.ballot_number}` : ""); tip.appendChild(title);
+    add("m", `${d.n.toLocaleString()} sentences through ${d.last}${d.specialty ? " · likely specialty court" : ""}${d.limited ? " · limited record" : ""}`);
+    for (const k of Object.keys(MEASURES)) {
+      const v = d[k]; if (!v) continue;
+      add("v", `${MEASURES[k].label}: ${fmt(v[0], MEASURES[k].unit)} (${fmt(v[1], MEASURES[k].unit)} to ${fmt(v[2], MEASURES[k].unit)})`);
+    }
+    if (d.ballot_number) add("m", "Click to open this judge's profile");
+    tip.hidden = false;
+    const hostBox = host.getBoundingClientRect(), w = tip.offsetWidth, h = tip.offsetHeight;
+    let left = x + 14, top = y - h - 10;
+    if (left + w > hostBox.width) left = x - w - 14;
+    if (top < 0) top = y + 14;
+    tip.style.left = Math.max(0, left) + "px"; tip.style.top = top + "px";
+    host.appendChild(tip);
+  }
+  const hideTip = () => { tip.hidden = true; };
+  function openProfile(d) {
+    const t = document.getElementById("b" + d.ballot_number);
+    if (t) { t.hidden = false; t.open = true; t.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }); }
+  }
+
+  function visible(k1, k2) {
+    return pop.filter((d) => d[k1] && (!k2 || d[k2]) && !($("#hide-spec").checked && d.specialty));
+  }
+
+  function scatter() {
+    const host = $("#scatter"), xk = $("#xm").value, yk = $("#ym").value;
+    host.querySelector("svg")?.remove();
+    const W = Math.max(320, host.clientWidth), H = Math.round(Math.min(520, Math.max(300, W * 0.68)));
+    const m = { t: 14, r: 16, b: 46, l: 54 }, iw = W - m.l - m.r, ih = H - m.t - m.b;
+    const data = visible(xk, yk), ci = $("#show-ci").checked;
+    const xs = data.map((d) => d[xk][0]).concat(ci ? data.filter((d) => d.ballot_number).flatMap((d) => [d[xk][1], d[xk][2]]) : []);
+    const ys = data.map((d) => d[yk][0]).concat(ci ? data.filter((d) => d.ballot_number).flatMap((d) => [d[yk][1], d[yk][2]]) : []);
+    const [x0, x1] = domain(xs), [y0, y1] = domain(ys);
+    const X = (v) => m.l + ((v - x0) / (x1 - x0)) * iw, Y = (v) => m.t + ih - ((v - y0) / (y1 - y0)) * ih;
+    const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": `Scatter plot of ${data.length} judges: ${MEASURES[xk].label} across, ${MEASURES[yk].label} up` });
+    for (const t of niceTicks(x0, x1)) { el("line", { class: t === 0 ? "zero" : "grid", x1: X(t), x2: X(t), y1: m.t, y2: m.t + ih }, svg); el("text", { x: X(t), y: m.t + ih + 16, "text-anchor": "middle" }, svg).textContent = t; }
+    for (const t of niceTicks(y0, y1)) { el("line", { class: t === 0 ? "zero" : "grid", x1: m.l, x2: m.l + iw, y1: Y(t), y2: Y(t) }, svg); el("text", { x: m.l - 8, y: Y(t) + 4, "text-anchor": "end" }, svg).textContent = t; }
+    el("text", { class: "axis-title", x: m.l + iw / 2, y: H - 6, "text-anchor": "middle" }, svg).textContent = MEASURES[xk].axis + " →";
+    el("text", { class: "axis-title", transform: `translate(14 ${m.t + ih / 2}) rotate(-90)`, "text-anchor": "middle" }, svg).textContent = MEASURES[yk].axis + " →";
+
+    // Quadrant labels, drawn first so they sit behind the dots. Zero is always inside both
+    // domains, so each corner of the plot lies in its own quadrant.
+    if (xk !== yk) {
+      const narrow = iw < 460, pad = 10, line = 15;
+      const top = m.t + pad + 11, bottom = m.t + ih - pad - line;
+      const corners = [
+        [m.l + pad, top, "start", "lo", "hi"], [m.l + iw - pad, top, "end", "hi", "hi"],
+        [m.l + pad, bottom, "start", "lo", "lo"], [m.l + iw - pad, bottom, "end", "hi", "lo"],
+      ];
+      for (const [x, y, anchor, xs, ys] of corners) {
+        const t = el("text", { class: "quad" + (narrow ? " narrow" : ""), x, y, "text-anchor": anchor }, svg);
+        el("tspan", { x, dy: 0 }, t).textContent = quadText(xk, xs, narrow);
+        el("tspan", { x, dy: line }, t).textContent = quadText(yk, ys, narrow);
+      }
+    }
+
+    const ordered = data.filter((d) => !d.ballot_number).concat(data.filter((d) => d.ballot_number));
+    if (ci) for (const d of ordered.filter((d) => d.ballot_number)) {
+      el("line", { x1: X(d[xk][1]), x2: X(d[xk][2]), y1: Y(d[yk][0]), y2: Y(d[yk][0]), stroke: "var(--series)", "stroke-width": 1.5, opacity: 0.45 }, svg);
+      el("line", { x1: X(d[xk][0]), x2: X(d[xk][0]), y1: Y(d[yk][1]), y2: Y(d[yk][2]), stroke: "var(--series)", "stroke-width": 1.5, opacity: 0.45 }, svg);
+    }
+    const pts = [];
+    for (const d of ordered) {
+      const b = !!d.ballot_number, cx = X(d[xk][0]), cy = Y(d[yk][0]);
+      const c = el("circle", { class: "pt" + (b ? " ballot" : ""), cx, cy, r: b ? 5.5 : 4.5,
+        fill: d.specialty ? "var(--card)" : b ? "var(--series)" : "var(--other)",
+        stroke: d.specialty ? (b ? "var(--series)" : "var(--other)") : "var(--card)", "stroke-width": d.specialty ? 1.5 : 2 }, svg);
+      if (b) { c.setAttribute("tabindex", "0"); c.setAttribute("aria-label", `${d.name}, ballot ${d.ballot_number}: ${MEASURES[xk].label} ${fmt(d[xk][0], MEASURES[xk].unit)}, ${MEASURES[yk].label} ${fmt(d[yk][0], MEASURES[yk].unit)}`);
+        c.addEventListener("focus", () => showTip(d, cx * host.clientWidth / W, cy * host.clientWidth / W, host));
+        c.addEventListener("blur", hideTip);
+        c.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openProfile(d); } }); }
+      pts.push({ d, cx, cy });
+    }
+    // Direct labels for ballot judges, skipping any that would collide.
+    const placed = [];
+    for (const p of pts.filter((p) => p.d.ballot_number).sort((a, b) => a.cy - b.cy)) {
+      const text = lastName(p.d.name), w = text.length * 6.4 + 4, box = { x: p.cx + 8, y: p.cy - 13, w, h: 13 };
+      if (box.x + w > W - 2) box.x = p.cx - 8 - w;
+      const hits = placed.some((q) => box.x < q.x + q.w && q.x < box.x + box.w && box.y < q.y + q.h && q.y < box.y + box.h)
+        || pts.some((q) => q !== p && q.d.ballot_number && q.cx > box.x - 3 && q.cx < box.x + box.w + 3 && q.cy > box.y - 3 && q.cy < box.y + box.h + 3);
+      if (hits) continue;
+      placed.push(box);
+      el("text", { class: "lbl", x: box.x + 2, y: box.y + 10 }, svg).textContent = text;
+    }
+    // Nearest-point hover layer, so the pointer only has to be close.
+    let active = null;
+    const ring = el("circle", { r: 8, fill: "none", stroke: "var(--ink)", "stroke-width": 1.5, visibility: "hidden", "pointer-events": "none" }, svg);
+    const nearest = (e) => {
+      const r = svg.getBoundingClientRect(), sx = W / r.width, px = (e.clientX - r.left) * sx, py = (e.clientY - r.top) * sx;
+      let best = null, bd = 24 * sx;
+      for (const p of pts) { const dd = Math.hypot(p.cx - px, p.cy - py); if (dd < bd) { bd = dd; best = p; } }
+      return best;
+    };
+    svg.addEventListener("pointermove", (e) => {
+      const p = nearest(e); active = p;
+      if (!p) { ring.setAttribute("visibility", "hidden"); svg.style.cursor = "default"; return hideTip(); }
+      ring.setAttribute("cx", p.cx); ring.setAttribute("cy", p.cy); ring.setAttribute("visibility", "visible");
+      svg.style.cursor = p.d.ballot_number ? "pointer" : "default";
+      const k = host.clientWidth / W; showTip(p.d, p.cx * k, p.cy * k, host);
+    });
+    svg.addEventListener("pointerleave", () => { ring.setAttribute("visibility", "hidden"); hideTip(); });
+    svg.addEventListener("click", (e) => { const p = nearest(e); if (p && p.d.ballot_number) openProfile(p.d); });
+    host.prepend(svg);
+
+    // Account for every ballot judge, so nobody looks missing by mistake.
+    const ballot = pop.filter((d) => d.ballot_number);
+    const hiddenSpec = $("#hide-spec").checked ? ballot.filter((d) => d.specialty) : [];
+    const lacking = ballot.filter((d) => !hiddenSpec.includes(d) && !(d[xk] && d[yk]));
+    const shown = ballot.length - hiddenSpec.length - lacking.length;
+    const names = (list) => list.map((d) => `${lastName(d.name)} (#${d.ballot_number})`).join(", ");
+    const parts = [`Showing ${shown} of the ${ballot.length} ballot judges with sentencing records.`];
+    if (hiddenSpec.length) parts.push(`${hiddenSpec.length} hidden as likely specialty courts: ${names(hiddenSpec)}. Uncheck "Hide likely specialty courts" to show them.`);
+    if (lacking.length) parts.push(`${lacking.length} without enough cases for ${xk === yk ? "this measure" : "one of these measures"}: ${names(lacking)}.`);
+    parts.push(`The other ${DATA.judges.length - ballot.length} ballot judges have no sentencing record, mostly because they hear civil cases.`);
+    $("#scatter-note").textContent = parts.join(" ");
+  }
+
+  function forest() {
+    const host = $("#forest"), k = $("#xm").value, M = MEASURES[k];
+    $("#forest-h").textContent = "Ballot judges, ranked: " + M.label.toLowerCase();
+    host.querySelector("svg")?.remove();
+    const all = pop.filter((d) => d[k] && !d.specialty).map((d) => d[k][0]).sort((a, b) => a - b);
+    const q = (p) => all[Math.min(all.length - 1, Math.floor(p * (all.length - 1)))];
+    const rows = pop.filter((d) => d.ballot_number && d[k] && !($("#hide-spec").checked && d.specialty)).sort((a, b) => b[k][0] - a[k][0]);
+    const W = Math.max(320, host.clientWidth), rowH = 26, labelW = Math.min(190, W * 0.38), m = { t: 8, r: 16, b: 34 };
+    const H = m.t + rows.length * rowH + m.b, iw = W - labelW - m.r;
+    const vals = rows.flatMap((d) => [d[k][1], d[k][2]]).concat([q(0.25), q(0.75), 0]);
+    const [lo, hi] = domain(vals), X = (v) => labelW + ((v - lo) / (hi - lo)) * iw;
+    const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": `${M.label} for ${rows.length} ballot judges with 95% ranges` });
+    el("rect", { x: X(q(0.25)), y: m.t, width: X(q(0.75)) - X(q(0.25)), height: rows.length * rowH, fill: "var(--accent-soft)" }, svg);
+    for (const t of niceTicks(lo, hi)) { el("line", { class: t === 0 ? "zero" : "grid", x1: X(t), x2: X(t), y1: m.t, y2: m.t + rows.length * rowH }, svg); el("text", { x: X(t), y: H - m.b + 16, "text-anchor": "middle" }, svg).textContent = t; }
+    el("text", { class: "axis-title", x: labelW + iw / 2, y: H - 4, "text-anchor": "middle" }, svg).textContent = M.axis + " →";
+    rows.forEach((d, i) => {
+      const y = m.t + i * rowH + rowH / 2, v = d[k];
+      const g = el("g", { tabindex: "0", role: "button", "aria-label": `${d.name}, ballot ${d.ballot_number}: ${fmt(v[0], M.unit)}, 95% range ${fmt(v[1], M.unit)} to ${fmt(v[2], M.unit)}` }, svg);
+      g.style.cursor = "pointer";
+      el("rect", { x: 0, y: y - rowH / 2, width: W, height: rowH, fill: "transparent" }, g);
+      el("text", { class: "lbl", x: labelW - 10, y: y + 4, "text-anchor": "end" }, g).textContent = `#${d.ballot_number} ${lastName(d.name)}${d.limited ? "*" : ""}`;
+      el("line", { x1: X(v[1]), x2: X(v[2]), y1: y, y2: y, stroke: "var(--series)", "stroke-width": 2, "stroke-linecap": "round" }, g);
+      el("circle", { cx: X(v[0]), cy: y, r: 5, fill: d.specialty ? "var(--card)" : "var(--series)", stroke: d.specialty ? "var(--series)" : "var(--card)", "stroke-width": 2 }, g);
+      const show = () => { const s = host.clientWidth / W; showTip(d, X(v[0]) * s, y * s, host); };
+      g.addEventListener("pointerenter", show); g.addEventListener("focus", show);
+      g.addEventListener("pointerleave", hideTip); g.addEventListener("blur", hideTip);
+      g.addEventListener("click", () => openProfile(d));
+      g.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openProfile(d); } });
+    });
+    host.prepend(svg);
+    let note = host.querySelector(".note");
+    if (!note) { note = document.createElement("p"); note.className = "note"; host.appendChild(note); }
+    note.textContent = `The shaded band is the middle half of all ${all.length} judges (specialty courts excluded). A range that crosses zero is consistent with sentencing like the court as a whole. * marks a limited record (30–99 sentences).`;
+  }
+
+  function table() {
+    const host = $("#pop-table"), keys = Object.keys(MEASURES);
+    const t = document.createElement("table"), head = t.createTHead().insertRow(), body = t.createTBody();
+    for (const h of ["Judge", "Ballot #", "Sentences", ...keys.map((k) => MEASURES[k].label)]) { const th = document.createElement("th"); th.textContent = h; head.appendChild(th); }
+    for (const d of [...pop].sort((a, b) => a.name.localeCompare(b.name))) {
+      const r = body.insertRow();
+      const cells = [d.name + (d.specialty ? " (likely specialty court)" : ""), d.ballot_number ?? "", d.n.toLocaleString(),
+        ...keys.map((k) => d[k] ? `${fmt(d[k][0], MEASURES[k].unit)} (${fmt(d[k][1], MEASURES[k].unit)} to ${fmt(d[k][2], MEASURES[k].unit)})` : "not enough cases")];
+      for (const c of cells) r.insertCell().textContent = c;
+    }
+    host.replaceChildren(t);
+  }
+
+  const draw = () => { hideTip(); scatter(); forest(); };
+  for (const id of ["xm", "ym", "show-ci", "hide-spec"]) $("#" + id).addEventListener("change", draw);
+  let raf; addEventListener("resize", () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(draw); });
+  draw(); table();
+})();
+</script>

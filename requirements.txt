@@ -1,0 +1,4 @@
+pandas>=2.2
+anthropic>=1.0
+numbers-parser>=4.0  # reads hand labels saved from Apple Numbers
+pypdf>=4.0

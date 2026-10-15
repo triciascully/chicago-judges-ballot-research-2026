@@ -1,0 +1,511 @@
+{
+  "grounding": {
+    "claims": 477,
+    "ungrounded": {
+      "Kerry M. Kennedy": [
+        {
+          "claim": "Attorney feedback that is positive about courtroom_management",
+          "evidence": "praised his ... ability to be pragmatic"
+        },
+        {
+          "claim": "Attorney feedback that is positive about integrity",
+          "evidence": "He is considered to be ... high integrity"
+        }
+      ],
+      "Edward A. Arce": [
+        {
+          "claim": "Attorney feedback that is positive about fairness",
+          "evidence": "he is prompt"
+        }
+      ],
+      "Thomas J. Byrne": [
+        {
+          "claim": "Attorney feedback that is positive about diligence",
+          "evidence": "Attorneys praised his ... demeanor"
+        }
+      ],
+      "John Michael Allegretti": [
+        {
+          "claim": "Attorney feedback that is positive about fairness",
+          "evidence": "Attorneys praised his ... fairness"
+        },
+        {
+          "claim": "Attorney feedback that is positive about fairness",
+          "evidence": "Attorneys praised his ... professionalism"
+        },
+        {
+          "claim": "Attorney feedback that is positive about fairness",
+          "evidence": "Attorneys praised his research skills"
+        }
+      ],
+      "Steven G. Watkins": [
+        {
+          "claim": "Attorney feedback that is positive about legal_knowledge",
+          "evidence": "He was universally praised for his legal knowledge"
+        },
+        {
+          "claim": "Attorney feedback that is positive about diligence",
+          "evidence": "He was universally praised for his diligence"
+        },
+        {
+          "claim": "Attorney feedback that is positive about temperament",
+          "evidence": "He was universally praised for his legal knowledge, diligence, professionalism and temperament"
+        }
+      ],
+      "Judith C. Rice": [
+        {
+          "claim": "Has served as a judge in: domestic_relations",
+          "evidence": "assigned to Domestic Relations in 2019"
+        },
+        {
+          "claim": "Has served as a judge in: civil",
+          "evidence": "rotating judge for civil"
+        },
+        {
+          "claim": "Has served as a judge in: criminal_felony",
+          "evidence": "rotating judge for criminal"
+        },
+        {
+          "claim": "Has served as a judge in: domestic_violence",
+          "evidence": "rotating judge for criminal domestic violence cases"
+        }
+      ],
+      "Patrick Kevin Coughlin": [
+        {
+          "claim": "Attorney feedback that is positive about fairness",
+          "evidence": "Attorneys described him as ... very fair"
+        },
+        {
+          "claim": "Attorney feedback that is positive about courtroom_management",
+          "evidence": "Attorneys described him as ... respectful to all"
+        }
+      ],
+      "Megan Elizabeth Goldish": [
+        {
+          "claim": "Attorney feedback that is positive about diligence",
+          "evidence": "Attorneys highly praised her diligence"
+        },
+        {
+          "claim": "Attorney feedback that is positive about fairness",
+          "evidence": "Attorneys highly praised her fairness"
+        },
+        {
+          "claim": "Attorney feedback that is positive about diligence",
+          "evidence": "Attorneys highly praised her diligence"
+        },
+        {
+          "claim": "Attorney feedback that is positive about fairness",
+          "evidence": "Attorneys highly praised her fairness"
+        },
+        {
+          "claim": "Attorney feedback that is positive about diligence",
+          "evidence": "Attorneys highly praised her diligence"
+        },
+        {
+          "claim": "Attorney feedback that is positive about fairness",
+          "evidence": "Attorneys highly praised her fairness"
+        },
+        {
+          "claim": "Attorney feedback that is positive about diligence",
+          "evidence": "Attorneys highly praised her diligence"
+        }
+      ],
+      "Anjana Hansen": [
+        {
+          "claim": "Before becoming a judge, worked as: private_criminal_defense",
+          "evidence": "She was a private general practitioner"
+        },
+        {
+          "claim": "Before becoming a judge, worked as: prosecutor",
+          "evidence": "She was ... a prosecutor"
+        }
+      ],
+      "Maritza Martinez": [
+        {
+          "claim": "Before becoming a judge, worked as: other",
+          "evidence": "she had worked for the City of Chicago Law Department"
+        }
+      ],
+      "Nichole C. Patton": [
+        {
+          "claim": "Attorney feedback that is positive about temperament",
+          "evidence": "The super majority of respondents were complimentary about her\u2026temperament"
+        },
+        {
+          "claim": "Attorney feedback that is positive about diligence",
+          "evidence": "The super majority of respondents were complimentary about her\u2026diligence"
+        },
+        {
+          "claim": "Attorney feedback that is positive about temperament",
+          "evidence": "The super majority of respondents were complimentary about her\u2026sensitivity"
+        },
+        {
+          "claim": "Attorney feedback that is positive about temperament",
+          "evidence": "The super majority of respondents were complimentary about her\u2026character"
+        }
+      ],
+      "Gerardo Tristan, Jr.": [
+        {
+          "claim": "Attorney feedback that is positive about temperament",
+          "evidence": "Comments about his ... sensitivity, temperament"
+        },
+        {
+          "claim": "Attorney feedback that is positive about diligence",
+          "evidence": "Comments about his ... diligence"
+        },
+        {
+          "claim": "Attorney feedback that is positive about integrity",
+          "evidence": "Comments about his ... integrity were all positive."
+        }
+      ],
+      "Lynn Weaver Boyle": [
+        {
+          "claim": "Attorney feedback that is positive about temperament",
+          "evidence": "Comments about Judge Weaver Boyle\u2019s\u2026temperament"
+        },
+        {
+          "claim": "Attorney feedback that is positive about integrity",
+          "evidence": "Comments about Judge Weaver Boyle\u2019s integrity"
+        },
+        {
+          "claim": "Attorney feedback that is positive about temperament",
+          "evidence": "Comments about Judge Weaver Boyle\u2019s\u2026sensitivity"
+        },
+        {
+          "claim": "Attorney feedback that is positive about temperament",
+          "evidence": "Comments about Judge Weaver Boyle\u2019s\u2026preparedness"
+        }
+      ],
+      "Tyria B. Walton": [
+        {
+          "claim": "Attorney feedback that is positive about temperament",
+          "evidence": "References uniformly praised her... temperament"
+        },
+        {
+          "claim": "Attorney feedback that is positive about diligence",
+          "evidence": "References uniformly praised her... character"
+        },
+        {
+          "claim": "Attorney feedback that is positive about integrity",
+          "evidence": "References uniformly praised her... professionalism"
+        }
+      ],
+      "Patricia M. Fallon": [
+        {
+          "claim": "Before becoming a judge, worked as: public_defender",
+          "evidence": ""
+        },
+        {
+          "claim": "Before becoming a judge, worked as: private_criminal_defense",
+          "evidence": ""
+        }
+      ],
+      "Sheree Desiree Henry": [
+        {
+          "claim": "Attorney feedback that is positive about integrity",
+          "evidence": "she is ... honest"
+        },
+        {
+          "claim": "Attorney feedback that is positive about courtroom_management",
+          "evidence": "she is ... respectful and calm"
+        }
+      ],
+      "Celestia L. Mays": [
+        {
+          "claim": "Attorney feedback that is positive about diligence",
+          "evidence": "is considered by attorneys to be respectful"
+        },
+        {
+          "claim": "Attorney feedback that is positive about legal_knowledge",
+          "evidence": "is considered by attorneys to be ... a good researcher, with good legal knowledge"
+        }
+      ],
+      "Levander Smith, Jr.": [
+        {
+          "claim": "Has served as a judge in: domestic_violence",
+          "evidence": "appointed as an Associate Judge in January 2020 serving briefly in Domestic Violence Court"
+        }
+      ],
+      "Krista D. Butler": [
+        {
+          "claim": "Attorney feedback that is positive about fairness",
+          "evidence": "takes extra care with pro se litigants"
+        }
+      ],
+      "Maire Aileen Dempsey": [
+        {
+          "claim": "Attorney feedback that is positive about legal_knowledge",
+          "evidence": "She was described as being very smart with an immense amount of legal knowledge"
+        }
+      ],
+      "Mary Catherine Marubio": [
+        {
+          "claim": "Attorney feedback that is positive about fairness",
+          "evidence": "and sensitivity"
+        }
+      ],
+      "Regina Ann Mescall": [
+        {
+          "claim": "Attorney feedback that is positive about temperament",
+          "evidence": "Comments about her temperament [...] were uniformly positive"
+        },
+        {
+          "claim": "Attorney feedback that is negative about fairness",
+          "evidence": "concerns voiced about her [...] impartiality in her new assignment in Domestic Relations Court"
+        }
+      ],
+      "Lorraine Mary Murphy": [
+        {
+          "claim": "Has served as a judge in: traffic",
+          "evidence": "assigned to Traffic Court"
+        }
+      ],
+      "Jill Rose Quinn": [
+        {
+          "claim": "Attorney feedback that is positive about temperament",
+          "evidence": "Comments were uniformly positive about her... temperament"
+        },
+        {
+          "claim": "Attorney feedback that is positive about diligence",
+          "evidence": "Comments were uniformly positive about her... diligence"
+        },
+        {
+          "claim": "Attorney feedback that is positive about temperament",
+          "evidence": "Comments were uniformly positive about her... sensitivity"
+        },
+        {
+          "claim": "Attorney feedback that is positive about integrity",
+          "evidence": "Comments were uniformly positive about her... character"
+        }
+      ],
+      "Pamela Reaves - Harris": [
+        {
+          "claim": "Attorney feedback that is positive about temperament",
+          "evidence": "praised for her... sensitivity... character... diligence... and temperament"
+        }
+      ],
+      "Christ Stacey": [
+        {
+          "claim": "Has served as a judge in: eviction_housing",
+          "evidence": "he was assigned to Evictions Court, where he presented over motions, bench trials and settlement conference"
+        }
+      ],
+      "Perla Tirado": [
+        {
+          "claim": "Attorney feedback that is positive about temperament",
+          "evidence": "Judge Tirado received favorable comments for her temperament"
+        },
+        {
+          "claim": "Attorney feedback that is positive about treatment_of_litigants",
+          "evidence": "Judge Tirado received favorable comments for her sensitivity"
+        },
+        {
+          "claim": "Attorney feedback that is positive about integrity",
+          "evidence": "Judge Tirado received favorable comments for her character"
+        }
+      ],
+      "Elizabeth Anne Walsh": [
+        {
+          "claim": "Attorney feedback that is positive about temperament",
+          "evidence": "uniformly positive about her ... sensitivity, temperament"
+        },
+        {
+          "claim": "Attorney feedback that is positive about diligence",
+          "evidence": "uniformly positive about her ... diligence"
+        },
+        {
+          "claim": "Attorney feedback that is positive about integrity",
+          "evidence": "uniformly positive about her ... character"
+        }
+      ]
+    }
+  },
+  "sentencing_check": [
+    {
+      "judge": "Laura Ayala-Gonzalez",
+      "criminal_bench": true
+    },
+    {
+      "judge": "Thomas J. Byrne",
+      "criminal_bench": true
+    },
+    {
+      "judge": "Patrick K. Coughlin",
+      "criminal_bench": true
+    },
+    {
+      "judge": "Anjana M.J. Hansen",
+      "criminal_bench": true
+    },
+    {
+      "judge": "Kerry M. Kennedy",
+      "criminal_bench": false
+    },
+    {
+      "judge": "Diana L. Kenworthy",
+      "criminal_bench": true
+    },
+    {
+      "judge": "Robert D. Kuzas",
+      "criminal_bench": true
+    },
+    {
+      "judge": "Lorraine Murphy",
+      "criminal_bench": true
+    },
+    {
+      "judge": "Ursula Walowski",
+      "criminal_bench": true
+    },
+    {
+      "judge": "Tyria B. Walton",
+      "criminal_bench": true
+    },
+    {
+      "judge": "Steven Gregory Watkins",
+      "criminal_bench": true
+    }
+  ],
+  "labels": {
+    "tuning set": [
+      {
+        "flag": "former_prosecutor",
+        "labeled": 15,
+        "agree": 15,
+        "false_pos": 0,
+        "false_neg": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "model_said_yes_you_said_no": [],
+        "model_said_no_you_said_yes": []
+      },
+      {
+        "flag": "former_criminal_defense",
+        "labeled": 15,
+        "agree": 15,
+        "false_pos": 0,
+        "false_neg": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "model_said_yes_you_said_no": [],
+        "model_said_no_you_said_yes": []
+      },
+      {
+        "flag": "represented_vulnerable_clients",
+        "labeled": 15,
+        "agree": 15,
+        "false_pos": 0,
+        "false_neg": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "model_said_yes_you_said_no": [],
+        "model_said_no_you_said_yes": []
+      },
+      {
+        "flag": "criminal_bench",
+        "labeled": 15,
+        "agree": 14,
+        "false_pos": 0,
+        "false_neg": 1,
+        "precision": 1.0,
+        "recall": 0.8,
+        "model_said_yes_you_said_no": [],
+        "model_said_no_you_said_yes": [
+          "James Paul Pieczonka"
+        ]
+      },
+      {
+        "flag": "treatment_court",
+        "labeled": 15,
+        "agree": 15,
+        "false_pos": 0,
+        "false_neg": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "model_said_yes_you_said_no": [],
+        "model_said_no_you_said_yes": []
+      },
+      {
+        "flag": "has_criticism",
+        "labeled": 15,
+        "agree": 15,
+        "false_pos": 0,
+        "false_neg": 0,
+        "precision": NaN,
+        "recall": NaN,
+        "model_said_yes_you_said_no": [],
+        "model_said_no_you_said_yes": []
+      }
+    ],
+    "held-out set": [
+      {
+        "flag": "former_prosecutor",
+        "labeled": 15,
+        "agree": 15,
+        "false_pos": 0,
+        "false_neg": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "model_said_yes_you_said_no": [],
+        "model_said_no_you_said_yes": []
+      },
+      {
+        "flag": "former_criminal_defense",
+        "labeled": 15,
+        "agree": 15,
+        "false_pos": 0,
+        "false_neg": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "model_said_yes_you_said_no": [],
+        "model_said_no_you_said_yes": []
+      },
+      {
+        "flag": "represented_vulnerable_clients",
+        "labeled": 15,
+        "agree": 15,
+        "false_pos": 0,
+        "false_neg": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "model_said_yes_you_said_no": [],
+        "model_said_no_you_said_yes": []
+      },
+      {
+        "flag": "criminal_bench",
+        "labeled": 15,
+        "agree": 14,
+        "false_pos": 0,
+        "false_neg": 1,
+        "precision": 1.0,
+        "recall": 0.86,
+        "model_said_yes_you_said_no": [],
+        "model_said_no_you_said_yes": [
+          "Levander Smith, Jr."
+        ]
+      },
+      {
+        "flag": "treatment_court",
+        "labeled": 15,
+        "agree": 15,
+        "false_pos": 0,
+        "false_neg": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "model_said_yes_you_said_no": [],
+        "model_said_no_you_said_yes": []
+      },
+      {
+        "flag": "has_criticism",
+        "labeled": 15,
+        "agree": 15,
+        "false_pos": 0,
+        "false_neg": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "model_said_yes_you_said_no": [],
+        "model_said_no_you_said_yes": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,3354 @@
+{
+  "model": "unsloth_Qwen3-Coder-Next-GGUF_Qwen3-Coder-Next-UD-Q4_K_XL.gguf",
+  "judges": [
+    {
+      "name": "Bertina E. Lampkin",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": true,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Appellate Court",
+        "prior_roles": [],
+        "bench_experience": [
+          {
+            "area": "traffic",
+            "evidence": "From 1987 to 1989 she was assigned to the Traffic Division at the Daley Center"
+          },
+          {
+            "area": "criminal_misdemeanor",
+            "evidence": "in 1989 she was assigned to the 5th Municipal District (Bridgeview)"
+          },
+          {
+            "area": "treatment_court",
+            "evidence": "from 1989 to 1993, she was assigned to the Night Narcotics Court"
+          },
+          {
+            "area": "criminal_felony",
+            "evidence": "from 1993 to 1996 she was assigned to the Criminal Division"
+          },
+          {
+            "area": "treatment_court",
+            "evidence": "from 1996 to 1997 she was assigned to the Domestic Violence Court"
+          },
+          {
+            "area": "criminal_felony",
+            "evidence": "from 1997 to 2009 she was supervising judge in the Criminal Division"
+          },
+          {
+            "area": "appellate",
+            "evidence": "in 2009 she was assigned to the Appellate Court"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "Attorneys speak highly of her knowledge and ability"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "her passion about the law"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "her opinions are well-written"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "show her attention to detail"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "courtroom_management",
+            "evidence": "She is described as being collegial"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "courtroom_management",
+            "evidence": "collaborative"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "courtroom_management",
+            "evidence": "gracious"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Lewis Nixon",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "supervising judge in the Chancery Division \u2013 Mortgage Foreclosure/Mechanics Lien Section since 2008",
+        "prior_roles": [],
+        "bench_experience": [
+          {
+            "area": "traffic",
+            "evidence": "Initially assigned to Traffic Division"
+          },
+          {
+            "area": "chancery",
+            "evidence": "he has been a supervising judge in the Chancery Division \u2013 Mortgage Foreclosure/Mechanics Lien Section since 2008"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "diligent"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "He is described as knowledgeable, kind, respectful, calm, collegial, and diligent."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Kerry M. Kennedy",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": true,
+        "represented_vulnerable_clients": true,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Presiding Judge of the Fifth Municipal District (Bridgeview)",
+        "prior_roles": [
+          {
+            "role": "public_defender",
+            "evidence": "After a career as an assistant public defender"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "criminal_misdemeanor",
+            "evidence": "elected to the Circuit Court in 2002"
+          },
+          {
+            "area": "criminal_misdemeanor",
+            "evidence": "subsequently, retained three times"
+          },
+          {
+            "area": "criminal_misdemeanor",
+            "evidence": "since 2003 he spent time sitting in various courtrooms in the Fifth District"
+          },
+          {
+            "area": "treatment_court",
+            "evidence": "He often presides over the various court calls in the district"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "praised his in-depth knowledge of various areas of the law"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "courtroom_management",
+            "evidence": "praised his ... ability to be pragmatic"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "courtroom_management",
+            "evidence": "He is considered to be well-prepared"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "integrity",
+            "evidence": "He is considered to be ... high integrity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Joan E. Powell",
+      "flags": {
+        "former_prosecutor": true,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Law Division since 2014, where she hears jury and occasionally bench trials, along with necessary motions",
+        "prior_roles": [
+          {
+            "role": "prosecutor",
+            "evidence": "She worked for the Cook County State\u2019s Attorney\u2019s Office, Civil Division"
+          },
+          {
+            "role": "private_criminal_defense",
+            "evidence": "in private solo practice for 14 years"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "civil",
+            "evidence": "She has been assigned to the Law Division since 2014, where she hears jury and occasionally bench trials, along with necessary motions"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "Her legal knowledge"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "She is described as hard working, diligent, and punctual"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "temperament were excellent"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "impartiality"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "courtroom_management",
+            "evidence": "professionalism"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "courtroom_management",
+            "evidence": "sensitivity to diversity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Maureen Ward Kirby",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Presiding Judge, County Division (named in June 2025; served as acting Presiding Judge since 2023)",
+        "prior_roles": [
+          {
+            "role": "private_criminal_defense",
+            "evidence": "She had been in private practice handling complex commercial litigation."
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "criminal_misdemeanor",
+            "evidence": "She has been assigned to the County Division in 2009"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "She is highly regarded by attorneys for her legal knowledge"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "integrity",
+            "evidence": "She is highly regarded by attorneys for her legal knowledge, integrity"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "She is highly regarded by attorneys for her legal knowledge, integrity, even-handedness"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "She is highly regarded by attorneys for her legal knowledge, integrity, even-handedness and ability to handle a variety of legal issues."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Edward A. Arce",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Domestic Relations Division at the 1st Municipal District (Daley Center)",
+        "prior_roles": [],
+        "bench_experience": [
+          {
+            "area": "criminal_misdemeanor",
+            "evidence": "He was appointed to the circuit court in February 2008"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "his decisions are based on the law"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "he is diligent"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "he is prompt"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Thomas J. Byrne",
+      "flags": {
+        "former_prosecutor": true,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": true,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "presiding over felony cases at the Leighton Criminal Courthouse since 2013",
+        "prior_roles": [
+          {
+            "role": "prosecutor",
+            "evidence": "After a career as a prosecutor"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "criminal_felony",
+            "evidence": "presiding over felony cases"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "Attorneys praised his fairness"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "Attorneys praised his ... demeanor"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "respected by both sides as a judge who follows the law"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Diana L. Kenworthy",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": true,
+        "represented_vulnerable_clients": true,
+        "criminal_bench": true,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "presiding over a felony trial call",
+        "prior_roles": [
+          {
+            "role": "private_criminal_defense",
+            "evidence": "she had focused on criminal defense as both a private practitioner"
+          },
+          {
+            "role": "public_defender",
+            "evidence": "an assistant public defender"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "criminal_felony",
+            "evidence": "Since 2019 she has been assigned to the Criminal Division, Leighton Criminal Courthouse, presiding over a felony trial call"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "She received high praise from attorneys for her legal knowledge"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "courtroom_management",
+            "evidence": "ability to handle complex cases"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "integrity",
+            "evidence": "integrity"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "professionalism"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Kristyna Colleen Ryan",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": true,
+        "treatment_court": true,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Presiding Judge in the Fourth Municipal District (Maywood), where she has been since 2010",
+        "prior_roles": [],
+        "bench_experience": [
+          {
+            "area": "criminal_misdemeanor",
+            "evidence": "She hears misdemeanor"
+          },
+          {
+            "area": "treatment_court",
+            "evidence": "Mental Health and Veterans calls"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "fair to everyone"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "treatment_of_litigants",
+            "evidence": "especially good with pro se litigants"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "She is punctual, diligent and professional"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "Judge Ryan is knowledgeable in her field"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ursula Walowski",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": true,
+        "treatment_court": false,
+        "has_criticism": true
+      },
+      "extraction": {
+        "current_assignment": "Criminal Division at 26th and California since 2016",
+        "prior_roles": [],
+        "bench_experience": [
+          {
+            "area": "traffic",
+            "evidence": "assigned to Traffic Court"
+          },
+          {
+            "area": "civil",
+            "evidence": "First Municipal"
+          },
+          {
+            "area": "domestic_violence",
+            "evidence": "served in the Domestic Violence Division"
+          },
+          {
+            "area": "criminal_misdemeanor",
+            "evidence": "assigned to the Criminal Division at 26th and California since 2016"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "praised for her legal knowledge"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "her willingness to research"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "courtroom_management",
+            "evidence": "her courtroom management ability"
+          },
+          {
+            "sentiment": "negative",
+            "topic": "temperament",
+            "evidence": "comments about poor temperament"
+          },
+          {
+            "sentiment": "negative",
+            "topic": "temperament",
+            "evidence": "impatience"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Anthony C. Kyriakopoulos",
+      "flags": {
+        "former_prosecutor": true,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Chancery Division, Mortgage Foreclosure/Mechanics Lien Section",
+        "prior_roles": [
+          {
+            "role": "prosecutor",
+            "evidence": "After a career as a prosecutor"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "criminal_felony",
+            "evidence": "appointed to the circuit court in February 2010"
+          },
+          {
+            "area": "civil",
+            "evidence": "Since 2015 he has been assigned to the Chancery Division, Mortgage Foreclosure/Mechanics Lien Section"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "courtroom_management",
+            "evidence": "He is professional"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "good at explaining the law to pro se litigants"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "treats all equally"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Caroline Kate Moreland",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Chancery Division",
+        "prior_roles": [],
+        "bench_experience": [
+          {
+            "area": "civil",
+            "evidence": "She is currently assigned to the Chancery Division where she handles a broad variety of complex civil matters: administrative reviews, corporate and business disputes, trust litigation and insurance coverage."
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "courtroom_management",
+            "evidence": "She manages her courtroom well and gives parties equal time to present their cases."
+          },
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "She is fair to everyone, and considerate of pro se litigants."
+          },
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "Judge Moreland is said to be prepared and knowledgeable about cases."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Thomas J. Carroll",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": true,
+        "represented_vulnerable_clients": true,
+        "criminal_bench": true,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Sixth Municipal District (Markham), supervising judge hearing misdemeanor and traffic matters",
+        "prior_roles": [
+          {
+            "role": "private_criminal_defense",
+            "evidence": "he was a private attorney focusing on criminal defense"
+          },
+          {
+            "role": "public_defender",
+            "evidence": "several years as an assistant public defender"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "criminal_misdemeanor",
+            "evidence": "hearing misdemeanor and traffic matters"
+          },
+          {
+            "area": "traffic",
+            "evidence": "hearing misdemeanor and traffic matters"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "legal knowledge"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "ability"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "judicial skills"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "respectful"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "professional"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "calm"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Andrea M. Buford",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Presiding Judge of Child Protection Division",
+        "prior_roles": [
+          {
+            "role": "private_criminal_defense",
+            "evidence": "She had been a private practitioner"
+          },
+          {
+            "role": "public_defender",
+            "evidence": "She had been a private practitioner"
+          },
+          {
+            "role": "other",
+            "evidence": "a commissioner for the Illinois Court of Claims"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "child_protection",
+            "evidence": "She is the Presiding Judge of Child Protection Division, where she has been assigned since 2014"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "highly knowledgeable"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "approachable"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "even-tempered"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "courtroom_management",
+            "evidence": "with the ability to navigate emotionally charged cases well"
+          }
+        ]
+      }
+    },
+    {
+      "name": "John Michael Allegretti",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "presiding over civil non-jury trials in the First Municipal District",
+        "prior_roles": [
+          {
+            "role": "civil_practice",
+            "evidence": "general counsel for the Cook County Treasurer\u2019s office"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "civil",
+            "evidence": "presiding over civil non-jury trials"
+          },
+          {
+            "area": "criminal_felony",
+            "evidence": "County Division"
+          },
+          {
+            "area": "criminal_misdemeanor",
+            "evidence": "First Municipal"
+          },
+          {
+            "area": "traffic",
+            "evidence": "Traffic"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "Attorneys praised his legal knowledge"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "Attorneys praised his ... fairness"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "Attorneys praised his ... professionalism"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "Attorneys praised his research skills"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Kristal Rivers",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": true,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Misdemeanor Petty and Domestic Violence Room in Bridgeview, where she currently hears criminal bench and jury trials",
+        "prior_roles": [
+          {
+            "role": "civil_practice",
+            "evidence": "She was appointed to the circuit court in June 2014"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "juvenile_justice",
+            "evidence": "From May 2015 until October 2021, she served in the Juvenile Justice Division"
+          },
+          {
+            "area": "criminal_misdemeanor",
+            "evidence": "In 2021 she was assigned to the Misdemeanor Petty and Domestic Violence Room in Bridgeview, where she currently hears criminal bench and jury trials"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "Judge Rivers is said to be knowledgeable"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "and able to make fair and thoughtful rulings"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "courtroom_management",
+            "evidence": "She is respectful, calm, consistent, and predictable"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "Judge Rivers is \u2018always on time\u2019 and prepared"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "courtroom_management",
+            "evidence": "She is sensitive to issues confronting the diverse population that appears before her"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Steven G. Watkins",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": true,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "supervising judge in the Criminal Division at the Leighton Criminal Courthouse",
+        "prior_roles": [],
+        "bench_experience": [
+          {
+            "area": "criminal_felony",
+            "evidence": "He is currently assigned as a supervising judge in the Criminal Division"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "He was universally praised for his legal knowledge"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "He was universally praised for his diligence"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "He was universally praised for his legal knowledge, diligence, professionalism and temperament"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "He treats everyone appearing before him with respect and is fair to both sides"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "courtroom_management",
+            "evidence": "He is noted as being prepared, punctual"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "He is noted as being prepared, punctual, and \u2018a student of the law\u2019"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Abbey Fishman Romanek",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Supervising Judge in Domestic Relations",
+        "prior_roles": [],
+        "bench_experience": [
+          {
+            "area": "eviction_housing",
+            "evidence": "She served in evictions"
+          },
+          {
+            "area": "probate",
+            "evidence": "pro se civil"
+          },
+          {
+            "area": "civil",
+            "evidence": "municipal civil courts"
+          },
+          {
+            "area": "domestic_relations",
+            "evidence": "In 2015, she was assigned to Domestic Relations individual docket"
+          },
+          {
+            "area": "domestic_relations",
+            "evidence": "In 2025, she became a Supervising Judge in Domestic Relations"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "Judge Romanek is said to be knowledgeable"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "courtroom_management",
+            "evidence": "efficient"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "courtroom_management",
+            "evidence": "punctual"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "fair-minded"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Judith C. Rice",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Presiding Judge of Domestic Relations, managing ten domestic violence courtrooms and fifteen judges",
+        "prior_roles": [
+          {
+            "role": "judicial_staff",
+            "evidence": "elected to the Circuit Court of Cook County in 2014"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "domestic_relations",
+            "evidence": "assigned to Domestic Relations in 2019"
+          },
+          {
+            "area": "civil",
+            "evidence": "rotating judge for civil"
+          },
+          {
+            "area": "criminal_felony",
+            "evidence": "rotating judge for criminal"
+          },
+          {
+            "area": "domestic_violence",
+            "evidence": "rotating judge for criminal domestic violence cases"
+          },
+          {
+            "area": "probate",
+            "evidence": "hears after-hours orders of protection"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "described as knowing the law well"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "is always ready to provide a fair hearing"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "courtroom_management",
+            "evidence": "asking relevant questions"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "brings sensitivity to diversity and bias to the bench"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "integrity",
+            "evidence": "once immediately addressing a litigant\u2019s derogatory remark"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Patrick Kevin Coughlin",
+      "flags": {
+        "former_prosecutor": true,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": true,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "felony courtroom in the Sixth Municipal District (Markham)",
+        "prior_roles": [
+          {
+            "role": "prosecutor",
+            "evidence": "After a career as a prosecutor"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "criminal_felony",
+            "evidence": "He is assigned to a felony courtroom in the Sixth Municipal District (Markham)"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "Attorneys described him as very knowledgeable and always up to date on recent case law"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "Attorneys described him as ... very fair"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "courtroom_management",
+            "evidence": "Attorneys described him as ... respectful to all"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Megan Elizabeth Goldish",
+      "flags": {
+        "former_prosecutor": true,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Domestic Relations",
+        "prior_roles": [
+          {
+            "role": "prosecutor",
+            "evidence": "After a career as a prosecutor"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "criminal_misdemeanor",
+            "evidence": "elected to the circuit court in 2014"
+          },
+          {
+            "area": "domestic_relations",
+            "evidence": "Since 2015, she has been assigned to Domestic Relations"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "Attorneys highly praised her legal knowledge"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "Attorneys highly praised her diligence"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "Attorneys highly praised her fairness"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "Attorneys highly praised her diligence"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "Attorneys highly praised her fairness"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "Attorneys highly praised her diligence"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "Attorneys highly praised her fairness"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "Attorneys highly praised her diligence"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Anjana Hansen",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": true,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Second Municipal District (Skokie), where she presides over a felony courtroom and also serves as Deputy Presiding Judge",
+        "prior_roles": [
+          {
+            "role": "private_criminal_defense",
+            "evidence": "She was a private general practitioner"
+          },
+          {
+            "role": "prosecutor",
+            "evidence": "She was ... a prosecutor"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "criminal_felony",
+            "evidence": "she presides over a felony courtroom"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "Attorneys praised her legal knowledge"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "research abilities"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "impartiality"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "thoroughness"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Robert D. Kuzas",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": true,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": true,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "presiding over preliminary hearings in Branch 44",
+        "prior_roles": [
+          {
+            "role": "private_criminal_defense",
+            "evidence": "he was in private practice focusing on criminal defense"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "criminal_misdemeanor",
+            "evidence": "presiding over preliminary hearings"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "a knowledgeable judge"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "applies the law carefully"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "is professional and diligent"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Maritza Martinez",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Domestic Relations",
+        "prior_roles": [
+          {
+            "role": "private_criminal_defense",
+            "evidence": "she had been a private practitioner"
+          },
+          {
+            "role": "other",
+            "evidence": "she had worked for the City of Chicago Law Department"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "criminal_misdemeanor",
+            "evidence": "elected to the circuit court in 2014"
+          },
+          {
+            "area": "domestic_relations",
+            "evidence": "She has been assigned to Domestic Relations since 2016"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "described by most attorneys as being diligent"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "hard-working"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "eager to see families succeed"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "someone who could be stern"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Terrence J. McGuire",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Probate Division, Decedent Estates Section",
+        "prior_roles": [
+          {
+            "role": "private_criminal_defense",
+            "evidence": "running a private practice focusing on estate planning, probate and real estate"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "traffic",
+            "evidence": "After an initial assignment in Traffic Court"
+          },
+          {
+            "area": "probate",
+            "evidence": "in 2018 he was assigned to the Probate Division"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "attorneys gave overwhelmingly positive feedback regarding his legal knowledge"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "and ability"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "his level-headedness"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "and understanding of complex matters"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Bridget Anne Mitchell",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "jury trials in the Law Division where she handles all aspects of litigation",
+        "prior_roles": [
+          {
+            "role": "civil_practice",
+            "evidence": "After a career as a civil litigator"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "traffic",
+            "evidence": "Her first assignment was in the Traffic Division"
+          },
+          {
+            "area": "chancery",
+            "evidence": "then to the Foreclosure Section of the Chancery Division"
+          },
+          {
+            "area": "civil",
+            "evidence": "Since 2017 she has been assigned to jury trials in the Law Division where she handles all aspects of litigation"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "Judge Mitchell is noted to have excellent legal knowledge"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "to treat everyone equally"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "integrity",
+            "evidence": "and to be impartial with high integrity"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "She is punctual and diligent, investing adequate time for all cases"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "though some attorneys thought she moved cases too slowly"
+          }
+        ]
+      }
+    },
+    {
+      "name": "James Paul Pieczonka",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "presides over civil jury trials involving personal injury, property damage, torts, and contracts among other issues",
+        "prior_roles": [],
+        "bench_experience": [
+          {
+            "area": "civil",
+            "evidence": "In 2015 he was assigned to the Civil Division"
+          },
+          {
+            "area": "civil",
+            "evidence": "in 2019 to the Civil Jury Section"
+          },
+          {
+            "area": "civil",
+            "evidence": "Judge Pieczonka currently presides over civil jury trials involving personal injury, property damage, torts, and contracts among other issues"
+          },
+          {
+            "area": "treatment_court",
+            "evidence": "He also serves in rotation with other judges for after-hours duty for emergency matters"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "He is described as well prepared, consistent, patient, professional, fair, diligent, and efficient."
+          },
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "He is described as well prepared, consistent, patient, professional, fair, diligent, and efficient."
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "He is described as well prepared, consistent, patient, professional, fair, diligent, and efficient."
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "He is described as well prepared, consistent, patient, professional, fair, diligent, and efficient."
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "He is described as well prepared, consistent, patient, professional, fair, diligent, and efficient."
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "He is described as well prepared, consistent, patient, professional, fair, diligent, and efficient."
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "He is described as well prepared, consistent, patient, professional, fair, diligent, and efficient."
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "He is described as well prepared, consistent, patient, professional, fair, diligent, and efficient."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Patricia O\u2019Brien Sheahan",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Law Division \u2013 Trial Section",
+        "prior_roles": [],
+        "bench_experience": [
+          {
+            "area": "criminal_misdemeanor",
+            "evidence": "assigned to First Municipal until 2017"
+          },
+          {
+            "area": "civil",
+            "evidence": "moved to the Motions Section of the Law Division"
+          },
+          {
+            "area": "civil",
+            "evidence": "current assignment is in Law Division \u2013 Trial Section"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "is said to be knowledgeable about the law"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "always prepared"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "is said to be sensitive to issues of diversity"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "is described as impartial"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "courtroom_management",
+            "evidence": "has the ability to stay neutral and keep control of her courtroom"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "hardworking"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "professional"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "pleasant, consistent demeanor"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Michael A. Forti",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Domestic Relations where he presides over an Individual Calendar",
+        "prior_roles": [
+          {
+            "role": "private_criminal_defense",
+            "evidence": "After a career in private practice"
+          },
+          {
+            "role": "government_attorney",
+            "evidence": "employment with the City of Chicago \u2013 Law Department"
+          },
+          {
+            "role": "government_attorney",
+            "evidence": "Chief Counsel for the Illinois Department of Transportation"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "criminal_misdemeanor",
+            "evidence": "appointed to the circuit court in 2016"
+          },
+          {
+            "area": "criminal_misdemeanor",
+            "evidence": "reappointed in 2018"
+          },
+          {
+            "area": "civil",
+            "evidence": "became an associate judge in January 2020"
+          },
+          {
+            "area": "domestic_relations",
+            "evidence": "His current assignment is in Domestic Relations where he presides over an Individual Calendar"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "highly skilled and knowledgeable on domestic relations matters"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "issuing well-reasoned decisions"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "while being respectful and patient"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Nichole C. Patton",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": true,
+        "criminal_bench": false,
+        "treatment_court": true,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Law Division, Trial Section, where she hears complex matters exceeding $30,000, involving personal injury, wrongful death, medical or legal malpractice and motor vehicle accidents",
+        "prior_roles": [
+          {
+            "role": "civil_practice",
+            "evidence": "From 2018 until 2023, she was assigned to the County Division, hearing mental health, real estate taxation, civil asset forfeiture, and election law cases"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "civil",
+            "evidence": "From 2018 until 2023, she was assigned to the County Division, hearing mental health, real estate taxation, civil asset forfeiture, and election law cases"
+          },
+          {
+            "area": "civil",
+            "evidence": "From 2023 to the present, Judge Patton has served in the Law Division, Trial Section, where she hears complex matters exceeding $30,000, involving personal injury, wrongful death, medical or legal malpractice and motor vehicle accidents"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "The super majority of respondents were complimentary about her legal knowledge"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "The super majority of respondents were complimentary about her\u2026temperament"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "The super majority of respondents were complimentary about her\u2026diligence"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "The super majority of respondents were complimentary about her\u2026sensitivity"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "The super majority of respondents were complimentary about her\u2026character"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Sondra Nicole Denmark",
+      "flags": {
+        "former_prosecutor": true,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Supervising Judge of First Municipal Trial Section",
+        "prior_roles": [
+          {
+            "role": "prosecutor",
+            "evidence": "she had been an Assistant State\u2019s Attorney in Will County for ten years"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "traffic",
+            "evidence": "After an initial assignment in Traffic"
+          },
+          {
+            "area": "civil",
+            "evidence": "she moved to First Municipal"
+          },
+          {
+            "area": "civil",
+            "evidence": "Supervising Judge of First Municipal Trial Section"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "her legal knowledge"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "her firm grasp of case law"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "courtroom_management",
+            "evidence": "her ability to explain things to jurors and pro se litigants"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Gerardo Tristan, Jr.",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "First Municipal District \u2013 Civil Jury Courts",
+        "prior_roles": [],
+        "bench_experience": [
+          {
+            "area": "civil",
+            "evidence": "Since 2021, Judge Tristan has been assigned to the First Municipal District \u2013 Civil Jury Courts, where he handles cases involving personal injury, evictions, and contract disputes, in addition to filling in at other courtrooms."
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "Comments about his legal knowledge"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "Comments about his ... sensitivity, temperament"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "Comments about his ... diligence"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "integrity",
+            "evidence": "Comments about his ... integrity were all positive."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Lynn Weaver Boyle",
+      "flags": {
+        "former_prosecutor": true,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "General Chancery",
+        "prior_roles": [
+          {
+            "role": "private_criminal_defense",
+            "evidence": "She was a partner in a firm handling commercial litigation"
+          },
+          {
+            "role": "prosecutor",
+            "evidence": "She began her legal career in the Cook County State\u2019s Attorney\u2019s Office"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "traffic",
+            "evidence": "She began her judicial service in Traffic Court"
+          },
+          {
+            "area": "chancery",
+            "evidence": "Between 2021 and 2024, she served in the Mortgage Foreclosure Section of the Chancery Division"
+          },
+          {
+            "area": "chancery",
+            "evidence": "Since 2024, Judge Weaver Boyle has been assigned to General Chancery where she handles a wide variety of cases including class actions, temporary restraining orders and insurance coverage"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "Comments about Judge Weaver Boyle\u2019s legal knowledge"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "Comments about Judge Weaver Boyle\u2019s\u2026temperament"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "integrity",
+            "evidence": "Comments about Judge Weaver Boyle\u2019s integrity"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "Comments about Judge Weaver Boyle\u2019s\u2026sensitivity"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "Comments about Judge Weaver Boyle\u2019s\u2026preparedness"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Daniel Edward Maloney",
+      "flags": {
+        "former_prosecutor": true,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": true,
+        "treatment_court": true,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Sixth Municipal District (Markham) in the Traffic and Misdemeanor rooms",
+        "prior_roles": [
+          {
+            "role": "prosecutor",
+            "evidence": "He spent the majority of his career as an Assistant State\u2019s Attorney in Cook County"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "traffic",
+            "evidence": "His first short assignment was in Traffic Court"
+          },
+          {
+            "area": "traffic",
+            "evidence": "Since 2019, he has been assigned to the Sixth Municipal District (Markham) in the Traffic and Misdemeanor rooms"
+          },
+          {
+            "area": "treatment_court",
+            "evidence": "He has also served in the Problem Solving Courts there, which involve substance addiction, and mental health issues"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "Comments about Judge Maloney\u2019s legal knowledge"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "Comments about Judge Maloney\u2019s legal knowledge, sensitivity, character, temperament, and diligence were all positive"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "Comments about Judge Maloney\u2019s legal knowledge, sensitivity, character, temperament, and diligence were all positive"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Thomas M. Cushing",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": true,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Law Division \u2013 Jury at the First Municipal District (Daley Center)",
+        "prior_roles": [
+          {
+            "role": "civil_practice",
+            "evidence": "he focused on civil litigation"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "traffic",
+            "evidence": "After prior assignments in Traffic"
+          },
+          {
+            "area": "domestic_violence",
+            "evidence": "Domestic Violence"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "his legal knowledge"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "and ability"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "his diligence"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "integrity",
+            "evidence": "integrity"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "and even keeled temperament"
+          }
+        ]
+      }
+    },
+    {
+      "name": "John G. Mulroe",
+      "flags": {
+        "former_prosecutor": true,
+        "former_criminal_defense": true,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": true,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Juvenile Justice",
+        "prior_roles": [
+          {
+            "role": "prosecutor",
+            "evidence": "He started his career as a Cook County State\u2019s Attorney."
+          },
+          {
+            "role": "private_criminal_defense",
+            "evidence": "From 1995 until his appointment in 2019, he had his own firm, concentrating in real estate, probate, personal injury, and criminal defense."
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "traffic",
+            "evidence": "After his appointment, Judge Mulroe was assigned to Traffic Court"
+          },
+          {
+            "area": "eviction_housing",
+            "evidence": "and also served in Forcible Entry/Detainer and Eviction Courts."
+          },
+          {
+            "area": "juvenile_justice",
+            "evidence": "After his election in 2020, he was transferred to Juvenile Justice, where he has been ever since."
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "All comments about Judge Mulroe\u2019s legal knowledge, sensitivity, temperament, diligence, and character were very favorable."
+          },
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "All comments about Judge Mulroe\u2019s legal knowledge, sensitivity, temperament, diligence, and character were very favorable."
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "All comments about Judge Mulroe\u2019s legal knowledge, sensitivity, temperament, diligence, and character were very favorable."
+          },
+          {
+            "sentiment": "positive",
+            "topic": "integrity",
+            "evidence": "All comments about Judge Mulroe\u2019s legal knowledge, sensitivity, temperament, diligence, and character were very favorable."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Tyria B. Walton",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": true,
+        "represented_vulnerable_clients": true,
+        "criminal_bench": true,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "hears felony cases at both bench and jury trials at the Leighton Criminal Courthouse",
+        "prior_roles": [
+          {
+            "role": "private_criminal_defense",
+            "evidence": "She briefly had her own practice"
+          },
+          {
+            "role": "public_defender",
+            "evidence": "She briefly had her own practice before joining the Office of the Cook County Public Defender, where she was assigned to the Markham courthouse as a trial attorney"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "criminal_felony",
+            "evidence": "Since her appointment to the circuit court in 2019, she served in the First Municipal District, and the Maywood Courthouse. She was elected in 2020 and presently hears felony cases at both bench and jury trials at the Leighton Criminal Courthouse"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "References uniformly praised her Legal knowledge"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "References uniformly praised her... temperament"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "References uniformly praised her... character"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "integrity",
+            "evidence": "References uniformly praised her... professionalism"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Erin Haggerty Antonietti",
+      "flags": {
+        "former_prosecutor": true,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": true,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "presides over a misdemeanor courtroom at the 6th Municipal District (Markham)",
+        "prior_roles": [
+          {
+            "role": "prosecutor",
+            "evidence": "After a career as a prosecutor"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "criminal_misdemeanor",
+            "evidence": "presides over a misdemeanor courtroom"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "she has good legal knowledge"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "gives thorough rulings"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "courtroom_management",
+            "evidence": "is prepared and punctual"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Teresa Molina - Gonzalez",
+      "flags": {
+        "former_prosecutor": true,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": true,
+        "treatment_court": true,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Fourth Municipal District (Maywood), where her duties rotate every 4 months",
+        "prior_roles": [
+          {
+            "role": "prosecutor",
+            "evidence": "she was a Cook County Assistant State\u2019s Attorney in the Child Support Enforcement Division and the Felony Trial Division"
+          },
+          {
+            "role": "prosecutor",
+            "evidence": "Chief of Real Estate Prosecutions for the Illinois Department of Financial and Professional Regulation"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "domestic_violence",
+            "evidence": "her duties rotate every 4 months. She has covered various courtrooms, including misdemeanors, preliminary hearings, domestic violence"
+          },
+          {
+            "area": "treatment_court",
+            "evidence": "and occasionally felony and mental health courts"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "she is knowledgeable and research cases"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "she is knowledgeable and research cases"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "is level-headed and respectful"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Patricia M. Fallon",
+      "flags": {
+        "former_prosecutor": true,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Domestic Relations",
+        "prior_roles": [
+          {
+            "role": "prosecutor",
+            "evidence": "she had been a prosecutor prior to taking that position"
+          },
+          {
+            "role": "public_defender",
+            "evidence": ""
+          },
+          {
+            "role": "private_criminal_defense",
+            "evidence": ""
+          },
+          {
+            "role": "other",
+            "evidence": "Chief of Human Resources for the Cook County Recorder of Deeds"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "traffic",
+            "evidence": "initial assignments in Traffic"
+          },
+          {
+            "area": "criminal_misdemeanor",
+            "evidence": "First Municipal"
+          },
+          {
+            "area": "domestic_relations",
+            "evidence": "assigned to Domestic Relations since July 2023"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "demonstrates strong legal knowledge"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "well-respected for her preparedness and fairness"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Sheree Desiree Henry",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": true,
+        "represented_vulnerable_clients": true,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Fourth Municipal District (Maywood)",
+        "prior_roles": [
+          {
+            "role": "public_defender",
+            "evidence": "After a career as an assistant public defender"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "criminal_misdemeanor",
+            "evidence": "Since October 2020 she has been assigned to the Fourth Municipal District (Maywood)"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "she is a good judge who mainly follows the law"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "integrity",
+            "evidence": "she is ... honest"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "courtroom_management",
+            "evidence": "she is ... respectful and calm"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Celestia L. Mays",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "4th Municipal District (Maywood), hearing a variety of matters",
+        "prior_roles": [
+          {
+            "role": "private_criminal_defense",
+            "evidence": "she was a sole practitioner"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "criminal_misdemeanor",
+            "evidence": "appointed to the circuit court in January 2019"
+          },
+          {
+            "area": "civil",
+            "evidence": "appointed to the circuit court in January 2019"
+          },
+          {
+            "area": "traffic",
+            "evidence": "appointed to the circuit court in January 2019"
+          },
+          {
+            "area": "probate",
+            "evidence": "appointed to the circuit court in January 2019"
+          },
+          {
+            "area": "domestic_relations",
+            "evidence": "appointed to the circuit court in January 2019"
+          },
+          {
+            "area": "criminal_felony",
+            "evidence": "appointed to the circuit court in January 2019"
+          },
+          {
+            "area": "juvenile_justice",
+            "evidence": "appointed to the circuit court in January 2019"
+          },
+          {
+            "area": "other",
+            "evidence": "appointed to the circuit court in January 2019"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "is considered by attorneys to be patient"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "is considered by attorneys to be respectful"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "is considered by attorneys to be ... a good researcher, with good legal knowledge"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Levander Smith, Jr.",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Child Protection Division of Juvenile Court",
+        "prior_roles": [
+          {
+            "role": "private_criminal_defense",
+            "evidence": "Prior to taking the bench, Judge Smith\u2019s legal career focused on family and child protection issues."
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "traffic",
+            "evidence": "appointed as an Associate Judge in January 2020 serving briefly in Traffic Court"
+          },
+          {
+            "area": "domestic_violence",
+            "evidence": "appointed as an Associate Judge in January 2020 serving briefly in Domestic Violence Court"
+          },
+          {
+            "area": "treatment_court",
+            "evidence": "volunteers twice a month for \u2018benchmark hearings\u2019, which are proactive meetings with youth (16 - 20) in foster care who are focused on transitioning them to independence as they become adults."
+          }
+        ],
+        "attorney_feedback": []
+      }
+    },
+    {
+      "name": "Julie Bess Aimen",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": true,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Domestic Relations Division at the 1st Municipal District (Daley Center)",
+        "prior_roles": [
+          {
+            "role": "private_criminal_defense",
+            "evidence": "a sole practitioner with concentrations in criminal defense"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "domestic_relations",
+            "evidence": "since 2022 she has been assigned to Domestic Relations Division at the 1st Municipal District (Daley Center)"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "integrity",
+            "evidence": "professional"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "hardworking"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "courtroom_management",
+            "evidence": "patient with the many pro se litigants who appear before her"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "smart"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Laura Ayala - Gonzalez",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": true,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "presides over a felony call at the Leighton Criminal Courthouse",
+        "prior_roles": [
+          {
+            "role": "civil_practice",
+            "evidence": "She was elected to the circuit court in 2020; since December 2022, she has been assigned to the Leighton Criminal Courthouse where she presides over a felony call. Prior to this she had been assigned to First Municipal and Traffic."
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "traffic",
+            "evidence": "Prior to this she had been assigned to First Municipal and Traffic."
+          },
+          {
+            "area": "criminal_felony",
+            "evidence": "since December 2022, she has been assigned to the Leighton Criminal Courthouse where she presides over a felony call."
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "Attorneys and judges praised her legal knowledge"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "and ability"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "courtroom_management",
+            "evidence": "describing her as one of the stronger jurists in the Criminal Division"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "She is considered to be fair"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "courtroom_management",
+            "evidence": "effective"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "diligent"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "courtroom_management",
+            "evidence": "and prepared."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Krista D. Butler",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "First municipal, Civil Jury section",
+        "prior_roles": [
+          {
+            "role": "legal_aid_or_public_interest",
+            "evidence": "serving in various state agencies"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "civil",
+            "evidence": "assigned to First municipal, where she currently sits in the Civil Jury section"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "a hardworking judge with a good understanding of legal issues"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "takes the time to understand all sides"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "a hardworking judge"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "courtroom_management",
+            "evidence": "commended for her patience"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "takes extra care with pro se litigants"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Maire Aileen Dempsey",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Law Division, Motions Section",
+        "prior_roles": [
+          {
+            "role": "private_criminal_defense",
+            "evidence": "she had been in private practice with various firms handling civil defense litigation"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "traffic",
+            "evidence": "After initial assignments in Traffic"
+          },
+          {
+            "area": "civil",
+            "evidence": "First Municipal"
+          },
+          {
+            "area": "civil",
+            "evidence": "in May 2024 she was assigned to the Law Division"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "She was described as being very smart with an immense amount of legal knowledge"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "integrity",
+            "evidence": "integrity"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "she is considered to be diligent"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "slow to anger"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jamie Guerra Dickler",
+      "flags": {
+        "former_prosecutor": true,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Probate Division, Minor Guardianship",
+        "prior_roles": [
+          {
+            "role": "prosecutor",
+            "evidence": "After a career as a prosecutor"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "traffic",
+            "evidence": "initial assignments in Traffic"
+          },
+          {
+            "area": "traffic",
+            "evidence": "First Municipal"
+          },
+          {
+            "area": "probate",
+            "evidence": "She is currently assigned to the Probate Division, Minor Guardianship"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "highly knowledgeable"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "treatment_of_litigants",
+            "evidence": "patient with pro se litigants"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "courtroom_management",
+            "evidence": "thoroughly prepared on complex matters"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jonathan Clark Green",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": true,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Law Division \u2013 Commercial Calendar since April 2025",
+        "prior_roles": [
+          {
+            "role": "judicial_staff",
+            "evidence": "After initial assignments in Traffic and Domestic Violence"
+          },
+          {
+            "role": "prosecutor",
+            "evidence": "he was a supervising attorney with the Corporation Counsel\u2019s Office for Chicago and with the Illinois Attorney General\u2019s Office"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "traffic",
+            "evidence": "After initial assignments in Traffic"
+          },
+          {
+            "area": "domestic_violence",
+            "evidence": "and Domestic Violence"
+          },
+          {
+            "area": "civil",
+            "evidence": "he has been assigned to the Law Division \u2013 Commercial Calendar since April 2025"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "Attorneys spoke highly of his legal knowledge"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "and ability"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "temperament"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "integrity",
+            "evidence": "and character"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "integrity",
+            "evidence": "many stated that \u201cthe bench could use more like him\u201d"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Mary Catherine Marubio",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": true,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Presiding Judge of the 2nd Municipal District (Skokie); Deputy Chief Judge of First Appearance Court",
+        "prior_roles": [
+          {
+            "role": "judicial_staff",
+            "evidence": "she served as an administrative law judge for the Illinois Department of Financial and Professional Regulation"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "traffic",
+            "evidence": "first assigned to the Pretrial Division in 2017, after first sitting in Traffic and Domestic Relations"
+          },
+          {
+            "area": "domestic_relations",
+            "evidence": "first assigned to the Pretrial Division in 2017, after first sitting in Traffic and Domestic Relations"
+          },
+          {
+            "area": "criminal_felony",
+            "evidence": "assigned to the Pretrial Division at the Leighton Criminal Courthouse"
+          },
+          {
+            "area": "criminal_felony",
+            "evidence": "elected to the circuit court in 2020"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "Attorneys commented favorably on her legal knowledge"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "and ability"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "her fairness"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "and sensitivity"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "her preparedness"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Regina Ann Mescall",
+      "flags": {
+        "former_prosecutor": true,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": true
+      },
+      "extraction": {
+        "current_assignment": "Domestic Relations in Fifth Municipal District (Bridgeview)",
+        "prior_roles": [
+          {
+            "role": "prosecutor",
+            "evidence": "she was a prosecutor in New Mexico from 2002 until 2007"
+          },
+          {
+            "role": "prosecutor",
+            "evidence": "became an Assistant State\u2019s Attorney in the Felony Trial Division"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "civil",
+            "evidence": "she sat in the First Municipal District \u2013 Civil Jury"
+          },
+          {
+            "area": "domestic_relations",
+            "evidence": "Judge Mescall has been assigned to Domestic Relations in Fifth Municipal District (Bridgeview) since July 2025"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "Comments about her temperament [...] were uniformly positive"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "sensitivity"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "preparedness were uniformly positive"
+          },
+          {
+            "sentiment": "negative",
+            "topic": "legal_knowledge",
+            "evidence": "There were concerns voiced about her legal knowledge"
+          },
+          {
+            "sentiment": "negative",
+            "topic": "fairness",
+            "evidence": "concerns voiced about her [...] impartiality in her new assignment in Domestic Relations Court"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Lorraine Mary Murphy",
+      "flags": {
+        "former_prosecutor": true,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": true,
+        "treatment_court": false,
+        "has_criticism": true
+      },
+      "extraction": {
+        "current_assignment": "felony courtroom in the Second Municipal District (Skokie)",
+        "prior_roles": [
+          {
+            "role": "civil_practice",
+            "evidence": "career Assistant State\u2019s Attorney assigned to the Leighton Criminal Courthouse in the Appeals Division and at the Sixth Municipal District (Markham)"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "traffic",
+            "evidence": "assigned to Traffic Court"
+          },
+          {
+            "area": "criminal_felony",
+            "evidence": "assigned to a felony courtroom in the Second Municipal District (Skokie)"
+          },
+          {
+            "area": "criminal_felony",
+            "evidence": "served as a floater in Skokie from October 2021 until her present assignment"
+          },
+          {
+            "area": "criminal_felony",
+            "evidence": "briefly assigned to Room 1104 in the Daley Center"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "Reports indicate that Judge Murphy has a good knowledge of criminal law and procedures."
+          },
+          {
+            "sentiment": "negative",
+            "topic": "fairness",
+            "evidence": "concerns were expressed about her lack of impartiality in criminal cases in favor of the prosecution"
+          },
+          {
+            "sentiment": "negative",
+            "topic": "diligence",
+            "evidence": "what the Committee felt was careless preparation of her judicial evaluation questionnaire"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Eileen Marie O\u2019Connor",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Law Trial Division (since 2025, hears trials and pretrials)",
+        "prior_roles": [
+          {
+            "role": "private_criminal_defense",
+            "evidence": "prior to becoming a judge, she concentrated in litigation of personal injury, medical malpractice, construction cases, product, product liability, and civil rights"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "traffic",
+            "evidence": "She was assigned to Traffic Court for one month"
+          },
+          {
+            "area": "civil",
+            "evidence": "she spent three and a half years in the First Municipal Division, civil trials"
+          },
+          {
+            "area": "civil",
+            "evidence": "From May 2024 to July 2025, Judge O\u2019Connor was assigned to the motions call"
+          },
+          {
+            "area": "civil",
+            "evidence": "She has been sitting in the Law Trial Division since 2025, where she hears trial and pretrials"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "All comments in the areas of legal knowledge, temperament, sensitivity, diligence, and character were positive"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "All comments in the areas of legal knowledge, temperament, sensitivity, diligence, and character were positive"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "All comments in the areas of legal knowledge, temperament, sensitivity, diligence, and character were positive"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "All comments in the areas of legal knowledge, temperament, sensitivity, diligence, and character were positive"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "All comments in the areas of legal knowledge, temperament, sensitivity, diligence, and character were positive"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "All comments in the areas of legal knowledge, temperament, sensitivity, diligence, and character were positive"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "All comments in the areas of legal knowledge, temperament, sensitivity, diligence, and character were positive"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "All comments in the areas of legal knowledge, temperament, sensitivity, diligence, and character were positive"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jill Rose Quinn",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Domestic Relations Court",
+        "prior_roles": [
+          {
+            "role": "private_criminal_defense",
+            "evidence": "her practice consisted mainly of family law, real estate and probate cases"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "traffic",
+            "evidence": "Her first assignment was in Traffic Court"
+          },
+          {
+            "area": "domestic_relations",
+            "evidence": "Since 2023 she has served in Domestic Relations Court"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "Comments were uniformly positive about her legal knowledge"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "Comments were uniformly positive about her... temperament"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "Comments were uniformly positive about her... diligence"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "Comments were uniformly positive about her... sensitivity"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "integrity",
+            "evidence": "Comments were uniformly positive about her... character"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Pamela Reaves - Harris",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Housing Court",
+        "prior_roles": [
+          {
+            "role": "judicial_staff",
+            "evidence": "served as an Administrative Law Judge for various municipalities, including Chicago"
+          },
+          {
+            "role": "legal_aid_or_public_interest",
+            "evidence": "served as a State Representative for the 10 District from January 2015 to January 2017"
+          },
+          {
+            "role": "government_attorney",
+            "evidence": "was Special Assistant to Legal Affairs in Cook County Government"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "traffic",
+            "evidence": "started her judicial career in Traffic Court, where she served until her current assignment in November 2021 to Housing Court"
+          },
+          {
+            "area": "civil",
+            "evidence": "her current assignment in November 2021 to Housing Court"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "praised for her legal knowledge"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "praised for her... sensitivity... character... diligence... and temperament"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Tiesha L. Smith",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": true,
+        "represented_vulnerable_clients": true,
+        "criminal_bench": true,
+        "treatment_court": false,
+        "has_criticism": true
+      },
+      "extraction": {
+        "current_assignment": "Juvenile Justice Division",
+        "prior_roles": [
+          {
+            "role": "public_defender",
+            "evidence": "she worked in several areas of civil law: expungements, insurance defense, and mortgage counseling until becoming an Assistant Public Defender in 2010 where she practiced prior to her election."
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "traffic",
+            "evidence": "She served for a brief period in Traffic Court."
+          },
+          {
+            "area": "child_protection",
+            "evidence": "From 2021 to 2024, Judge Smith was assigned to the Child Protection Division in Juvenile Court."
+          },
+          {
+            "area": "juvenile_justice",
+            "evidence": "In 2024, she was transferred to the Juvenile Justice Division."
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "negative",
+            "topic": "temperament",
+            "evidence": "Reports of screaming matches between the Judge and attorneys, and between the Judge and minor respondents cause concern about her temperament and effectiveness of her judicial performance."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Christ Stacey",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Civil Jury Room",
+        "prior_roles": [
+          {
+            "role": "private_criminal_defense",
+            "evidence": "he had his own solo firm, concentrating in tort and commercial litigation in both state and federal courts"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "traffic",
+            "evidence": "he served briefly in the Traffic Division"
+          },
+          {
+            "area": "eviction_housing",
+            "evidence": "he was assigned to Evictions Court, where he presented over motions, bench trials and settlement conference"
+          },
+          {
+            "area": "civil",
+            "evidence": "Since December 2021, he has been assigned Civil Jury Room where he hears bench and jury trials in addition to motions and settlement conferences"
+          }
+        ],
+        "attorney_feedback": []
+      }
+    },
+    {
+      "name": "Perla Tirado",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": true,
+        "represented_vulnerable_clients": true,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Civil Jury room",
+        "prior_roles": [
+          {
+            "role": "public_defender",
+            "evidence": "She began her career in the Domestic Violence Court in the Public Defenders\u2019 Office."
+          },
+          {
+            "role": "private_criminal_defense",
+            "evidence": "She worked briefly for a white collar criminal defense firm before establishing her own practice in criminal defense, immigration, and traffic cases."
+          },
+          {
+            "role": "public_defender",
+            "evidence": "From 2016 until her election in 2020, Judge Tirado was a supervisor in the Community Activism Law Alliance, dealing with criminal defense, traffic and immigration cases."
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "traffic",
+            "evidence": "After her election, Judge Tirado was assigned briefly to Traffic Court"
+          },
+          {
+            "area": "eviction_housing",
+            "evidence": "before being assigned to the First Municipal Division, where she covered the Eviction Trial room"
+          },
+          {
+            "area": "civil",
+            "evidence": "In 2024, she was assigned to the Civil Jury room, where she currently presides."
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "Judge Tirado received favorable comments for her diligence"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "Judge Tirado received favorable comments for her temperament"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "treatment_of_litigants",
+            "evidence": "Judge Tirado received favorable comments for her sensitivity"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "integrity",
+            "evidence": "Judge Tirado received favorable comments for her character"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "She was noted as doing her own research in issues"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "fairness",
+            "evidence": "and issuing written rulings when necessary."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Elizabeth Anne Walsh",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": false,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Law Motions",
+        "prior_roles": [
+          {
+            "role": "private_criminal_defense",
+            "evidence": "worked for a firm handling defending insureds from State Farm from pleadings through trial"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "traffic",
+            "evidence": "served in the Traffic Division until February 2021"
+          },
+          {
+            "area": "civil",
+            "evidence": "First Municipal Non-Jury Division, where she served until February of 2025"
+          },
+          {
+            "area": "civil",
+            "evidence": "Law Motions, where her caseload included car accidents, dog bites, medical malpractice, and defamation, among other issues"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "uniformly positive about her legal knowledge"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "uniformly positive about her ... sensitivity, temperament"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "uniformly positive about her ... diligence"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "integrity",
+            "evidence": "uniformly positive about her ... character"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Maura McMahon Zeller",
+      "flags": {
+        "former_prosecutor": false,
+        "former_criminal_defense": false,
+        "represented_vulnerable_clients": true,
+        "criminal_bench": false,
+        "treatment_court": false,
+        "has_criticism": false
+      },
+      "extraction": {
+        "current_assignment": "Domestic Relations Division (since October 2021)",
+        "prior_roles": [
+          {
+            "role": "public_defender",
+            "evidence": "worked as a Public Guardian, representing children in the Child Protection Division of Juvenile Court"
+          },
+          {
+            "role": "private_criminal_defense",
+            "evidence": "she had her own practice in guardianships; she served as a Child Representative and mediator in Domestic Relations"
+          }
+        ],
+        "bench_experience": [
+          {
+            "area": "traffic",
+            "evidence": "assigned to Traffic Court until she her transfer to the Domestic Relations Division in October 2021"
+          },
+          {
+            "area": "domestic_relations",
+            "evidence": "assigned to Traffic Court until she her transfer to the Domestic Relations Division in October 2021, where she has served ever since"
+          }
+        ],
+        "attorney_feedback": [
+          {
+            "sentiment": "positive",
+            "topic": "legal_knowledge",
+            "evidence": "Interviewees described her legal knowledge, diligence, sensitivity, and character as good"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "Interviewees described her legal knowledge, diligence, sensitivity, and character as good"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "temperament being a particular strong point"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "Interviewees described her legal knowledge, diligence, sensitivity, and character as good"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "temperament being a particular strong point"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "Interviewees described her legal knowledge, diligence, sensitivity, and character as good"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "temperament",
+            "evidence": "temperament being a particular strong point"
+          },
+          {
+            "sentiment": "positive",
+            "topic": "diligence",
+            "evidence": "Interviewees described her legal knowledge, diligence, sensitivity, and character as good"
+          }
+        ]
+      }
+    }
+  ]
+}
