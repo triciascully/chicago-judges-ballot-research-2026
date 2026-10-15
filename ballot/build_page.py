@@ -22,7 +22,7 @@ _WRAPPER = """<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Sourced profiles of the judges on the Cook County retention ballot.">
-<style>html{color-scheme:light dark}body{margin:0}img{max-width:100%}</style>
+<style>html{color-scheme:light}body{margin:0}img{max-width:100%}</style>
 </head>
 <body>
 {page}
