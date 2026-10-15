@@ -4,8 +4,10 @@ All text here comes from fixed templates filled with computed numbers or quotes 
 verbatim from the sources; no language model writes profile text. Each claim carries
 what it rests on (a quote, or a 95% range and sample size) so readers can check it.
 """
+import re
+
 from ballot.judges import metrics
-from ballot.judges.extract import flag_evidence
+from ballot.judges.extract import CRITICISM_PATTERN, flag_evidence, is_grounded, normalize
 
 # Plain-language labels for the background flags, in display order.
 BACKGROUND = {
@@ -14,6 +16,36 @@ BACKGROUND = {
     "represented_vulnerable_clients": "Represented children, poor clients, or people with disabilities",
     "treatment_court": "Has presided over a treatment court (mental health, drug, or veterans)",
 }
+
+
+# Topics for attorney feedback, assigned by wording rather than by the model, so the grid's
+# columns mean the same thing for every judge. A quote can fall under several topics.
+FEEDBACK_TOPICS = {
+    "Temperament": r"temperament|demeanor|patien|\bcalm\b|courteous|respectful|polite|even[- ]keeled|\bkind\b"
+                   r"|sensitiv|screaming|\brude\b",
+    "Legal knowledge": r"knowledge|legal ability|\babilit|research|well[- ]reasoned|analytical|\bsmart\b|intelligen",
+    "Fairness": r"\bfair|impartial|even[- ]?handed|treats? (all|everyone)|equal|unbiased|\bbias",
+    "Diligence": r"diligen|prepared|preparation|punctual|hard[- ]?working|efficien|timely|moved cases|\bslow",
+    "Integrity": r"integrity|honest|ethic|\bcharacter\b",
+    "Self-represented litigants": r"pro se|self[- ]represented|unrepresented",
+}
+
+
+def attorney_feedback(extraction: dict | None, text: str | None) -> dict[str, dict[str, list[str]]]:
+    """{topic: {"praise": [quotes], "criticism": [quotes]}} from verbatim ISBA feedback quotes."""
+    out = {topic: {"praise": [], "criticism": []} for topic in FEEDBACK_TOPICS}
+    if not extraction or not text:
+        return out
+    for item in extraction["attorney_feedback"]:
+        quote = item["evidence"]
+        if not is_grounded(quote, text):
+            continue
+        q = normalize(quote)
+        tone = "criticism" if item["sentiment"] != "positive" or re.search(CRITICISM_PATTERN, q) else "praise"
+        for topic, pattern in FEEDBACK_TOPICS.items():
+            if re.search(pattern, q) and quote not in out[topic][tone]:
+                out[topic][tone].append(quote)
+    return out
 
 
 def _pts(x: float) -> str:
@@ -86,6 +118,7 @@ def background_section(isba_text: str | None, extraction: dict | None, n_sentenc
         "criminal_court_experience": {"value": bool(basis), "basis": basis},
         "background": items,
         "attorney_criticism": evidence.get("has_criticism", []),
+        "attorney_feedback": attorney_feedback(extraction, isba_text),
         "isba_evaluation": isba_text,
     }
 
