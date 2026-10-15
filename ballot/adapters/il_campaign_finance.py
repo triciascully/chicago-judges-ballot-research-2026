@@ -88,16 +88,20 @@ def fetch_receipts(committee_ids: set[str], dest: Path, since: str) -> Path:
 
 # Donors whose occupation or employer looks like legal work. These are the contributions that
 # matter for independence questions, since lawyers can appear before the judge they fund.
-_LEGAL = re.compile(r"attorney|lawyer|\blaw\b|legal|counsel|llp|l\.l\.p|\bp\.?c\.?$|litigat|paralegal", re.I)
+_LEGAL = re.compile(r"attorney|lawyer|\blaw\b|legal|counsel|llp|l\.l\.p|\bp\.?c\.?$|litigat|paralegal|judge|court", re.I)
 
 
 def load_receipts(path: Path, committees: pd.DataFrame) -> pd.DataFrame:
     df = pd.read_csv(path, dtype=str).fillna("")
     df["amount"] = pd.to_numeric(df.Amount, errors="coerce").fillna(0.0)
     df["date"] = pd.to_datetime(df.RcvDate.str[:10], errors="coerce")
-    df["kind"] = df.D2Part.map(D2_PARTS).fillna("other")
+    df["kind"] = df.D2Part.str[:1].map(D2_PARTS).fillna("other")  # codes look like "1A"
     df["legal"] = df.Occupation.str.contains(_LEGAL) | df.Employer.str.contains(_LEGAL)
     return df.merge(committees[["committee_id", "judge"]], left_on="CommitteeID", right_on="committee_id")
+
+
+_NOT_EMPLOYERS = {"", "RETIRED", "NONE", "N/A", "NA", "SELF", "SELF EMPLOYED", "SELF-EMPLOYED", "HOMEMAKER",
+                  "NOT EMPLOYED", "UNEMPLOYED", "INFORMATION REQUESTED", "STUDENT"}
 
 
 def _org(employer: str) -> str:
@@ -108,31 +112,40 @@ def _org(employer: str) -> str:
 
 
 def judge_summary(receipts: pd.DataFrame, judge: str) -> dict:
-    """Totals for one judge. Names of individual donors are left out; employers stand in for
-    them, since the question is which firms and organizations fund a judge."""
+    """Totals for one judge's own committees. Individual donors' names are left out; employers
+    stand in for them, since the question is which firms and organizations fund a judge.
+
+    Illinois reports a donor's employer and occupation mainly for larger contributions, so
+    "from_legal" counts only donors who listed a legal job; "with_employer" says how much of
+    the money that covers."""
     r = receipts[receipts.judge == judge]
-    money = r[r.kind.isin(["individual", "transfer in", "other", "in-kind"])]
     given, surnames = name_parts(judge)
-    self_funded = r[(r.kind == "loan") | r.LastOnlyName.str.upper().isin({s.upper() for s in surnames})
-                    & r.FirstName.str.lower().str[:3].isin({g[:3] for g in given})]
-    individual = money[money.kind == "individual"]
-    employers = (individual[individual.Employer.str.strip() != ""]
-                 .assign(org=lambda d: d.Employer.map(_org))
-                 .groupby("org").agg(total=("amount", "sum"), donors=("amount", "size"),
-                                     legal=("legal", "max"))
+    is_self = (r.LastOnlyName.str.upper().isin({s.upper() for s in surnames})
+               & r.FirstName.str.lower().str[:3].isin({g[:3] for g in given}))
+    gifts = r[r.kind != "loan"]
+    from_others = gifts[~is_self.loc[gifts.index]]
+    self_funded = r[(r.kind == "loan") | is_self]
+    individual = from_others[from_others.kind == "individual"]
+    with_employer = individual[~individual.Employer.map(_org).isin(_NOT_EMPLOYERS)]
+    employers = (with_employer.assign(org=lambda d: d.Employer.map(_org))
+                 .groupby("org").agg(total=("amount", "sum"), donors=("amount", "size"), legal=("legal", "max"))
                  .sort_values("total", ascending=False))
-    orgs = (money[money.kind != "individual"].assign(org=lambda d: d.LastOnlyName.map(_org))
-            .groupby("org").amount.sum().sort_values(ascending=False))
+    # Organizations only: in-kind gifts from individuals carry a person's name, which stays out.
+    orgs = from_others[(from_others.kind != "individual") & (from_others.FirstName.str.strip() == "")]
+    organizations = (orgs.assign(org=lambda d: d.LastOnlyName.map(_org))
+                     .groupby("org").amount.sum().sort_values(ascending=False))
+    money = lambda d: round(float(d.amount.sum()), 2)
     return {
-        "total_raised": round(float(money.amount.sum()), 2),
-        "self_funded": round(float(self_funded.amount.sum()), 2),
-        "from_legal": round(float(individual[individual.legal].amount.sum()), 2),
-        "from_individuals": round(float(individual.amount.sum()), 2),
-        "from_organizations": round(float(money[money.kind != "individual"].amount.sum()), 2),
-        "n_contributions": int(len(money)),
+        "raised_from_others": money(from_others),
+        "self_funded": money(self_funded),
+        "from_individuals": money(individual),
+        "with_employer": money(with_employer),
+        "from_legal": money(with_employer[with_employer.legal]),
+        "from_organizations": money(from_others[from_others.kind != "individual"]),
+        "n_contributions": int(len(from_others)),
         "first": r.date.min().date().isoformat() if len(r) else None,
         "last": r.date.max().date().isoformat() if len(r) else None,
         "top_employers": [{"employer": k, "total": round(float(v.total), 2), "donors": int(v.donors),
                            "legal": bool(v.legal)} for k, v in employers.head(8).iterrows()],
-        "top_organizations": [{"name": k, "total": round(float(v), 2)} for k, v in orgs.head(5).items()],
+        "top_organizations": [{"name": k, "total": round(float(v), 2)} for k, v in organizations.head(5).items()],
     }

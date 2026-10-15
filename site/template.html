@@ -16,6 +16,7 @@
   --flag-soft: #f7e6dc;
   --quote: #f5f7fa;
   --series: #2a78d6;
+  --series-2: #eb6834;
   --other: #a3acb9;
   --display: "Bitter", Georgia, "Times New Roman", serif;
   --body: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -25,14 +26,14 @@
   :root:not([data-theme="light"]) {
     --paper: #0f141b; --card: #161d27; --ink: #e5e9ef; --muted: #9ba6b6; --rule: #2a3442;
     --accent: #8db0f0; --accent-soft: #1c2a42; --flag: #f29a6b; --flag-soft: #3a2418; --quote: #1b2330;
-    --series: #3987e5; --other: #56606f;
+    --series: #3987e5; --series-2: #d95926; --other: #56606f;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --paper: #0f141b; --card: #161d27; --ink: #e5e9ef; --muted: #9ba6b6; --rule: #2a3442;
   --accent: #8db0f0; --accent-soft: #1c2a42; --flag: #f29a6b; --flag-soft: #3a2418; --quote: #1b2330;
-  --series: #3987e5; --other: #56606f;
+  --series: #3987e5; --series-2: #d95926; --other: #56606f;
   color-scheme: dark;
 }
 
@@ -142,6 +143,12 @@ details.more > div { margin-top: 0.5rem; display: grid; gap: 0.5rem; }
 .mark i { display: block; }
 .mark .praise { width: 9px; height: 9px; border-radius: 50%; background: var(--series); }
 .mark .crit { width: 0; height: 0; border-left: 6px solid transparent; border-right: 6px solid transparent; border-bottom: 11px solid var(--flag); }
+.legend .k-others { background: var(--series); border-radius: 2px; }
+.legend .k-self { background: var(--series-2); border-radius: 2px; }
+.money { font-variant-numeric: tabular-nums; }
+.kv { display: grid; grid-template-columns: max-content 1fr; gap: 0.2rem 1rem; font-size: 0.92rem; }
+.kv dt { color: var(--muted); }
+.kv dd { margin: 0; font-variant-numeric: tabular-nums; }
 .legend .k-praise { background: var(--series); }
 .legend .k-crit { width: 0; height: 0; border-radius: 0; background: none; border-left: 6px solid transparent; border-right: 6px solid transparent; border-bottom: 11px solid var(--flag); }
 .method { display: grid; gap: 1rem; background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 1.25rem; }
@@ -210,6 +217,17 @@ footer { color: var(--muted); font-size: 0.85rem; display: grid; gap: 0.4rem; }
     <div class="fb-wrap" id="fb-wrap"><div class="tip" id="fb-tip" hidden></div></div>
   </section>
 
+  <section class="compare" id="campaign" aria-labelledby="campaign-h">
+    <h2 id="campaign-h">Campaign money</h2>
+    <p class="intro">What each judge's own campaign committee reported taking in since January 2020, from the Illinois State Board of Elections. Most of this money is from the 2020 elections, when many of these judges first won their seats. Judges running only for retention usually raise money together through the Committee for Retention of Judges in Cook County, which can't be split by judge, so a short or missing bar doesn't mean a judge raised nothing at all.</p>
+    <div class="legend" aria-hidden="true">
+      <span><i class="k-others"></i>Raised from others</span>
+      <span><i class="k-self"></i>Judge's own money (contributions and loans)</span>
+    </div>
+    <div class="chart" id="money"><div class="tip" id="money-tip" hidden></div></div>
+    <p class="note" id="money-note"></p>
+  </section>
+
   <section class="controls" aria-label="Find a judge">
     <input class="search" id="q" type="search" placeholder="Search by name, ballot number, or courtroom" autocomplete="off">
     <div class="filters">
@@ -232,12 +250,13 @@ footer { color: var(--muted); font-size: 0.85rem; display: grid; gap: 0.4rem; }
       <li><strong>Bar ratings</strong> come from the Alliance of Bar Associations (13 groups), the Illinois State Bar Association, and the Chicago Bar Association. Nearly every judge is rated Yes, so a No from any group stands out.</li>
       <li><strong>The attorney feedback grid</strong> sorts each quote from the ISBA evaluation into a topic by its wording. It shows what the evaluation mentions, not a score, and a blank cell means the evaluation didn't discuss that topic.</li>
       <li><strong>Background and attorney criticism</strong> are quotes from each judge's ISBA evaluation. A local AI model pulled them out, and code accepts a quote only if it appears word for word in the evaluation. Checked against 30 hand-labeled evaluations, it made no false claims; it occasionally misses an assignment.</li>
+      <li><strong>Campaign money</strong> comes from the Illinois State Board of Elections and covers each judge's own committee since 2020. The page shows totals and donors' employers but not individual donors' names.</li>
       <li><strong>Nothing here is an endorsement.</strong> The page shows what the records say. How to weigh them is up to you.</li>
     </ul>
   </section>
 
   <footer>
-    <div>Sources: <a href="" data-src="sao">Cook County State's Attorney sentencing data</a> · <a href="https://www.isba.org/judicial-elections/counties/cook">ISBA evaluations</a> · <a href="https://www.chicagobar.org/CBA/CBA/JEC/Judicial_Voters_Guide.aspx">CBA voters guide</a> · <a href="https://www.voteforjudges.org/">Alliance ratings</a>. For reporting on these judges, see the <a href="https://2026retention.injusticewatch.org/">Injustice Watch guide</a>.</div>
+    <div>Sources: <a href="" data-src="sao">Cook County State's Attorney sentencing data</a> · <a href="https://www.isba.org/judicial-elections/counties/cook">ISBA evaluations</a> · <a href="https://www.chicagobar.org/CBA/CBA/JEC/Judicial_Voters_Guide.aspx">CBA voters guide</a> · <a href="https://www.voteforjudges.org/">Alliance ratings</a> · <a href="https://elections.il.gov/campaigndisclosuredatafiles/">Illinois State Board of Elections</a>. For reporting on these judges, see the <a href="https://2026retention.injusticewatch.org/">Injustice Watch guide</a>.</div>
     <div>Built <span data-built></span>. Independent volunteer project, not affiliated with any campaign, court, or bar association.</div>
   </footer>
 </div>
@@ -302,6 +321,24 @@ footer { color: var(--muted); font-size: 0.85rem; display: grid; gap: 0.4rem; }
       </div></details>`;
   }
 
+  const usd = (x) => "$" + Math.round(x).toLocaleString();
+  function campaignHTML(c) {
+    if (!c || (c.raised_from_others === 0 && c.self_funded === 0))
+      return '<p class="note">No contributions reported to this judge\'s own committee since 2020. Retention campaigns usually run through a joint committee for all retention judges.</p>';
+    const emp = c.top_employers.filter((e) => e.total >= 250).slice(0, 5);
+    const org = c.top_organizations.slice(0, 3);
+    return `
+      <dl class="kv">
+        <dt>Raised from others</dt><dd>${usd(c.raised_from_others)} (${c.n_contributions} contributions, ${esc(c.first)} to ${esc(c.last)})</dd>
+        <dt>Judge's own money</dt><dd>${usd(c.self_funded)}</dd>
+        <dt>From donors listing legal jobs</dt><dd>${usd(c.from_legal)} of the ${usd(c.with_employer)} whose donors listed an employer</dd>
+        <dt>From organizations</dt><dd>${usd(c.from_organizations)}</dd>
+      </dl>
+      ${emp.length ? `<p class="note">Top employers of individual donors: ${emp.map((e) => `${esc(e.employer)} (${usd(e.total)})`).join(", ")}.</p>` : ""}
+      ${org.length ? `<p class="note">Top organizations: ${org.map((o) => `${esc(o.name)} (${usd(o.total)})`).join(", ")}.</p>` : ""}
+      <p class="note">Illinois reports a donor's employer mainly for larger contributions, so legal-job totals cover only those donors.</p>`;
+  }
+
   function profileHTML(j) {
     const ratings = j.bar_ratings.map((r) => `
       <div class="rating"><b>${esc(r.source)}</b><span>${esc(r.rating)}${r.bars_saying_no ? `: ${esc(r.bars_saying_no)}` : ""}</span></div>`).join("");
@@ -320,6 +357,7 @@ footer { color: var(--muted); font-size: 0.85rem; display: grid; gap: 0.4rem; }
         <div class="section"><h3>Bar association ratings</h3>${ratings || '<p class="note">Not found in any bar rating source. Check your sample ballot to confirm this judge is listed.</p>'}</div>
         <div class="section"><h3>Sentencing record</h3>${sentencingHTML(j.sentencing)}</div>
         <div class="section"><h3>Attorney criticism (ISBA)</h3>${crit}</div>
+        <div class="section"><h3>Campaign money since 2020</h3>${campaignHTML(j.campaign)}</div>
         <div class="section"><h3>Criminal court experience</h3>${crimHTML}</div>
         <div class="section"><h3>Career background (ISBA)</h3>${bg}</div>
         ${j.isba_evaluation ? `<details class="more"><summary>Read the full ISBA evaluation</summary><div><p>${esc(j.isba_evaluation)}</p></div></details>` : ""}
@@ -650,5 +688,64 @@ footer { color: var(--muted); font-size: 0.85rem; display: grid; gap: 0.4rem; }
   }
   document.getElementById("fb-crit").addEventListener("change", () => { hideTip(); render(); });
   render();
+})();
+</script>
+<script>
+(function () {
+  const DATA = JSON.parse(document.getElementById("data").textContent);
+  const NS = "http://www.w3.org/2000/svg";
+  const el = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
+  const usd = (x) => "$" + Math.round(x).toLocaleString();
+  const compact = (x) => x >= 1000 ? "$" + (x / 1000).toFixed(x >= 10000 ? 0 : 1) + "K" : "$" + Math.round(x);
+  const rows = DATA.judges.filter((j) => j.campaign && j.campaign.raised_from_others + j.campaign.self_funded > 0)
+    .sort((a, b) => (b.campaign.raised_from_others + b.campaign.self_funded) - (a.campaign.raised_from_others + a.campaign.self_funded));
+  const host = document.getElementById("money"), tip = document.getElementById("money-tip");
+  const lastName = (n) => n.replace(/,? (Jr\.?|III|II)$/i, "").split(" ").pop();
+
+  function showTip(j, x, y) {
+    const c = j.campaign; tip.replaceChildren();
+    const add = (cls, t) => { const s = document.createElement(cls === "h" ? "strong" : "span"); if (cls && cls !== "h") s.className = cls; s.textContent = t; tip.appendChild(s); };
+    add("h", `${j.name}${j.ballot_number ? "  ·  ballot #" + j.ballot_number : ""}`);
+    add("v", `Raised from others: ${usd(c.raised_from_others)}`);
+    add("v", `Judge's own money: ${usd(c.self_funded)}`);
+    add("m", `From donors listing legal jobs: ${usd(c.from_legal)} of ${usd(c.with_employer)} with an employer listed`);
+    add("m", "Click to open this judge's profile");
+    tip.hidden = false;
+    const w = tip.offsetWidth; tip.style.left = Math.min(Math.max(0, x + 12), host.clientWidth - w) + "px"; tip.style.top = (y + 14) + "px";
+  }
+  const hide = () => { tip.hidden = true; };
+
+  function draw() {
+    host.querySelector("svg")?.remove(); hide();
+    const W = Math.max(320, host.clientWidth), rowH = 24, labelW = Math.min(170, W * 0.36), m = { t: 4, r: 56, b: 26 };
+    const H = m.t + rows.length * rowH + m.b, iw = W - labelW - m.r;
+    const max = Math.max(...rows.map((j) => j.campaign.raised_from_others + j.campaign.self_funded));
+    const X = (v) => (v / max) * iw;
+    const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": `Campaign money for ${rows.length} judges since 2020` });
+    const step = [5000, 10000, 25000, 50000, 100000].find((s) => max / s <= 6);
+    for (let t = 0; t <= max; t += step) { el("line", { class: t ? "grid" : "zero", x1: labelW + X(t), x2: labelW + X(t), y1: m.t, y2: m.t + rows.length * rowH }, svg); el("text", { x: labelW + X(t), y: H - 8, "text-anchor": "middle" }, svg).textContent = compact(t); }
+    rows.forEach((j, i) => {
+      const c = j.campaign, y = m.t + i * rowH + 5, h = rowH - 10;
+      const g = el("g", { tabindex: "0", role: "button", "aria-label": `${j.name}: raised ${usd(c.raised_from_others)} from others and ${usd(c.self_funded)} of own money` }, svg);
+      g.style.cursor = "pointer";
+      el("rect", { x: 0, y: y - 5, width: W, height: rowH, fill: "transparent" }, g);
+      el("text", { class: "lbl", x: labelW - 10, y: y + h - 3, "text-anchor": "end" }, g).textContent = `${j.ballot_number ? "#" + j.ballot_number + " " : ""}${lastName(j.name)}`;
+      const a = X(c.raised_from_others), b = X(c.self_funded), gap = a > 0 && b > 0 ? 2 : 0;
+      if (a > 0) el("rect", { x: labelW, y, width: Math.max(1, a - gap / 2), height: h, rx: b > 0 ? 0 : 3, fill: "var(--series)" }, g);
+      if (b > 0) el("rect", { x: labelW + a + gap / 2, y, width: Math.max(1, b - gap / 2), height: h, rx: 3, fill: "var(--series-2)" }, g);
+      el("text", { x: labelW + a + b + 6, y: y + h - 3 }, g).textContent = compact(c.raised_from_others + c.self_funded);
+      const show = () => { const s = host.clientWidth / W; showTip(j, (labelW + a + b) * s, (y + h) * s); };
+      g.addEventListener("pointerenter", show); g.addEventListener("focus", show);
+      g.addEventListener("pointerleave", hide); g.addEventListener("blur", hide);
+      const open = () => { const t = document.getElementById("b" + j.ballot_number); if (t) { t.hidden = false; t.open = true; t.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }); } };
+      g.addEventListener("click", open);
+      g.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(); } });
+    });
+    host.prepend(svg);
+  }
+  const none = DATA.judges.length - rows.length;
+  document.getElementById("money-note").textContent = `${rows.length} judges reported contributions to their own committees since 2020. The other ${none} reported none, usually because they last campaigned for retention through the joint committee. Each judge's profile lists totals and top contributing employers; individual donors aren't named here.`;
+  let raf; addEventListener("resize", () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(draw); });
+  draw();
 })();
 </script>

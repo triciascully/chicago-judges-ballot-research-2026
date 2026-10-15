@@ -48,7 +48,7 @@ def page_data(report: dict) -> dict:
                             for r in j["bar_ratings"]],
             "criminal_court_experience": j["criminal_court_experience"],
             "background": j["background"], "attorney_criticism": j["attorney_criticism"],
-            "attorney_feedback": j["attorney_feedback"],
+            "attorney_feedback": j["attorney_feedback"], "campaign": j.get("campaign"),
             "isba_evaluation": j["isba_evaluation"], "sentencing": s,
         })
     return {"source": report["source"], "since": report["since"], "data_through": report["data_through"],

@@ -88,7 +88,8 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
-      }
+      },
+      "campaign": null
     },
     {
       "name": "Julie B. Aimen",
@@ -175,6 +176,24 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
+      },
+      "campaign": {
+        "raised_from_others": 6950.0,
+        "self_funded": 6700.54,
+        "from_individuals": 6450.0,
+        "with_employer": 0.0,
+        "from_legal": 0.0,
+        "from_organizations": 500.0,
+        "n_contributions": 21,
+        "first": "2020-01-23",
+        "last": "2020-06-18",
+        "top_employers": [],
+        "top_organizations": [
+          {
+            "name": "INT'L UNION OF ELEVATOR CONSTRUCTORS POL COMTE",
+            "total": 500.0
+          }
+        ]
       }
     },
     {
@@ -249,7 +268,8 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
-      }
+      },
+      "campaign": null
     },
     {
       "name": "Erin Haggerty Antonietti",
@@ -341,6 +361,24 @@
         "status": "no record",
         "n_sentences": 4,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
+      },
+      "campaign": {
+        "raised_from_others": 5085.76,
+        "self_funded": 0.0,
+        "from_individuals": 4650.0,
+        "with_employer": 0.0,
+        "from_legal": 0.0,
+        "from_organizations": 435.76,
+        "n_contributions": 8,
+        "first": "2020-02-07",
+        "last": "2020-03-07",
+        "top_employers": [],
+        "top_organizations": [
+          {
+            "name": "13TH WARD DEMOCRATIC ORG",
+            "total": 435.76
+          }
+        ]
       }
     },
     {
@@ -415,7 +453,8 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
-      }
+      },
+      "campaign": null
     },
     {
       "name": "Laura Ayala-Gonzalez",
@@ -562,6 +601,36 @@
             }
           }
         }
+      },
+      "campaign": {
+        "raised_from_others": 5425.0,
+        "self_funded": 10000.0,
+        "from_individuals": 3300.0,
+        "with_employer": 0.0,
+        "from_legal": 0.0,
+        "from_organizations": 2125.0,
+        "n_contributions": 11,
+        "first": "2020-01-23",
+        "last": "2020-12-14",
+        "top_employers": [],
+        "top_organizations": [
+          {
+            "name": "LIUNA",
+            "total": 1000.0
+          },
+          {
+            "name": "DEMOCRATIC PARTY OF EVANSTON",
+            "total": 550.0
+          },
+          {
+            "name": "PURPLE PAC",
+            "total": 375.0
+          },
+          {
+            "name": "SWANSON FRIENDS FOR KARIN ELIZABETH",
+            "total": 200.0
+          }
+        ]
       }
     },
     {
@@ -637,7 +706,8 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
-      }
+      },
+      "campaign": null
     },
     {
       "name": "Krista D. Butler",
@@ -714,6 +784,19 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
+      },
+      "campaign": {
+        "raised_from_others": 500.0,
+        "self_funded": 0.0,
+        "from_individuals": 500.0,
+        "with_employer": 0.0,
+        "from_legal": 0.0,
+        "from_organizations": 0.0,
+        "n_contributions": 2,
+        "first": "2020-01-06",
+        "last": "2020-01-28",
+        "top_employers": [],
+        "top_organizations": []
       }
     },
     {
@@ -876,7 +959,8 @@
             "hi": 0.20543874570525722
           }
         }
-      }
+      },
+      "campaign": null
     },
     {
       "name": "Thomas J. Carroll",
@@ -977,7 +1061,8 @@
         "status": "no record",
         "n_sentences": 2,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
-      }
+      },
+      "campaign": null
     },
     {
       "name": "Patrick K. Coughlin",
@@ -1138,7 +1223,8 @@
             "hi": 0.15315197742368175
           }
         }
-      }
+      },
+      "campaign": null
     },
     {
       "name": "Thomas M. Cushing",
@@ -1226,6 +1312,79 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
+      },
+      "campaign": {
+        "raised_from_others": 59005.36,
+        "self_funded": 11500.0,
+        "from_individuals": 20150.0,
+        "with_employer": 9450.0,
+        "from_legal": 7250.0,
+        "from_organizations": 38855.36,
+        "n_contributions": 50,
+        "first": "2020-01-06",
+        "last": "2020-04-08",
+        "top_employers": [
+          {
+            "employer": "POWER ROGERS & SMITH",
+            "total": 3000.0,
+            "donors": 2,
+            "legal": true
+          },
+          {
+            "employer": "COOK COUNTY",
+            "total": 1500.0,
+            "donors": 1,
+            "legal": true
+          },
+          {
+            "employer": "ACQUIRENT",
+            "total": 1200.0,
+            "donors": 2,
+            "legal": false
+          },
+          {
+            "employer": "BRAUVIN REAL ESTATE",
+            "total": 1000.0,
+            "donors": 1,
+            "legal": false
+          },
+          {
+            "employer": "CUSHING LAW OFFICES",
+            "total": 1000.0,
+            "donors": 1,
+            "legal": true
+          },
+          {
+            "employer": "MILLER JOHNSON",
+            "total": 1000.0,
+            "donors": 1,
+            "legal": true
+          },
+          {
+            "employer": "STATE OF ILLINOIS",
+            "total": 750.0,
+            "donors": 2,
+            "legal": true
+          }
+        ],
+        "top_organizations": [
+          {
+            "name": "STRATEGY GROUP",
+            "total": 35641.62
+          },
+          {
+            "name": "FRANKLIN DISPLAY GROUP",
+            "total": 850.0
+          },
+          {
+            "name": "CUSHING COMPANY",
+            "total": 800.0
+          },
+          {
+            "name": "CITIZENS FOR CAROLINE",
+            "total": 300.0
+          }
+        ]
       }
     },
     {
@@ -1303,6 +1462,62 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
+      },
+      "campaign": {
+        "raised_from_others": 21160.0,
+        "self_funded": 85050.0,
+        "from_individuals": 21160.0,
+        "with_employer": 10400.0,
+        "from_legal": 7750.0,
+        "from_organizations": 0.0,
+        "n_contributions": 47,
+        "first": "2020-01-13",
+        "last": "2020-03-31",
+        "top_employers": [
+          {
+            "employer": "MAYER BROWN",
+            "total": 5000.0,
+            "donors": 1,
+            "legal": true
+          },
+          {
+            "employer": "BRESSLER GROUP",
+            "total": 1500.0,
+            "donors": 1,
+            "legal": false
+          },
+          {
+            "employer": "HALL PRANGLE SCHOONVELD",
+            "total": 1000.0,
+            "donors": 1,
+            "legal": true
+          },
+          {
+            "employer": "JONES DAY",
+            "total": 1000.0,
+            "donors": 1,
+            "legal": true
+          },
+          {
+            "employer": "COOK COUNTY IL",
+            "total": 750.0,
+            "donors": 2,
+            "legal": true
+          },
+          {
+            "employer": "PRO SOURCE",
+            "total": 600.0,
+            "donors": 2,
+            "legal": false
+          },
+          {
+            "employer": "BERKSHIRE HATHAWAY",
+            "total": 550.0,
+            "donors": 2,
+            "legal": false
+          }
+        ],
+        "top_organizations": []
       }
     },
     {
@@ -1387,6 +1602,43 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
+      },
+      "campaign": {
+        "raised_from_others": 11680.0,
+        "self_funded": 44617.0,
+        "from_individuals": 2300.0,
+        "with_employer": 300.0,
+        "from_legal": 0.0,
+        "from_organizations": 9380.0,
+        "n_contributions": 14,
+        "first": "2020-01-07",
+        "last": "2020-08-14",
+        "top_employers": [
+          {
+            "employer": "NORTHERN TRUST",
+            "total": 300.0,
+            "donors": 1,
+            "legal": false
+          }
+        ],
+        "top_organizations": [
+          {
+            "name": "WILLIAM DAVIS FOR STATE REPRESENTATIVE",
+            "total": 3000.0
+          },
+          {
+            "name": "FRIENDS OF ELGIE SIMS JR",
+            "total": 1000.0
+          },
+          {
+            "name": "LIUNA CHICAGO LABORERS' DISTRICT COUNCIL POLITICAL ACTION COMMITTEE",
+            "total": 1000.0
+          },
+          {
+            "name": "PAINTERS DISTRICT COUNCIL #14 POLITICAL ACTION FUND",
+            "total": 500.0
+          }
+        ]
       }
     },
     {
@@ -1476,6 +1728,43 @@
         "status": "no record",
         "n_sentences": 2,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
+      },
+      "campaign": {
+        "raised_from_others": 24776.0,
+        "self_funded": 70000.0,
+        "from_individuals": 23776.0,
+        "with_employer": 4001.0,
+        "from_legal": 4001.0,
+        "from_organizations": 1000.0,
+        "n_contributions": 39,
+        "first": "2020-01-03",
+        "last": "2020-03-17",
+        "top_employers": [
+          {
+            "employer": "SPERLING & SLATER",
+            "total": 2000.0,
+            "donors": 1,
+            "legal": true
+          },
+          {
+            "employer": "DLA PIPER",
+            "total": 1001.0,
+            "donors": 1,
+            "legal": true
+          },
+          {
+            "employer": "PECK RITCHEY",
+            "total": 1000.0,
+            "donors": 1,
+            "legal": true
+          }
+        ],
+        "top_organizations": [
+          {
+            "name": "LIUNA CHICAGO LABORERS\u0092 DISTRICT COUNCIL PAC",
+            "total": 1000.0
+          }
+        ]
       }
     },
     {
@@ -1561,6 +1850,77 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
+      },
+      "campaign": {
+        "raised_from_others": 65673.42,
+        "self_funded": 105000.0,
+        "from_individuals": 50025.0,
+        "with_employer": 11500.0,
+        "from_legal": 0.0,
+        "from_organizations": 15648.42,
+        "n_contributions": 79,
+        "first": "2020-01-16",
+        "last": "2021-01-26",
+        "top_employers": [
+          {
+            "employer": "CAVAN CAPITAL MANAGEMENT",
+            "total": 5000.0,
+            "donors": 1,
+            "legal": false
+          },
+          {
+            "employer": "CORE MECHANICAL",
+            "total": 2500.0,
+            "donors": 1,
+            "legal": false
+          },
+          {
+            "employer": "CARE MECHANICAL",
+            "total": 1000.0,
+            "donors": 1,
+            "legal": false
+          },
+          {
+            "employer": "CAVAN CAPITAL",
+            "total": 1000.0,
+            "donors": 1,
+            "legal": false
+          },
+          {
+            "employer": "DERRIG BUILDERS & MANAGEMENT",
+            "total": 1000.0,
+            "donors": 1,
+            "legal": false
+          },
+          {
+            "employer": "ONWARD HEALTHCARE CONSULTING",
+            "total": 1000.0,
+            "donors": 1,
+            "legal": false
+          }
+        ],
+        "top_organizations": [
+          {
+            "name": "POTENZA PRODUCTIONS",
+            "total": 5700.0
+          },
+          {
+            "name": "IUOE LOCAL 399 POLITICAL EDUCATION FUND",
+            "total": 5000.0
+          },
+          {
+            "name": "PERSONAL PAC",
+            "total": 2000.0
+          },
+          {
+            "name": "LIUNA CHICAGO LABORERS DISTRICT COUNCIL PAC",
+            "total": 1000.0
+          },
+          {
+            "name": "DEMOCRATS OF NORTHFIELD TOWNSHIP",
+            "total": 998.42
+          }
+        ]
       }
     },
     {
@@ -1638,7 +1998,8 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
-      }
+      },
+      "campaign": null
     },
     {
       "name": "Megan E. Goldish",
@@ -1721,7 +2082,8 @@
         "status": "no record",
         "n_sentences": 4,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
-      }
+      },
+      "campaign": null
     },
     {
       "name": "Jonathan Green",
@@ -1807,6 +2169,51 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
+      },
+      "campaign": {
+        "raised_from_others": 7130.5,
+        "self_funded": 52968.29,
+        "from_individuals": 5401.0,
+        "with_employer": 3001.0,
+        "from_legal": 2000.0,
+        "from_organizations": 1729.5,
+        "n_contributions": 18,
+        "first": "2020-01-03",
+        "last": "2026-05-18",
+        "top_employers": [
+          {
+            "employer": "ROMANUCCI & BLANDIN",
+            "total": 2000.0,
+            "donors": 2,
+            "legal": true
+          },
+          {
+            "employer": "PECK RITCHEY",
+            "total": 1000.0,
+            "donors": 1,
+            "legal": false
+          },
+          {
+            "employer": "VORNADO REALTY TRUST",
+            "total": 1.0,
+            "donors": 1,
+            "legal": false
+          }
+        ],
+        "top_organizations": [
+          {
+            "name": "LIUNA CHICAGO LABORERS' DISTRICT COUNCIL POLITICAL ACTION COMMITTEE",
+            "total": 1000.0
+          },
+          {
+            "name": "CITIZENS FOR TUNNEY",
+            "total": 500.0
+          },
+          {
+            "name": "ANN SATHERS",
+            "total": 229.5
+          }
+        ]
       }
     },
     {
@@ -1973,7 +2380,8 @@
             "hi": 0.15483575692465798
           }
         }
-      }
+      },
+      "campaign": null
     },
     {
       "name": "Sheree D. Henry",
@@ -2100,6 +2508,19 @@
           "likely_specialty_court": true,
           "prison_by_race": {}
         }
+      },
+      "campaign": {
+        "raised_from_others": 2838.0,
+        "self_funded": 60527.0,
+        "from_individuals": 2838.0,
+        "with_employer": 0.0,
+        "from_legal": 0.0,
+        "from_organizations": 0.0,
+        "n_contributions": 8,
+        "first": "2020-01-04",
+        "last": "2020-03-25",
+        "top_employers": [],
+        "top_organizations": []
       }
     },
     {
@@ -2264,7 +2685,8 @@
             "hi": 0.12299878743905503
           }
         }
-      }
+      },
+      "campaign": null
     },
     {
       "name": "Diana L. Kenworthy",
@@ -2436,7 +2858,8 @@
             "hi": 0.2466520674657716
           }
         }
-      }
+      },
+      "campaign": null
     },
     {
       "name": "Robert D. Kuzas",
@@ -2572,7 +2995,8 @@
             }
           }
         }
-      }
+      },
+      "campaign": null
     },
     {
       "name": "Anthony C. Kyriakopoulos",
@@ -2657,7 +3081,8 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
-      }
+      },
+      "campaign": null
     },
     {
       "name": "John J. Mahoney III",
@@ -2710,7 +3135,8 @@
         "status": "no record",
         "n_sentences": 8,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
-      }
+      },
+      "campaign": null
     },
     {
       "name": "Daniel E. Maloney",
@@ -2861,6 +3287,19 @@
             }
           }
         }
+      },
+      "campaign": {
+        "raised_from_others": 1500.0,
+        "self_funded": 0.0,
+        "from_individuals": 1500.0,
+        "with_employer": 0.0,
+        "from_legal": 0.0,
+        "from_organizations": 0.0,
+        "n_contributions": 4,
+        "first": "2021-06-30",
+        "last": "2021-06-30",
+        "top_employers": [],
+        "top_organizations": []
       }
     },
     {
@@ -2936,7 +3375,8 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
-      }
+      },
+      "campaign": null
     },
     {
       "name": "Mary C. Marubio",
@@ -3025,6 +3465,79 @@
         "status": "no record",
         "n_sentences": 2,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
+      },
+      "campaign": {
+        "raised_from_others": 53254.64,
+        "self_funded": 5100.0,
+        "from_individuals": 47050.0,
+        "with_employer": 9700.0,
+        "from_legal": 9700.0,
+        "from_organizations": 6204.64,
+        "n_contributions": 105,
+        "first": "2020-01-06",
+        "last": "2020-03-13",
+        "top_employers": [
+          {
+            "employer": "COOK COUNTY CIRCUIT COURT",
+            "total": 3500.0,
+            "donors": 1,
+            "legal": true
+          },
+          {
+            "employer": "STATE OF ILLINOIS",
+            "total": 1350.0,
+            "donors": 4,
+            "legal": true
+          },
+          {
+            "employer": "BLEGEN & GARVEY",
+            "total": 1100.0,
+            "donors": 1,
+            "legal": true
+          },
+          {
+            "employer": "LAW OFFICES OF STEPHANIE K NATHANSON",
+            "total": 1000.0,
+            "donors": 1,
+            "legal": true
+          },
+          {
+            "employer": "MERTES & MERTES",
+            "total": 1000.0,
+            "donors": 1,
+            "legal": true
+          },
+          {
+            "employer": "PROFIT LAWS",
+            "total": 1000.0,
+            "donors": 1,
+            "legal": true
+          },
+          {
+            "employer": "EDELSON",
+            "total": 750.0,
+            "donors": 1,
+            "legal": true
+          }
+        ],
+        "top_organizations": [
+          {
+            "name": "LAKEVIEW STRATEGY GROUP",
+            "total": 3290.0
+          },
+          {
+            "name": "ILLINOIS JUSTICE PAC",
+            "total": 1000.0
+          },
+          {
+            "name": "FRIENDS OF DEBRA SHORE",
+            "total": 500.0
+          },
+          {
+            "name": "CITIZENS FOR TUNNEY",
+            "total": 200.0
+          }
+        ]
       }
     },
     {
@@ -3099,6 +3612,28 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
+      },
+      "campaign": {
+        "raised_from_others": 4558.39,
+        "self_funded": 0.0,
+        "from_individuals": 3050.0,
+        "with_employer": 0.0,
+        "from_legal": 0.0,
+        "from_organizations": 1508.39,
+        "n_contributions": 12,
+        "first": "2020-02-26",
+        "last": "2020-05-11",
+        "top_employers": [],
+        "top_organizations": [
+          {
+            "name": "LIUNA CHICAGO LABORER'S DISTRICT COUNCIL POLITICAL ACTION COMMITTEE",
+            "total": 1000.0
+          },
+          {
+            "name": "EFFECTV",
+            "total": 508.39
+          }
+        ]
       }
     },
     {
@@ -3174,7 +3709,8 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
-      }
+      },
+      "campaign": null
     },
     {
       "name": "Maura McMahon Zeller",
@@ -3263,6 +3799,47 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
+      },
+      "campaign": {
+        "raised_from_others": 12927.0,
+        "self_funded": 29685.64,
+        "from_individuals": 6250.0,
+        "with_employer": 150.0,
+        "from_legal": 150.0,
+        "from_organizations": 6677.0,
+        "n_contributions": 33,
+        "first": "2020-01-08",
+        "last": "2020-09-22",
+        "top_employers": [
+          {
+            "employer": "DYKEMA",
+            "total": 150.0,
+            "donors": 1,
+            "legal": true
+          }
+        ],
+        "top_organizations": [
+          {
+            "name": "IBEW LOCAL 134 PAC",
+            "total": 1500.0
+          },
+          {
+            "name": "MCMAHON FRIENDS OF EAMON",
+            "total": 1477.0
+          },
+          {
+            "name": "LIUNA",
+            "total": 1000.0
+          },
+          {
+            "name": "CHICAGO & COOK COUNTY BUILDING TRADES COUNCIL",
+            "total": 500.0
+          },
+          {
+            "name": "SPRINKLER FITTERS LOCAL 281",
+            "total": 500.0
+          }
+        ]
       }
     },
     {
@@ -3353,6 +3930,32 @@
         "status": "no record",
         "n_sentences": 11,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
+      },
+      "campaign": {
+        "raised_from_others": 16144.42,
+        "self_funded": 0.0,
+        "from_individuals": 14716.42,
+        "with_employer": 7466.42,
+        "from_legal": 6466.42,
+        "from_organizations": 1428.0,
+        "n_contributions": 20,
+        "first": "2020-01-15",
+        "last": "2020-03-09",
+        "top_employers": [
+          {
+            "employer": "COOK COUNTY",
+            "total": 6466.42,
+            "donors": 4,
+            "legal": true
+          },
+          {
+            "employer": "ORLAND PARK",
+            "total": 1000.0,
+            "donors": 1,
+            "legal": false
+          }
+        ],
+        "top_organizations": []
       }
     },
     {
@@ -3438,6 +4041,19 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
+      },
+      "campaign": {
+        "raised_from_others": 0.0,
+        "self_funded": 14129.58,
+        "from_individuals": 0.0,
+        "with_employer": 0.0,
+        "from_legal": 0.0,
+        "from_organizations": 0.0,
+        "n_contributions": 0,
+        "first": "2020-10-13",
+        "last": "2020-12-02",
+        "top_employers": [],
+        "top_organizations": []
       }
     },
     {
@@ -3538,6 +4154,24 @@
         "status": "no record",
         "n_sentences": 29,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
+      },
+      "campaign": {
+        "raised_from_others": 7450.0,
+        "self_funded": 11510.0,
+        "from_individuals": 6450.0,
+        "with_employer": 0.0,
+        "from_legal": 0.0,
+        "from_organizations": 1000.0,
+        "n_contributions": 6,
+        "first": "2020-01-08",
+        "last": "2020-03-12",
+        "top_employers": [],
+        "top_organizations": [
+          {
+            "name": "LIUNA",
+            "total": 1000.0
+          }
+        ]
       }
     },
     {
@@ -3621,7 +4255,8 @@
         "status": "no record",
         "n_sentences": 3,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
-      }
+      },
+      "campaign": null
     },
     {
       "name": "John G. Mulroe",
@@ -3721,6 +4356,24 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
+      },
+      "campaign": {
+        "raised_from_others": 1750.0,
+        "self_funded": 0.0,
+        "from_individuals": 0.0,
+        "with_employer": 0.0,
+        "from_legal": 0.0,
+        "from_organizations": 1750.0,
+        "n_contributions": 1,
+        "first": "2020-07-10",
+        "last": "2020-07-10",
+        "top_employers": [],
+        "top_organizations": [
+          {
+            "name": "LADUZINSKI & ASSOCIATES",
+            "total": 1750.0
+          }
+        ]
       }
     },
     {
@@ -3876,6 +4529,24 @@
             }
           }
         }
+      },
+      "campaign": {
+        "raised_from_others": 8500.0,
+        "self_funded": 25228.0,
+        "from_individuals": 7600.0,
+        "with_employer": 0.0,
+        "from_legal": 0.0,
+        "from_organizations": 900.0,
+        "n_contributions": 25,
+        "first": "2020-01-15",
+        "last": "2020-03-08",
+        "top_employers": [],
+        "top_organizations": [
+          {
+            "name": "CARPETLAND USA",
+            "total": 300.0
+          }
+        ]
       }
     },
     {
@@ -3955,7 +4626,8 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
-      }
+      },
+      "campaign": null
     },
     {
       "name": "Eileen M. O\u2019Connor",
@@ -4035,6 +4707,26 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
+      },
+      "campaign": {
+        "raised_from_others": 14633.42,
+        "self_funded": 0.0,
+        "from_individuals": 11300.0,
+        "with_employer": 1000.0,
+        "from_legal": 0.0,
+        "from_organizations": 3333.42,
+        "n_contributions": 36,
+        "first": "2020-01-10",
+        "last": "2020-03-08",
+        "top_employers": [
+          {
+            "employer": "ROCKFORD ANESTHESIOLOGISTS ASSOCIATED",
+            "total": 1000.0,
+            "donors": 1,
+            "legal": false
+          }
+        ],
+        "top_organizations": []
       }
     },
     {
@@ -4122,6 +4814,43 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
+      },
+      "campaign": {
+        "raised_from_others": 7399.2,
+        "self_funded": 62661.94,
+        "from_individuals": 5399.2,
+        "with_employer": 549.47,
+        "from_legal": 549.47,
+        "from_organizations": 2000.0,
+        "n_contributions": 20,
+        "first": "2020-01-03",
+        "last": "2020-04-07",
+        "top_employers": [
+          {
+            "employer": "STATE OF ILLINOIS",
+            "total": 549.47,
+            "donors": 2,
+            "legal": true
+          }
+        ],
+        "top_organizations": [
+          {
+            "name": "LIUNA CHICAGO LABORERS' DISTRICT COUNCIL PAC",
+            "total": 1000.0
+          },
+          {
+            "name": "UNITY PARTY OF BLOOM TOWNSHIP",
+            "total": 500.0
+          },
+          {
+            "name": "FRIENDS OF SHEILA CHALMERS CURRIN",
+            "total": 250.0
+          },
+          {
+            "name": "OPUS",
+            "total": 250.0
+          }
+        ]
       }
     },
     {
@@ -4200,7 +4929,8 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
-      }
+      },
+      "campaign": null
     },
     {
       "name": "Joan E. Powell",
@@ -4281,7 +5011,8 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
-      }
+      },
+      "campaign": null
     },
     {
       "name": "Jill Rose Quinn",
@@ -4355,6 +5086,31 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
+      },
+      "campaign": {
+        "raised_from_others": 7250.0,
+        "self_funded": 0.0,
+        "from_individuals": 6750.0,
+        "with_employer": 1000.0,
+        "from_legal": 0.0,
+        "from_organizations": 500.0,
+        "n_contributions": 10,
+        "first": "2020-01-08",
+        "last": "2020-03-16",
+        "top_employers": [
+          {
+            "employer": "CHICAGO PUBLIC SCHOOLS",
+            "total": 1000.0,
+            "donors": 1,
+            "legal": false
+          }
+        ],
+        "top_organizations": [
+          {
+            "name": "LGBTQ VICTORY FUND",
+            "total": 500.0
+          }
+        ]
       }
     },
     {
@@ -4429,6 +5185,32 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
+      },
+      "campaign": {
+        "raised_from_others": 24400.0,
+        "self_funded": 4000.0,
+        "from_individuals": 1400.0,
+        "with_employer": 0.0,
+        "from_legal": 0.0,
+        "from_organizations": 23000.0,
+        "n_contributions": 8,
+        "first": "2020-01-23",
+        "last": "2020-07-27",
+        "top_employers": [],
+        "top_organizations": [
+          {
+            "name": "CITIZENS FOR GREGORY HARRIS",
+            "total": 12000.0
+          },
+          {
+            "name": "MELISSA FOR CHICAGO",
+            "total": 10000.0
+          },
+          {
+            "name": "PEOPLE FOR EMANUEL \"CHRIS\" WELCH",
+            "total": 1000.0
+          }
+        ]
       }
     },
     {
@@ -4506,6 +5288,37 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
+      },
+      "campaign": {
+        "raised_from_others": 13050.0,
+        "self_funded": 63300.0,
+        "from_individuals": 12550.0,
+        "with_employer": 2000.0,
+        "from_legal": 1000.0,
+        "from_organizations": 500.0,
+        "n_contributions": 27,
+        "first": "2025-08-24",
+        "last": "2026-03-12",
+        "top_employers": [
+          {
+            "employer": "CIRCUIT COURT",
+            "total": 1000.0,
+            "donors": 1,
+            "legal": true
+          },
+          {
+            "employer": "ULLICO",
+            "total": 1000.0,
+            "donors": 1,
+            "legal": false
+          }
+        ],
+        "top_organizations": [
+          {
+            "name": "CITIZENS FOR TUNNEY",
+            "total": 500.0
+          }
+        ]
       }
     },
     {
@@ -4595,7 +5408,8 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
-      }
+      },
+      "campaign": null
     },
     {
       "name": "Abbey Fishman Romanek",
@@ -4674,7 +5488,8 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
-      }
+      },
+      "campaign": null
     },
     {
       "name": "Kristyna C. Ryan",
@@ -4770,7 +5585,8 @@
         "status": "no record",
         "n_sentences": 20,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
-      }
+      },
+      "campaign": null
     },
     {
       "name": "Patricia O\u2019Brien Sheahan",
@@ -4853,7 +5669,8 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
-      }
+      },
+      "campaign": null
     },
     {
       "name": "Levander Smith Jr.",
@@ -4925,6 +5742,24 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
+      },
+      "campaign": {
+        "raised_from_others": 1000.0,
+        "self_funded": 9000.0,
+        "from_individuals": 0.0,
+        "with_employer": 0.0,
+        "from_legal": 0.0,
+        "from_organizations": 1000.0,
+        "n_contributions": 1,
+        "first": "2020-02-07",
+        "last": "2020-03-03",
+        "top_employers": [],
+        "top_organizations": [
+          {
+            "name": "LIUNA",
+            "total": 1000.0
+          }
+        ]
       }
     },
     {
@@ -5021,7 +5856,8 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
-      }
+      },
+      "campaign": null
     },
     {
       "name": "Chris Stacey",
@@ -5093,6 +5929,19 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
+      },
+      "campaign": {
+        "raised_from_others": 49834.6,
+        "self_funded": 663.09,
+        "from_individuals": 46575.0,
+        "with_employer": 0.0,
+        "from_legal": 0.0,
+        "from_organizations": 3259.6,
+        "n_contributions": 21,
+        "first": "2020-01-05",
+        "last": "2020-04-13",
+        "top_employers": [],
+        "top_organizations": []
       }
     },
     {
@@ -5184,6 +6033,28 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
+      },
+      "campaign": {
+        "raised_from_others": 9213.25,
+        "self_funded": 8104.39,
+        "from_individuals": 2325.0,
+        "with_employer": 0.0,
+        "from_legal": 0.0,
+        "from_organizations": 6888.25,
+        "n_contributions": 16,
+        "first": "2020-01-14",
+        "last": "2020-09-28",
+        "top_employers": [],
+        "top_organizations": [
+          {
+            "name": "FRIENDS OF MICHAEL D RODRIGUEZ",
+            "total": 5538.25
+          },
+          {
+            "name": "EXCLUSIVE PR",
+            "total": 1350.0
+          }
+        ]
       }
     },
     {
@@ -5260,6 +6131,39 @@
         "status": "no record",
         "n_sentences": 7,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
+      },
+      "campaign": {
+        "raised_from_others": 7660.14,
+        "self_funded": 0.0,
+        "from_individuals": 1928.2,
+        "with_employer": 1000.0,
+        "from_legal": 0.0,
+        "from_organizations": 5731.94,
+        "n_contributions": 13,
+        "first": "2020-01-19",
+        "last": "2020-03-20",
+        "top_employers": [
+          {
+            "employer": "GOTB CONSULTING",
+            "total": 1000.0,
+            "donors": 1,
+            "legal": false
+          }
+        ],
+        "top_organizations": [
+          {
+            "name": "FRIENDS OF MICHAEL RODRIGUEZ",
+            "total": 4538.25
+          },
+          {
+            "name": "LIUNA CHICAGO LABORERS DISTRICT COUNCIL POLITICAL ACTION COMMITTEE",
+            "total": 1000.0
+          },
+          {
+            "name": "TRISTAN & CERVANTES",
+            "total": 193.69
+          }
+        ]
       }
     },
     {
@@ -5425,7 +6329,8 @@
             "hi": 0.11469576315760814
           }
         }
-      }
+      },
+      "campaign": null
     },
     {
       "name": "Elizabeth A. Walsh",
@@ -5499,6 +6404,38 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
+      },
+      "campaign": {
+        "raised_from_others": 2600.0,
+        "self_funded": 2480.0,
+        "from_individuals": 2600.0,
+        "with_employer": 2600.0,
+        "from_legal": 2600.0,
+        "from_organizations": 0.0,
+        "n_contributions": 4,
+        "first": "2020-01-21",
+        "last": "2020-06-12",
+        "top_employers": [
+          {
+            "employer": "BRUCE FARRELL DORN & ASSOCIATES",
+            "total": 1000.0,
+            "donors": 1,
+            "legal": true
+          },
+          {
+            "employer": "MICHAEL D WALSH",
+            "total": 1000.0,
+            "donors": 1,
+            "legal": true
+          },
+          {
+            "employer": "STATE FARM INURANCE CO",
+            "total": 600.0,
+            "donors": 2,
+            "legal": true
+          }
+        ],
+        "top_organizations": []
       }
     },
     {
@@ -5653,6 +6590,24 @@
             }
           }
         }
+      },
+      "campaign": {
+        "raised_from_others": 4386.88,
+        "self_funded": 0.0,
+        "from_individuals": 1250.0,
+        "with_employer": 0.0,
+        "from_legal": 0.0,
+        "from_organizations": 3136.88,
+        "n_contributions": 4,
+        "first": "2020-01-01",
+        "last": "2020-03-03",
+        "top_employers": [],
+        "top_organizations": [
+          {
+            "name": "FRIENDS OF JUDGE BROOKS",
+            "total": 3136.88
+          }
+        ]
       }
     },
     {
@@ -5737,7 +6692,8 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
-      }
+      },
+      "campaign": null
     },
     {
       "name": "Steven Gregory Watkins",
@@ -5896,7 +6852,8 @@
             "hi": 0.3157931460716298
           }
         }
-      }
+      },
+      "campaign": null
     },
     {
       "name": "Lynn Weaver-Boyle",
@@ -5977,6 +6934,19 @@
         "status": "no record",
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
+      },
+      "campaign": {
+        "raised_from_others": 1000.0,
+        "self_funded": 0.0,
+        "from_individuals": 1000.0,
+        "with_employer": 0.0,
+        "from_legal": 0.0,
+        "from_organizations": 0.0,
+        "n_contributions": 1,
+        "first": "2020-03-16",
+        "last": "2020-03-16",
+        "top_employers": [],
+        "top_organizations": []
       }
     }
   ],

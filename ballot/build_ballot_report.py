@@ -9,7 +9,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from ballot.adapters import cook_bar_ratings, cook_county
+from ballot.adapters import cook_bar_ratings, cook_county, il_campaign_finance
 from ballot.build_judge_profiles import OUT, RAW, format_profile
 from ballot.judges import match, metrics, profile
 from ballot.judges.extract import output_path
@@ -49,6 +49,13 @@ def main() -> None:
                    if extraction_file.exists() else {})
     data_through = df.sentence_date.quantile(0.999).date().isoformat()
 
+    # Campaign money: needs `python -m ballot.build_campaign_finance` to have fetched the receipts.
+    isbe = RAW.parent / "isbe"
+    receipts = None
+    if (isbe / "judge_receipts.csv").exists() and (isbe / "judge_committees.csv").exists():
+        committees = pd.read_csv(isbe / "judge_committees.csv", dtype=str)
+        receipts = il_campaign_finance.load_receipts(isbe / "judge_receipts.csv", committees)
+
     report = []
     for row in ballot.itertuples(index=False):
         n = int(recent.get(row.name, 0))
@@ -65,7 +72,9 @@ def main() -> None:
                        "bar_summary": bar_summary(judge_ratings),
                        **profile.background_section(isba_row.summary.iloc[0] if isba_name else None,
                                                     extractions.get(isba_name), n),
-                       "sentencing": profile.sentencing_section(n, profiles.get(row.name), args.since, data_through)})
+                       "sentencing": profile.sentencing_section(n, profiles.get(row.name), args.since, data_through),
+                       "campaign": (il_campaign_finance.judge_summary(receipts, row.name)
+                                    if receipts is not None and row.name in set(receipts.judge) else None)})
 
     # Every judge with a full record, plus ballot judges with a limited one, for the comparison chart.
     numbers = {r["name"]: r["ballot_number"] for r in report}

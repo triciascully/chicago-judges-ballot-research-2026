@@ -13,3 +13,8 @@ __pycache__/
 
 # Pre-git copies of the label sheets (git history replaces them)
 data/eval/backup/
+
+# Any env or token file, however it is named
+*.env
+.env*
+COURTLISTENER_TOKEN*
