@@ -38,13 +38,14 @@ def _token() -> str | None:
 
 
 def _get(url: str) -> dict:
-    """GET with the token if there is one; waits and retries when throttled."""
+    """GET with the token if there is one. When throttled, waits as long as the server's
+    Retry-After says (search is limited to 50 requests an hour) and tries again."""
     headers = {"User-Agent": "ballot-research (voter guide)"}
     if token := _token():
         headers["Authorization"] = f"Token {token}"
-    for attempt in range(6):
+    for attempt in range(8):
         try:
-            with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=60) as r:
+            with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=90) as r:
                 return json.load(r)
         except urllib.error.HTTPError as e:
             if e.code == 401:
@@ -52,8 +53,22 @@ def _get(url: str) -> dict:
                                    "COURTLISTENER_TOKEN=... to the project's .env file") from e
             if e.code not in (429, 502, 503):
                 raise
-            time.sleep(15 * (attempt + 1))
-    raise RuntimeError(f"Still throttled after retries: {url}")
+            wait = int(e.headers.get("Retry-After") or 30 * (attempt + 1))
+            print(f"  throttled; waiting {wait // 60} min {wait % 60} s", flush=True)
+            time.sleep(wait + 5)
+    raise RuntimeError(f"Gave up after repeated throttling: {url}")
+
+
+def _cached_get(url: str) -> dict:
+    """_get, cached on disk by URL, so reruns never spend the hourly search budget twice."""
+    import hashlib
+    path = CACHE / "search" / (hashlib.sha256(url.encode()).hexdigest()[:20] + ".json")
+    if path.exists():
+        return json.loads(path.read_text())
+    data = _get(url)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(data))
+    return data
 
 
 def name_variants(ballot_name: str) -> list[str]:
@@ -72,15 +87,19 @@ def name_variants(ballot_name: str) -> list[str]:
     return sorted(variants)
 
 
-def search(ballot_name: str, since: str = "2015-01-01") -> list[dict]:
-    """Candidate decisions: Cook County appeals whose text contains the judge's name."""
-    names = " OR ".join(f'"{v}"' for v in name_variants(ballot_name))
+def search(ballot_names: list[str], since: str = "2015-01-01") -> list[dict]:
+    """Candidate decisions for several judges in one query: Cook County appeals whose text
+    contains any of their names. Batching matters because search allows 50 requests an hour.
+    Asks for unpublished (Rule 23) orders too, which are most Illinois appellate decisions."""
+    names = " OR ".join(f'"{v}"' for n in ballot_names for v in name_variants(n))
     q = f'"Circuit Court of Cook County" AND ({names}) AND presiding'
     url = f"{API}/search/?" + urllib.parse.urlencode(
-        {"q": q, "type": "o", "court": "illappct", "filed_after": since, "order_by": "dateFiled asc"})
+        {"q": q, "type": "o", "court": "illappct", "filed_after": since, "order_by": "dateFiled asc",
+         "stat_Published": "on", "stat_Unpublished": "on", "stat_Errata": "on", "stat_Separate": "on",
+         "stat_In-chambers": "on", "stat_Relating-to": "on", "stat_Unknown": "on"})
     results = []
     while url:
-        page = _get(url)
+        page = _cached_get(url)
         results += page.get("results", [])
         url = page.get("next")
     return results
@@ -157,24 +176,31 @@ def outcome(text: str) -> str | None:
     return _label(sentences[-1]) if sentences else None
 
 
-def judge_decisions(ballot_name: str, since: str = "2015-01-01") -> list[dict]:
+def decisions_for(ballot_names: list[str], since: str = "2015-01-01") -> list[dict]:
+    """Confirmed decisions for a batch of judges; each opinion goes to the judge its header
+    names as presiding (opinion downloads don't count against the search limit)."""
     out, seen = [], set()
-    for r in search(ballot_name, since):
+    for r in search(ballot_names, since):
         key = (r.get("caseName"), r.get("dateFiled"), r.get("docketNumber"))
         if key in seen:  # the same decision can be indexed more than once
             continue
         seen.add(key)
         for op in r.get("opinions", [])[:1]:
             text = opinion_text(op["id"])
-            if not presided(text, ballot_name):
-                continue
-            out.append({
-                "judge": ballot_name, "case_name": r.get("caseName"), "date": r.get("dateFiled"),
-                "docket": r.get("docketNumber"), "status": r.get("status"),
-                "opinion_id": op["id"], "url": "https://www.courtlistener.com" + r.get("absolute_url", ""),
-                "outcome": outcome(text), "criminal": bool(re.match(r"People v\.?", r.get("caseName") or "")),
-            })
+            for name in ballot_names:
+                if presided(text, name):
+                    out.append({
+                        "judge": name, "case_name": r.get("caseName"), "date": r.get("dateFiled"),
+                        "docket": r.get("docketNumber"), "status": r.get("status"),
+                        "opinion_id": op["id"], "url": "https://www.courtlistener.com" + r.get("absolute_url", ""),
+                        "outcome": outcome(text), "criminal": bool(re.match(r"People v\.?", r.get("caseName") or "")),
+                    })
+                    break
     return out
+
+
+def judge_decisions(ballot_name: str, since: str = "2015-01-01") -> list[dict]:
+    return decisions_for([ballot_name], since)
 
 
 def main() -> None:
