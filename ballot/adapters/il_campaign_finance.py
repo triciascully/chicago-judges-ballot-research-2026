@@ -111,6 +111,67 @@ def _org(employer: str) -> str:
     return re.sub(r"\s+", " ", e).strip()
 
 
+# Donor groups, checked in order; the first match wins. Individuals are grouped by their reported
+# employer and occupation, organizations by their name. Law firms stay one group: telling
+# plaintiffs' firms from defense firms needs knowledge about each firm that names alone don't give.
+DONOR_GROUPS = [
+    ("Prosecutors", r"state'?s attorney|\bccsao\b|\bsao\b|prosecutor"),
+    ("Public defenders", r"public defender|appellate defender"),
+    ("Police and law enforcement", r"fraternal order of police|\bfop\b|police|sheriff|corrections officer"),
+    ("Judges and court staff", r"\bjudge\b|\bcourt\b|judiciary|clerk of the circuit"),
+    ("Labor unions", r"\bunion\b|\blocal \d|liuna|laborers|\biuoe\b|\bibew\b|teamsters|afscme|\bseiu\b"
+                     r"|painters|sprinkler fitters|elevator constructors|building trades|pipefitters|carpenters"
+                     r"|bricklayers|plumbers|journeymen|district council|regional council|\blu \d|ironworkers|operating engineers"),
+    ("Party and ward organizations", r"democrat|republican|\bward\b|township|\bparty\b"),
+    ("Advocacy PACs", r"\bpac\b|political action|victory fund|\bfund\b"),
+    ("Politicians' committees", r"^(friends|citizens|people|committee|comm|neighbors)\b|\bfriends\b|\b(citizens|people|neighbors) (of|for)\b|\bfor (judge|state|chicago|congress|mayor)\b"
+                                r"|\bfor [a-z]+$|for alderman|for commissioner"),
+    ("Private law firms", r"attorney|lawyer|\blaw\b|legal|counsel|\bllp\b|&\s*associates|litigat|\bfirm\b"
+                          # "Surname & Surname" with no business words: in donations to judges, a law firm
+                          r"|^(?!.*(builder|management|company|group|construction|mechanical|realty|capital|productions"
+                          r"|properties|sons|co\b|inc\b|iron|metal|steel|venture))[a-z'\-]+( [a-z'\-]+)? & [a-z'\-]+( [a-z'\-]+)?$"),
+    ("Government (other)", r"state of illinois|cook county|city of chicago|chicago public schools|village|\bcity\b|county"),
+]
+OTHER_GROUP = "Businesses and other employers"
+UNREPORTED = "Employer not reported"
+
+
+def donor_group(row) -> str:
+    """Group for one receipt (individual or organization). Each field is checked on its own so
+    patterns anchored to a whole name (like "Surname & Surname") still work."""
+    org_name = str(row.LastOnlyName).strip().strip('"') if not str(row.FirstName).strip() else ""
+    # In-kind gifts from people carry a first name; group them by employer like other individuals.
+    if row.kind == "individual" or not org_name:
+        if _org(row.Employer) in _NOT_EMPLOYERS and not org_name:
+            return UNREPORTED
+        fields = [row.Employer, row.Occupation, org_name]
+    else:
+        fields = [org_name]
+    fields = [str(f).lower().strip() for f in fields if str(f).strip()]
+    for group, pattern in DONOR_GROUPS:
+        if any(re.search(pattern, f) for f in fields):
+            return group
+    return OTHER_GROUP
+
+
+# Only names that look like organizations are listed by name; some people are filed with no
+# first name, and individual donors stay unnamed on the page.
+_ORG_WORDS = re.compile(r"\b(?:pac|committee|comm|comte|friends|citizens|people|neighbors|union|local|council|inc|llc|ltd"
+                        r"|group|company|co|corp|party|org|fund|association|productions|media|pr|management|partners"
+                        r"|foundation|trust|democrat\w*|republican|ward|township|for)\b|&", re.I)
+
+
+def judge_party(lookup_dir: Path, ballot_names) -> dict[str, str]:
+    """Party each judge ran under, from their candidate records ("" if none listed)."""
+    cand = _read(lookup_dir / "Candidates.txt")
+    judges = cand[cand.Office.str.contains(r"Judge|Justice", case=False)]
+    out = {}
+    for name in ballot_names:
+        hits = judges[[_same_person(name, f, l) for f, l in zip(judges.FirstName, judges.LastName)]]
+        out[name] = "/".join(sorted(set(hits.PartyAffiliation) - {""}))
+    return out
+
+
 def judge_summary(receipts: pd.DataFrame, judge: str) -> dict:
     """Totals for one judge's own committees. Individual donors' names are left out; employers
     stand in for them, since the question is which firms and organizations fund a judge.
@@ -131,7 +192,8 @@ def judge_summary(receipts: pd.DataFrame, judge: str) -> dict:
                  .groupby("org").agg(total=("amount", "sum"), donors=("amount", "size"), legal=("legal", "max"))
                  .sort_values("total", ascending=False))
     # Organizations only: in-kind gifts from individuals carry a person's name, which stays out.
-    orgs = from_others[(from_others.kind != "individual") & (from_others.FirstName.str.strip() == "")]
+    orgs = from_others[(from_others.kind != "individual") & (from_others.FirstName.str.strip() == "")
+                       & from_others.LastOnlyName.str.contains(_ORG_WORDS)]
     organizations = (orgs.assign(org=lambda d: d.LastOnlyName.map(_org))
                      .groupby("org").amount.sum().sort_values(ascending=False))
     money = lambda d: round(float(d.amount.sum()), 2)
@@ -148,4 +210,7 @@ def judge_summary(receipts: pd.DataFrame, judge: str) -> dict:
         "top_employers": [{"employer": k, "total": round(float(v.total), 2), "donors": int(v.donors),
                            "legal": bool(v.legal)} for k, v in employers.head(8).iterrows()],
         "top_organizations": [{"name": k, "total": round(float(v), 2)} for k, v in organizations.head(5).items()],
+        "by_group": {g: round(float(v), 2) for g, v in
+                     from_others.assign(group=[donor_group(x) for x in from_others.itertuples()])
+                     .groupby("group").amount.sum().sort_values(ascending=False).items()},
     }

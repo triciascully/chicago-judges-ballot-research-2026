@@ -55,6 +55,7 @@ def main() -> None:
     if (isbe / "judge_receipts.csv").exists() and (isbe / "judge_committees.csv").exists():
         committees = pd.read_csv(isbe / "judge_committees.csv", dtype=str)
         receipts = il_campaign_finance.load_receipts(isbe / "judge_receipts.csv", committees)
+    parties = il_campaign_finance.judge_party(isbe, ballot.name) if (isbe / "Candidates.txt").exists() else {}
 
     report = []
     for row in ballot.itertuples(index=False):
@@ -73,6 +74,7 @@ def main() -> None:
                        **profile.background_section(isba_row.summary.iloc[0] if isba_name else None,
                                                     extractions.get(isba_name), n),
                        "sentencing": profile.sentencing_section(n, profiles.get(row.name), args.since, data_through),
+                       "party": parties.get(row.name, ""),
                        "campaign": (il_campaign_finance.judge_summary(receipts, row.name)
                                     if receipts is not None and row.name in set(receipts.judge) else None)})
 

@@ -89,6 +89,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": null
     },
     {
@@ -177,6 +178,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": {
         "raised_from_others": 6950.0,
         "self_funded": 6700.54,
@@ -193,7 +195,13 @@
             "name": "INT'L UNION OF ELEVATOR CONSTRUCTORS POL COMTE",
             "total": 500.0
           }
-        ]
+        ],
+        "by_group": {
+          "Employer not reported": 5250.0,
+          "Businesses and other employers": 950.0,
+          "Labor unions": 500.0,
+          "Private law firms": 250.0
+        }
       }
     },
     {
@@ -269,6 +277,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": null
     },
     {
@@ -362,6 +371,7 @@
         "n_sentences": 4,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": {
         "raised_from_others": 5085.76,
         "self_funded": 0.0,
@@ -378,7 +388,12 @@
             "name": "13TH WARD DEMOCRATIC ORG",
             "total": 435.76
           }
-        ]
+        ],
+        "by_group": {
+          "Labor unions": 2500.0,
+          "Employer not reported": 2150.0,
+          "Party and ward organizations": 435.76
+        }
       }
     },
     {
@@ -454,6 +469,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "",
       "campaign": null
     },
     {
@@ -602,6 +618,7 @@
           }
         }
       },
+      "party": "Democratic",
       "campaign": {
         "raised_from_others": 5425.0,
         "self_funded": 10000.0,
@@ -615,10 +632,6 @@
         "top_employers": [],
         "top_organizations": [
           {
-            "name": "LIUNA",
-            "total": 1000.0
-          },
-          {
             "name": "DEMOCRATIC PARTY OF EVANSTON",
             "total": 550.0
           },
@@ -630,7 +643,15 @@
             "name": "SWANSON FRIENDS FOR KARIN ELIZABETH",
             "total": 200.0
           }
-        ]
+        ],
+        "by_group": {
+          "Employer not reported": 2500.0,
+          "Labor unions": 1000.0,
+          "Businesses and other employers": 800.0,
+          "Party and ward organizations": 550.0,
+          "Advocacy PACs": 375.0,
+          "Politicians' committees": 200.0
+        }
       }
     },
     {
@@ -707,6 +728,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": null
     },
     {
@@ -785,6 +807,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": {
         "raised_from_others": 500.0,
         "self_funded": 0.0,
@@ -796,7 +819,10 @@
         "first": "2020-01-06",
         "last": "2020-01-28",
         "top_employers": [],
-        "top_organizations": []
+        "top_organizations": [],
+        "by_group": {
+          "Employer not reported": 500.0
+        }
       }
     },
     {
@@ -960,6 +986,7 @@
           }
         }
       },
+      "party": "Democratic",
       "campaign": null
     },
     {
@@ -1062,6 +1089,7 @@
         "n_sentences": 2,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": null
     },
     {
@@ -1224,6 +1252,7 @@
           }
         }
       },
+      "party": "Democratic",
       "campaign": null
     },
     {
@@ -1313,6 +1342,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": {
         "raised_from_others": 59005.36,
         "self_funded": 11500.0,
@@ -1384,7 +1414,14 @@
             "name": "CITIZENS FOR CAROLINE",
             "total": 300.0
           }
-        ]
+        ],
+        "by_group": {
+          "Businesses and other employers": 39741.62,
+          "Employer not reported": 9050.0,
+          "Private law firms": 6700.0,
+          "Judges and court staff": 3213.74,
+          "Politicians' committees": 300.0
+        }
       }
     },
     {
@@ -1463,6 +1500,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": {
         "raised_from_others": 21160.0,
         "self_funded": 85050.0,
@@ -1517,7 +1555,13 @@
             "legal": false
           }
         ],
-        "top_organizations": []
+        "top_organizations": [],
+        "by_group": {
+          "Private law firms": 8450.0,
+          "Employer not reported": 7560.0,
+          "Businesses and other employers": 4400.0,
+          "Judges and court staff": 750.0
+        }
       }
     },
     {
@@ -1603,6 +1647,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": {
         "raised_from_others": 11680.0,
         "self_funded": 44617.0,
@@ -1638,7 +1683,13 @@
             "name": "PAINTERS DISTRICT COUNCIL #14 POLITICAL ACTION FUND",
             "total": 500.0
           }
-        ]
+        ],
+        "by_group": {
+          "Businesses and other employers": 4430.0,
+          "Politicians' committees": 4000.0,
+          "Employer not reported": 1750.0,
+          "Labor unions": 1500.0
+        }
       }
     },
     {
@@ -1729,6 +1780,7 @@
         "n_sentences": 2,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": {
         "raised_from_others": 24776.0,
         "self_funded": 70000.0,
@@ -1764,7 +1816,13 @@
             "name": "LIUNA CHICAGO LABORERS\u0092 DISTRICT COUNCIL PAC",
             "total": 1000.0
           }
-        ]
+        ],
+        "by_group": {
+          "Private law firms": 12501.0,
+          "Employer not reported": 10275.0,
+          "Businesses and other employers": 1000.0,
+          "Labor unions": 1000.0
+        }
       }
     },
     {
@@ -1851,6 +1909,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": {
         "raised_from_others": 65673.42,
         "self_funded": 105000.0,
@@ -1920,7 +1979,15 @@
             "name": "DEMOCRATS OF NORTHFIELD TOWNSHIP",
             "total": 998.42
           }
-        ]
+        ],
+        "by_group": {
+          "Businesses and other employers": 29750.0,
+          "Employer not reported": 25975.0,
+          "Labor unions": 6500.0,
+          "Advocacy PACs": 2000.0,
+          "Party and ward organizations": 1248.42,
+          "Politicians' committees": 200.0
+        }
       }
     },
     {
@@ -1999,6 +2066,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": null
     },
     {
@@ -2083,6 +2151,7 @@
         "n_sentences": 4,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": null
     },
     {
@@ -2170,6 +2239,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": {
         "raised_from_others": 7130.5,
         "self_funded": 52968.29,
@@ -2208,12 +2278,15 @@
           {
             "name": "CITIZENS FOR TUNNEY",
             "total": 500.0
-          },
-          {
-            "name": "ANN SATHERS",
-            "total": 229.5
           }
-        ]
+        ],
+        "by_group": {
+          "Employer not reported": 2150.0,
+          "Private law firms": 2000.0,
+          "Businesses and other employers": 1480.5,
+          "Labor unions": 1000.0,
+          "Politicians' committees": 500.0
+        }
       }
     },
     {
@@ -2381,6 +2454,7 @@
           }
         }
       },
+      "party": "Democratic",
       "campaign": null
     },
     {
@@ -2509,6 +2583,7 @@
           "prison_by_race": {}
         }
       },
+      "party": "Democratic",
       "campaign": {
         "raised_from_others": 2838.0,
         "self_funded": 60527.0,
@@ -2520,7 +2595,12 @@
         "first": "2020-01-04",
         "last": "2020-03-25",
         "top_employers": [],
-        "top_organizations": []
+        "top_organizations": [],
+        "by_group": {
+          "Employer not reported": 1788.0,
+          "Politicians' committees": 657.0,
+          "Judges and court staff": 393.0
+        }
       }
     },
     {
@@ -2686,6 +2766,7 @@
           }
         }
       },
+      "party": "Democratic",
       "campaign": null
     },
     {
@@ -2859,6 +2940,7 @@
           }
         }
       },
+      "party": "Democratic",
       "campaign": null
     },
     {
@@ -2996,6 +3078,7 @@
           }
         }
       },
+      "party": "Democratic",
       "campaign": null
     },
     {
@@ -3082,6 +3165,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": null
     },
     {
@@ -3136,6 +3220,7 @@
         "n_sentences": 8,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": null
     },
     {
@@ -3288,6 +3373,7 @@
           }
         }
       },
+      "party": "Democratic",
       "campaign": {
         "raised_from_others": 1500.0,
         "self_funded": 0.0,
@@ -3299,7 +3385,11 @@
         "first": "2021-06-30",
         "last": "2021-06-30",
         "top_employers": [],
-        "top_organizations": []
+        "top_organizations": [],
+        "by_group": {
+          "Businesses and other employers": 1000.0,
+          "Employer not reported": 500.0
+        }
       }
     },
     {
@@ -3376,6 +3466,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": null
     },
     {
@@ -3466,6 +3557,7 @@
         "n_sentences": 2,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": {
         "raised_from_others": 53254.64,
         "self_funded": 5100.0,
@@ -3537,7 +3629,16 @@
             "name": "CITIZENS FOR TUNNEY",
             "total": 200.0
           }
-        ]
+        ],
+        "by_group": {
+          "Employer not reported": 26650.0,
+          "Private law firms": 13150.0,
+          "Businesses and other employers": 5004.64,
+          "Judges and court staff": 4250.0,
+          "Party and ward organizations": 2500.0,
+          "Advocacy PACs": 1000.0,
+          "Politicians' committees": 700.0
+        }
       }
     },
     {
@@ -3613,6 +3714,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": {
         "raised_from_others": 4558.39,
         "self_funded": 0.0,
@@ -3628,12 +3730,14 @@
           {
             "name": "LIUNA CHICAGO LABORER'S DISTRICT COUNCIL POLITICAL ACTION COMMITTEE",
             "total": 1000.0
-          },
-          {
-            "name": "EFFECTV",
-            "total": 508.39
           }
-        ]
+        ],
+        "by_group": {
+          "Employer not reported": 2300.0,
+          "Labor unions": 1000.0,
+          "Businesses and other employers": 758.39,
+          "Private law firms": 500.0
+        }
       }
     },
     {
@@ -3710,6 +3814,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": null
     },
     {
@@ -3800,6 +3905,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": {
         "raised_from_others": 12927.0,
         "self_funded": 29685.64,
@@ -3828,18 +3934,24 @@
             "total": 1477.0
           },
           {
-            "name": "LIUNA",
-            "total": 1000.0
-          },
-          {
             "name": "CHICAGO & COOK COUNTY BUILDING TRADES COUNCIL",
             "total": 500.0
           },
           {
             "name": "SPRINKLER FITTERS LOCAL 281",
             "total": 500.0
+          },
+          {
+            "name": "BRICKLAYERS DISTRICT COUNCIL",
+            "total": 250.0
           }
-        ]
+        ],
+        "by_group": {
+          "Labor unions": 5500.0,
+          "Employer not reported": 4850.0,
+          "Politicians' committees": 2177.0,
+          "Private law firms": 400.0
+        }
       }
     },
     {
@@ -3931,6 +4043,7 @@
         "n_sentences": 11,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": {
         "raised_from_others": 16144.42,
         "self_funded": 0.0,
@@ -3955,7 +4068,12 @@
             "legal": false
           }
         ],
-        "top_organizations": []
+        "top_organizations": [],
+        "by_group": {
+          "Private law firms": 7294.42,
+          "Employer not reported": 5550.0,
+          "Businesses and other employers": 3300.0
+        }
       }
     },
     {
@@ -4042,6 +4160,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Non Partisan",
       "campaign": {
         "raised_from_others": 0.0,
         "self_funded": 14129.58,
@@ -4053,7 +4172,8 @@
         "first": "2020-10-13",
         "last": "2020-12-02",
         "top_employers": [],
-        "top_organizations": []
+        "top_organizations": [],
+        "by_group": {}
       }
     },
     {
@@ -4155,6 +4275,7 @@
         "n_sentences": 29,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": {
         "raised_from_others": 7450.0,
         "self_funded": 11510.0,
@@ -4166,12 +4287,11 @@
         "first": "2020-01-08",
         "last": "2020-03-12",
         "top_employers": [],
-        "top_organizations": [
-          {
-            "name": "LIUNA",
-            "total": 1000.0
-          }
-        ]
+        "top_organizations": [],
+        "by_group": {
+          "Employer not reported": 6450.0,
+          "Labor unions": 1000.0
+        }
       }
     },
     {
@@ -4256,6 +4376,7 @@
         "n_sentences": 3,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": null
     },
     {
@@ -4357,6 +4478,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": {
         "raised_from_others": 1750.0,
         "self_funded": 0.0,
@@ -4373,7 +4495,10 @@
             "name": "LADUZINSKI & ASSOCIATES",
             "total": 1750.0
           }
-        ]
+        ],
+        "by_group": {
+          "Private law firms": 1750.0
+        }
       }
     },
     {
@@ -4530,6 +4655,7 @@
           }
         }
       },
+      "party": "Democratic",
       "campaign": {
         "raised_from_others": 8500.0,
         "self_funded": 25228.0,
@@ -4541,12 +4667,14 @@
         "first": "2020-01-15",
         "last": "2020-03-08",
         "top_employers": [],
-        "top_organizations": [
-          {
-            "name": "CARPETLAND USA",
-            "total": 300.0
-          }
-        ]
+        "top_organizations": [],
+        "by_group": {
+          "Employer not reported": 4850.0,
+          "Businesses and other employers": 1750.0,
+          "Labor unions": 1000.0,
+          "Politicians' committees": 700.0,
+          "Private law firms": 200.0
+        }
       }
     },
     {
@@ -4627,6 +4755,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": null
     },
     {
@@ -4708,6 +4837,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": {
         "raised_from_others": 14633.42,
         "self_funded": 0.0,
@@ -4726,7 +4856,12 @@
             "legal": false
           }
         ],
-        "top_organizations": []
+        "top_organizations": [],
+        "by_group": {
+          "Employer not reported": 9683.42,
+          "Businesses and other employers": 3450.0,
+          "Private law firms": 1500.0
+        }
       }
     },
     {
@@ -4815,6 +4950,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": {
         "raised_from_others": 7399.2,
         "self_funded": 62661.94,
@@ -4845,12 +4981,16 @@
           {
             "name": "FRIENDS OF SHEILA CHALMERS CURRIN",
             "total": 250.0
-          },
-          {
-            "name": "OPUS",
-            "total": 250.0
           }
-        ]
+        ],
+        "by_group": {
+          "Employer not reported": 2399.73,
+          "Businesses and other employers": 2200.0,
+          "Private law firms": 1049.47,
+          "Labor unions": 1000.0,
+          "Party and ward organizations": 500.0,
+          "Politicians' committees": 250.0
+        }
       }
     },
     {
@@ -4930,6 +5070,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Republican",
       "campaign": null
     },
     {
@@ -5012,6 +5153,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": null
     },
     {
@@ -5087,6 +5229,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": {
         "raised_from_others": 7250.0,
         "self_funded": 0.0,
@@ -5110,7 +5253,14 @@
             "name": "LGBTQ VICTORY FUND",
             "total": 500.0
           }
-        ]
+        ],
+        "by_group": {
+          "Employer not reported": 3750.0,
+          "Government (other)": 1000.0,
+          "Labor unions": 1000.0,
+          "Politicians' committees": 1000.0,
+          "Advocacy PACs": 500.0
+        }
       }
     },
     {
@@ -5186,6 +5336,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": {
         "raised_from_others": 24400.0,
         "self_funded": 4000.0,
@@ -5210,7 +5361,11 @@
             "name": "PEOPLE FOR EMANUEL \"CHRIS\" WELCH",
             "total": 1000.0
           }
-        ]
+        ],
+        "by_group": {
+          "Politicians' committees": 23000.0,
+          "Employer not reported": 1400.0
+        }
       }
     },
     {
@@ -5289,6 +5444,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": {
         "raised_from_others": 13050.0,
         "self_funded": 63300.0,
@@ -5318,7 +5474,14 @@
             "name": "CITIZENS FOR TUNNEY",
             "total": 500.0
           }
-        ]
+        ],
+        "by_group": {
+          "Employer not reported": 10250.0,
+          "Businesses and other employers": 1000.0,
+          "Judges and court staff": 1000.0,
+          "Politicians' committees": 500.0,
+          "Private law firms": 300.0
+        }
       }
     },
     {
@@ -5409,6 +5572,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": null
     },
     {
@@ -5489,6 +5653,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": null
     },
     {
@@ -5586,6 +5751,7 @@
         "n_sentences": 20,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": null
     },
     {
@@ -5670,6 +5836,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": null
     },
     {
@@ -5743,6 +5910,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": {
         "raised_from_others": 1000.0,
         "self_funded": 9000.0,
@@ -5754,12 +5922,10 @@
         "first": "2020-02-07",
         "last": "2020-03-03",
         "top_employers": [],
-        "top_organizations": [
-          {
-            "name": "LIUNA",
-            "total": 1000.0
-          }
-        ]
+        "top_organizations": [],
+        "by_group": {
+          "Labor unions": 1000.0
+        }
       }
     },
     {
@@ -5857,6 +6023,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": null
     },
     {
@@ -5930,6 +6097,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": {
         "raised_from_others": 49834.6,
         "self_funded": 663.09,
@@ -5941,7 +6109,12 @@
         "first": "2020-01-05",
         "last": "2020-04-13",
         "top_employers": [],
-        "top_organizations": []
+        "top_organizations": [],
+        "by_group": {
+          "Employer not reported": 44534.6,
+          "Businesses and other employers": 4800.0,
+          "Private law firms": 500.0
+        }
       }
     },
     {
@@ -6034,6 +6207,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": {
         "raised_from_others": 9213.25,
         "self_funded": 8104.39,
@@ -6054,7 +6228,12 @@
             "name": "EXCLUSIVE PR",
             "total": 1350.0
           }
-        ]
+        ],
+        "by_group": {
+          "Politicians' committees": 5538.25,
+          "Employer not reported": 2325.0,
+          "Businesses and other employers": 1350.0
+        }
       }
     },
     {
@@ -6132,6 +6311,7 @@
         "n_sentences": 7,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "",
       "campaign": {
         "raised_from_others": 7660.14,
         "self_funded": 0.0,
@@ -6163,7 +6343,14 @@
             "name": "TRISTAN & CERVANTES",
             "total": 193.69
           }
-        ]
+        ],
+        "by_group": {
+          "Politicians' committees": 4538.25,
+          "Businesses and other employers": 1000.0,
+          "Labor unions": 1000.0,
+          "Employer not reported": 928.2,
+          "Private law firms": 193.69
+        }
       }
     },
     {
@@ -6330,6 +6517,7 @@
           }
         }
       },
+      "party": "Democratic",
       "campaign": null
     },
     {
@@ -6405,6 +6593,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": {
         "raised_from_others": 2600.0,
         "self_funded": 2480.0,
@@ -6435,7 +6624,10 @@
             "legal": true
           }
         ],
-        "top_organizations": []
+        "top_organizations": [],
+        "by_group": {
+          "Private law firms": 2600.0
+        }
       }
     },
     {
@@ -6591,6 +6783,7 @@
           }
         }
       },
+      "party": "Democratic",
       "campaign": {
         "raised_from_others": 4386.88,
         "self_funded": 0.0,
@@ -6607,7 +6800,12 @@
             "name": "FRIENDS OF JUDGE BROOKS",
             "total": 3136.88
           }
-        ]
+        ],
+        "by_group": {
+          "Judges and court staff": 3136.88,
+          "Labor unions": 1000.0,
+          "Employer not reported": 250.0
+        }
       }
     },
     {
@@ -6693,6 +6891,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": null
     },
     {
@@ -6853,6 +7052,7 @@
           }
         }
       },
+      "party": "Democratic",
       "campaign": null
     },
     {
@@ -6935,6 +7135,7 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
+      "party": "Democratic",
       "campaign": {
         "raised_from_others": 1000.0,
         "self_funded": 0.0,
@@ -6946,7 +7147,10 @@
         "first": "2020-03-16",
         "last": "2020-03-16",
         "top_employers": [],
-        "top_organizations": []
+        "top_organizations": [],
+        "by_group": {
+          "Labor unions": 1000.0
+        }
       }
     }
   ],

@@ -226,6 +226,9 @@ footer { color: var(--muted); font-size: 0.85rem; display: grid; gap: 0.4rem; }
     </div>
     <div class="chart" id="money"><div class="tip" id="money-tip" hidden></div></div>
     <p class="note" id="money-note"></p>
+    <h3>Where each judge's money came from</h3>
+    <p class="note">Money raised from others, by donor group. Donors are grouped by the employer they reported or by organization name. Illinois reports employers mainly for larger gifts, so "Employer not reported" is often the largest share. Groups are assigned by rules and are approximate: a firm whose donors listed only a title like "Partner" can land under businesses. Law firms aren't split into plaintiffs' and defense firms.</p>
+    <div class="table-wrap" id="money-groups"></div>
   </section>
 
   <section class="controls" aria-label="Find a judge">
@@ -322,6 +325,12 @@ footer { color: var(--muted); font-size: 0.85rem; display: grid; gap: 0.4rem; }
   }
 
   const usd = (x) => "$" + Math.round(x).toLocaleString();
+  function groupsHTML(c) {
+    const g = Object.entries(c.by_group || {}).filter(([, v]) => v > 0);
+    if (!g.length) return "";
+    const total = g.reduce((a, [, v]) => a + v, 0);
+    return `<p class="note">Where money from others came from: ${g.map(([k, v]) => `${esc(k)} ${usd(v)} (${Math.round(100 * v / total)}%)`).join(" · ")}.</p>`;
+  }
   function campaignHTML(c) {
     if (!c || (c.raised_from_others === 0 && c.self_funded === 0))
       return '<p class="note">No contributions reported to this judge\'s own committee since 2020. Retention campaigns usually run through a joint committee for all retention judges.</p>';
@@ -334,6 +343,7 @@ footer { color: var(--muted); font-size: 0.85rem; display: grid; gap: 0.4rem; }
         <dt>From donors listing legal jobs</dt><dd>${usd(c.from_legal)} of the ${usd(c.with_employer)} whose donors listed an employer</dd>
         <dt>From organizations</dt><dd>${usd(c.from_organizations)}</dd>
       </dl>
+      ${groupsHTML(c)}
       ${emp.length ? `<p class="note">Top employers of individual donors: ${emp.map((e) => `${esc(e.employer)} (${usd(e.total)})`).join(", ")}.</p>` : ""}
       ${org.length ? `<p class="note">Top organizations: ${org.map((o) => `${esc(o.name)} (${usd(o.total)})`).join(", ")}.</p>` : ""}
       <p class="note">Illinois reports a donor's employer mainly for larger contributions, so legal-job totals cover only those donors.</p>`;
@@ -359,7 +369,7 @@ footer { color: var(--muted); font-size: 0.85rem; display: grid; gap: 0.4rem; }
         <div class="section"><h3>Attorney criticism (ISBA)</h3>${crit}</div>
         <div class="section"><h3>Campaign money since 2020</h3>${campaignHTML(j.campaign)}</div>
         <div class="section"><h3>Criminal court experience</h3>${crimHTML}</div>
-        <div class="section"><h3>Career background (ISBA)</h3>${bg}</div>
+        <div class="section"><h3>Career background (ISBA)</h3>${bg}${j.party ? `<p class="note">Ran for judge as: ${esc(j.party)} (Illinois State Board of Elections candidate records).</p>` : ""}</div>
         ${j.isba_evaluation ? `<details class="more"><summary>Read the full ISBA evaluation</summary><div><p>${esc(j.isba_evaluation)}</p></div></details>` : ""}
       </div>`;
   }
@@ -745,7 +755,22 @@ footer { color: var(--muted); font-size: 0.85rem; display: grid; gap: 0.4rem; }
   }
   const none = DATA.judges.length - rows.length;
   document.getElementById("money-note").textContent = `${rows.length} judges reported contributions to their own committees since 2020. The other ${none} reported none, usually because they last campaigned for retention through the joint committee. Each judge's profile lists totals and top contributing employers; individual donors aren't named here.`;
+  function groupTable() {
+    const order = ["Private law firms", "Judges and court staff", "Prosecutors", "Public defenders", "Police and law enforcement",
+      "Labor unions", "Politicians' committees", "Party and ward organizations", "Advocacy PACs", "Government (other)",
+      "Businesses and other employers", "Employer not reported"];
+    const used = order.filter((g) => rows.some((j) => (j.campaign.by_group || {})[g] > 0));
+    const t = document.createElement("table"), head = t.createTHead().insertRow(), body = t.createTBody();
+    for (const h of ["Judge", "From others", ...used]) { const th = document.createElement("th"); th.textContent = h; head.appendChild(th); }
+    for (const j of rows) {
+      const r = body.insertRow(), g = j.campaign.by_group || {};
+      r.insertCell().textContent = `${j.ballot_number ? "#" + j.ballot_number + " " : ""}${j.name}`;
+      r.insertCell().textContent = compact(j.campaign.raised_from_others);
+      for (const k of used) r.insertCell().textContent = g[k] ? compact(g[k]) : "";
+    }
+    document.getElementById("money-groups").replaceChildren(t);
+  }
   let raf; addEventListener("resize", () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(draw); });
-  draw();
+  draw(); groupTable();
 })();
 </script>

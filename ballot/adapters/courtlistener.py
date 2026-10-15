@@ -99,41 +99,62 @@ def opinion_text(opinion_id: int) -> str:
 
 
 def presided(text: str, ballot_name: str) -> bool:
-    """True if the opinion's header names this judge as the trial judge. The header sits in the
-    first few thousand characters; looking only there avoids judges merely cited in the body."""
-    head = re.sub(r"\s+", " ", text[:6000])
+    """True if the opinion's header names this judge as the trial judge.
+
+    Headers print the caption in two columns, and text extraction interleaves them
+    ("The Honorable ATATRUK PROPERTIES, INC. ) Caroline Kate Moreland, ) Judge, presiding."),
+    so instead of matching one phrase this looks for the judge's surname and a given name in
+    the 300 characters before "Judge, presiding". Only the first few thousand characters are
+    checked, so judges merely cited in the body don't count."""
+    head = re.sub(r"\s+", " ", text[:8000])
     if not re.search(r"Cook County", head, re.I):
         return False
     given, surnames = name_parts(ballot_name)
-    for m in re.finditer(r"Honorable\s+([^,]{3,60}?),?\s+Judges?,?\s+presiding", head, re.I):
-        g, s = name_parts(m.group(1))
-        if s & surnames and (not g or any(x[:3] == y[:3] for x in g for y in given)):
+    for m in re.finditer(r"Judges?,?\s+presiding", head, re.I):
+        window = head[max(0, m.start() - 300):m.start()].lower()
+        if not re.search(r"\bhon(orable|\.)", window):
+            continue
+        if any(re.search(rf"\b{re.escape(s)}\b", window) for s in surnames) and \
+                any(re.search(rf"\b{re.escape(g[:3])}", window) for g in given):
             return True
     return False
 
 
-# The disposition is the last word of an Illinois decision ("Affirmed." / "Reversed and
-# remanded."), and Rule 23 orders also state it up front in a "Held:" summary.
+# Where an Illinois decision states its disposition, most reliable first:
+#   1. the last numbered paragraph that is just the disposition ("¶ 68 Affirmed.",
+#      "¶ 31 Reversed and remanded."); newer opinions add an attorneys page after it
+#   2. the "Judgment: Affirmed." line in a published opinion's summary page
+#   3. a Rule 23 order's "Held:" summary
+#   4. the court's own sentence ("we affirm the judgment of the circuit court")
 _OUTCOMES = [
-    ("affirmed in part", r"affirmed in part|reversed in part|vacated in part"),
-    ("reversed", r"\breversed\b"),
-    ("vacated", r"\bvacated\b"),
-    ("dismissed", r"appeal dismissed|\bdismissed\b"),
-    ("affirmed", r"\baffirmed\b|\baffirm\b"),
+    ("affirmed in part", r"affirmed in part|reversed in part|vacated in part|affirm in part|reverse in part"),
+    ("reversed", r"\breverse"),
+    ("vacated", r"\bvacate"),
+    ("dismissed", r"dismiss"),
+    ("affirmed", r"\baffirm"),
 ]
+_DISPOSITION = r"(?:affirmed|reversed|vacated|dismissed|appeal dismissed|remanded|judgment affirmed)[^.¶]{0,120}"
+
+
+def _label(snippet: str) -> str | None:
+    s = snippet.lower()
+    return next((label for label, pattern in _OUTCOMES if re.search(pattern, s)), None)
 
 
 def outcome(text: str) -> str | None:
-    """Disposition from the decision's closing lines, falling back to the "Held:" summary.
-    None when neither says, which leaves the case for the model (and for hand labels)."""
-    flat = re.sub(r"\s+", " ", text).strip()
-    tail = flat[-400:].lower()
-    held = re.search(r"held:(.{0,400})", flat[:4000], re.I)
-    for chunk in (tail, held.group(1).lower() if held else ""):
-        for label, pattern in _OUTCOMES:
-            if re.search(pattern, chunk):
-                return label
-    return None
+    """Disposition of the appeal, or None when the text doesn't state one clearly (those cases
+    are left for the model and for hand labels)."""
+    flat = re.sub(r"\s+", " ", text)
+    paragraphs = list(re.finditer(rf"¶\s*\d+\s+({_DISPOSITION})\.", flat, re.I))
+    if paragraphs:
+        return _label(paragraphs[-1].group(1))
+    if m := re.search(rf"Judgment\s*:?\s*({_DISPOSITION})", flat[:6000], re.I):
+        return _label(m.group(1))
+    if m := re.search(r"Held:(.{0,400})", flat[:5000], re.I):
+        if label := _label(m.group(1)):
+            return label
+    sentences = re.findall(r"[^.]*\bwe (?:affirm|reverse|vacate|dismiss)[^.]*\.", flat[-4000:], re.I)
+    return _label(sentences[-1]) if sentences else None
 
 
 def judge_decisions(ballot_name: str, since: str = "2015-01-01") -> list[dict]:
