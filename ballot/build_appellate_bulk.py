@@ -55,7 +55,10 @@ def main() -> None:
             "disposition_field": (r.disposition or "")[:200],
             "criminal": bool(re.match(r"People v\.?", r.case_name or "")),
         })
-    out = pd.DataFrame(rows).sort_values(["judge", "date"])
+    # One appeal can appear twice (an unpublished order later reissued as a published opinion).
+    # Illinois gives each appeal its own docket number, so keep the latest version per docket.
+    out = (pd.DataFrame(rows).sort_values("date")
+           .drop_duplicates(["docket", "judge"], keep="last").sort_values(["judge", "date"]))
     DECISIONS.write_text(json.dumps(out.to_dict("records"), indent=1))
     out.to_parquet(OUT / "appellate_decisions.parquet", index=False)
 
