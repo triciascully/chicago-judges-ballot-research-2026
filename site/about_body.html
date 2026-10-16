@@ -1,0 +1,124 @@
+<div class="wrap about">
+  <nav class="topnav"><a href="./">&larr; Back to the judges guide</a></nav>
+
+  <header>
+    <div class="eyebrow">About this project</div>
+    <h1>How the judges guide is built</h1>
+    <p class="lede">A retrieval-augmented pipeline that turns scattered public records into a sourced voter guide to the 61 judges on the November 2026 Cook County retention ballot. I built it to learn retrieval-augmented generation and LLM evaluation hands-on, on a problem where wrong answers have real costs.</p>
+    <p class="dateline">Built by [Your name] · <a href="[link to the GitHub repository]">Source code on GitHub</a> · Updated <span data-built></span></p>
+  </header>
+
+  <section class="compare">
+    <h2>What it does</h2>
+    <p>Retention ballots ask voters to keep or remove dozens of judges, but the evidence about any one judge is spread across a 300,000-row sentencing dataset, three bar associations' websites, a 1 GB campaign-finance file and appellate court opinions. The guide gathers it into one profile per judge:</p>
+    <ul class="plain">
+      <li>Sentencing compared with what the whole court did for the same charges, with 95% ranges</li>
+      <li>Bar association ratings and the attorney feedback behind them, quoted word for word</li>
+      <li>Career background: former prosecutor, criminal defense, work for vulnerable clients</li>
+      <li>Campaign money by donor type, and where donor organizations give elsewhere</li>
+      <li>Appellate track record: how often the judge's rulings were affirmed or reversed (in progress)</li>
+    </ul>
+    <p><strong>The design rule throughout:</strong> every claim on the page points to a verbatim quote or a computed number with its uncertainty. The language model never writes text readers see; it extracts facts from retrieved documents, and code verifies them.</p>
+  </section>
+
+  <section class="compare">
+    <h2>How it works as a retrieval-augmented system</h2>
+    <p>For each judge, the pipeline retrieves the relevant documents, gives them to a language model as its only context, has it return structured facts with a quote for each, then verifies every quote in code before anything reaches the page. It follows the standard RAG loop (retrieve, augment, generate) with an added verification stage, because a voter guide can't tolerate invented facts.</p>
+    <figure class="diagram">
+      <svg viewBox="0 0 760 548" role="img" aria-label="Retrieved text goes through the model, but code decides what reaches the page">
+        <defs><marker id="ab-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a8a8a"/></marker></defs>
+        <text x="24" y="34" class="d-title">Retrieved text goes through the model, but code decides what reaches the page</text>
+        <g fill="none" stroke="#8a8a8a" stroke-width="1.25">
+          <path d="M104 120V166" marker-end="url(#ab-arrow)"/><path d="M280 120V166" marker-end="url(#ab-arrow)"/>
+          <path d="M456 120V166" marker-end="url(#ab-arrow)"/><path d="M632 120V166" marker-end="url(#ab-arrow)"/>
+          <path d="M192 224V254" marker-end="url(#ab-arrow)"/><path d="M544 224V254" marker-end="url(#ab-arrow)"/>
+          <path d="M192 328V358" marker-end="url(#ab-arrow)"/><path d="M192 432V466" marker-end="url(#ab-arrow)"/>
+          <path d="M650 328V466" marker-end="url(#ab-arrow)"/><path d="M376 396H362" stroke-dasharray="4 4" marker-end="url(#ab-arrow)"/>
+        </g>
+        <g class="d-box"><rect x="24" y="64" width="160" height="56" rx="6"/><text x="36" y="88" class="d-name">Bar evaluations</text><text x="36" y="106" class="d-line">3 bar groups</text></g>
+        <g class="d-box"><rect x="200" y="64" width="160" height="56" rx="6"/><text x="212" y="88" class="d-name">Appellate opinions</text><text x="212" y="106" class="d-line">CourtListener</text></g>
+        <g class="d-box"><rect x="376" y="64" width="160" height="56" rx="6"/><text x="388" y="88" class="d-name">Sentencing records</text><text x="388" y="106" class="d-line">306,000 rows</text></g>
+        <g class="d-box"><rect x="552" y="64" width="160" height="56" rx="6"/><text x="564" y="88" class="d-name">Campaign filings</text><text x="564" y="106" class="d-line">1 GB of receipts</text></g>
+        <g class="d-box"><rect x="24" y="168" width="688" height="56" rx="6"/><text x="36" y="192" class="d-name">Retrieve documents for each judge</text><text x="36" y="210" class="d-line">Name matching, full-text search with a caption check, and streaming filters</text></g>
+        <g class="d-box"><rect x="24" y="256" width="336" height="72" rx="6"/><text x="36" y="280" class="d-name">Model extracts facts</text><text x="36" y="296" class="d-line">Local LLM, output fixed to a JSON schema</text><text x="36" y="312" class="d-line">Each fact comes with a verbatim quote</text></g>
+        <g class="d-box"><rect x="376" y="256" width="336" height="72" rx="6"/><text x="388" y="280" class="d-name">Code computes statistics</text><text x="388" y="296" class="d-line">Comparison with like cases, 95% ranges</text><text x="388" y="312" class="d-line">Donor groups and campaign totals</text></g>
+        <g class="d-box d-key"><rect x="24" y="360" width="336" height="72" rx="6"/><text x="36" y="384" class="d-name">Code verifies every claim</text><text x="36" y="400" class="d-line ink">Quote must appear word for word in the source</text><text x="36" y="416" class="d-line ink">A flag needs wording that shows the fact</text></g>
+        <g class="d-box d-dash"><rect x="376" y="360" width="200" height="72" rx="6"/><text x="388" y="384" class="d-name">Evaluation</text><text x="388" y="400" class="d-line">Held-out hand labels</text><text x="388" y="416" class="d-line">Outside-data checks</text></g>
+        <g class="d-box"><rect x="24" y="468" width="688" height="56" rx="6"/><text x="36" y="492" class="d-name">Judge profiles and the shareable page</text><text x="36" y="510" class="d-line">Text comes from templates; every claim cites a quote or a computed number</text></g>
+      </svg>
+      <figcaption class="note">Text sources pass through the model and then code verification; structured data goes straight to code statistics. Both meet only in the templated profiles.</figcaption>
+    </figure>
+    <ol class="steps">
+      <li><strong>Retrieve.</strong> Each judge is the query. Bar evaluations are retrieved by a name matcher that handles middle initials, nicknames, hyphenated and married surnames, and typos on source pages. Appellate opinions come from Boolean full-text search on CourtListener, then a filter that parses each opinion's caption to confirm the judge presided. Campaign filings are retrieved by streaming a 1 GB file and keeping each judge's committees.</li>
+      <li><strong>Augment.</strong> The retrieved document goes into the prompt as the model's only source, with instructions to use nothing else and to copy evidence word for word. Output is constrained to a JSON schema compiled into a grammar, so it can't come back malformed.</li>
+      <li><strong>Generate.</strong> A local model, Qwen3-Coder-Next running through llama.cpp on a laptop, extracts the facts. The same code can call Claude through the Anthropic API, so the two can be compared on the same evaluation.</li>
+      <li><strong>Verify.</strong> Each quote must appear verbatim in the source, a flag needs wording that shows the fact, and reader-facing text comes from templates. The page cannot contain a sentence the model invented.</li>
+    </ol>
+    <p class="note">Retrieval here is lexical and structured rather than embedding-based, because every document is keyed to a known judge. Semantic search over the opinions is the next phase.</p>
+  </section>
+
+  <section class="compare">
+    <h2>How the output is evaluated</h2>
+    <p>On 15 hand-labeled evaluations held out from tuning, the final pipeline made no false claims on any of six facts and missed one criminal-court assignment.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Fact</th><th>Precision</th><th>Recall</th></tr></thead>
+      <tbody>
+        <tr><td>Former prosecutor</td><td>1.00</td><td>1.00</td></tr>
+        <tr><td>Former criminal defense attorney</td><td>1.00</td><td>1.00</td></tr>
+        <tr><td>Represented vulnerable clients</td><td>1.00</td><td>1.00</td></tr>
+        <tr><td>Criminal-court experience</td><td>1.00</td><td>0.86</td></tr>
+        <tr><td>Treatment-court experience</td><td>1.00</td><td>1.00</td></tr>
+        <tr><td>Criticized by attorneys</td><td>1.00</td><td>1.00</td></tr>
+      </tbody>
+    </table></div>
+    <p>Four layers of checks each caught different errors:</p>
+    <ul class="plain">
+      <li><strong>Grounding:</strong> is every evidence quote verbatim in the source? Catches invented or paraphrased evidence.</li>
+      <li><strong>Hand labels:</strong> a tuning set and a separate held-out set, labeled from the text alone under a written guide. Catches real quotes with the wrong label, which grounding can't.</li>
+      <li><strong>Outside data:</strong> every judge with 100+ criminal sentences in court records must have criminal-court experience. This exposed a schema bug that cost recall on 5 of 11 judges, fixed with one prompt sentence.</li>
+      <li><strong>Support check:</strong> a stronger model judges whether each quote supports its label (built, ready to run with an API key).</li>
+    </ul>
+  </section>
+
+  <section class="compare">
+    <h2>Lessons from building it</h2>
+    <ul class="plain">
+      <li><strong>Prompts set what the model attempts; code decides what counts.</strong> Across five prompt versions, stricter rules made the model dump facts into catch-all buckets or loop until it hit the output limit. Splitting the job (the model extracts broadly, code checks keep only verified facts) took precision to 1.00.</li>
+      <li><strong>A local model was good enough.</strong> A quantized mixture-of-experts model on a 64 GB laptop extracted each judge in about 9 seconds, at no cost.</li>
+      <li><strong>Every source had data-quality problems.</strong> Sentence dates as far off as 2921, names stored "Last, First" or in capitals, misspellings on source pages, a dataset that silently stopped in 2024. Each was found by checking outputs against expectations.</li>
+      <li><strong>Rate limits shaped retrieval.</strong> With search capped at 50 requests an hour, the pipeline batches judges per query, caches every result page, and waits out limits on the server's terms.</li>
+    </ul>
+  </section>
+
+  <section class="compare">
+    <h2>Responsible design</h2>
+    <ul class="plain">
+      <li>No voting recommendations; the guide shows the records and how to read them.</li>
+      <li>Every number carries its uncertainty, and specialty-court judges are flagged so they aren't compared unfairly.</li>
+      <li>Donors are shown by employer and organization, never by individual name.</li>
+      <li>Readers' ballot choices stay in their own browser.</li>
+    </ul>
+  </section>
+
+  <section class="compare">
+    <h2>Data sources</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Source</th><th>Provides</th></tr></thead>
+      <tbody>
+        <tr><td>Cook County State's Attorney sentencing data</td><td>305,885 sentencing records, 2011–2024</td></tr>
+        <tr><td>Illinois State Bar Association, Chicago Bar Association, Alliance of Bar Associations</td><td>Ratings, written evaluations, ballot numbers</td></tr>
+        <tr><td>Illinois State Board of Elections</td><td>Campaign committees, party, itemized receipts</td></tr>
+        <tr><td>CourtListener (Free Law Project)</td><td>Illinois Appellate Court decisions</td></tr>
+        <tr><td>Circuit Court of Cook County</td><td>Judge directory and courtroom assignments</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section class="compare">
+    <h2>Tools</h2>
+    <p>Python and pandas; llama.cpp with Qwen3-Coder-Next; the Anthropic API; JSON-schema-constrained generation; the CourtListener and Socrata APIs; hand-built SVG charts with a colorblind-validated palette; Flask and GitHub Pages for hosting; git.</p>
+  </section>
+
+  <nav class="topnav bottom"><a href="./">&larr; Back to the judges guide</a></nav>
+</div>
+<script>document.querySelectorAll("[data-built]").forEach((e) => (e.textContent = "{{BUILT}}"));</script>

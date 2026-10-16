@@ -200,6 +200,20 @@ details.more > div { margin-top: 0.6rem; display: grid; gap: 0.5rem; }
   .sheet-foot { margin-top: 12pt; color: #000; }
 }
 
+.topnav { font: 600 0.8rem/1.2 var(--sans); }
+.topnav a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--rule); }
+.topnav a:hover { border-bottom-color: var(--ink); }
+.topnav.bottom { border-top: 1px solid var(--rule); padding-top: 1rem; }
+.about ul.plain, .about ol.steps { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.5rem; max-width: var(--measure); }
+.about .diagram { margin: 0.5rem 0; display: grid; gap: 0.5rem; max-width: 46rem; }
+.about .diagram svg { width: 100%; height: auto; display: block; }
+.d-title { font: 700 15px var(--sans); fill: var(--ink); }
+.d-box rect { fill: none; stroke: #9a9a9a; stroke-width: 1.25; }
+.d-key rect { fill: #eaf2fb; stroke: var(--series); stroke-width: 2; }
+.d-dash rect { stroke-dasharray: 4 4; }
+.d-name { font: 700 13px var(--sans); fill: var(--ink); }
+.d-line { font: 400 11.5px var(--sans); fill: var(--muted); }
+.d-line.ink { fill: var(--ink); }
 .method ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.55rem; font-size: 0.98rem; }
 footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; gap: 0.4rem; border-top: 1px solid var(--rule); padding-top: 1rem; max-width: var(--measure); }
 
@@ -213,6 +227,7 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
 
 <div class="wrap">
   <header>
+    <nav class="topnav"><a href="about.html">About this project</a></nav>
     <div class="eyebrow">Cook County judicial retention · Nov. 3, 2026</div>
     <h1>What the record shows about the 61 judges on your ballot</h1>
     <p class="lede">Every Cook County voter decides whether these sitting judges keep their seats. Here is what sentencing records, bar associations, campaign filings and the attorneys who appear before them say about each one, with the source for every claim.</p>
@@ -329,7 +344,7 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
 
   <footer>
     <div>Sources: <a href="" data-src="sao">Cook County State's Attorney sentencing data</a> · <a href="https://www.isba.org/judicial-elections/counties/cook">ISBA evaluations</a> · <a href="https://www.chicagobar.org/CBA/CBA/JEC/Judicial_Voters_Guide.aspx">CBA voters guide</a> · <a href="https://www.voteforjudges.org/">Alliance ratings</a> · <a href="https://elections.il.gov/campaigndisclosuredatafiles/">Illinois State Board of Elections</a>. For reporting on these judges, see the <a href="https://2026retention.injusticewatch.org/">Injustice Watch guide</a>.</div>
-    <div>Built <span data-built></span>. Independent volunteer project, not affiliated with any campaign, court, or bar association.</div>
+    <div>Built <span data-built></span>. Independent volunteer project, not affiliated with any campaign, court, or bar association. <a href="about.html">How this guide is built</a>.</div>
   </footer>
 </div>
 

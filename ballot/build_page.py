@@ -16,6 +16,9 @@ REPORT = OUT / "cook_2026_retention_judges.json"
 TEMPLATE = ROOT / "site" / "template.html"
 PAGE = ROOT / "site" / "judges.html"
 STANDALONE = ROOT / "site" / "web" / "public" / "index.html"
+ABOUT_BODY = ROOT / "site" / "about_body.html"
+ABOUT = ROOT / "site" / "web" / "public" / "about.html"
+ABOUT_ARTIFACT = ROOT / "site" / "about.html"  # published beside judges.html in the Claude artifact
 _WRAPPER = """<!doctype html>
 <html lang="en">
 <head>
@@ -63,7 +66,14 @@ def main() -> None:
     PAGE.write_text(page)
     STANDALONE.parent.mkdir(parents=True, exist_ok=True)
     STANDALONE.write_text(_WRAPPER.replace("{page}", page))
-    for path in (PAGE, STANDALONE):
+    # The About page reuses the main page's <head> (fonts and styles) with its own title.
+    template = TEMPLATE.read_text()
+    head = template[:template.index("</style>") + len("</style>")].replace(
+        "<title>Cook County Judges 2026</title>", "<title>About the Judges Guide</title>")
+    about = head + "\n" + ABOUT_BODY.read_text().replace("{{BUILT}}", date.today().strftime("%B %-d, %Y"))
+    ABOUT.write_text(_WRAPPER.replace("{page}", about))
+    ABOUT_ARTIFACT.write_text(_WRAPPER.replace("{page}", about))
+    for path in (PAGE, STANDALONE, ABOUT):
         print(f"{path} ({path.stat().st_size / 1e3:.0f} KB)")
 
 
