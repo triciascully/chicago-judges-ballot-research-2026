@@ -193,7 +193,8 @@
         "top_organizations": [
           {
             "name": "INT'L UNION OF ELEVATOR CONSTRUCTORS POL COMTE",
-            "total": 500.0
+            "total": 500.0,
+            "elsewhere": null
           }
         ],
         "by_group": {
@@ -386,7 +387,15 @@
         "top_organizations": [
           {
             "name": "13TH WARD DEMOCRATIC ORG",
-            "total": 435.76
+            "total": 435.76,
+            "elsewhere": {
+              "total": 3974.96,
+              "democratic": 3974.96,
+              "republican": 0.0,
+              "no_party": 0.0,
+              "recipients": 3,
+              "dem_share": 1.0
+            }
           }
         ],
         "by_group": {
@@ -633,15 +642,32 @@
         "top_organizations": [
           {
             "name": "DEMOCRATIC PARTY OF EVANSTON",
-            "total": 550.0
+            "total": 550.0,
+            "elsewhere": {
+              "total": 7200.0,
+              "democratic": 3100.0,
+              "republican": 0.0,
+              "no_party": 4100.0,
+              "recipients": 4,
+              "dem_share": 1.0
+            }
           },
           {
             "name": "PURPLE PAC",
-            "total": 375.0
+            "total": 375.0,
+            "elsewhere": {
+              "total": 339700.0,
+              "democratic": 152350.0,
+              "republican": 9000.0,
+              "no_party": 178350.0,
+              "recipients": 40,
+              "dem_share": 0.944
+            }
           },
           {
             "name": "SWANSON FRIENDS FOR KARIN ELIZABETH",
-            "total": 200.0
+            "total": 200.0,
+            "elsewhere": null
           }
         ],
         "by_group": {
@@ -1358,61 +1384,114 @@
             "employer": "POWER ROGERS & SMITH",
             "total": 3000.0,
             "donors": 2,
-            "legal": true
+            "legal": true,
+            "elsewhere": {
+              "total": 1061403.6,
+              "democratic": 898553.6,
+              "republican": 0.0,
+              "no_party": 162850.0,
+              "recipients": 68,
+              "dem_share": 1.0
+            }
           },
           {
             "employer": "COOK COUNTY",
             "total": 1500.0,
             "donors": 1,
-            "legal": true
+            "legal": true,
+            "elsewhere": null
           },
           {
             "employer": "ACQUIRENT",
             "total": 1200.0,
             "donors": 2,
-            "legal": false
+            "legal": false,
+            "elsewhere": null
           },
           {
             "employer": "BRAUVIN REAL ESTATE",
             "total": 1000.0,
             "donors": 1,
-            "legal": false
+            "legal": false,
+            "elsewhere": null
           },
           {
             "employer": "CUSHING LAW OFFICES",
             "total": 1000.0,
             "donors": 1,
-            "legal": true
+            "legal": true,
+            "elsewhere": {
+              "total": 1500.0,
+              "democratic": 1500.0,
+              "republican": 0.0,
+              "no_party": 0.0,
+              "recipients": 2,
+              "dem_share": 1.0
+            }
           },
           {
             "employer": "MILLER JOHNSON",
             "total": 1000.0,
             "donors": 1,
-            "legal": true
+            "legal": true,
+            "elsewhere": null
           },
           {
             "employer": "STATE OF ILLINOIS",
             "total": 750.0,
             "donors": 2,
-            "legal": true
+            "legal": true,
+            "elsewhere": {
+              "total": 45746.63,
+              "democratic": 37353.61,
+              "republican": 3214.2,
+              "no_party": 5178.82,
+              "recipients": 12,
+              "dem_share": 0.921
+            }
           }
         ],
         "top_organizations": [
           {
             "name": "STRATEGY GROUP",
-            "total": 35641.62
+            "total": 35641.62,
+            "elsewhere": {
+              "total": 106569.87,
+              "democratic": 102773.73,
+              "republican": 0.0,
+              "no_party": 3796.14,
+              "recipients": 12,
+              "dem_share": 1.0
+            }
           },
           {
             "name": "FRANKLIN DISPLAY GROUP",
-            "total": 850.0
+            "total": 850.0,
+            "elsewhere": {
+              "total": 6790.0,
+              "democratic": 0.0,
+              "republican": 250.0,
+              "no_party": 6540.0,
+              "recipients": 2,
+              "dem_share": 0.0
+            }
           },
           {
             "name": "CUSHING COMPANY",
-            "total": 800.0
+            "total": 800.0,
+            "elsewhere": null
           },
           {
             "name": "CITIZENS FOR CAROLINE",
-            "total": 300.0
+            "total": 300.0,
+            "elsewhere": {
+              "total": 300.0,
+              "democratic": 300.0,
+              "republican": 0.0,
+              "no_party": 0.0,
+              "recipients": 1,
+              "dem_share": 1.0
+            }
           }
         ],
         "by_group": {
@@ -1516,43 +1595,78 @@
             "employer": "MAYER BROWN",
             "total": 5000.0,
             "donors": 1,
-            "legal": true
+            "legal": true,
+            "elsewhere": {
+              "total": 488380.25,
+              "democratic": 230500.0,
+              "republican": 220000.0,
+              "no_party": 37880.25,
+              "recipients": 18,
+              "dem_share": 0.512
+            }
           },
           {
             "employer": "BRESSLER GROUP",
             "total": 1500.0,
             "donors": 1,
-            "legal": false
+            "legal": false,
+            "elsewhere": null
           },
           {
             "employer": "HALL PRANGLE SCHOONVELD",
             "total": 1000.0,
             "donors": 1,
-            "legal": true
+            "legal": true,
+            "elsewhere": {
+              "total": 1500.0,
+              "democratic": 1500.0,
+              "republican": 0.0,
+              "no_party": 0.0,
+              "recipients": 1,
+              "dem_share": 1.0
+            }
           },
           {
             "employer": "JONES DAY",
             "total": 1000.0,
             "donors": 1,
-            "legal": true
+            "legal": true,
+            "elsewhere": {
+              "total": 1079.6,
+              "democratic": 0.0,
+              "republican": 0.0,
+              "no_party": 1079.6,
+              "recipients": 1,
+              "dem_share": null
+            }
           },
           {
             "employer": "COOK COUNTY IL",
             "total": 750.0,
             "donors": 2,
-            "legal": true
+            "legal": true,
+            "elsewhere": null
           },
           {
             "employer": "PRO SOURCE",
             "total": 600.0,
             "donors": 2,
-            "legal": false
+            "legal": false,
+            "elsewhere": null
           },
           {
             "employer": "BERKSHIRE HATHAWAY",
             "total": 550.0,
             "donors": 2,
-            "legal": false
+            "legal": false,
+            "elsewhere": {
+              "total": 700.0,
+              "democratic": 0.0,
+              "republican": 0.0,
+              "no_party": 700.0,
+              "recipients": 2,
+              "dem_share": null
+            }
           }
         ],
         "top_organizations": [],
@@ -1663,25 +1777,58 @@
             "employer": "NORTHERN TRUST",
             "total": 300.0,
             "donors": 1,
-            "legal": false
+            "legal": false,
+            "elsewhere": {
+              "total": 76354.41,
+              "democratic": 30978.92,
+              "republican": 0.0,
+              "no_party": 45375.49,
+              "recipients": 9,
+              "dem_share": 1.0
+            }
           }
         ],
         "top_organizations": [
           {
             "name": "WILLIAM DAVIS FOR STATE REPRESENTATIVE",
-            "total": 3000.0
+            "total": 3000.0,
+            "elsewhere": {
+              "total": 138916.4,
+              "democratic": 114266.4,
+              "republican": 0.0,
+              "no_party": 24650.0,
+              "recipients": 64,
+              "dem_share": 1.0
+            }
           },
           {
             "name": "FRIENDS OF ELGIE SIMS JR",
-            "total": 1000.0
+            "total": 1000.0,
+            "elsewhere": null
           },
           {
             "name": "LIUNA CHICAGO LABORERS' DISTRICT COUNCIL POLITICAL ACTION COMMITTEE",
-            "total": 1000.0
+            "total": 1000.0,
+            "elsewhere": {
+              "total": 5192810.0,
+              "democratic": 4873810.0,
+              "republican": 53800.0,
+              "no_party": 265200.0,
+              "recipients": 94,
+              "dem_share": 0.989
+            }
           },
           {
             "name": "PAINTERS DISTRICT COUNCIL #14 POLITICAL ACTION FUND",
-            "total": 500.0
+            "total": 500.0,
+            "elsewhere": {
+              "total": 425123.0,
+              "democratic": 263350.0,
+              "republican": 1500.0,
+              "no_party": 160273.0,
+              "recipients": 103,
+              "dem_share": 0.994
+            }
           }
         ],
         "by_group": {
@@ -1796,25 +1943,57 @@
             "employer": "SPERLING & SLATER",
             "total": 2000.0,
             "donors": 1,
-            "legal": true
+            "legal": true,
+            "elsewhere": {
+              "total": 7500.0,
+              "democratic": 7500.0,
+              "republican": 0.0,
+              "no_party": 0.0,
+              "recipients": 1,
+              "dem_share": 1.0
+            }
           },
           {
             "employer": "DLA PIPER",
             "total": 1001.0,
             "donors": 1,
-            "legal": true
+            "legal": true,
+            "elsewhere": {
+              "total": 182250.0,
+              "democratic": 130100.0,
+              "republican": 0.0,
+              "no_party": 52150.0,
+              "recipients": 72,
+              "dem_share": 1.0
+            }
           },
           {
             "employer": "PECK RITCHEY",
             "total": 1000.0,
             "donors": 1,
-            "legal": true
+            "legal": true,
+            "elsewhere": {
+              "total": 153405.23,
+              "democratic": 141455.23,
+              "republican": 10700.0,
+              "no_party": 1250.0,
+              "recipients": 43,
+              "dem_share": 0.93
+            }
           }
         ],
         "top_organizations": [
           {
             "name": "LIUNA CHICAGO LABORERS\u0092 DISTRICT COUNCIL PAC",
-            "total": 1000.0
+            "total": 1000.0,
+            "elsewhere": {
+              "total": 14000.0,
+              "democratic": 10000.0,
+              "republican": 0.0,
+              "no_party": 4000.0,
+              "recipients": 4,
+              "dem_share": 1.0
+            }
           }
         ],
         "by_group": {
@@ -1925,59 +2104,105 @@
             "employer": "CAVAN CAPITAL MANAGEMENT",
             "total": 5000.0,
             "donors": 1,
-            "legal": false
+            "legal": false,
+            "elsewhere": null
           },
           {
             "employer": "CORE MECHANICAL",
             "total": 2500.0,
             "donors": 1,
-            "legal": false
+            "legal": false,
+            "elsewhere": {
+              "total": 72600.0,
+              "democratic": 25650.0,
+              "republican": 1500.0,
+              "no_party": 45450.0,
+              "recipients": 19,
+              "dem_share": 0.945
+            }
           },
           {
             "employer": "CARE MECHANICAL",
             "total": 1000.0,
             "donors": 1,
-            "legal": false
+            "legal": false,
+            "elsewhere": null
           },
           {
             "employer": "CAVAN CAPITAL",
             "total": 1000.0,
             "donors": 1,
-            "legal": false
+            "legal": false,
+            "elsewhere": null
           },
           {
             "employer": "DERRIG BUILDERS & MANAGEMENT",
             "total": 1000.0,
             "donors": 1,
-            "legal": false
+            "legal": false,
+            "elsewhere": null
           },
           {
             "employer": "ONWARD HEALTHCARE CONSULTING",
             "total": 1000.0,
             "donors": 1,
-            "legal": false
+            "legal": false,
+            "elsewhere": null
           }
         ],
         "top_organizations": [
           {
             "name": "POTENZA PRODUCTIONS",
-            "total": 5700.0
+            "total": 5700.0,
+            "elsewhere": null
           },
           {
             "name": "IUOE LOCAL 399 POLITICAL EDUCATION FUND",
-            "total": 5000.0
+            "total": 5000.0,
+            "elsewhere": {
+              "total": 5743423.56,
+              "democratic": 5064573.56,
+              "republican": 109750.0,
+              "no_party": 569100.0,
+              "recipients": 337,
+              "dem_share": 0.979
+            }
           },
           {
             "name": "PERSONAL PAC",
-            "total": 2000.0
+            "total": 2000.0,
+            "elsewhere": {
+              "total": 3358678.4,
+              "democratic": 2588608.79,
+              "republican": 9452.65,
+              "no_party": 760616.96,
+              "recipients": 221,
+              "dem_share": 0.996
+            }
           },
           {
             "name": "LIUNA CHICAGO LABORERS DISTRICT COUNCIL PAC",
-            "total": 1000.0
+            "total": 1000.0,
+            "elsewhere": {
+              "total": 2007700.0,
+              "democratic": 1588200.0,
+              "republican": 85000.0,
+              "no_party": 334500.0,
+              "recipients": 90,
+              "dem_share": 0.949
+            }
           },
           {
             "name": "DEMOCRATS OF NORTHFIELD TOWNSHIP",
-            "total": 998.42
+            "total": 998.42,
+            "elsewhere": {
+              "total": 48692.73,
+              "democratic": 24192.73,
+              "republican": 0.0,
+              "no_party": 24500.0,
+              "recipients": 9,
+              "dem_share": 1.0
+            }
           }
         ],
         "by_group": {
@@ -2255,29 +2480,62 @@
             "employer": "ROMANUCCI & BLANDIN",
             "total": 2000.0,
             "donors": 2,
-            "legal": true
+            "legal": true,
+            "elsewhere": {
+              "total": 1359475.17,
+              "democratic": 1085925.0,
+              "republican": 8950.0,
+              "no_party": 264600.17,
+              "recipients": 115,
+              "dem_share": 0.992
+            }
           },
           {
             "employer": "PECK RITCHEY",
             "total": 1000.0,
             "donors": 1,
-            "legal": false
+            "legal": false,
+            "elsewhere": {
+              "total": 153405.23,
+              "democratic": 141455.23,
+              "republican": 10700.0,
+              "no_party": 1250.0,
+              "recipients": 43,
+              "dem_share": 0.93
+            }
           },
           {
             "employer": "VORNADO REALTY TRUST",
             "total": 1.0,
             "donors": 1,
-            "legal": false
+            "legal": false,
+            "elsewhere": null
           }
         ],
         "top_organizations": [
           {
             "name": "LIUNA CHICAGO LABORERS' DISTRICT COUNCIL POLITICAL ACTION COMMITTEE",
-            "total": 1000.0
+            "total": 1000.0,
+            "elsewhere": {
+              "total": 5192810.0,
+              "democratic": 4873810.0,
+              "republican": 53800.0,
+              "no_party": 265200.0,
+              "recipients": 94,
+              "dem_share": 0.989
+            }
           },
           {
             "name": "CITIZENS FOR TUNNEY",
-            "total": 500.0
+            "total": 500.0,
+            "elsewhere": {
+              "total": 200327.64,
+              "democratic": 158477.64,
+              "republican": 0.0,
+              "no_party": 41850.0,
+              "recipients": 49,
+              "dem_share": 1.0
+            }
           }
         ],
         "by_group": {
@@ -3573,61 +3831,121 @@
             "employer": "COOK COUNTY CIRCUIT COURT",
             "total": 3500.0,
             "donors": 1,
-            "legal": true
+            "legal": true,
+            "elsewhere": null
           },
           {
             "employer": "STATE OF ILLINOIS",
             "total": 1350.0,
             "donors": 4,
-            "legal": true
+            "legal": true,
+            "elsewhere": {
+              "total": 45746.63,
+              "democratic": 37353.61,
+              "republican": 3214.2,
+              "no_party": 5178.82,
+              "recipients": 12,
+              "dem_share": 0.921
+            }
           },
           {
             "employer": "BLEGEN & GARVEY",
             "total": 1100.0,
             "donors": 1,
-            "legal": true
+            "legal": true,
+            "elsewhere": null
           },
           {
             "employer": "LAW OFFICES OF STEPHANIE K NATHANSON",
             "total": 1000.0,
             "donors": 1,
-            "legal": true
+            "legal": true,
+            "elsewhere": {
+              "total": 300.0,
+              "democratic": 300.0,
+              "republican": 0.0,
+              "no_party": 0.0,
+              "recipients": 1,
+              "dem_share": 1.0
+            }
           },
           {
             "employer": "MERTES & MERTES",
             "total": 1000.0,
             "donors": 1,
-            "legal": true
+            "legal": true,
+            "elsewhere": null
           },
           {
             "employer": "PROFIT LAWS",
             "total": 1000.0,
             "donors": 1,
-            "legal": true
+            "legal": true,
+            "elsewhere": null
           },
           {
             "employer": "EDELSON",
             "total": 750.0,
             "donors": 1,
-            "legal": true
+            "legal": true,
+            "elsewhere": {
+              "total": 599091.26,
+              "democratic": 488834.53,
+              "republican": 4500.0,
+              "no_party": 105756.73,
+              "recipients": 39,
+              "dem_share": 0.991
+            }
           }
         ],
         "top_organizations": [
           {
             "name": "LAKEVIEW STRATEGY GROUP",
-            "total": 3290.0
+            "total": 3290.0,
+            "elsewhere": {
+              "total": 113352.0,
+              "democratic": 13370.0,
+              "republican": 0.0,
+              "no_party": 99982.0,
+              "recipients": 16,
+              "dem_share": 1.0
+            }
           },
           {
             "name": "ILLINOIS JUSTICE PAC",
-            "total": 1000.0
+            "total": 1000.0,
+            "elsewhere": {
+              "total": 5500.0,
+              "democratic": 0.0,
+              "republican": 0.0,
+              "no_party": 5500.0,
+              "recipients": 1,
+              "dem_share": null
+            }
           },
           {
             "name": "FRIENDS OF DEBRA SHORE",
-            "total": 500.0
+            "total": 500.0,
+            "elsewhere": {
+              "total": 147412.96,
+              "democratic": 82092.09,
+              "republican": 0.0,
+              "no_party": 65320.87,
+              "recipients": 117,
+              "dem_share": 1.0
+            }
           },
           {
             "name": "CITIZENS FOR TUNNEY",
-            "total": 200.0
+            "total": 200.0,
+            "elsewhere": {
+              "total": 200327.64,
+              "democratic": 158477.64,
+              "republican": 0.0,
+              "no_party": 41850.0,
+              "recipients": 49,
+              "dem_share": 1.0
+            }
           }
         ],
         "by_group": {
@@ -3729,7 +4047,15 @@
         "top_organizations": [
           {
             "name": "LIUNA CHICAGO LABORER'S DISTRICT COUNCIL POLITICAL ACTION COMMITTEE",
-            "total": 1000.0
+            "total": 1000.0,
+            "elsewhere": {
+              "total": 399750.0,
+              "democratic": 384800.0,
+              "republican": 0.0,
+              "no_party": 14950.0,
+              "recipients": 13,
+              "dem_share": 1.0
+            }
           }
         ],
         "by_group": {
@@ -3921,29 +4247,70 @@
             "employer": "DYKEMA",
             "total": 150.0,
             "donors": 1,
-            "legal": true
+            "legal": true,
+            "elsewhere": {
+              "total": 4971.45,
+              "democratic": 3321.45,
+              "republican": 0.0,
+              "no_party": 1650.0,
+              "recipients": 5,
+              "dem_share": 1.0
+            }
           }
         ],
         "top_organizations": [
           {
             "name": "IBEW LOCAL 134 PAC",
-            "total": 1500.0
+            "total": 1500.0,
+            "elsewhere": {
+              "total": 451125.0,
+              "democratic": 406900.0,
+              "republican": 0.0,
+              "no_party": 44225.0,
+              "recipients": 36,
+              "dem_share": 1.0
+            }
           },
           {
             "name": "MCMAHON FRIENDS OF EAMON",
-            "total": 1477.0
+            "total": 1477.0,
+            "elsewhere": null
           },
           {
             "name": "CHICAGO & COOK COUNTY BUILDING TRADES COUNCIL",
-            "total": 500.0
+            "total": 500.0,
+            "elsewhere": {
+              "total": 15300.0,
+              "democratic": 9300.0,
+              "republican": 0.0,
+              "no_party": 6000.0,
+              "recipients": 11,
+              "dem_share": 1.0
+            }
           },
           {
             "name": "SPRINKLER FITTERS LOCAL 281",
-            "total": 500.0
+            "total": 500.0,
+            "elsewhere": {
+              "total": 267235.2,
+              "democratic": 232950.0,
+              "republican": 1000.0,
+              "no_party": 33285.2,
+              "recipients": 120,
+              "dem_share": 0.996
+            }
           },
           {
             "name": "BRICKLAYERS DISTRICT COUNCIL",
-            "total": 250.0
+            "total": 250.0,
+            "elsewhere": {
+              "total": 1500.0,
+              "democratic": 500.0,
+              "republican": 0.0,
+              "no_party": 1000.0,
+              "recipients": 2,
+              "dem_share": 1.0
+            }
           }
         ],
         "by_group": {
@@ -4059,13 +4426,15 @@
             "employer": "COOK COUNTY",
             "total": 6466.42,
             "donors": 4,
-            "legal": true
+            "legal": true,
+            "elsewhere": null
           },
           {
             "employer": "ORLAND PARK",
             "total": 1000.0,
             "donors": 1,
-            "legal": false
+            "legal": false,
+            "elsewhere": null
           }
         ],
         "top_organizations": [],
@@ -4493,7 +4862,8 @@
         "top_organizations": [
           {
             "name": "LADUZINSKI & ASSOCIATES",
-            "total": 1750.0
+            "total": 1750.0,
+            "elsewhere": null
           }
         ],
         "by_group": {
@@ -4853,7 +5223,15 @@
             "employer": "ROCKFORD ANESTHESIOLOGISTS ASSOCIATED",
             "total": 1000.0,
             "donors": 1,
-            "legal": false
+            "legal": false,
+            "elsewhere": {
+              "total": 27564.85,
+              "democratic": 2500.0,
+              "republican": 14964.85,
+              "no_party": 10100.0,
+              "recipients": 11,
+              "dem_share": 0.143
+            }
           }
         ],
         "top_organizations": [],
@@ -4966,21 +5344,53 @@
             "employer": "STATE OF ILLINOIS",
             "total": 549.47,
             "donors": 2,
-            "legal": true
+            "legal": true,
+            "elsewhere": {
+              "total": 45746.63,
+              "democratic": 37353.61,
+              "republican": 3214.2,
+              "no_party": 5178.82,
+              "recipients": 12,
+              "dem_share": 0.921
+            }
           }
         ],
         "top_organizations": [
           {
             "name": "LIUNA CHICAGO LABORERS' DISTRICT COUNCIL PAC",
-            "total": 1000.0
+            "total": 1000.0,
+            "elsewhere": {
+              "total": 21517775.0,
+              "democratic": 18538725.0,
+              "republican": 260850.0,
+              "no_party": 2718200.0,
+              "recipients": 238,
+              "dem_share": 0.986
+            }
           },
           {
             "name": "UNITY PARTY OF BLOOM TOWNSHIP",
-            "total": 500.0
+            "total": 500.0,
+            "elsewhere": {
+              "total": 199057.3,
+              "democratic": 106400.0,
+              "republican": 1000.0,
+              "no_party": 91657.3,
+              "recipients": 23,
+              "dem_share": 0.991
+            }
           },
           {
             "name": "FRIENDS OF SHEILA CHALMERS CURRIN",
-            "total": 250.0
+            "total": 250.0,
+            "elsewhere": {
+              "total": 200.0,
+              "democratic": 200.0,
+              "republican": 0.0,
+              "no_party": 0.0,
+              "recipients": 1,
+              "dem_share": 1.0
+            }
           }
         ],
         "by_group": {
@@ -5245,13 +5655,22 @@
             "employer": "CHICAGO PUBLIC SCHOOLS",
             "total": 1000.0,
             "donors": 1,
-            "legal": false
+            "legal": false,
+            "elsewhere": null
           }
         ],
         "top_organizations": [
           {
             "name": "LGBTQ VICTORY FUND",
-            "total": 500.0
+            "total": 500.0,
+            "elsewhere": {
+              "total": 6066.24,
+              "democratic": 5390.0,
+              "republican": 0.0,
+              "no_party": 676.24,
+              "recipients": 5,
+              "dem_share": 1.0
+            }
           }
         ],
         "by_group": {
@@ -5351,15 +5770,39 @@
         "top_organizations": [
           {
             "name": "CITIZENS FOR GREGORY HARRIS",
-            "total": 12000.0
+            "total": 12000.0,
+            "elsewhere": {
+              "total": 1785015.87,
+              "democratic": 1578765.87,
+              "republican": 0.0,
+              "no_party": 206250.0,
+              "recipients": 112,
+              "dem_share": 1.0
+            }
           },
           {
             "name": "MELISSA FOR CHICAGO",
-            "total": 10000.0
+            "total": 10000.0,
+            "elsewhere": {
+              "total": 97400.0,
+              "democratic": 84950.0,
+              "republican": 0.0,
+              "no_party": 12450.0,
+              "recipients": 23,
+              "dem_share": 1.0
+            }
           },
           {
             "name": "PEOPLE FOR EMANUEL \"CHRIS\" WELCH",
-            "total": 1000.0
+            "total": 1000.0,
+            "elsewhere": {
+              "total": 43508785.65,
+              "democratic": 43342535.65,
+              "republican": 0.0,
+              "no_party": 166250.0,
+              "recipients": 50,
+              "dem_share": 1.0
+            }
           }
         ],
         "by_group": {
@@ -5460,19 +5903,36 @@
             "employer": "CIRCUIT COURT",
             "total": 1000.0,
             "donors": 1,
-            "legal": true
+            "legal": true,
+            "elsewhere": null
           },
           {
             "employer": "ULLICO",
             "total": 1000.0,
             "donors": 1,
-            "legal": false
+            "legal": false,
+            "elsewhere": {
+              "total": 148048.84,
+              "democratic": 122750.0,
+              "republican": 0.0,
+              "no_party": 25298.84,
+              "recipients": 15,
+              "dem_share": 1.0
+            }
           }
         ],
         "top_organizations": [
           {
             "name": "CITIZENS FOR TUNNEY",
-            "total": 500.0
+            "total": 500.0,
+            "elsewhere": {
+              "total": 200327.64,
+              "democratic": 158477.64,
+              "republican": 0.0,
+              "no_party": 41850.0,
+              "recipients": 49,
+              "dem_share": 1.0
+            }
           }
         ],
         "by_group": {
@@ -6222,11 +6682,20 @@
         "top_organizations": [
           {
             "name": "FRIENDS OF MICHAEL D RODRIGUEZ",
-            "total": 5538.25
+            "total": 5538.25,
+            "elsewhere": {
+              "total": 145407.35,
+              "democratic": 89445.0,
+              "republican": 0.0,
+              "no_party": 55962.35,
+              "recipients": 24,
+              "dem_share": 1.0
+            }
           },
           {
             "name": "EXCLUSIVE PR",
-            "total": 1350.0
+            "total": 1350.0,
+            "elsewhere": null
           }
         ],
         "by_group": {
@@ -6327,21 +6796,53 @@
             "employer": "GOTB CONSULTING",
             "total": 1000.0,
             "donors": 1,
-            "legal": false
+            "legal": false,
+            "elsewhere": {
+              "total": 19750.0,
+              "democratic": 5000.0,
+              "republican": 0.0,
+              "no_party": 14750.0,
+              "recipients": 2,
+              "dem_share": 1.0
+            }
           }
         ],
         "top_organizations": [
           {
             "name": "FRIENDS OF MICHAEL RODRIGUEZ",
-            "total": 4538.25
+            "total": 4538.25,
+            "elsewhere": {
+              "total": 2500.0,
+              "democratic": 0.0,
+              "republican": 0.0,
+              "no_party": 2500.0,
+              "recipients": 1,
+              "dem_share": null
+            }
           },
           {
             "name": "LIUNA CHICAGO LABORERS DISTRICT COUNCIL POLITICAL ACTION COMMITTEE",
-            "total": 1000.0
+            "total": 1000.0,
+            "elsewhere": {
+              "total": 161700.0,
+              "democratic": 155200.0,
+              "republican": 0.0,
+              "no_party": 6500.0,
+              "recipients": 20,
+              "dem_share": 1.0
+            }
           },
           {
             "name": "TRISTAN & CERVANTES",
-            "total": 193.69
+            "total": 193.69,
+            "elsewhere": {
+              "total": 58825.71,
+              "democratic": 5000.0,
+              "republican": 1000.0,
+              "no_party": 52825.71,
+              "recipients": 10,
+              "dem_share": 0.833
+            }
           }
         ],
         "by_group": {
@@ -6609,19 +7110,22 @@
             "employer": "BRUCE FARRELL DORN & ASSOCIATES",
             "total": 1000.0,
             "donors": 1,
-            "legal": true
+            "legal": true,
+            "elsewhere": null
           },
           {
             "employer": "MICHAEL D WALSH",
             "total": 1000.0,
             "donors": 1,
-            "legal": true
+            "legal": true,
+            "elsewhere": null
           },
           {
             "employer": "STATE FARM INURANCE CO",
             "total": 600.0,
             "donors": 2,
-            "legal": true
+            "legal": true,
+            "elsewhere": null
           }
         ],
         "top_organizations": [],
@@ -6798,7 +7302,8 @@
         "top_organizations": [
           {
             "name": "FRIENDS OF JUDGE BROOKS",
-            "total": 3136.88
+            "total": 3136.88,
+            "elsewhere": null
           }
         ],
         "by_group": {
