@@ -214,3 +214,83 @@ def judge_summary(receipts: pd.DataFrame, judge: str) -> dict:
                      from_others.assign(group=[donor_group(x) for x in from_others.itertuples()])
                      .groupby("group").amount.sum().sort_values(ascending=False).items()},
     }
+
+
+# --- Where the judges' organizational donors give elsewhere ------------------------------------
+
+def donor_org_names(receipts: pd.DataFrame) -> set[str]:
+    """Normalized names of the organizations in the judges' donor lists: organizations that gave
+    directly, and employers reported by individual donors."""
+    orgs = receipts[(receipts.FirstName.str.strip() == "") & receipts.LastOnlyName.str.contains(_ORG_WORDS)]
+    names = set(orgs.LastOnlyName.map(_org))
+    employers = receipts[receipts.kind == "individual"].Employer.map(_org)
+    names |= {e for e in employers if e not in _NOT_EMPLOYERS}
+    # Skip employer names shaped like a person ("ALLEN N SCHWARTZ"): looking those up would
+    # profile an individual's politics, which stays off this project.
+    person = re.compile(r"^[A-Z'\-]+ [A-Z] [A-Z'\-]+( JR| SR| III)?$")
+    return {n for n in names if len(n) >= 4 and not person.match(n)}
+
+
+def fetch_org_giving(org_names: set[str], dest: Path, since: str) -> Path:
+    """Stream Receipts.txt and keep contributions *made by* these organizations (donor rows with
+    no first name whose normalized name matches) to any committee since `since`."""
+    req = urllib.request.Request(f"{BASE}/Receipts.txt", headers=_HEADERS)
+    with urllib.request.urlopen(req, timeout=600) as resp:
+        reader = csv.reader(io.TextIOWrapper(resp, encoding="latin-1", newline=""), delimiter="\t",
+                            quoting=csv.QUOTE_NONE)
+        header = next(reader)
+        col = {h: i for i, h in enumerate(header)}
+        with dest.open("w", newline="") as out:
+            writer = csv.writer(out)
+            writer.writerow(["org", "CommitteeID", "RcvDate", "Amount", "D2Part"])
+            for row in reader:
+                if len(row) < len(header) or row[col["FirstName"]].strip():
+                    continue
+                if row[col["Archived"]].lower() == "true" or row[col["RcvDate"]][:10] < since:
+                    continue
+                org = _org(row[col["LastOnlyName"]])
+                if org in org_names:
+                    writer.writerow([org, row[col["CommitteeID"]], row[col["RcvDate"]][:10],
+                                     row[col["Amount"]], row[col["D2Part"]]])
+    return dest
+
+
+def committee_parties(lookup_dir: Path) -> dict[str, str]:
+    """Party for each committee: the committee's own listing, else its candidate's most recent."""
+    cmte, links, cand = (_read(lookup_dir / n) for n in ("Committees.txt", "CmteCandidateLinks.txt", "Candidates.txt"))
+    party = {}
+    cand_party = dict(zip(cand.ID, cand.PartyAffiliation))
+    for cid, cand_id in zip(links.CommitteeID, links.CandidateID):
+        if cand_party.get(cand_id):
+            party[cid] = cand_party[cand_id]
+    for cid, p in zip(cmte.ID, cmte.PartyAffiliation):
+        if p.strip():
+            party[cid] = p
+    return {k: _party_bucket(v) for k, v in party.items()}
+
+
+def _party_bucket(p: str) -> str:
+    p = p.lower()
+    if "democrat" in p:
+        return "Democratic"
+    if "republican" in p:
+        return "Republican"
+    return "No party listed"
+
+
+def org_leanings(giving_path: Path, parties: dict[str, str], exclude_committees: set[str]) -> dict[str, dict]:
+    """{org: totals by recipient party} for each organization's giving to committees other than
+    the judges' own (so the measure is about where else the money goes)."""
+    g = pd.read_csv(giving_path, dtype=str)
+    g = g[~g.CommitteeID.isin(exclude_committees)]
+    g["amount"] = pd.to_numeric(g.Amount, errors="coerce").fillna(0)
+    g["party"] = g.CommitteeID.map(parties).fillna("No party listed")
+    out = {}
+    for org, rows in g.groupby("org"):
+        by = rows.groupby("party").amount.sum()
+        dem, rep = float(by.get("Democratic", 0)), float(by.get("Republican", 0))
+        out[org] = {"total": round(float(rows.amount.sum()), 2), "democratic": round(dem, 2),
+                    "republican": round(rep, 2), "no_party": round(float(by.get("No party listed", 0)), 2),
+                    "recipients": int(rows.CommitteeID.nunique()),
+                    "dem_share": round(dem / (dem + rep), 3) if dem + rep > 0 else None}
+    return out

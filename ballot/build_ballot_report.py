@@ -56,6 +56,13 @@ def main() -> None:
         committees = pd.read_csv(isbe / "judge_committees.csv", dtype=str)
         receipts = il_campaign_finance.load_receipts(isbe / "judge_receipts.csv", committees)
     parties = il_campaign_finance.judge_party(isbe, ballot.name) if (isbe / "Candidates.txt").exists() else {}
+    # Where the judges' organizational donors give elsewhere (needs org_giving.csv; see
+    # ballot.build_campaign_finance). The judges' own committees are excluded from that measure.
+    leanings = {}
+    if receipts is not None and (isbe / "org_giving.csv").exists():
+        own = set(committees.committee_id) | il_campaign_finance.JOINT_COMMITTEES
+        leanings = il_campaign_finance.org_leanings(isbe / "org_giving.csv",
+                                                    il_campaign_finance.committee_parties(isbe), own)
 
     report = []
     for row in ballot.itertuples(index=False):
@@ -75,8 +82,8 @@ def main() -> None:
                                                     extractions.get(isba_name), n),
                        "sentencing": profile.sentencing_section(n, profiles.get(row.name), args.since, data_through),
                        "party": parties.get(row.name, ""),
-                       "campaign": (il_campaign_finance.judge_summary(receipts, row.name)
-                                    if receipts is not None and row.name in set(receipts.judge) else None)})
+                       "campaign": _with_leanings(il_campaign_finance.judge_summary(receipts, row.name), leanings)
+                                    if receipts is not None and row.name in set(receipts.judge) else None})
 
     # Every judge with a full record, plus ballot judges with a limited one, for the comparison chart.
     numbers = {r["name"]: r["ballot_number"] for r in report}
@@ -99,6 +106,15 @@ def main() -> None:
     for r in sorted(report, key=lambda r: -r["n_sentences"]):
         if "details" in r["sentencing"]:
             print("\n" + format_profile(r["sentencing"]["details"]))
+
+
+def _with_leanings(summary: dict, leanings: dict) -> dict:
+    """Attach each listed employer's or organization's other Illinois giving, by party."""
+    for e in summary["top_employers"]:
+        e["elsewhere"] = leanings.get(e["employer"])
+    for o in summary["top_organizations"]:
+        o["elsewhere"] = leanings.get(o["name"])
+    return summary
 
 
 def bar_summary(judge_ratings: pd.DataFrame) -> str:

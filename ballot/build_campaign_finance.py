@@ -21,6 +21,12 @@ def main() -> None:
     path = il_campaign_finance.fetch_receipts(set(committees.committee_id), isbe / "judge_receipts.csv", SINCE)
     print(f"{sum(1 for _ in path.open()) - 1} receipts since {SINCE} -> {path}")
 
+    # Where the judges' organizational donors give elsewhere (a second pass over Receipts.txt).
+    receipts = il_campaign_finance.load_receipts(path, committees)
+    names = il_campaign_finance.donor_org_names(receipts)
+    giving = il_campaign_finance.fetch_org_giving(names, isbe / "org_giving.csv", since="2016-01-01")
+    print(f"giving by {len(names)} donor organizations since 2016 -> {giving}")
+
 
 if __name__ == "__main__":
     main()

@@ -142,7 +142,7 @@ th { font: 700 0.7rem/1.2 var(--sans); color: var(--ink); text-transform: upperc
 details.more > summary { cursor: pointer; color: var(--accent); font: 600 0.84rem var(--sans); }
 details.more > div { margin-top: 0.6rem; display: grid; gap: 0.5rem; }
 
-#money-groups td:first-child, #pop-table td:first-child { white-space: nowrap; font: 400 0.92rem var(--serif); padding-right: 1.2rem; }
+#money-groups td:first-child, #money-lean td:first-child, #pop-table td:first-child { white-space: nowrap; font: 400 0.92rem var(--serif); padding-right: 1.2rem; }
 .fb { width: 100%; min-width: 40rem; }
 .fb th { text-align: center; padding: 0.4rem 0.3rem; }
 .fb th:first-child, .fb td:first-child { text-align: left; }
@@ -156,12 +156,56 @@ details.more > div { margin-top: 0.6rem; display: grid; gap: 0.5rem; }
 .mark .praise { width: 9px; height: 9px; border-radius: 50%; background: var(--series); }
 .mark .crit { width: 0; height: 0; border-left: 6px solid transparent; border-right: 6px solid transparent; border-bottom: 11px solid var(--flag); }
 
+.vote { display: flex; gap: 0.35rem; }
+.opt { display: inline-flex; align-items: center; gap: 0.35rem; font: 700 0.7rem/1 var(--sans); letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); background: transparent; border: 1px solid transparent; border-radius: 3px; padding: 0.4rem 0.45rem; cursor: pointer; }
+.opt::before { content: ""; width: 1.05rem; height: 0.66rem; border: 1.5px solid #8a8a8a; border-radius: 50%; }
+.opt:hover { border-color: var(--rule); color: var(--ink); }
+.opt[aria-pressed="true"] { color: var(--ink); }
+.opt[aria-pressed="true"]::before { background: var(--ink); border-color: var(--ink); }
+.my-ballot { display: grid; gap: 1rem; border-top: 1px solid var(--rule-strong); padding-top: 1.5rem; max-width: var(--measure); }
+.sheet-head { display: grid; gap: 0.25rem; }
+.sheet-sub { font: 500 0.82rem var(--sans); color: var(--muted); }
+.sheet-controls { display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; font: 500 0.82rem var(--sans); }
+.btn { font: 600 0.84rem var(--sans); padding: 0.55rem 0.9rem; border: 1px solid #bdbdbd; border-radius: 3px; background: #fff; color: var(--ink); cursor: pointer; }
+.btn:hover { border-color: var(--ink); }
+.btn.primary { background: var(--ink); color: #fff; border-color: var(--ink); }
+.sheet-table { width: 100%; min-width: 0; font: 400 0.95rem/1.4 var(--sans); }
+.sheet-table td { padding: 0.55rem 0.8rem 0.55rem 0; vertical-align: middle; }
+.sheet-table .bn { font: 800 1.15rem var(--sans); width: 3.5rem; }
+.sheet-table .jn { font: 400 1rem var(--serif); }
+.sheet-table .ch { white-space: nowrap; text-align: right; }
+.choice { display: inline-flex; gap: 0.9rem; font: 700 0.75rem var(--sans); letter-spacing: 0.05em; }
+.choice span { display: inline-flex; align-items: center; gap: 0.3rem; color: #9a9a9a; }
+.choice span::before { content: ""; width: 1.1rem; height: 0.7rem; border: 1.5px solid #9a9a9a; border-radius: 50%; }
+.choice span.on { color: var(--ink); }
+.choice span.on::before { background: var(--ink); border-color: var(--ink); }
+.sheet-empty { font: 400 0.95rem var(--sans); color: var(--muted); padding: 1rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.sheet-foot { font: 400 0.8rem/1.5 var(--sans); color: var(--muted); }
+
+/* Printing shows only the choices sheet. */
+@media print {
+  @page { margin: 0.6in; }
+  body { background: #fff; font-size: 11pt; }
+  .wrap { display: block; padding: 0; max-width: none; }
+  .wrap > *:not(#my-ballot), .screen-only, #copy-status, #print-note { display: none !important; }
+  #my-ballot { border-top: 0; padding-top: 0; max-width: none; display: block; }
+  #my-ballot h2 { font-size: 20pt; margin-bottom: 2pt; }
+  .sheet-sub { font-size: 10pt; margin-bottom: 12pt; }
+  .sheet-table { font-size: 11pt; }
+  .sheet-table tr { break-inside: avoid; }
+  .sheet-table td { border-bottom: 1px solid #999; padding: 6pt 8pt 6pt 0; }
+  .choice span, .choice span.on { color: #000; }
+  .choice span::before { border-color: #000; }
+  .choice span.on::before { background: #000; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .sheet-foot { margin-top: 12pt; color: #000; }
+}
+
 .method ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.55rem; font-size: 0.98rem; }
 footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; gap: 0.4rem; border-top: 1px solid var(--rule); padding-top: 1rem; max-width: var(--measure); }
 
 @media (max-width: 34rem) {
-  .judge > summary { grid-template-columns: 2.6rem 1fr; gap: 0.75rem; }
-  .ovals { display: none; }
+  .judge > summary { grid-template-columns: 2.6rem 1fr; gap: 0.5rem 0.75rem; }
+  .vote { grid-column: 2; justify-self: start; margin-left: -0.45rem; }
   .profile { padding-left: 0.25rem; }
   .rating { grid-template-columns: 1fr; gap: 0.1rem; }
 }
@@ -218,6 +262,9 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
     <h3>Where each judge's money came from</h3>
     <p class="note">Money raised from others, by donor group. Donors are grouped by the employer they reported or by organization name. Illinois reports employers mainly for larger gifts, so "Employer not reported" is often the largest share. Groups are assigned by rules and are approximate: a firm whose donors listed only a title like "Partner" can land under businesses. Law firms aren't split into plaintiffs' and defense firms.</p>
     <div class="table-wrap" id="money-groups"></div>
+    <h3>Where these donors give elsewhere</h3>
+    <p class="note">For organizations in these judges' donor lists (companies, unions, PACs and the firms donors work for), their own contributions to other Illinois political committees since 2016, by the recipient's party. Committees with no party listed, often judicial or local races, are shown separately. This counts each organization's own contributions, not personal giving by its employees. Most Illinois political money goes to Democrats, so differences in degree are what stand out.</p>
+    <div class="table-wrap" id="money-lean"></div>
   </section>
 
   <section class="compare" id="feedback" aria-labelledby="feedback-h">
@@ -247,6 +294,24 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
   </section>
 
   <section class="list" id="list" aria-live="polite"></section>
+
+  <section class="my-ballot" id="my-ballot" aria-labelledby="my-ballot-h">
+    <div class="sheet-head">
+      <h2 id="my-ballot-h">My ballot choices</h2>
+      <p class="sheet-sub">Cook County judicial retention · General election, Nov. 3, 2026</p>
+    </div>
+    <p class="note screen-only">Mark Yes or No beside any judge in the list above. Your choices stay in this browser; nothing is sent anywhere. Bring this list to the polls and use the ballot numbers to find each judge.</p>
+    <div class="sheet-controls screen-only">
+      <button type="button" class="btn primary" id="print-btn">Print my ballot choices</button>
+      <button type="button" class="btn" id="copy-btn">Copy as text</button>
+      <button type="button" class="btn" id="clear-btn">Clear all</button>
+      <label><input type="checkbox" id="include-blank"> Include judges I haven't decided</label>
+    </div>
+    <p class="note screen-only" id="print-note" hidden>Printing isn't available in this preview. Copy your choices or take a screenshot, or print from the shared website.</p>
+    <p class="note" id="copy-status" role="status"></p>
+    <div id="sheet"></div>
+    <p class="sheet-foot">A judge needs at least 60% Yes votes to stay. Leaving a judge blank is not the same as voting No.</p>
+  </section>
 
   <section class="method" id="method">
     <h2>How to read this</h2>
@@ -329,6 +394,12 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
   }
 
   const usd = (x) => "$" + Math.round(x).toLocaleString();
+  // An organization's own giving to other Illinois committees since 2016, by recipient party.
+  function lean(x) {
+    if (!x || !x.total) return "";
+    if (x.dem_share === null) return `; elsewhere gave ${usd(x.total)}, none to party-affiliated committees`;
+    return `; elsewhere gave ${usd(x.total)}, ${Math.round(100 * x.dem_share)}% of party money to Democrats`;
+  }
   function groupsHTML(c) {
     const g = Object.entries(c.by_group || {}).filter(([, v]) => v > 0);
     if (!g.length) return "";
@@ -348,8 +419,8 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
         <dt>From organizations</dt><dd>${usd(c.from_organizations)}</dd>
       </dl>
       ${groupsHTML(c)}
-      ${emp.length ? `<p class="note">Top employers of individual donors: ${emp.map((e) => `${esc(e.employer)} (${usd(e.total)})`).join(", ")}.</p>` : ""}
-      ${org.length ? `<p class="note">Top organizations: ${org.map((o) => `${esc(o.name)} (${usd(o.total)})`).join(", ")}.</p>` : ""}
+      ${emp.length ? `<p class="note">Top employers of individual donors: ${emp.map((e) => `${esc(e.employer)} (${usd(e.total)}${lean(e.elsewhere)})`).join(", ")}.</p>` : ""}
+      ${org.length ? `<p class="note">Top organizations: ${org.map((o) => `${esc(o.name)} (${usd(o.total)}${lean(o.elsewhere)})`).join(", ")}.</p>` : ""}
       <p class="note">Illinois reports a donor's employer mainly for larger contributions, so legal-job totals cover only those donors.</p>`;
   }
 
@@ -388,9 +459,76 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
           <span class="assign">${esc(j.court === "Circuit Court of Cook County" ? (j.assignment || "Circuit Court") + " · Circuit Court" : j.court)}</span>
           <span class="chips">${chips(j)}</span>
         </span>
-        <span class="ovals" aria-hidden="true"><span>YES</span><span>NO</span></span>
+        <span class="vote" role="group" aria-label="Your choice for ${esc(j.name)}">
+          <button type="button" class="opt" data-v="yes" aria-pressed="false">Yes</button>
+          <button type="button" class="opt" data-v="no" aria-pressed="false">No</button>
+        </span>
       </summary>
     </details>`).join("");
+
+  // Ballot choices: kept only in this browser (localStorage), never sent anywhere.
+  const KEY = "cook-2026-retention-choices";
+  let choices = {};
+  try { choices = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { choices = {}; }
+  const save = () => { try { localStorage.setItem(KEY, JSON.stringify(choices)); } catch (e) { /* private mode: keep in memory */ } };
+  const keyOf = (j) => String(j.ballot_number ?? j.name);
+
+  function paintRow(el) {
+    const j = judges[+el.dataset.i], v = choices[keyOf(j)];
+    el.querySelectorAll(".opt").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.v === v)));
+  }
+  list.addEventListener("click", (e) => {
+    const b = e.target.closest(".opt");
+    if (!b) return;
+    e.preventDefault(); e.stopPropagation();  // don't open or close the profile
+    const row = b.closest(".judge"), j = judges[+row.dataset.i], k = keyOf(j);
+    if (choices[k] === b.dataset.v) delete choices[k]; else choices[k] = b.dataset.v;
+    save(); paintRow(row); renderSheet();
+  });
+
+  function renderSheet() {
+    const includeBlank = $("#include-blank").checked;
+    const rows = judges.filter((j) => includeBlank || choices[keyOf(j)]);
+    const host = $("#sheet"); host.replaceChildren();
+    if (!rows.length) {
+      const p = document.createElement("p"); p.className = "sheet-empty";
+      p.textContent = "No choices yet. Mark Yes or No beside a judge above and it will appear here.";
+      host.appendChild(p); return;
+    }
+    const t = document.createElement("table"); t.className = "sheet-table";
+    const body = t.createTBody();
+    for (const j of rows) {
+      const v = choices[keyOf(j)], r = body.insertRow();
+      const bn = r.insertCell(); bn.className = "bn"; bn.textContent = j.ballot_number ?? "";
+      const jn = r.insertCell(); jn.className = "jn"; jn.textContent = j.name;
+      const ch = r.insertCell(); ch.className = "ch";
+      const box = document.createElement("span"); box.className = "choice";
+      for (const opt of ["yes", "no"]) { const s = document.createElement("span"); s.textContent = opt.toUpperCase(); if (v === opt) s.className = "on"; box.appendChild(s); }
+      box.setAttribute("aria-label", v ? `Your choice: ${v}` : "No choice");
+      ch.appendChild(box);
+    }
+    host.appendChild(t);
+  }
+
+  // Inside a framed preview the browser blocks the print dialog, so offer copying instead.
+  const framed = (() => { try { return window.self !== window.top; } catch (e) { return true; } })();
+  if (framed) { $("#print-btn").hidden = true; $("#print-note").hidden = false; }
+  $("#print-btn").addEventListener("click", () => window.print());
+  $("#include-blank").addEventListener("change", renderSheet);
+  $("#clear-btn").addEventListener("click", () => {
+    choices = {}; save(); list.querySelectorAll(".judge").forEach(paintRow); renderSheet();
+    $("#copy-status").textContent = "Cleared.";
+  });
+  $("#copy-btn").addEventListener("click", () => {
+    const lines = judges.filter((j) => choices[keyOf(j)]).map((j) => `#${j.ballot_number ?? "?"}  ${j.name}: ${choices[keyOf(j)].toUpperCase()}`);
+    const text = ["My Cook County retention ballot choices (Nov. 3, 2026)", ...lines].join("\n");
+    const done = () => { $("#copy-status").textContent = lines.length ? `Copied ${lines.length} choices.` : "No choices to copy yet."; };
+    navigator.clipboard?.writeText(text).then(done, () => {
+      $("#copy-status").textContent = "Copy isn't allowed here. Select the list below and copy it, or take a screenshot.";
+    }) ?? done();
+  });
+  list.querySelectorAll(".judge").forEach(paintRow);
+  renderSheet();
 
   list.addEventListener("toggle", (e) => {
     const el = e.target;
@@ -774,7 +912,32 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
     }
     document.getElementById("money-groups").replaceChildren(t);
   }
+  function leanTable() {
+    const orgs = new Map();
+    for (const j of rows) {
+      for (const e of j.campaign.top_employers || []) if (e.elsewhere) add(e.employer, e.total, e.elsewhere, j);
+      for (const o of j.campaign.top_organizations || []) if (o.elsewhere) add(o.name, o.total, o.elsewhere, j);
+    }
+    function add(name, toJudge, x, j) {
+      const cur = orgs.get(name) || { name, toJudges: 0, judges: new Set(), x };
+      cur.toJudges += toJudge; cur.judges.add(j.ballot_number ? "#" + j.ballot_number : j.name); orgs.set(name, cur);
+    }
+    const list = [...orgs.values()].sort((a, b) => b.x.total - a.x.total);
+    const host = document.getElementById("money-lean");
+    if (!list.length) { host.textContent = "No other Illinois giving found for these organizations."; return; }
+    const t = document.createElement("table"), head = t.createTHead().insertRow(), body = t.createTBody();
+    for (const h of ["Organization", "Gave these judges", "Judges", "Other Illinois giving", "To Democrats", "To Republicans", "No party listed", "Democratic share of party money"]) {
+      const th = document.createElement("th"); th.textContent = h; head.appendChild(th);
+    }
+    for (const o of list) {
+      const r = body.insertRow();
+      for (const v of [o.name, compact(o.toJudges), [...o.judges].join(", "), compact(o.x.total), compact(o.x.democratic),
+        compact(o.x.republican), compact(o.x.no_party), o.x.dem_share === null ? "none partisan" : Math.round(100 * o.x.dem_share) + "%"])
+        r.insertCell().textContent = v;
+    }
+    host.replaceChildren(t);
+  }
   let raf; addEventListener("resize", () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(draw); });
-  draw(); groupTable();
+  draw(); groupTable(); leanTable();
 })();
 </script>
