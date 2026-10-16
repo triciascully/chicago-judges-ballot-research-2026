@@ -1,13 +1,14 @@
-"""Adapter: CourtListener bulk data -> Illinois Appellate Court decisions, as Parquet.
+"""Adapter: CourtListener bulk data -> Illinois and Michigan appellate decisions, as Parquet.
 
 The API allows 125 requests a day on a free account, so this reads Free Law Project's
 quarterly database dumps instead (https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/,
 snapshot 2026-09-30). The dumps cover every court, so each one is streamed through a parallel
-bzip2 decoder and filtered on the fly; only the Illinois slice is kept:
+bzip2 decoder and filtered on the fly; only the courts in COURTS are kept (Illinois for the
+Cook County guide, Michigan for the Detroit guide), tagged by court:
 
-    dockets (5 GB)   -> Illinois Appellate Court cases         -> il_dockets.parquet
-    clusters (2.5 GB) -> their decisions since 2015              -> il_clusters.parquet
-    opinions (55 GB) -> those decisions' text                    -> il_opinions.parquet
+    dockets (5 GB)    -> cases in those courts             -> dockets.parquet
+    clusters (2.5 GB) -> their decisions since 2015        -> clusters.parquet
+    opinions (55 GB)  -> those decisions' text             -> opinions.parquet
 
     python -m ballot.adapters.courtlistener_bulk dockets|clusters|opinions|all
 
@@ -30,7 +31,12 @@ ROOT = Path(__file__).resolve().parents[2]
 BULK = ROOT / "data" / "raw" / "courtlistener" / "bulk"
 OUT = ROOT / "data" / "processed" / "courtlistener"
 SNAPSHOT = "2026-09-30"
-COURT = "illappct"
+COURTS = {
+    "illappct": "Appellate Court of Illinois",  # reviews Cook County judges
+    "ill": "Illinois Supreme Court",
+    "michctapp": "Michigan Court of Appeals",    # reviews Wayne County judges
+    "mich": "Michigan Supreme Court",            # also decides judicial discipline
+}
 SINCE = "2015-01-01"
 BATCH = 2000
 csv.field_size_limit(sys.maxsize)
@@ -79,13 +85,20 @@ def _write(path: Path, columns: list[str], keep, source) -> int:
 
 def dockets() -> None:
     cols = ["id", "court_id", "docket_number", "case_name", "appeal_from_str", "date_filed"]
-    _write(OUT / "il_dockets.parquet", cols, lambda r: r[1] == COURT, rows("dockets", cols))
+    _write(OUT / "dockets.parquet", cols, lambda r: r[1] in COURTS, rows("dockets", cols))
 
 
 def clusters() -> None:
-    ids = set(pq.read_table(OUT / "il_dockets.parquet", columns=["id"]).column("id").to_pylist())
+    d = pq.read_table(OUT / "dockets.parquet", columns=["id", "court_id"]).to_pydict()
+    court_of = dict(zip(d["id"], d["court_id"]))
     cols = ["id", "docket_id", "date_filed", "case_name", "precedential_status", "disposition", "judges"]
-    _write(OUT / "il_clusters.parquet", cols, lambda r: r[1] in ids and r[2] >= SINCE, rows("opinion-clusters", cols))
+
+    def tagged(source):  # add each decision's court, from its docket
+        for r in source:
+            yield r + [court_of.get(r[1], "")]
+
+    _write(OUT / "clusters.parquet", cols + ["court_id"], lambda r: r[-1] in COURTS and r[2] >= SINCE,
+           tagged(rows("opinion-clusters", cols)))
 
 
 def _plain(html: str) -> str:
@@ -93,7 +106,7 @@ def _plain(html: str) -> str:
 
 
 def opinions() -> None:
-    ids = set(pq.read_table(OUT / "il_clusters.parquet", columns=["id"]).column("id").to_pylist())
+    ids = set(pq.read_table(OUT / "clusters.parquet", columns=["id"]).column("id").to_pylist())
     src = ["id", "cluster_id", "type", "plain_text", "html_with_citations", "html"]
     out = ["id", "cluster_id", "type", "text"]
 
@@ -104,7 +117,7 @@ def opinions() -> None:
             else:
                 yield None  # still counted, so progress shows rows read
 
-    _write(OUT / "il_opinions.parquet", out, lambda r: r is not None, slim(rows("opinions", src)))
+    _write(OUT / "opinions.parquet", out, lambda r: r is not None, slim(rows("opinions", src)))
 
 
 def main() -> None:

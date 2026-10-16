@@ -24,9 +24,10 @@ _MAIN_TYPES = ["010combined", "020lead", "015unamimous", "025plurality", "030con
 
 
 def load() -> pd.DataFrame:
-    ops = pd.read_parquet(BULK_OUT / "il_opinions.parquet")
-    clusters = pd.read_parquet(BULK_OUT / "il_clusters.parquet")
-    dockets = pd.read_parquet(BULK_OUT / "il_dockets.parquet", columns=["id", "docket_number"])
+    clusters = pd.read_parquet(BULK_OUT / "clusters.parquet", filters=[("court_id", "==", "illappct")])
+    ops = pd.read_parquet(BULK_OUT / "opinions.parquet")
+    ops = ops[ops.cluster_id.isin(clusters.id)]
+    dockets = pd.read_parquet(BULK_OUT / "dockets.parquet", columns=["id", "docket_number"])
     ops["rank"] = ops["type"].map({t: i for i, t in enumerate(_MAIN_TYPES)}).fillna(len(_MAIN_TYPES))
     ops = ops.sort_values("rank").drop_duplicates("cluster_id")
     df = ops.merge(clusters, left_on="cluster_id", right_on="id", suffixes=("", "_cluster"))
