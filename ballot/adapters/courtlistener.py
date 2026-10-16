@@ -24,6 +24,8 @@ from ballot.judges.match import name_parts
 API = "https://www.courtlistener.com/api/rest/v4"
 ROOT = Path(__file__).resolve().parents[2]
 CACHE = ROOT / "data" / "raw" / "courtlistener"
+_MIN_INTERVAL = 4.0  # seconds between requests
+_last_request = 0.0
 
 
 def _token() -> str | None:
@@ -43,7 +45,11 @@ def _get(url: str) -> dict:
     headers = {"User-Agent": "ballot-research (voter guide)"}
     if token := _token():
         headers["Authorization"] = f"Token {token}"
+    global _last_request
     for attempt in range(8):
+        # Space requests out: the API also has a short-term limit of a few requests per few seconds.
+        time.sleep(max(0.0, _MIN_INTERVAL - (time.monotonic() - _last_request)))
+        _last_request = time.monotonic()
         try:
             with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=90) as r:
                 return json.load(r)
@@ -56,6 +62,10 @@ def _get(url: str) -> dict:
             wait = int(e.headers.get("Retry-After") or 30 * (attempt + 1))
             print(f"  throttled; waiting {wait // 60} min {wait % 60} s", flush=True)
             time.sleep(wait + 5)
+        except (TimeoutError, ConnectionError, urllib.error.URLError) as e:
+            wait = 30 * (attempt + 1)
+            print(f"  network error ({type(e).__name__}); retrying in {wait} s", flush=True)
+            time.sleep(wait)
     raise RuntimeError(f"Gave up after repeated throttling: {url}")
 
 
