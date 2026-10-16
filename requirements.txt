@@ -2,3 +2,5 @@ pandas>=2.2
 anthropic>=1.0
 numbers-parser>=4.0  # reads hand labels saved from Apple Numbers
 pypdf>=4.0
+torch>=2.0  # demos/embedding_demo.py
+transformers>=4.40  # demos/embedding_demo.py
