@@ -23,3 +23,6 @@ COURTLISTENER_TOKEN*
 *.log
 data/processed/appellate_done.json
 data/processed/appellate.pid
+
+# Bulk-data Parquet slices are rebuilt from the dumps
+data/processed/courtlistener/
