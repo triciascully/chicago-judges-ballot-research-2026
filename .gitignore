@@ -22,3 +22,4 @@ COURTLISTENER_TOKEN*
 # Run logs
 *.log
 data/processed/appellate_done.json
+data/processed/appellate.pid
