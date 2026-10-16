@@ -24,7 +24,10 @@ def name_parts(name: str) -> tuple[list[str], set[str]]:
 
 def _same_given(a: str, b: str) -> bool:
     short, long = sorted((a, b), key=len)
-    return long.startswith(short) and len(short) >= 3
+    if long.startswith(short) and len(short) >= 3:  # "Chris" / "Christopher"
+        return True
+    # Near-identical spellings of a longer name ("Khalilia" / "Kahlilia").
+    return min(len(a), len(b)) >= 6 and SequenceMatcher(None, a, b).ratio() >= 0.85
 
 
 def _same_surname(a: set[str], b: set[str]) -> bool:
