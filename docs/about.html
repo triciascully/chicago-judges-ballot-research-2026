@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Sourced profiles of the judges on the Cook County retention ballot.">
+<style>html{color-scheme:light}body{margin:0}img{max-width:100%}</style>
+</head>
+<body>
+<title>About the Judges Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,800;1,8..60,400&family=Libre+Franklin:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: a newspaper graphics page. A narrow serif reading column, wider charts labeled
+   directly, sections divided by hairline rules instead of boxes. Deliberately one light
+   theme, as printed pages are; every color is set explicitly so it reads the same on any host. */
+:root {
+  color-scheme: light;
+  --paper: #ffffff;
+  --card: #ffffff;
+  --ink: #121212;
+  --muted: #5a5a5a;
+  --faint: #8a8a8a;
+  --rule: #e2e2e2;
+  --rule-strong: #121212;
+  --accent: #326891;       /* link blue */
+  --accent-soft: #eef3f7;  /* shaded band in charts */
+  --flag: #b5341b;         /* criticism, No votes */
+  --flag-soft: #fbece8;
+  --quote: #f7f7f5;
+  --series: #2a78d6;       /* validated chart blue */
+  --series-2: #eb6834;     /* validated chart orange */
+  --other: #bdbdbd;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+  --display: var(--serif);
+  --body: var(--serif);
+  --mono: var(--sans);
+  --measure: 38rem;        /* reading column */
+  --wide: 60rem;           /* charts and tables */
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { background: var(--paper); color: var(--ink); font: 400 1.0625rem/1.6 var(--serif); }
+.wrap { max-width: var(--wide); margin: 0 auto; padding-inline: 16px; padding-block: 2.5rem 4rem; display: grid; gap: 2.75rem; }
+.wrap > * { min-width: 0; }
+a { color: var(--accent); text-underline-offset: 2px; }
+a:focus-visible, summary:focus-visible, input:focus-visible, button:focus-visible, select:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+h1, h2, h3 { margin: 0; text-wrap: balance; }
+h1 { font: 700 clamp(2rem, 5.2vw, 3rem)/1.1 var(--serif); letter-spacing: -0.01em; }
+h2 { font: 700 clamp(1.45rem, 3.2vw, 1.85rem)/1.2 var(--serif); }
+h3 { font: 700 0.98rem/1.3 var(--sans); }
+p { margin: 0; max-width: var(--measure); }
+.eyebrow { font: 700 0.75rem/1 var(--sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); }
+
+header { display: grid; gap: 1rem; max-width: var(--measure); margin-inline: auto; width: 100%; }
+.lede { font-size: 1.2rem; line-height: 1.5; color: #333; }
+.dateline { font: 500 0.8rem/1.4 var(--sans); color: var(--muted); border-top: 1px solid var(--rule); padding-top: 0.75rem; }
+.howto { display: grid; grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr)); gap: 1.25rem; margin-top: 0.5rem; }
+.howto div { border-top: 2px solid var(--rule-strong); padding-top: 0.6rem; display: grid; gap: 0.3rem; min-width: 0; }
+.howto strong { font: 700 0.9rem/1.25 var(--sans); }
+.howto span { font: 400 0.88rem/1.45 var(--sans); color: var(--muted); }
+.lookup { font: 400 0.88rem/1.5 var(--sans); color: var(--muted); }
+
+.compare, .method { display: grid; gap: 1.1rem; border-top: 1px solid var(--rule-strong); padding-top: 1.5rem; min-width: 0; }
+.compare > h2, .compare > .intro, .compare > h3, .compare > .note, .method > h2, .method > ul { max-width: var(--measure); }
+.compare .intro { font-size: 1.02rem; color: #333; }
+.chart-controls { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; align-items: center; font: 500 0.82rem/1.3 var(--sans); }
+.chart-controls select { font: 500 0.82rem var(--sans); padding: 0.3rem 1.6rem 0.3rem 0.5rem; border: 1px solid #ccc; border-radius: 3px; background: var(--card); color: var(--ink); max-width: 100%; }
+.chart-controls label { display: inline-flex; align-items: center; gap: 0.35rem; }
+.chart-controls input, .filters input { accent-color: var(--ink); margin: 0; }
+.legend { display: flex; flex-wrap: wrap; gap: 0.4rem 1.1rem; font: 500 0.78rem/1.2 var(--sans); color: var(--muted); }
+.legend span { display: inline-flex; align-items: center; gap: 0.4rem; }
+.legend i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.legend .k-ballot { background: var(--series); }
+.legend .k-other { background: var(--other); }
+.legend .k-spec { border: 1.5px solid var(--faint); background: var(--card); }
+.legend .k-band { border-radius: 0; width: 16px; background: var(--accent-soft); outline: 1px solid #d9e3ec; }
+.legend .k-others { background: var(--series); border-radius: 0; }
+.legend .k-self { background: var(--series-2); border-radius: 0; }
+.legend .k-praise { background: var(--series); }
+.legend .k-crit { width: 0; height: 0; border-radius: 0; background: none; border-left: 6px solid transparent; border-right: 6px solid transparent; border-bottom: 11px solid var(--flag); }
+
+.chart { position: relative; min-width: 0; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart text { fill: var(--muted); font: 500 11px var(--sans); }
+.chart .lbl { fill: var(--ink); font-weight: 700; }
+.chart .axis-title { fill: var(--ink); font: 600 11.5px var(--sans); }
+.chart .quad { fill: var(--faint); font: italic 400 13px var(--serif); pointer-events: none; }
+.chart .quad.narrow { font-size: 11.5px; }
+.chart .grid { stroke: #ececec; stroke-width: 1; }
+.chart .zero { stroke: #121212; stroke-width: 1; }
+.chart circle.pt { cursor: default; }
+.chart circle.pt.ballot { cursor: pointer; }
+.chart circle.pt:focus { outline: none; stroke: var(--ink); stroke-width: 2; }
+.tip { position: absolute; pointer-events: none; background: #fff; border: 1px solid #cfcfcf; border-radius: 2px; padding: 0.55rem 0.7rem; font: 400 0.78rem/1.4 var(--sans); box-shadow: 0 2px 8px rgba(0,0,0,0.12); max-width: 17rem; z-index: 3; display: grid; gap: 0.2rem; }
+.tip strong { font-weight: 700; font-size: 0.84rem; }
+.tip .v { font-variant-numeric: tabular-nums; }
+.tip .m { color: var(--muted); }
+
+.controls { display: grid; gap: 0.7rem; position: sticky; top: env(safe-area-inset-top, 0px); z-index: 2; background: var(--paper); padding-block: 0.8rem; border-top: 1px solid var(--rule-strong); border-bottom: 1px solid var(--rule); }
+.search { width: 100%; font: 400 1rem var(--sans); padding: 0.6rem 0.75rem; border: 1px solid #ccc; border-radius: 3px; background: var(--card); color: var(--ink); }
+.filters { display: flex; flex-wrap: wrap; gap: 0.5rem 1.1rem; align-items: center; font: 500 0.82rem var(--sans); }
+.filters label { display: inline-flex; align-items: center; gap: 0.4rem; cursor: pointer; }
+.count { font: 500 0.8rem var(--sans); color: var(--muted); margin-left: auto; font-variant-numeric: tabular-nums; }
+
+.list { display: grid; gap: 0; border-top: 1px solid var(--rule); }
+.judge { border-bottom: 1px solid var(--rule); background: var(--paper); }
+.judge[open] { background: #fcfcfa; }
+.judge > summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 3.2rem 1fr auto; gap: 1rem; align-items: center; padding: 0.85rem 0.25rem; }
+.judge > summary:hover .name { text-decoration: underline; text-underline-offset: 3px; }
+.judge > summary::-webkit-details-marker { display: none; }
+.num { font: 800 1.15rem/1 var(--sans); color: var(--ink); font-variant-numeric: tabular-nums; }
+.num.none { color: var(--faint); font: 600 0.7rem/1.2 var(--sans); text-transform: uppercase; }
+.who { min-width: 0; display: grid; gap: 0.25rem; }
+.name { font: 700 1.1rem/1.25 var(--serif); }
+.assign { font: 400 0.82rem/1.3 var(--sans); color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 0.2rem 0.9rem; }
+.chip { font: 600 0.72rem/1.4 var(--sans); color: var(--muted); white-space: nowrap; letter-spacing: 0.01em; }
+.chip::before { content: "●"; font-size: 0.6rem; margin-right: 0.3rem; color: var(--other); vertical-align: 1px; }
+.chip.flag { color: var(--flag); }
+.chip.flag::before { content: "▲"; color: var(--flag); }
+.chip.quiet { color: var(--faint); }
+.ovals { display: flex; gap: 0.6rem; font: 600 0.66rem/1 var(--sans); color: var(--faint); letter-spacing: 0.04em; }
+.ovals span { display: inline-flex; align-items: center; gap: 0.25rem; }
+.ovals span::before { content: ""; width: 1rem; height: 0.62rem; border: 1.5px solid #9a9a9a; border-radius: 50%; }
+
+.profile { padding: 0.25rem 0.25rem 1.5rem 4.45rem; display: grid; gap: 1.4rem; }
+.section { display: grid; gap: 0.5rem; min-width: 0; }
+.section > h3 { font: 700 0.72rem/1.2 var(--sans); text-transform: uppercase; letter-spacing: 0.07em; color: var(--ink); border-top: 1px solid var(--rule); padding-top: 0.7rem; }
+.finding { max-width: var(--measure); padding-left: 0.85rem; border-left: 3px solid var(--series); }
+.finding.flagged { border-left-color: var(--flag); }
+.note { font: 400 0.84rem/1.5 var(--sans); color: var(--muted); }
+blockquote { margin: 0; padding: 0 0 0 0.9rem; border-left: 2px solid #cfcfcf; font: italic 400 1rem/1.5 var(--serif); color: #333; max-width: var(--measure); }
+.bg-item { display: grid; gap: 0.35rem; }
+.bg-item strong { font: 600 0.9rem var(--sans); }
+.ratings { display: grid; gap: 0.4rem; }
+.rating { display: grid; grid-template-columns: 13rem 1fr; gap: 0.75rem; font: 400 0.88rem/1.45 var(--sans); }
+.rating b { font-weight: 600; }
+.kv { display: grid; grid-template-columns: max-content 1fr; gap: 0.25rem 1.1rem; font: 400 0.88rem/1.45 var(--sans); }
+.kv dt { color: var(--muted); }
+.kv dd { margin: 0; font-variant-numeric: tabular-nums; }
+.money { font-variant-numeric: tabular-nums; }
+
+.table-wrap, .fb-wrap { overflow-x: auto; position: relative; }
+table { border-collapse: collapse; font: 400 0.84rem/1.4 var(--sans); font-variant-numeric: tabular-nums; min-width: 28rem; }
+th, td { text-align: left; padding: 0.4rem 1rem 0.4rem 0; border-bottom: 1px solid var(--rule); }
+th { font: 700 0.7rem/1.2 var(--sans); color: var(--ink); text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid var(--rule-strong); vertical-align: bottom; }
+details.more > summary { cursor: pointer; color: var(--accent); font: 600 0.84rem var(--sans); }
+details.more > div { margin-top: 0.6rem; display: grid; gap: 0.5rem; }
+
+#money-groups td:first-child, #money-lean td:first-child, #pop-table td:first-child { white-space: nowrap; font: 400 0.92rem var(--serif); padding-right: 1.2rem; }
+.fb { width: 100%; min-width: 40rem; }
+.fb th { text-align: center; padding: 0.4rem 0.3rem; }
+.fb th:first-child, .fb td:first-child { text-align: left; }
+.fb td { padding: 0.25rem 0.3rem; text-align: center; }
+.fb td:first-child { white-space: nowrap; padding-right: 0.8rem; font-family: var(--serif); font-size: 0.95rem; }
+.fb tr.judge-row { cursor: pointer; }
+.fb tr.judge-row:hover td, .fb tr.judge-row:focus-within td { background: var(--quote); }
+.fb .num-s { font: 800 0.76rem var(--sans); color: var(--ink); margin-right: 0.5rem; display: inline-block; min-width: 1.8rem; }
+.mark { display: inline-flex; align-items: center; justify-content: center; width: 1.6rem; height: 1.6rem; border: 0; background: transparent; padding: 0; cursor: help; border-radius: 2px; }
+.mark i { display: block; }
+.mark .praise { width: 9px; height: 9px; border-radius: 50%; background: var(--series); }
+.mark .crit { width: 0; height: 0; border-left: 6px solid transparent; border-right: 6px solid transparent; border-bottom: 11px solid var(--flag); }
+
+.vote { display: flex; gap: 0.35rem; }
+.opt { display: inline-flex; align-items: center; gap: 0.35rem; font: 700 0.7rem/1 var(--sans); letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); background: transparent; border: 1px solid transparent; border-radius: 3px; padding: 0.4rem 0.45rem; cursor: pointer; }
+.opt::before { content: ""; width: 1.05rem; height: 0.66rem; border: 1.5px solid #8a8a8a; border-radius: 50%; }
+.opt:hover { border-color: var(--rule); color: var(--ink); }
+.opt[aria-pressed="true"] { color: var(--ink); }
+.opt[aria-pressed="true"]::before { background: var(--ink); border-color: var(--ink); }
+.my-ballot { display: grid; gap: 1rem; border-top: 1px solid var(--rule-strong); padding-top: 1.5rem; max-width: var(--measure); }
+.sheet-head { display: grid; gap: 0.25rem; }
+.sheet-sub { font: 500 0.82rem var(--sans); color: var(--muted); }
+.sheet-controls { display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; font: 500 0.82rem var(--sans); }
+.btn { font: 600 0.84rem var(--sans); padding: 0.55rem 0.9rem; border: 1px solid #bdbdbd; border-radius: 3px; background: #fff; color: var(--ink); cursor: pointer; }
+.btn:hover { border-color: var(--ink); }
+.btn.primary { background: var(--ink); color: #fff; border-color: var(--ink); }
+.sheet-table { width: 100%; min-width: 0; font: 400 0.95rem/1.4 var(--sans); }
+.sheet-table td { padding: 0.55rem 0.8rem 0.55rem 0; vertical-align: middle; }
+.sheet-table .bn { font: 800 1.15rem var(--sans); width: 3.5rem; }
+.sheet-table .jn { font: 400 1rem var(--serif); }
+.sheet-table .ch { white-space: nowrap; text-align: right; }
+.choice { display: inline-flex; gap: 0.9rem; font: 700 0.75rem var(--sans); letter-spacing: 0.05em; }
+.choice span { display: inline-flex; align-items: center; gap: 0.3rem; color: #9a9a9a; }
+.choice span::before { content: ""; width: 1.1rem; height: 0.7rem; border: 1.5px solid #9a9a9a; border-radius: 50%; }
+.choice span.on { color: var(--ink); }
+.choice span.on::before { background: var(--ink); border-color: var(--ink); }
+.sheet-empty { font: 400 0.95rem var(--sans); color: var(--muted); padding: 1rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.sheet-foot { font: 400 0.8rem/1.5 var(--sans); color: var(--muted); }
+
+/* Printing shows only the choices sheet. */
+@media print {
+  @page { margin: 0.6in; }
+  body { background: #fff; font-size: 11pt; }
+  .wrap { display: block; padding: 0; max-width: none; }
+  .wrap > *:not(#my-ballot), .screen-only, #copy-status, #print-note { display: none !important; }
+  #my-ballot { border-top: 0; padding-top: 0; max-width: none; display: block; }
+  #my-ballot h2 { font-size: 20pt; margin-bottom: 2pt; }
+  .sheet-sub { font-size: 10pt; margin-bottom: 12pt; }
+  .sheet-table { font-size: 11pt; }
+  .sheet-table tr { break-inside: avoid; }
+  .sheet-table td { border-bottom: 1px solid #999; padding: 6pt 8pt 6pt 0; }
+  .choice span, .choice span.on { color: #000; }
+  .choice span::before { border-color: #000; }
+  .choice span.on::before { background: #000; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .sheet-foot { margin-top: 12pt; color: #000; }
+}
+
+.topnav { font: 600 0.8rem/1.2 var(--sans); }
+.topnav a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--rule); }
+.topnav a:hover { border-bottom-color: var(--ink); }
+.topnav.bottom { border-top: 1px solid var(--rule); padding-top: 1rem; }
+.about ul.plain, .about ol.steps { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.5rem; max-width: var(--measure); }
+.about .diagram { margin: 0.5rem 0; display: grid; gap: 0.5rem; max-width: 46rem; }
+.about .diagram svg { width: 100%; height: auto; display: block; }
+.d-title { font: 700 15px var(--sans); fill: var(--ink); }
+.d-box rect { fill: none; stroke: #9a9a9a; stroke-width: 1.25; }
+.d-key rect { fill: #eaf2fb; stroke: var(--series); stroke-width: 2; }
+.d-dash rect { stroke-dasharray: 4 4; }
+.d-name { font: 700 13px var(--sans); fill: var(--ink); }
+.d-line { font: 400 11.5px var(--sans); fill: var(--muted); }
+.d-line.ink { fill: var(--ink); }
+.method ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.55rem; font-size: 0.98rem; }
+footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; gap: 0.4rem; border-top: 1px solid var(--rule); padding-top: 1rem; max-width: var(--measure); }
+
+@media (max-width: 34rem) {
+  .judge > summary { grid-template-columns: 2.6rem 1fr; gap: 0.5rem 0.75rem; }
+  .vote { grid-column: 2; justify-self: start; margin-left: -0.45rem; }
+  .profile { padding-left: 0.25rem; }
+  .rating { grid-template-columns: 1fr; gap: 0.1rem; }
+}
+</style>
+<div class="wrap about">
+  <nav class="topnav"><a href="./">&larr; Back to the judges guide</a></nav>
+
+  <header>
+    <div class="eyebrow">About this project</div>
+    <h1>How the judges guide is built</h1>
+    <p class="lede">A retrieval-augmented pipeline that turns scattered public records into a sourced voter guide to the 61 judges on the November 2026 Cook County retention ballot. I built it to learn retrieval-augmented generation and LLM evaluation hands-on, on a problem where wrong answers have real costs.</p>
+    <p class="dateline">Built by Tricia Scully · <a href="https://github.com/triciascully/chicago-judges-ballot-research-2026">Source code on GitHub</a> · Updated <span data-built></span></p>
+  </header>
+
+  <section class="compare">
+    <h2>What it does</h2>
+    <p>Retention ballots ask voters to keep or remove dozens of judges, but the evidence about any one judge is spread across a 300,000-row sentencing dataset, three bar associations' websites, a 1 GB campaign-finance file and appellate court opinions. The guide gathers it into one profile per judge:</p>
+    <ul class="plain">
+      <li>Sentencing compared with what the whole court did for the same charges, with 95% ranges</li>
+      <li>Bar association ratings and the attorney feedback behind them, quoted word for word</li>
+      <li>Career background: former prosecutor, criminal defense, work for vulnerable clients</li>
+      <li>Campaign money by donor type, and where donor organizations give elsewhere</li>
+      <li>Appellate track record: how often the judge's rulings were affirmed or reversed (in progress)</li>
+    </ul>
+    <p><strong>The design rule throughout:</strong> every claim on the page points to a verbatim quote or a computed number with its uncertainty. The language model never writes text readers see; it extracts facts from retrieved documents, and code verifies them.</p>
+  </section>
+
+  <section class="compare">
+    <h2>How it works as a retrieval-augmented system</h2>
+    <p>For each judge, the pipeline retrieves the relevant documents, gives them to a language model as its only context, has it return structured facts with a quote for each, then verifies every quote in code before anything reaches the page. It follows the standard RAG loop (retrieve, augment, generate) with an added verification stage, because a voter guide can't tolerate invented facts.</p>
+    <figure class="diagram">
+      <svg viewBox="0 0 760 548" role="img" aria-label="Retrieved text goes through the model, but code decides what reaches the page">
+        <defs><marker id="ab-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a8a8a"/></marker></defs>
+        <text x="24" y="34" class="d-title">Retrieved text goes through the model, but code decides what reaches the page</text>
+        <g fill="none" stroke="#8a8a8a" stroke-width="1.25">
+          <path d="M104 120V166" marker-end="url(#ab-arrow)"/><path d="M280 120V166" marker-end="url(#ab-arrow)"/>
+          <path d="M456 120V166" marker-end="url(#ab-arrow)"/><path d="M632 120V166" marker-end="url(#ab-arrow)"/>
+          <path d="M192 224V254" marker-end="url(#ab-arrow)"/><path d="M544 224V254" marker-end="url(#ab-arrow)"/>
+          <path d="M192 328V358" marker-end="url(#ab-arrow)"/><path d="M192 432V466" marker-end="url(#ab-arrow)"/>
+          <path d="M650 328V466" marker-end="url(#ab-arrow)"/><path d="M376 396H362" stroke-dasharray="4 4" marker-end="url(#ab-arrow)"/>
+        </g>
+        <g class="d-box"><rect x="24" y="64" width="160" height="56" rx="6"/><text x="36" y="88" class="d-name">Bar evaluations</text><text x="36" y="106" class="d-line">3 bar groups</text></g>
+        <g class="d-box"><rect x="200" y="64" width="160" height="56" rx="6"/><text x="212" y="88" class="d-name">Appellate opinions</text><text x="212" y="106" class="d-line">CourtListener</text></g>
+        <g class="d-box"><rect x="376" y="64" width="160" height="56" rx="6"/><text x="388" y="88" class="d-name">Sentencing records</text><text x="388" y="106" class="d-line">306,000 rows</text></g>
+        <g class="d-box"><rect x="552" y="64" width="160" height="56" rx="6"/><text x="564" y="88" class="d-name">Campaign filings</text><text x="564" y="106" class="d-line">1 GB of receipts</text></g>
+        <g class="d-box"><rect x="24" y="168" width="688" height="56" rx="6"/><text x="36" y="192" class="d-name">Retrieve documents for each judge</text><text x="36" y="210" class="d-line">Name matching, full-text search with a caption check, and streaming filters</text></g>
+        <g class="d-box"><rect x="24" y="256" width="336" height="72" rx="6"/><text x="36" y="280" class="d-name">Model extracts facts</text><text x="36" y="296" class="d-line">Local LLM, output fixed to a JSON schema</text><text x="36" y="312" class="d-line">Each fact comes with a verbatim quote</text></g>
+        <g class="d-box"><rect x="376" y="256" width="336" height="72" rx="6"/><text x="388" y="280" class="d-name">Code computes statistics</text><text x="388" y="296" class="d-line">Comparison with like cases, 95% ranges</text><text x="388" y="312" class="d-line">Donor groups and campaign totals</text></g>
+        <g class="d-box d-key"><rect x="24" y="360" width="336" height="72" rx="6"/><text x="36" y="384" class="d-name">Code verifies every claim</text><text x="36" y="400" class="d-line ink">Quote must appear word for word in the source</text><text x="36" y="416" class="d-line ink">A flag needs wording that shows the fact</text></g>
+        <g class="d-box d-dash"><rect x="376" y="360" width="200" height="72" rx="6"/><text x="388" y="384" class="d-name">Evaluation</text><text x="388" y="400" class="d-line">Held-out hand labels</text><text x="388" y="416" class="d-line">Outside-data checks</text></g>
+        <g class="d-box"><rect x="24" y="468" width="688" height="56" rx="6"/><text x="36" y="492" class="d-name">Judge profiles and the shareable page</text><text x="36" y="510" class="d-line">Text comes from templates; every claim cites a quote or a computed number</text></g>
+      </svg>
+      <figcaption class="note">Text sources pass through the model and then code verification; structured data goes straight to code statistics. Both meet only in the templated profiles.</figcaption>
+    </figure>
+    <ol class="steps">
+      <li><strong>Retrieve.</strong> Each judge is the query. Bar evaluations are retrieved by a name matcher that handles middle initials, nicknames, hyphenated and married surnames, and typos on source pages. Appellate opinions come from Boolean full-text search on CourtListener, then a filter that parses each opinion's caption to confirm the judge presided. Campaign filings are retrieved by streaming a 1 GB file and keeping each judge's committees.</li>
+      <li><strong>Augment.</strong> The retrieved document goes into the prompt as the model's only source, with instructions to use nothing else and to copy evidence word for word. Output is constrained to a JSON schema compiled into a grammar, so it can't come back malformed.</li>
+      <li><strong>Generate.</strong> A local model, Qwen3-Coder-Next running through llama.cpp on a laptop, extracts the facts. The same code can call Claude through the Anthropic API, so the two can be compared on the same evaluation.</li>
+      <li><strong>Verify.</strong> Each quote must appear verbatim in the source, a flag needs wording that shows the fact, and reader-facing text comes from templates. The page cannot contain a sentence the model invented.</li>
+    </ol>
+    <p class="note">Retrieval here is lexical and structured rather than embedding-based, because every document is keyed to a known judge. Semantic search over the opinions is the next phase.</p>
+  </section>
+
+  <section class="compare">
+    <h2>How the output is evaluated</h2>
+    <p>On 15 hand-labeled evaluations held out from tuning, the final pipeline made no false claims on any of six facts and missed one criminal-court assignment.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Fact</th><th>Precision</th><th>Recall</th></tr></thead>
+      <tbody>
+        <tr><td>Former prosecutor</td><td>1.00</td><td>1.00</td></tr>
+        <tr><td>Former criminal defense attorney</td><td>1.00</td><td>1.00</td></tr>
+        <tr><td>Represented vulnerable clients</td><td>1.00</td><td>1.00</td></tr>
+        <tr><td>Criminal-court experience</td><td>1.00</td><td>0.86</td></tr>
+        <tr><td>Treatment-court experience</td><td>1.00</td><td>1.00</td></tr>
+        <tr><td>Criticized by attorneys</td><td>1.00</td><td>1.00</td></tr>
+      </tbody>
+    </table></div>
+    <p>Four layers of checks each caught different errors:</p>
+    <ul class="plain">
+      <li><strong>Grounding:</strong> is every evidence quote verbatim in the source? Catches invented or paraphrased evidence.</li>
+      <li><strong>Hand labels:</strong> a tuning set and a separate held-out set, labeled from the text alone under a written guide. Catches real quotes with the wrong label, which grounding can't.</li>
+      <li><strong>Outside data:</strong> every judge with 100+ criminal sentences in court records must have criminal-court experience. This exposed a schema bug that cost recall on 5 of 11 judges, fixed with one prompt sentence.</li>
+      <li><strong>Support check:</strong> a stronger model judges whether each quote supports its label (built, ready to run with an API key).</li>
+    </ul>
+  </section>
+
+  <section class="compare">
+    <h2>Lessons from building it</h2>
+    <ul class="plain">
+      <li><strong>Prompts set what the model attempts; code decides what counts.</strong> Across five prompt versions, stricter rules made the model dump facts into catch-all buckets or loop until it hit the output limit. Splitting the job (the model extracts broadly, code checks keep only verified facts) took precision to 1.00.</li>
+      <li><strong>A local model was good enough.</strong> A quantized mixture-of-experts model on a 64 GB laptop extracted each judge in about 9 seconds, at no cost.</li>
+      <li><strong>Every source had data-quality problems.</strong> Sentence dates as far off as 2921, names stored "Last, First" or in capitals, misspellings on source pages, a dataset that silently stopped in 2024. Each was found by checking outputs against expectations.</li>
+      <li><strong>Rate limits shaped retrieval.</strong> With search capped at 50 requests an hour, the pipeline batches judges per query, caches every result page, and waits out limits on the server's terms.</li>
+    </ul>
+  </section>
+
+  <section class="compare">
+    <h2>Responsible design</h2>
+    <ul class="plain">
+      <li>No voting recommendations; the guide shows the records and how to read them.</li>
+      <li>Every number carries its uncertainty, and specialty-court judges are flagged so they aren't compared unfairly.</li>
+      <li>Donors are shown by employer and organization, never by individual name.</li>
+      <li>Readers' ballot choices stay in their own browser.</li>
+    </ul>
+  </section>
+
+  <section class="compare">
+    <h2>Data sources</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Source</th><th>Provides</th></tr></thead>
+      <tbody>
+        <tr><td>Cook County State's Attorney sentencing data</td><td>305,885 sentencing records, 2011–2024</td></tr>
+        <tr><td>Illinois State Bar Association, Chicago Bar Association, Alliance of Bar Associations</td><td>Ratings, written evaluations, ballot numbers</td></tr>
+        <tr><td>Illinois State Board of Elections</td><td>Campaign committees, party, itemized receipts</td></tr>
+        <tr><td>CourtListener (Free Law Project)</td><td>Illinois Appellate Court decisions</td></tr>
+        <tr><td>Circuit Court of Cook County</td><td>Judge directory and courtroom assignments</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section class="compare">
+    <h2>Tools</h2>
+    <p>Python and pandas; llama.cpp with Qwen3-Coder-Next; the Anthropic API; JSON-schema-constrained generation; the CourtListener and Socrata APIs; hand-built SVG charts with a colorblind-validated palette; Flask and GitHub Pages for hosting; git.</p>
+  </section>
+
+  <nav class="topnav bottom"><a href="./">&larr; Back to the judges guide</a></nav>
+</div>
+<script>document.querySelectorAll("[data-built]").forEach((e) => (e.textContent = "October 15, 2026"));</script>
+
+</body>
+</html>

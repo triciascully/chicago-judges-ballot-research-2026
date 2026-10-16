@@ -1,7 +1,7 @@
 """Build the shareable judges page from the ballot report.
 
     python -m ballot.build_ballot_report    # first, to refresh the profiles
-    python -m ballot.build_page             # writes site/judges.html and site/web/public/index.html
+    python -m ballot.build_page             # writes site/judges.html, site/web/public/ and docs/ (GitHub Pages)
 
 The page is one self-contained HTML file with the profile data embedded. judges.html is the
 page body for the Claude artifact (which adds the document wrapper itself); public/index.html
@@ -19,6 +19,7 @@ STANDALONE = ROOT / "site" / "web" / "public" / "index.html"
 ABOUT_BODY = ROOT / "site" / "about_body.html"
 ABOUT = ROOT / "site" / "web" / "public" / "about.html"
 ABOUT_ARTIFACT = ROOT / "site" / "about.html"  # published beside judges.html in the Claude artifact
+PAGES = ROOT / "docs"  # GitHub Pages: Settings > Pages > Deploy from a branch > main, /docs
 _WRAPPER = """<!doctype html>
 <html lang="en">
 <head>
@@ -73,7 +74,11 @@ def main() -> None:
     about = head + "\n" + ABOUT_BODY.read_text().replace("{{BUILT}}", date.today().strftime("%B %-d, %Y"))
     ABOUT.write_text(_WRAPPER.replace("{page}", about))
     ABOUT_ARTIFACT.write_text(_WRAPPER.replace("{page}", about))
-    for path in (PAGE, STANDALONE, ABOUT):
+    PAGES.mkdir(exist_ok=True)
+    (PAGES / "index.html").write_text(STANDALONE.read_text())
+    (PAGES / "about.html").write_text(ABOUT.read_text())
+    (PAGES / ".nojekyll").write_text("")  # serve files as-is, no Jekyll processing
+    for path in (PAGE, STANDALONE, ABOUT, PAGES / "index.html", PAGES / "about.html"):
         print(f"{path} ({path.stat().st_size / 1e3:.0f} KB)")
 
 
