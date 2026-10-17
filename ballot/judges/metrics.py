@@ -21,6 +21,7 @@ import pandas as pd
 MIN_STRATUM = 30  # smallest class x category group used as its own baseline
 MIN_CASES = 100  # judges with fewer cases in the window aren't scored
 MIN_GROUP = 30  # smallest race group per judge for disparity estimates
+MIN_GROUP_APPEALS = 10  # smallest number of merits decisions to state an appellate finding
 # Judges whose sentences are mostly treatment-based are likely assigned to a
 # specialty court (drug, mental health, veterans), so their docket isn't comparable.
 SPECIALTY_TREATMENT_SHARE = 0.2

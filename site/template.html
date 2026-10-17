@@ -265,6 +265,16 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
     <details class="more"><summary>Show all judges as a table</summary><div class="table-wrap" id="pop-table"></div></details>
   </section>
 
+  <section class="compare" id="appeals" aria-labelledby="appeals-h">
+    <h2 id="appeals-h">How often appeals courts changed their rulings</h2>
+    <p class="intro">When someone appeals a judge's decision, the Illinois Appellate Court affirms it, changes it, or dismisses the appeal. Across <span data-appeals></span> Cook County appeals decided since 2015, the court changed the ruling at least in part <span data-appeal-rate></span> of the time. Each ballot judge below is compared with that rate for the same mix of criminal, civil and family cases. Only appealed cases count, so this shows how well rulings hold up on review.</p>
+    <div class="legend" aria-hidden="true">
+      <span><i class="k-ballot"></i>Ballot judge, with 95% range</span>
+    </div>
+    <div class="chart" id="appeal-chart"><div class="tip" id="appeal-tip" hidden></div></div>
+    <p class="note" id="appeal-note"></p>
+  </section>
+
   <section class="compare" id="campaign" aria-labelledby="campaign-h">
     <h2 id="campaign-h">Campaign money</h2>
     <p class="intro">What each judge's own campaign committee reported taking in since January 2020, from the Illinois State Board of Elections. Most of this money is from the 2020 elections, when many of these judges first won their seats. Judges running only for retention usually raise money together through the Committee for Retention of Judges in Cook County, which can't be split by judge, so a short or missing bar doesn't mean a judge raised nothing at all.</p>
@@ -337,13 +347,14 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
       <li><strong>Bar ratings</strong> come from the Alliance of Bar Associations (13 groups), the Illinois State Bar Association, and the Chicago Bar Association. Nearly every judge is rated Yes, so a No from any group stands out.</li>
       <li><strong>The attorney feedback grid</strong> sorts each quote from the ISBA evaluation into a topic by its wording. It shows what the evaluation mentions, not a score, and a blank cell means the evaluation didn't discuss that topic.</li>
       <li><strong>Background and attorney criticism</strong> are quotes from each judge's ISBA evaluation. A local AI model pulled them out, and code accepts a quote only if it appears word for word in the evaluation. Checked against 30 hand-labeled evaluations, it made no false claims; it occasionally misses an assignment.</li>
+      <li><strong>Appellate track record</strong> comes from every Illinois Appellate Court decision since 2015 in CourtListener's bulk data (Free Law Project), matched to judges by the name in each decision's caption. It counts how often the appeals court changed a ruling at least in part, compared with the countywide rate for the same case types. Only appealed cases are included.</li>
       <li><strong>Campaign money</strong> comes from the Illinois State Board of Elections and covers each judge's own committee since 2020. The page shows totals and donors' employers but not individual donors' names.</li>
       <li><strong>Nothing here is an endorsement.</strong> The page shows what the records say. How to weigh them is up to you.</li>
     </ul>
   </section>
 
   <footer>
-    <div>Sources: <a href="" data-src="sao">Cook County State's Attorney sentencing data</a> · <a href="https://www.isba.org/judicial-elections/counties/cook">ISBA evaluations</a> · <a href="https://www.chicagobar.org/CBA/CBA/JEC/Judicial_Voters_Guide.aspx">CBA voters guide</a> · <a href="https://www.voteforjudges.org/">Alliance ratings</a> · <a href="https://elections.il.gov/campaigndisclosuredatafiles/">Illinois State Board of Elections</a>. For reporting on these judges, see the <a href="https://2026retention.injusticewatch.org/">Injustice Watch guide</a>.</div>
+    <div>Sources: <a href="" data-src="sao">Cook County State's Attorney sentencing data</a> · <a href="https://www.isba.org/judicial-elections/counties/cook">ISBA evaluations</a> · <a href="https://www.chicagobar.org/CBA/CBA/JEC/Judicial_Voters_Guide.aspx">CBA voters guide</a> · <a href="https://www.voteforjudges.org/">Alliance ratings</a> · <a href="https://elections.il.gov/campaigndisclosuredatafiles/">Illinois State Board of Elections</a> · <a href="https://www.courtlistener.com/">CourtListener</a>. For reporting on these judges, see the <a href="https://2026retention.injusticewatch.org/">Injustice Watch guide</a>.</div>
     <div>Built <span data-built></span>. Independent volunteer project, not affiliated with any campaign, court, or bar association. <a href="about.html">How this guide is built</a>.</div>
   </footer>
 </div>
@@ -408,6 +419,20 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
       </div></details>`;
   }
 
+  const OUTCOME = { "affirmed": "Affirmed", "affirmed in part": "Partly reversed", "reversed": "Reversed", "vacated": "Vacated", "dismissed": "Appeal dismissed" };
+  function appellateHTML(a) {
+    if (!a || !a.n_decisions) return `<p class="note">${esc(a ? a.summary : "No appellate data.")}</p>`;
+    const c = a.counts;
+    const parts = [["affirmed", c.affirmed], ["affirmed in part", c["affirmed in part"]], ["reversed", c.reversed], ["vacated", c.vacated], ["dismissed", c.dismissed]]
+      .filter(([, v]) => v).map(([k, v]) => `${v} ${OUTCOME[k].toLowerCase()}`).join(", ");
+    const rate = a.n_merits ? `<p class="note">Changed at least in part in ${a.changed} of ${a.n_merits} decisions on the merits (${Math.round(100 * a.rate)}%), vs ${Math.round(100 * a.expected)}% expected for the same kinds of cases countywide.</p>` : "";
+    const finding = a.finding ? `<p class="finding">${esc(a.finding)}</p>` : (a.n_merits >= 10 ? `<p class="note">Within the range expected for comparable appeals.</p>` : "");
+    const recent = a.recent.map((d) => `<li><a href="${esc(d.url)}">${esc(d.case_name)}</a> · ${esc(String(d.date).slice(0, 10))} · ${esc(OUTCOME[d.outcome] || "Outcome unclear")}</li>`).join("");
+    return `<p class="note">${a.n_decisions} Illinois Appellate Court decisions since 2015 reviewed this judge's rulings: ${parts}.</p>
+      ${finding}${rate}
+      <details class="more"><summary>Most recent decisions</summary><div><ul class="plain">${recent}</ul>
+      <p class="note">Only appealed cases appear here, so this shows how often a judge's rulings hold up on review, not how all their cases were decided.</p></div></details>`;
+  }
   const usd = (x) => "$" + Math.round(x).toLocaleString();
   // An organization's own giving to other Illinois committees since 2016, by recipient party.
   function lean(x) {
@@ -456,6 +481,7 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
       <div class="profile">
         <div class="section"><h3>Bar association ratings</h3>${ratings || '<p class="note">Not found in any bar rating source. Check your sample ballot to confirm this judge is listed.</p>'}</div>
         <div class="section"><h3>Sentencing record</h3>${sentencingHTML(j.sentencing)}</div>
+        <div class="section"><h3>Appellate track record</h3>${appellateHTML(j.appellate)}</div>
         <div class="section"><h3>Attorney criticism (ISBA)</h3>${crit}</div>
         <div class="section"><h3>Campaign money since 2020</h3>${campaignHTML(j.campaign)}</div>
         <div class="section"><h3>Criminal court experience</h3>${crimHTML}</div>
@@ -862,6 +888,20 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
   const DATA = JSON.parse(document.getElementById("data").textContent);
   const NS = "http://www.w3.org/2000/svg";
   const el = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
+  const OUTCOME = { "affirmed": "Affirmed", "affirmed in part": "Partly reversed", "reversed": "Reversed", "vacated": "Vacated", "dismissed": "Appeal dismissed" };
+  function appellateHTML(a) {
+    if (!a || !a.n_decisions) return `<p class="note">${esc(a ? a.summary : "No appellate data.")}</p>`;
+    const c = a.counts;
+    const parts = [["affirmed", c.affirmed], ["affirmed in part", c["affirmed in part"]], ["reversed", c.reversed], ["vacated", c.vacated], ["dismissed", c.dismissed]]
+      .filter(([, v]) => v).map(([k, v]) => `${v} ${OUTCOME[k].toLowerCase()}`).join(", ");
+    const rate = a.n_merits ? `<p class="note">Changed at least in part in ${a.changed} of ${a.n_merits} decisions on the merits (${Math.round(100 * a.rate)}%), vs ${Math.round(100 * a.expected)}% expected for the same kinds of cases countywide.</p>` : "";
+    const finding = a.finding ? `<p class="finding">${esc(a.finding)}</p>` : (a.n_merits >= 10 ? `<p class="note">Within the range expected for comparable appeals.</p>` : "");
+    const recent = a.recent.map((d) => `<li><a href="${esc(d.url)}">${esc(d.case_name)}</a> · ${esc(String(d.date).slice(0, 10))} · ${esc(OUTCOME[d.outcome] || "Outcome unclear")}</li>`).join("");
+    return `<p class="note">${a.n_decisions} Illinois Appellate Court decisions since 2015 reviewed this judge's rulings: ${parts}.</p>
+      ${finding}${rate}
+      <details class="more"><summary>Most recent decisions</summary><div><ul class="plain">${recent}</ul>
+      <p class="note">Only appealed cases appear here, so this shows how often a judge's rulings hold up on review, not how all their cases were decided.</p></div></details>`;
+  }
   const usd = (x) => "$" + Math.round(x).toLocaleString();
   const compact = (x) => x >= 1000 ? "$" + (x / 1000).toFixed(x >= 10000 ? 0 : 1) + "K" : "$" + Math.round(x);
   const rows = DATA.judges.filter((j) => j.campaign && j.campaign.raised_from_others + j.campaign.self_funded > 0)
@@ -954,5 +994,72 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
   }
   let raf; addEventListener("resize", () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(draw); });
   draw(); groupTable(); leanTable();
+})();
+</script>
+<script>
+(function () {
+  const DATA = JSON.parse(document.getElementById("data").textContent);
+  const base = DATA.appellate_baseline;
+  if (!base) return;
+  document.querySelectorAll("[data-appeals]").forEach((e) => (e.textContent = base.decided_on_merits.toLocaleString()));
+  document.querySelectorAll("[data-appeal-rate]").forEach((e) => (e.textContent = Math.round(100 * base.changed_share) + "%"));
+  const NS = "http://www.w3.org/2000/svg";
+  const el = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
+  const lastName = (n) => n.replace(/,? (Jr\.?|III|II)$/i, "").split(" ").pop();
+  const pts = (x) => (x > 0 ? "+" : x < 0 ? "−" : "") + Math.abs(100 * x).toFixed(0) + " pts";
+  const host = document.getElementById("appeal-chart"), tip = document.getElementById("appeal-tip");
+  const rows = DATA.judges.filter((j) => j.appellate && j.appellate.n_merits >= 10).sort((a, b) => a.appellate.diff - b.appellate.diff);
+  const few = DATA.judges.filter((j) => j.appellate && j.appellate.n_decisions && !(j.appellate.n_merits >= 10)).length;
+  const none = DATA.judges.filter((j) => !j.appellate || !j.appellate.n_decisions).length;
+  document.getElementById("appeal-note").textContent = `${rows.length} ballot judges had at least 10 appeals decided on the merits. ${few} more had fewer (see their profiles), and ${none} had none. A range that crosses zero is consistent with the countywide rate.`;
+
+  function open(j) { const t = document.getElementById("b" + j.ballot_number); if (t) { t.hidden = false; t.open = true; t.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }); } }
+  function show(j, x, y) {
+    const a = j.appellate; tip.replaceChildren();
+    const add = (cls, t) => { const s = document.createElement(cls === "h" ? "strong" : "span"); if (cls !== "h") s.className = cls; s.textContent = t; tip.appendChild(s); };
+    add("h", `${j.name}${j.ballot_number ? "  ·  ballot #" + j.ballot_number : ""}`);
+    add("v", `Changed on appeal: ${a.changed} of ${a.n_merits} (${Math.round(100 * a.rate)}%)`);
+    add("v", `Expected for the same case types: ${Math.round(100 * a.expected)}%`);
+    add("m", `Difference ${pts(a.diff)} (95% range ${pts(a.lo)} to ${pts(a.hi)})`);
+    add("m", "Click to open this judge's profile");
+    tip.hidden = false; tip.style.left = Math.min(Math.max(0, x + 12), host.clientWidth - tip.offsetWidth) + "px"; tip.style.top = (y + 12) + "px";
+  }
+  const hide = () => { tip.hidden = true; };
+
+  function draw() {
+    host.querySelector("svg")?.remove(); hide();
+    const W = Math.max(320, host.clientWidth), rowH = 26, labelW = Math.min(190, W * 0.38), m = { t: 8, r: 16, b: 34 };
+    const H = m.t + rows.length * rowH + m.b, iw = W - labelW - m.r;
+    const vals = rows.flatMap((j) => [j.appellate.lo, j.appellate.hi]).concat([0]);
+    let lo = Math.min(...vals), hi = Math.max(...vals); const pad = (hi - lo) * 0.06; lo -= pad; hi += pad;
+    const X = (v) => labelW + ((v - lo) / (hi - lo)) * iw;
+    const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": `Appellate outcomes for ${rows.length} ballot judges compared with the countywide rate` });
+    const step = [0.05, 0.1, 0.2].find((s) => (hi - lo) / s <= 8);
+    for (let t = Math.ceil(lo / step) * step; t <= hi; t += step) {
+      const v = Math.round(t * 100) / 100;
+      el("line", { class: v === 0 ? "zero" : "grid", x1: X(v), x2: X(v), y1: m.t, y2: m.t + rows.length * rowH }, svg);
+      el("text", { x: X(v), y: H - m.b + 16, "text-anchor": "middle" }, svg).textContent = (v > 0 ? "+" : "") + Math.round(v * 100);
+    }
+    el("text", { class: "axis-title", x: labelW + iw / 2, y: H - 4, "text-anchor": "middle" }, svg).textContent = "Rulings changed on appeal: points above or below expected →";
+    el("text", { class: "quad", x: X(lo) + 4, y: m.t + 12 }, svg).textContent = "Held up more often";
+    el("text", { class: "quad", x: X(hi) - 4, y: m.t + 12, "text-anchor": "end" }, svg).textContent = "Changed more often";
+    rows.forEach((j, i) => {
+      const a = j.appellate, y = m.t + i * rowH + rowH / 2 + 8;
+      const g = el("g", { tabindex: "0", role: "button", "aria-label": `${j.name}: ${pts(a.diff)}, 95% range ${pts(a.lo)} to ${pts(a.hi)}` }, svg);
+      g.style.cursor = "pointer";
+      el("rect", { x: 0, y: y - rowH / 2, width: W, height: rowH, fill: "transparent" }, g);
+      el("text", { class: "lbl", x: labelW - 10, y: y + 4, "text-anchor": "end" }, g).textContent = `#${j.ballot_number} ${lastName(j.name)} (${a.n_merits})`;
+      el("line", { x1: X(a.lo), x2: X(a.hi), y1: y, y2: y, stroke: "var(--series)", "stroke-width": 2, "stroke-linecap": "round" }, g);
+      el("circle", { cx: X(a.diff), cy: y, r: 5, fill: "var(--series)", stroke: "var(--card)", "stroke-width": 2 }, g);
+      const s = () => { const k = host.clientWidth / W; show(j, X(a.diff) * k, y * k); };
+      g.addEventListener("pointerenter", s); g.addEventListener("focus", s);
+      g.addEventListener("pointerleave", hide); g.addEventListener("blur", hide);
+      g.addEventListener("click", () => open(j));
+      g.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(j); } });
+    });
+    host.prepend(svg);
+  }
+  let raf; addEventListener("resize", () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(draw); });
+  draw();
 })();
 </script>

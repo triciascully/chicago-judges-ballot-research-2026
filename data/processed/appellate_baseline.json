@@ -1,0 +1,20 @@
+{
+ "appeals": 9096,
+ "decided_on_merits": 8574,
+ "changed_share": 0.2831,
+ "by_kind": {
+  "civil": {
+   "n": 3653,
+   "changed_share": 0.2921
+  },
+  "criminal": {
+   "n": 4172,
+   "changed_share": 0.2783
+  },
+  "juvenile/family": {
+   "n": 749,
+   "changed_share": 0.2657
+  }
+ },
+ "since": "2015-01-08"
+}

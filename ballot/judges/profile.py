@@ -138,3 +138,33 @@ def population_point(p: dict, ballot_number: int | None = None) -> dict:
         "length": [round(100 * (ln[k] - 1), 1) for k in ("ratio", "lo", "hi")] if ln else None,
         "gap": pts(gap, "gap") if gap else None,
     }
+
+
+def appellate_section(decisions: list[dict], baseline: dict) -> dict:
+    """How often the appeals court changed this judge's rulings, against what the countywide
+    rate predicts for the same mix of case types. Dismissals don't count either way."""
+    if not decisions:
+        return {"n_decisions": 0, "summary": "No Illinois Appellate Court decisions reviewing this judge since 2015."}
+    merits = [d for d in decisions if d["outcome"] in ("affirmed", "reversed", "vacated", "affirmed in part")]
+    out = {
+        "n_decisions": len(decisions), "n_merits": len(merits),
+        "counts": {k: sum(d["outcome"] == k for d in decisions)
+                   for k in ("affirmed", "affirmed in part", "reversed", "vacated", "dismissed")},
+        "recent": [{k: d[k] for k in ("date", "case_name", "outcome", "url", "kind")}
+                   for d in sorted(decisions, key=lambda d: d["date"], reverse=True)[:6]],
+    }
+    if not merits:
+        return out
+    p = [baseline["by_kind"][d["kind"]]["changed_share"] for d in merits]
+    n, changed = len(merits), sum(d["outcome"] != "affirmed" for d in merits)
+    rate, expected = changed / n, sum(p) / n
+    se = (sum(x * (1 - x) for x in p)) ** 0.5 / n
+    diff = rate - expected
+    out.update({"changed": changed, "rate": rate, "expected": expected, "diff": diff,
+                "lo": diff - 1.96 * se, "hi": diff + 1.96 * se})
+    if n >= metrics.MIN_GROUP_APPEALS and (out["lo"] > 0 or out["hi"] < 0):
+        more = "more" if out["lo"] > 0 else "less"
+        out["finding"] = (f"The appeals court changed this judge's rulings {more} often than expected for the same "
+                          f"kinds of cases: {rate:.0%} of {n} decisions vs {expected:.0%} expected "
+                          f"({_pts(diff)}; 95% range {_pts(out['lo'])} to {_pts(out['hi'])}).")
+    return out

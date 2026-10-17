@@ -2,6 +2,26 @@
   "source": "https://datacatalog.cookcountyil.gov/d/tg8v-tm6u",
   "since": "2019-01-01",
   "data_through": "2024-11-14",
+  "appellate_baseline": {
+    "appeals": 9096,
+    "decided_on_merits": 8574,
+    "changed_share": 0.2831,
+    "by_kind": {
+      "civil": {
+        "n": 3653,
+        "changed_share": 0.2921
+      },
+      "criminal": {
+        "n": 4172,
+        "changed_share": 0.2783
+      },
+      "juvenile/family": {
+        "n": 749,
+        "changed_share": 0.2657
+      }
+    },
+    "since": "2015-01-08"
+  },
   "isba_extractions": "isba_extractions_llama.json",
   "judges": [
     {
@@ -90,6 +110,10 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 0,
+        "summary": "No Illinois Appellate Court decisions reviewing this judge since 2015."
+      },
       "campaign": null
     },
     {
@@ -179,6 +203,60 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 5,
+        "n_merits": 3,
+        "counts": {
+          "affirmed": 1,
+          "affirmed in part": 2,
+          "reversed": 0,
+          "vacated": 0,
+          "dismissed": 2
+        },
+        "recent": [
+          {
+            "date": "2026-06-29",
+            "case_name": "Kampf v. Kampf",
+            "outcome": "dismissed",
+            "url": "https://www.courtlistener.com/opinion/10881763/",
+            "kind": "civil"
+          },
+          {
+            "date": "2025-12-16",
+            "case_name": "Adams v. Cuellar",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10759436/",
+            "kind": "civil"
+          },
+          {
+            "date": "2025-11-19",
+            "case_name": "In re Marriage of Julin",
+            "outcome": "affirmed in part",
+            "url": "https://www.courtlistener.com/opinion/10739078/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2024-12-18",
+            "case_name": "In re Marriage of Norton",
+            "outcome": "dismissed",
+            "url": "https://www.courtlistener.com/opinion/10296491/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2023-08-23",
+            "case_name": "In re Marriage of Kattner",
+            "outcome": "affirmed in part",
+            "url": "https://www.courtlistener.com/opinion/9422174/",
+            "kind": "juvenile/family"
+          }
+        ],
+        "changed": 2,
+        "rate": 0.6666666666666666,
+        "expected": 0.2745,
+        "diff": 0.3921666666666666,
+        "lo": -0.1126298905693483,
+        "hi": 0.8969632239026815
+      },
       "campaign": {
         "raised_from_others": 6950.0,
         "self_funded": 6700.54,
@@ -279,6 +357,46 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 3,
+        "n_merits": 3,
+        "counts": {
+          "affirmed": 2,
+          "affirmed in part": 1,
+          "reversed": 0,
+          "vacated": 0,
+          "dismissed": 0
+        },
+        "recent": [
+          {
+            "date": "2026-03-11",
+            "case_name": "People ex rel Burke v. 2016 Land Rover Range Rover",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10807326/",
+            "kind": "civil"
+          },
+          {
+            "date": "2018-12-20",
+            "case_name": "Hampton v. The Chicago Transit Authority",
+            "outcome": "affirmed in part",
+            "url": "https://www.courtlistener.com/opinion/4576106/",
+            "kind": "civil"
+          },
+          {
+            "date": "2017-02-03",
+            "case_name": "Blackstone Condominium Association v. Speights-Carnegie",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/4349670/",
+            "kind": "civil"
+          }
+        ],
+        "changed": 1,
+        "rate": 0.3333333333333333,
+        "expected": 0.2921,
+        "diff": 0.04123333333333329,
+        "lo": -0.4733398845680003,
+        "hi": 0.5558065512346668
+      },
       "campaign": null
     },
     {
@@ -373,6 +491,39 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 2,
+        "n_merits": 2,
+        "counts": {
+          "affirmed": 2,
+          "affirmed in part": 0,
+          "reversed": 0,
+          "vacated": 0,
+          "dismissed": 0
+        },
+        "recent": [
+          {
+            "date": "2025-06-06",
+            "case_name": "People v. Anderson",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10599835/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2024-05-09",
+            "case_name": "People v. Smetana",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9500932/",
+            "kind": "criminal"
+          }
+        ],
+        "changed": 0,
+        "rate": 0.0,
+        "expected": 0.2783,
+        "diff": -0.2783,
+        "lo": -0.8994207374480424,
+        "hi": 0.3428207374480424
+      },
       "campaign": {
         "raised_from_others": 5085.76,
         "self_funded": 0.0,
@@ -479,6 +630,67 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "",
+      "appellate": {
+        "n_decisions": 7,
+        "n_merits": 5,
+        "counts": {
+          "affirmed": 4,
+          "affirmed in part": 0,
+          "reversed": 1,
+          "vacated": 0,
+          "dismissed": 2
+        },
+        "recent": [
+          {
+            "date": "2025-02-10",
+            "case_name": "In re Parentage of D.C.",
+            "outcome": "dismissed",
+            "url": "https://www.courtlistener.com/opinion/10330076/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2024-05-24",
+            "case_name": "Department of Health & Family Services v. Angulo-Delabra",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9507160/",
+            "kind": "civil"
+          },
+          {
+            "date": "2023-03-10",
+            "case_name": "In re Parentage of Miller",
+            "outcome": "reversed",
+            "url": "https://www.courtlistener.com/opinion/9382981/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2021-04-27",
+            "case_name": "In re Parentage of D.S.",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/4877712/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2021-04-02",
+            "case_name": "In re Marriage of Salviola",
+            "outcome": "dismissed",
+            "url": "https://www.courtlistener.com/opinion/4870452/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2019-12-09",
+            "case_name": "Andersen v. Gimbel",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9503518/",
+            "kind": "civil"
+          }
+        ],
+        "changed": 1,
+        "rate": 0.2,
+        "expected": 0.27626,
+        "diff": -0.07626,
+        "lo": -0.4680376160801431,
+        "hi": 0.3155176160801431
+      },
       "campaign": null
     },
     {
@@ -628,6 +840,67 @@
         }
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 19,
+        "n_merits": 19,
+        "counts": {
+          "affirmed": 17,
+          "affirmed in part": 0,
+          "reversed": 2,
+          "vacated": 0,
+          "dismissed": 0
+        },
+        "recent": [
+          {
+            "date": "2026-09-23",
+            "case_name": "People v. Austin",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10981501/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2026-09-08",
+            "case_name": "People v. Hearring",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10969148/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2026-08-18",
+            "case_name": "People v. Denham",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10953212/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2026-08-07",
+            "case_name": "People v. Drake",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10942326/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2026-05-29",
+            "case_name": "People v. Green",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10866324/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2026-04-27",
+            "case_name": "People v. Johnson",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10848593/",
+            "kind": "criminal"
+          }
+        ],
+        "changed": 2,
+        "rate": 0.10526315789473684,
+        "expected": 0.2769736842105263,
+        "diff": -0.17171052631578948,
+        "lo": -0.3729250676570104,
+        "hi": 0.02950401502543143
+      },
       "campaign": {
         "raised_from_others": 5425.0,
         "self_funded": 10000.0,
@@ -755,6 +1028,67 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 28,
+        "n_merits": 28,
+        "counts": {
+          "affirmed": 21,
+          "affirmed in part": 2,
+          "reversed": 5,
+          "vacated": 0,
+          "dismissed": 0
+        },
+        "recent": [
+          {
+            "date": "2026-06-16",
+            "case_name": "In re A.E.",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10875911/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2025-12-10",
+            "case_name": "In re S.B.",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10751322/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2025-09-30",
+            "case_name": "In re H.B.-H",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10681835/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2025-08-12",
+            "case_name": "In re K.B.",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10652431/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2025-07-28",
+            "case_name": "In re Ki.G.",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10642834/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2025-06-13",
+            "case_name": "In re M.W.",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10604380/",
+            "kind": "juvenile/family"
+          }
+        ],
+        "changed": 7,
+        "rate": 0.25,
+        "expected": 0.26709285714285713,
+        "diff": -0.017092857142857132,
+        "lo": -0.1809634097262911,
+        "hi": 0.14677769544057684
+      },
       "campaign": null
     },
     {
@@ -834,6 +1168,46 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 3,
+        "n_merits": 3,
+        "counts": {
+          "affirmed": 2,
+          "affirmed in part": 0,
+          "reversed": 1,
+          "vacated": 0,
+          "dismissed": 0
+        },
+        "recent": [
+          {
+            "date": "2026-04-30",
+            "case_name": "The Habitat Company, LLC v. James",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10851378/",
+            "kind": "civil"
+          },
+          {
+            "date": "2025-12-10",
+            "case_name": "Dockery v. Guthrie",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10751324/",
+            "kind": "civil"
+          },
+          {
+            "date": "2024-08-19",
+            "case_name": "Lau v. Dasai",
+            "outcome": "reversed",
+            "url": "https://www.courtlistener.com/opinion/10045367/",
+            "kind": "civil"
+          }
+        ],
+        "changed": 1,
+        "rate": 0.3333333333333333,
+        "expected": 0.2921,
+        "diff": 0.04123333333333329,
+        "lo": -0.4733398845680003,
+        "hi": 0.5558065512346668
+      },
       "campaign": {
         "raised_from_others": 500.0,
         "self_funded": 0.0,
@@ -1013,6 +1387,67 @@
         }
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 92,
+        "n_merits": 92,
+        "counts": {
+          "affirmed": 66,
+          "affirmed in part": 5,
+          "reversed": 18,
+          "vacated": 3,
+          "dismissed": 0
+        },
+        "recent": [
+          {
+            "date": "2026-09-18",
+            "case_name": "People v. Williams",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10976873/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2026-09-11",
+            "case_name": "People v. Lujano",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10972046/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2026-08-14",
+            "case_name": "People v. Hongo",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10948637/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2026-08-07",
+            "case_name": "People v. Newbern",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10942488/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2026-07-28",
+            "case_name": "People v. Dugar",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10935789/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2026-07-16",
+            "case_name": "People v. Rankin",
+            "outcome": "reversed",
+            "url": "https://www.courtlistener.com/opinion/10932177/",
+            "kind": "criminal"
+          }
+        ],
+        "changed": 26,
+        "rate": 0.2826086956521739,
+        "expected": 0.2780521739130435,
+        "diff": 0.004556521739130404,
+        "lo": -0.0869951612945043,
+        "hi": 0.0961082047727651
+      },
       "campaign": null
     },
     {
@@ -1116,6 +1551,60 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 5,
+        "n_merits": 3,
+        "counts": {
+          "affirmed": 2,
+          "affirmed in part": 1,
+          "reversed": 0,
+          "vacated": 0,
+          "dismissed": 0
+        },
+        "recent": [
+          {
+            "date": "2023-11-22",
+            "case_name": "People v. Carroll",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9444081/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2021-05-10",
+            "case_name": "Muldrow v. Barron",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/4881757/",
+            "kind": "civil"
+          },
+          {
+            "date": "2021-04-27",
+            "case_name": "Walker v. Barron",
+            "outcome": null,
+            "url": "https://www.courtlistener.com/opinion/4877706/",
+            "kind": "civil"
+          },
+          {
+            "date": "2018-03-16",
+            "case_name": "Let Forest Park Vote on Video Gaming v. Village of Forest Park Municipal Officers Electoral Board",
+            "outcome": null,
+            "url": "https://www.courtlistener.com/opinion/4478592/",
+            "kind": "civil"
+          },
+          {
+            "date": "2017-11-14",
+            "case_name": "1550 MP Road LLC v. Teamsters Local Union No. 700",
+            "outcome": "affirmed in part",
+            "url": "https://www.courtlistener.com/opinion/4443126/",
+            "kind": "civil"
+          }
+        ],
+        "changed": 1,
+        "rate": 0.3333333333333333,
+        "expected": 0.28750000000000003,
+        "diff": 0.04583333333333328,
+        "lo": -0.46627511009377254,
+        "hi": 0.5579417767604391
+      },
       "campaign": null
     },
     {
@@ -1279,6 +1768,68 @@
         }
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 41,
+        "n_merits": 40,
+        "counts": {
+          "affirmed": 35,
+          "affirmed in part": 1,
+          "reversed": 3,
+          "vacated": 1,
+          "dismissed": 1
+        },
+        "recent": [
+          {
+            "date": "2026-06-29",
+            "case_name": "People v. Norfleet",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10881759/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2026-06-26",
+            "case_name": "People v. Rose",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10881002/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2026-06-24",
+            "case_name": "People v. Nooner",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10879922/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2026-05-07",
+            "case_name": "People v. Smith",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10855813/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2026-03-11",
+            "case_name": "People v. Lawson",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10807325/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2025-12-31",
+            "case_name": "People v. Williams",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10767630/",
+            "kind": "criminal"
+          }
+        ],
+        "changed": 5,
+        "rate": 0.125,
+        "expected": 0.2783,
+        "diff": -0.1533,
+        "lo": -0.2921868191168622,
+        "hi": -0.014413180883137783,
+        "finding": "The appeals court changed this judge's rulings less often than expected for the same kinds of cases: 12% of 40 decisions vs 28% expected (-15.3 points; 95% range -29.2 points to -1.4 points)."
+      },
       "campaign": null
     },
     {
@@ -1369,6 +1920,67 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 14,
+        "n_merits": 12,
+        "counts": {
+          "affirmed": 9,
+          "affirmed in part": 0,
+          "reversed": 2,
+          "vacated": 1,
+          "dismissed": 2
+        },
+        "recent": [
+          {
+            "date": "2026-08-31",
+            "case_name": "Mandel v. Krochmal",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10963117/",
+            "kind": "civil"
+          },
+          {
+            "date": "2026-05-08",
+            "case_name": "Melendez v. Wiesman",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10856487/",
+            "kind": "civil"
+          },
+          {
+            "date": "2025-09-30",
+            "case_name": "Rivas v. Benny's Prime Chophouse, LLC",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10681832/",
+            "kind": "civil"
+          },
+          {
+            "date": "2025-05-29",
+            "case_name": "Meherg v. Rush University Medical Center",
+            "outcome": "vacated",
+            "url": "https://www.courtlistener.com/opinion/10594881/",
+            "kind": "civil"
+          },
+          {
+            "date": "2025-03-28",
+            "case_name": "Richardson v. Sabbs",
+            "outcome": "reversed",
+            "url": "https://www.courtlistener.com/opinion/10366601/",
+            "kind": "civil"
+          },
+          {
+            "date": "2025-02-18",
+            "case_name": "Taylor v. Brooklyn Boulders, LLC",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10334537/",
+            "kind": "civil"
+          }
+        ],
+        "changed": 3,
+        "rate": 0.25,
+        "expected": 0.2899,
+        "diff": -0.03989999999999999,
+        "lo": -0.2965806588610317,
+        "hi": 0.2167806588610317
+      },
       "campaign": {
         "raised_from_others": 59005.36,
         "self_funded": 11500.0,
@@ -1580,6 +2192,67 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 19,
+        "n_merits": 16,
+        "counts": {
+          "affirmed": 13,
+          "affirmed in part": 1,
+          "reversed": 2,
+          "vacated": 0,
+          "dismissed": 2
+        },
+        "recent": [
+          {
+            "date": "2026-09-25",
+            "case_name": "Rowe v. Central Machinery Co. , LLC",
+            "outcome": "affirmed in part",
+            "url": "https://www.courtlistener.com/opinion/10984040/",
+            "kind": "civil"
+          },
+          {
+            "date": "2026-07-08",
+            "case_name": "Aguilar v. Doe",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10919113/",
+            "kind": "civil"
+          },
+          {
+            "date": "2026-07-02",
+            "case_name": "Greenfield v. Brannan",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10884086/",
+            "kind": "civil"
+          },
+          {
+            "date": "2026-07-02",
+            "case_name": "Schenk v. Advocate Health and Hospitals Corporation",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10884082/",
+            "kind": "civil"
+          },
+          {
+            "date": "2026-03-17",
+            "case_name": "Paulinski v. Link",
+            "outcome": null,
+            "url": "https://www.courtlistener.com/opinion/10809852/",
+            "kind": "civil"
+          },
+          {
+            "date": "2025-12-16",
+            "case_name": "Diaz v. Loyola University Medical Center",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10759433/",
+            "kind": "civil"
+          }
+        ],
+        "changed": 3,
+        "rate": 0.1875,
+        "expected": 0.2921,
+        "diff": -0.10460000000000003,
+        "lo": -0.3274167394048302,
+        "hi": 0.11821673940483013
+      },
       "campaign": {
         "raised_from_others": 21160.0,
         "self_funded": 85050.0,
@@ -1762,6 +2435,60 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 5,
+        "n_merits": 5,
+        "counts": {
+          "affirmed": 1,
+          "affirmed in part": 2,
+          "reversed": 2,
+          "vacated": 0,
+          "dismissed": 0
+        },
+        "recent": [
+          {
+            "date": "2024-05-17",
+            "case_name": "Goolsby v. Thompson",
+            "outcome": "affirmed in part",
+            "url": "https://www.courtlistener.com/opinion/9505052/",
+            "kind": "civil"
+          },
+          {
+            "date": "2023-09-11",
+            "case_name": "Woods v. Pace Bus, Inc.",
+            "outcome": "reversed",
+            "url": "https://www.courtlistener.com/opinion/9425539/",
+            "kind": "civil"
+          },
+          {
+            "date": "2023-03-24",
+            "case_name": "Hyman v. Club Meadows Realty, LLC",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9386618/",
+            "kind": "civil"
+          },
+          {
+            "date": "2023-02-27",
+            "case_name": "Bryton Properties, LLC v. Kids' Work Chicago, Inc.",
+            "outcome": "reversed",
+            "url": "https://www.courtlistener.com/opinion/9379983/",
+            "kind": "civil"
+          },
+          {
+            "date": "2022-07-25",
+            "case_name": "Bryton Properties, LLC v. Kids' Work Chicago, Inc.",
+            "outcome": "affirmed in part",
+            "url": "https://www.courtlistener.com/opinion/7408648/",
+            "kind": "civil"
+          }
+        ],
+        "changed": 4,
+        "rate": 0.8,
+        "expected": 0.2921,
+        "diff": 0.5079,
+        "lo": 0.10931329933275497,
+        "hi": 0.906486700667245
+      },
       "campaign": {
         "raised_from_others": 11680.0,
         "self_funded": 44617.0,
@@ -1928,6 +2655,53 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 4,
+        "n_merits": 2,
+        "counts": {
+          "affirmed": 1,
+          "affirmed in part": 0,
+          "reversed": 1,
+          "vacated": 0,
+          "dismissed": 2
+        },
+        "recent": [
+          {
+            "date": "2026-05-20",
+            "case_name": "In re Estate of Dylan R.",
+            "outcome": "dismissed",
+            "url": "https://www.courtlistener.com/opinion/10862314/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2026-02-13",
+            "case_name": "In re Estate of Madison F.",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10794975/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2024-03-13",
+            "case_name": "Frankel v. Bedstone Co.",
+            "outcome": "reversed",
+            "url": "https://www.courtlistener.com/opinion/9484162/",
+            "kind": "civil"
+          },
+          {
+            "date": "2023-04-13",
+            "case_name": "Portfolio Recovery Associates, LLC v. Moore",
+            "outcome": "dismissed",
+            "url": "https://www.courtlistener.com/opinion/9391407/",
+            "kind": "civil"
+          }
+        ],
+        "changed": 1,
+        "rate": 0.5,
+        "expected": 0.27890000000000004,
+        "diff": 0.22109999999999996,
+        "lo": -0.4001621092904347,
+        "hi": 0.8423621092904346
+      },
       "campaign": {
         "raised_from_others": 24776.0,
         "self_funded": 70000.0,
@@ -2089,6 +2863,67 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 6,
+        "n_merits": 6,
+        "counts": {
+          "affirmed": 4,
+          "affirmed in part": 1,
+          "reversed": 1,
+          "vacated": 0,
+          "dismissed": 0
+        },
+        "recent": [
+          {
+            "date": "2026-09-22",
+            "case_name": "In re Marriage of Maslii",
+            "outcome": "affirmed in part",
+            "url": "https://www.courtlistener.com/opinion/10979344/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2024-08-05",
+            "case_name": "Haywood v. Cherry",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10031695/",
+            "kind": "civil"
+          },
+          {
+            "date": "2024-03-22",
+            "case_name": "Midland Credit Management, Inc v. Terrell",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9487121/",
+            "kind": "civil"
+          },
+          {
+            "date": "2024-02-08",
+            "case_name": "Brackett v. Tyler",
+            "outcome": "reversed",
+            "url": "https://www.courtlistener.com/opinion/9473573/",
+            "kind": "civil"
+          },
+          {
+            "date": "2023-10-05",
+            "case_name": "DiFranco v. Fallon",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9430271/",
+            "kind": "civil"
+          },
+          {
+            "date": "2022-11-14",
+            "case_name": "Sandrzyk v. M&M Limousine Services",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/8511180/",
+            "kind": "civil"
+          }
+        ],
+        "changed": 2,
+        "rate": 0.3333333333333333,
+        "expected": 0.2877,
+        "diff": 0.045633333333333304,
+        "lo": -0.31650896500071474,
+        "hi": 0.40777563166738134
+      },
       "campaign": {
         "raised_from_others": 65673.42,
         "self_funded": 105000.0,
@@ -2292,6 +3127,67 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 11,
+        "n_merits": 11,
+        "counts": {
+          "affirmed": 8,
+          "affirmed in part": 2,
+          "reversed": 1,
+          "vacated": 0,
+          "dismissed": 0
+        },
+        "recent": [
+          {
+            "date": "2026-02-05",
+            "case_name": "In re Marriage of Schoen",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10784841/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2025-06-24",
+            "case_name": "In re Marriage of Harnack",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10616213/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2025-05-08",
+            "case_name": "In re Marriage of Maloney",
+            "outcome": "affirmed in part",
+            "url": "https://www.courtlistener.com/opinion/10573087/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2024-03-22",
+            "case_name": "In re Marriage of Goldin",
+            "outcome": "affirmed in part",
+            "url": "https://www.courtlistener.com/opinion/9487122/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2024-01-29",
+            "case_name": "Adams v. Ogunoshun",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9469923/",
+            "kind": "civil"
+          },
+          {
+            "date": "2023-07-28",
+            "case_name": "In re Marriage of Chanen",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9416587/",
+            "kind": "juvenile/family"
+          }
+        ],
+        "changed": 3,
+        "rate": 0.2727272727272727,
+        "expected": 0.2681,
+        "diff": 0.004627272727272702,
+        "lo": -0.25711282342364356,
+        "hi": 0.26636736887818896
+      },
       "campaign": null
     },
     {
@@ -2377,6 +3273,46 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 3,
+        "n_merits": 3,
+        "counts": {
+          "affirmed": 2,
+          "affirmed in part": 0,
+          "reversed": 1,
+          "vacated": 0,
+          "dismissed": 0
+        },
+        "recent": [
+          {
+            "date": "2024-06-21",
+            "case_name": "People v. Rivera",
+            "outcome": "reversed",
+            "url": "https://www.courtlistener.com/opinion/9687024/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2022-03-24",
+            "case_name": "People v. Dorr",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/6454588/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2018-03-02",
+            "case_name": "Trinidad C. v. Augustin L.",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/4474285/",
+            "kind": "civil"
+          }
+        ],
+        "changed": 1,
+        "rate": 0.3333333333333333,
+        "expected": 0.2829,
+        "diff": 0.05043333333333333,
+        "lo": -0.4591984151648675,
+        "hi": 0.5600650818315341
+      },
       "campaign": null
     },
     {
@@ -2465,6 +3401,67 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 6,
+        "n_merits": 6,
+        "counts": {
+          "affirmed": 5,
+          "affirmed in part": 0,
+          "reversed": 1,
+          "vacated": 0,
+          "dismissed": 0
+        },
+        "recent": [
+          {
+            "date": "2026-09-08",
+            "case_name": "Vasquez v. Aguilar",
+            "outcome": "reversed",
+            "url": "https://www.courtlistener.com/opinion/10969180/",
+            "kind": "civil"
+          },
+          {
+            "date": "2026-08-31",
+            "case_name": "Vandyke v. Prime Healthcare Agency, LLC",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10963084/",
+            "kind": "civil"
+          },
+          {
+            "date": "2026-05-08",
+            "case_name": "Huber v. Pointer",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10856490/",
+            "kind": "civil"
+          },
+          {
+            "date": "2026-05-06",
+            "case_name": "Saud v. DePaul University",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10854239/",
+            "kind": "civil"
+          },
+          {
+            "date": "2026-04-21",
+            "case_name": "Ilgaz v. Kazouini",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10846307/",
+            "kind": "civil"
+          },
+          {
+            "date": "2019-11-26",
+            "case_name": "Department of Healthcare & Family Services v. Jones",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9503468/",
+            "kind": "civil"
+          }
+        ],
+        "changed": 1,
+        "rate": 0.16666666666666666,
+        "expected": 0.2921,
+        "diff": -0.12543333333333337,
+        "lo": -0.48929154512834927,
+        "hi": 0.23842487846168256
+      },
       "campaign": {
         "raised_from_others": 7130.5,
         "self_funded": 52968.29,
@@ -2713,6 +3710,67 @@
         }
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 19,
+        "n_merits": 11,
+        "counts": {
+          "affirmed": 8,
+          "affirmed in part": 1,
+          "reversed": 1,
+          "vacated": 1,
+          "dismissed": 7
+        },
+        "recent": [
+          {
+            "date": "2026-08-12",
+            "case_name": "People v. Seddon",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10945978/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2026-06-16",
+            "case_name": "People v. Ellis",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10875904/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2026-05-28",
+            "case_name": "People v. Drew",
+            "outcome": null,
+            "url": "https://www.courtlistener.com/opinion/10865659/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2026-05-21",
+            "case_name": "People v. Gately",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10862902/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2025-11-14",
+            "case_name": "People v. Torres",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10736890/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2025-01-21",
+            "case_name": "People v. Smith",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10318085/",
+            "kind": "criminal"
+          }
+        ],
+        "changed": 3,
+        "rate": 0.2727272727272727,
+        "expected": 0.2783,
+        "diff": -0.005572727272727285,
+        "lo": -0.2704194996072226,
+        "hi": 0.25927404506176804
+      },
       "campaign": null
     },
     {
@@ -2842,6 +3900,39 @@
         }
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 2,
+        "n_merits": 2,
+        "counts": {
+          "affirmed": 2,
+          "affirmed in part": 0,
+          "reversed": 0,
+          "vacated": 0,
+          "dismissed": 0
+        },
+        "recent": [
+          {
+            "date": "2025-10-16",
+            "case_name": "People v. Mercado-Garcia",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10705330/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2025-06-27",
+            "case_name": "People v. Plascencia",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10618948/",
+            "kind": "criminal"
+          }
+        ],
+        "changed": 0,
+        "rate": 0.0,
+        "expected": 0.2783,
+        "diff": -0.2783,
+        "lo": -0.8994207374480424,
+        "hi": 0.3428207374480424
+      },
       "campaign": {
         "raised_from_others": 2838.0,
         "self_funded": 60527.0,
@@ -3025,6 +4116,67 @@
         }
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 8,
+        "n_merits": 8,
+        "counts": {
+          "affirmed": 3,
+          "affirmed in part": 1,
+          "reversed": 4,
+          "vacated": 0,
+          "dismissed": 0
+        },
+        "recent": [
+          {
+            "date": "2024-02-16",
+            "case_name": "People v. Garcia",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9476245/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2022-09-19",
+            "case_name": "People v.Wunderich",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/8242050/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2022-06-03",
+            "case_name": "People v. Schoen",
+            "outcome": "reversed",
+            "url": "https://www.courtlistener.com/opinion/6474707/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2021-11-01",
+            "case_name": "People v. Rodriguez",
+            "outcome": "reversed",
+            "url": "https://www.courtlistener.com/opinion/10024555/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2021-06-29",
+            "case_name": "People v. Moore",
+            "outcome": "reversed",
+            "url": "https://www.courtlistener.com/opinion/9504837/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2020-09-30",
+            "case_name": "People v. Leib",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10022124/",
+            "kind": "criminal"
+          }
+        ],
+        "changed": 5,
+        "rate": 0.625,
+        "expected": 0.2783,
+        "diff": 0.3467,
+        "lo": 0.0361396312759788,
+        "hi": 0.6572603687240213
+      },
       "campaign": null
     },
     {
@@ -3199,6 +4351,68 @@
         }
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 52,
+        "n_merits": 50,
+        "counts": {
+          "affirmed": 47,
+          "affirmed in part": 0,
+          "reversed": 3,
+          "vacated": 0,
+          "dismissed": 1
+        },
+        "recent": [
+          {
+            "date": "2026-09-25",
+            "case_name": "People v. Aguado",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10984048/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2026-09-17",
+            "case_name": "People v. King",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10975780/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2026-05-28",
+            "case_name": "People v. Calaff",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10865660/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2026-05-28",
+            "case_name": "People v. Phelps",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10865898/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2026-04-14",
+            "case_name": "People v. Cunningham",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10842620/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2026-03-27",
+            "case_name": "People v. Jones-Lanum",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10826443/",
+            "kind": "criminal"
+          }
+        ],
+        "changed": 3,
+        "rate": 0.06,
+        "expected": 0.2783,
+        "diff": -0.2183,
+        "lo": -0.34252414748960847,
+        "hi": -0.09407585251039152,
+        "finding": "The appeals court changed this judge's rulings less often than expected for the same kinds of cases: 6% of 50 decisions vs 28% expected (-21.8 points; 95% range -34.3 points to -9.4 points)."
+      },
       "campaign": null
     },
     {
@@ -3337,6 +4551,60 @@
         }
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 5,
+        "n_merits": 5,
+        "counts": {
+          "affirmed": 5,
+          "affirmed in part": 0,
+          "reversed": 0,
+          "vacated": 0,
+          "dismissed": 0
+        },
+        "recent": [
+          {
+            "date": "2025-05-12",
+            "case_name": "People v. Ledesma",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10582013/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2024-12-16",
+            "case_name": "People v. Paramo",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10293094/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2022-12-27",
+            "case_name": "People v. Harvey",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9355079/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2021-03-18",
+            "case_name": "People v. Zavala",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10023305/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2020-05-13",
+            "case_name": "People v. Jones",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9504497/",
+            "kind": "criminal"
+          }
+        ],
+        "changed": 0,
+        "rate": 0.0,
+        "expected": 0.2783,
+        "diff": -0.2783,
+        "lo": -0.6711312464598507,
+        "hi": 0.11453124645985069
+      },
       "campaign": null
     },
     {
@@ -3424,6 +4692,67 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 10,
+        "n_merits": 10,
+        "counts": {
+          "affirmed": 6,
+          "affirmed in part": 2,
+          "reversed": 1,
+          "vacated": 1,
+          "dismissed": 0
+        },
+        "recent": [
+          {
+            "date": "2026-06-26",
+            "case_name": "Omega Demolition Corp v. Judlau Contracting, Inc",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10881005/",
+            "kind": "civil"
+          },
+          {
+            "date": "2024-09-26",
+            "case_name": "OG Plumbing, LLC v. Basecamp Old Irving Park, LLC.",
+            "outcome": "affirmed in part",
+            "url": "https://www.courtlistener.com/opinion/10125460/",
+            "kind": "civil"
+          },
+          {
+            "date": "2024-09-03",
+            "case_name": "Concrete Structures/Sachi, J.V. v. Clark/Bulley/OVC/Power",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10103193/",
+            "kind": "civil"
+          },
+          {
+            "date": "2024-03-29",
+            "case_name": "Burrink Commercial Services v. New Life Covenant Church",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9489307/",
+            "kind": "civil"
+          },
+          {
+            "date": "2023-12-06",
+            "case_name": "Concrete Structures v. Clark",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9449860/",
+            "kind": "civil"
+          },
+          {
+            "date": "2019-07-02",
+            "case_name": "MEP Construction, LLC v. Truco MP, LLC",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/4636185/",
+            "kind": "civil"
+          }
+        ],
+        "changed": 4,
+        "rate": 0.4,
+        "expected": 0.2921,
+        "diff": 0.1079,
+        "lo": -0.17394335893258156,
+        "hi": 0.38974335893258155
+      },
       "campaign": null
     },
     {
@@ -3479,6 +4808,32 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 1,
+        "n_merits": 1,
+        "counts": {
+          "affirmed": 1,
+          "affirmed in part": 0,
+          "reversed": 0,
+          "vacated": 0,
+          "dismissed": 0
+        },
+        "recent": [
+          {
+            "date": "2022-06-22",
+            "case_name": "People v. Butler",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/6480545/",
+            "kind": "criminal"
+          }
+        ],
+        "changed": 0,
+        "rate": 0.0,
+        "expected": 0.2783,
+        "diff": -0.2783,
+        "lo": -1.1566973707701997,
+        "hi": 0.6000973707701999
+      },
       "campaign": null
     },
     {
@@ -3632,6 +4987,10 @@
         }
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 0,
+        "summary": "No Illinois Appellate Court decisions reviewing this judge since 2015."
+      },
       "campaign": {
         "raised_from_others": 1500.0,
         "self_funded": 0.0,
@@ -3725,6 +5084,67 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 54,
+        "n_merits": 49,
+        "counts": {
+          "affirmed": 33,
+          "affirmed in part": 6,
+          "reversed": 10,
+          "vacated": 0,
+          "dismissed": 3
+        },
+        "recent": [
+          {
+            "date": "2026-06-10",
+            "case_name": "Martinez v. Tolentino",
+            "outcome": "dismissed",
+            "url": "https://www.courtlistener.com/opinion/10873237/",
+            "kind": "civil"
+          },
+          {
+            "date": "2026-04-30",
+            "case_name": "Illinois Department of Healthcare and Family Services ex rel Miller v. Stroud",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10851383/",
+            "kind": "civil"
+          },
+          {
+            "date": "2025-11-14",
+            "case_name": "People v. Owens",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10736879/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2025-10-28",
+            "case_name": "LeMaster v. Hynds, Yohnka, Bzdill & McInerney, LLC",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10712620/",
+            "kind": "civil"
+          },
+          {
+            "date": "2025-09-19",
+            "case_name": "People v. Martinez",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10674522/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2025-08-11",
+            "case_name": "Safeco Insurance Company of Illinois v. Martinez",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10651526/",
+            "kind": "civil"
+          }
+        ],
+        "changed": 16,
+        "rate": 0.32653061224489793,
+        "expected": 0.282365306122449,
+        "diff": 0.044165306122448955,
+        "lo": -0.08185386391132013,
+        "hi": 0.17018447615621804
+      },
       "campaign": null
     },
     {
@@ -3816,6 +5236,46 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 3,
+        "n_merits": 3,
+        "counts": {
+          "affirmed": 2,
+          "affirmed in part": 1,
+          "reversed": 0,
+          "vacated": 0,
+          "dismissed": 0
+        },
+        "recent": [
+          {
+            "date": "2024-09-11",
+            "case_name": "People v. Williams",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10114242/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2024-05-16",
+            "case_name": "People v. Jones",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9502961/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2017-08-22",
+            "case_name": "In re Custody of G.L.",
+            "outcome": "affirmed in part",
+            "url": "https://www.courtlistener.com/opinion/4420850/",
+            "kind": "juvenile/family"
+          }
+        ],
+        "changed": 1,
+        "rate": 0.3333333333333333,
+        "expected": 0.2741,
+        "diff": 0.059233333333333305,
+        "lo": -0.4454858984038112,
+        "hi": 0.5639525650704778
+      },
       "campaign": {
         "raised_from_others": 53254.64,
         "self_funded": 5100.0,
@@ -4033,6 +5493,39 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 2,
+        "n_merits": 2,
+        "counts": {
+          "affirmed": 2,
+          "affirmed in part": 0,
+          "reversed": 0,
+          "vacated": 0,
+          "dismissed": 0
+        },
+        "recent": [
+          {
+            "date": "2026-02-03",
+            "case_name": "People v. Valez",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10783572/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2021-03-18",
+            "case_name": "People v. Aviles",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10023308/",
+            "kind": "criminal"
+          }
+        ],
+        "changed": 0,
+        "rate": 0.0,
+        "expected": 0.2783,
+        "diff": -0.2783,
+        "lo": -0.8994207374480424,
+        "hi": 0.3428207374480424
+      },
       "campaign": {
         "raised_from_others": 4558.39,
         "self_funded": 0.0,
@@ -4141,6 +5634,67 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 13,
+        "n_merits": 11,
+        "counts": {
+          "affirmed": 10,
+          "affirmed in part": 0,
+          "reversed": 1,
+          "vacated": 0,
+          "dismissed": 2
+        },
+        "recent": [
+          {
+            "date": "2026-09-21",
+            "case_name": "In re: estate of Miller",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10978334/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2026-09-10",
+            "case_name": "In re Estate of Felner",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10970582/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2026-07-30",
+            "case_name": "In re Estate of Niewolik",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10936739/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2024-09-12",
+            "case_name": "Estate of Rossi v. Amos Financial, LLC.",
+            "outcome": "reversed",
+            "url": "https://www.courtlistener.com/opinion/10115422/",
+            "kind": "civil"
+          },
+          {
+            "date": "2024-03-29",
+            "case_name": "In re Estate of Tacher",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9489218/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2024-02-29",
+            "case_name": "In re Estate of McMullan",
+            "outcome": "dismissed",
+            "url": "https://www.courtlistener.com/opinion/9480027/",
+            "kind": "juvenile/family"
+          }
+        ],
+        "changed": 1,
+        "rate": 0.09090909090909091,
+        "expected": 0.27404545454545454,
+        "diff": -0.18313636363636362,
+        "lo": -0.4466350709319522,
+        "hi": 0.08036234365922498
+      },
       "campaign": null
     },
     {
@@ -4232,6 +5786,32 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 1,
+        "n_merits": 1,
+        "counts": {
+          "affirmed": 0,
+          "affirmed in part": 0,
+          "reversed": 1,
+          "vacated": 0,
+          "dismissed": 0
+        },
+        "recent": [
+          {
+            "date": "2023-05-30",
+            "case_name": "In re Marriage of Botero",
+            "outcome": "reversed",
+            "url": "https://www.courtlistener.com/opinion/9402850/",
+            "kind": "juvenile/family"
+          }
+        ],
+        "changed": 1,
+        "rate": 1.0,
+        "expected": 0.2657,
+        "diff": 0.7343,
+        "lo": -0.13144225033551415,
+        "hi": 1.600042250335514
+      },
       "campaign": {
         "raised_from_others": 12927.0,
         "self_funded": 29685.64,
@@ -4411,6 +5991,67 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 11,
+        "n_merits": 7,
+        "counts": {
+          "affirmed": 4,
+          "affirmed in part": 2,
+          "reversed": 1,
+          "vacated": 0,
+          "dismissed": 4
+        },
+        "recent": [
+          {
+            "date": "2026-07-29",
+            "case_name": "Shriji Real Estate Investment, LLC v. Younis",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10936432/",
+            "kind": "civil"
+          },
+          {
+            "date": "2026-05-21",
+            "case_name": "3850 W. Cortland, LLC v. Amyriad, Inc.",
+            "outcome": "dismissed",
+            "url": "https://www.courtlistener.com/opinion/10862908/",
+            "kind": "civil"
+          },
+          {
+            "date": "2026-04-29",
+            "case_name": "People v. Wordlow",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10850416/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2026-03-20",
+            "case_name": "Davidson v. Parsons-Passmore",
+            "outcome": "affirmed in part",
+            "url": "https://www.courtlistener.com/opinion/10812032/",
+            "kind": "civil"
+          },
+          {
+            "date": "2025-10-28",
+            "case_name": "Atlas Asset Management v. Kang",
+            "outcome": "affirmed in part",
+            "url": "https://www.courtlistener.com/opinion/10712624/",
+            "kind": "civil"
+          },
+          {
+            "date": "2025-04-07",
+            "case_name": "People v. Buchanan",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10373649/",
+            "kind": "criminal"
+          }
+        ],
+        "changed": 3,
+        "rate": 0.42857142857142855,
+        "expected": 0.2881571428571429,
+        "diff": 0.14041428571428566,
+        "lo": -0.19507037224789303,
+        "hi": 0.47589894367646435
+      },
       "campaign": {
         "raised_from_others": 16144.42,
         "self_funded": 0.0,
@@ -4530,6 +6171,67 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Non Partisan",
+      "appellate": {
+        "n_decisions": 12,
+        "n_merits": 11,
+        "counts": {
+          "affirmed": 6,
+          "affirmed in part": 2,
+          "reversed": 2,
+          "vacated": 1,
+          "dismissed": 1
+        },
+        "recent": [
+          {
+            "date": "2026-06-15",
+            "case_name": "Zawadzki v. Burgin",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10875299/",
+            "kind": "civil"
+          },
+          {
+            "date": "2025-12-19",
+            "case_name": "Carr v. The City of Chicago",
+            "outcome": "dismissed",
+            "url": "https://www.courtlistener.com/opinion/10761930/",
+            "kind": "civil"
+          },
+          {
+            "date": "2025-01-24",
+            "case_name": "Advance Iron Works, Inc. v. Contegra Construction Co., LLC",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10320747/",
+            "kind": "civil"
+          },
+          {
+            "date": "2025-01-16",
+            "case_name": "Mroz v. Hinsdale Surgical Center, LLC",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10315222/",
+            "kind": "civil"
+          },
+          {
+            "date": "2024-06-24",
+            "case_name": "Guzaldere v. Dockery",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9773443/",
+            "kind": "civil"
+          },
+          {
+            "date": "2023-08-29",
+            "case_name": "Thompson v. LaSpisa",
+            "outcome": "affirmed in part",
+            "url": "https://www.courtlistener.com/opinion/9423055/",
+            "kind": "civil"
+          }
+        ],
+        "changed": 5,
+        "rate": 0.45454545454545453,
+        "expected": 0.2908454545454546,
+        "diff": 0.16369999999999996,
+        "lo": -0.10467666016709853,
+        "hi": 0.43207666016709845
+      },
       "campaign": {
         "raised_from_others": 0.0,
         "self_funded": 14129.58,
@@ -4645,6 +6347,46 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 3,
+        "n_merits": 3,
+        "counts": {
+          "affirmed": 2,
+          "affirmed in part": 0,
+          "reversed": 1,
+          "vacated": 0,
+          "dismissed": 0
+        },
+        "recent": [
+          {
+            "date": "2026-05-14",
+            "case_name": "People v. Caraballo",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10858927/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2025-12-16",
+            "case_name": "People v. Delgado",
+            "outcome": "reversed",
+            "url": "https://www.courtlistener.com/opinion/10759431/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2024-01-16",
+            "case_name": "People v. Romero",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9461468/",
+            "kind": "criminal"
+          }
+        ],
+        "changed": 1,
+        "rate": 0.3333333333333333,
+        "expected": 0.2783,
+        "diff": 0.05503333333333332,
+        "lo": -0.452109625136301,
+        "hi": 0.5621762918029676
+      },
       "campaign": {
         "raised_from_others": 7450.0,
         "self_funded": 11510.0,
@@ -4746,6 +6488,67 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 71,
+        "n_merits": 68,
+        "counts": {
+          "affirmed": 52,
+          "affirmed in part": 5,
+          "reversed": 10,
+          "vacated": 1,
+          "dismissed": 2
+        },
+        "recent": [
+          {
+            "date": "2026-08-28",
+            "case_name": "Pierson v. Illinois State Police",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10961530/",
+            "kind": "civil"
+          },
+          {
+            "date": "2026-08-07",
+            "case_name": "Baughns v. God be Glorified",
+            "outcome": "reversed",
+            "url": "https://www.courtlistener.com/opinion/10942273/",
+            "kind": "civil"
+          },
+          {
+            "date": "2026-06-30",
+            "case_name": "Frankenfeld v. Thrive Physical Therapy",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10882372/",
+            "kind": "civil"
+          },
+          {
+            "date": "2026-06-22",
+            "case_name": "Penn v. Fill",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10878237/",
+            "kind": "civil"
+          },
+          {
+            "date": "2026-05-27",
+            "case_name": "Tucker v. Department of Healthcare and Family Services",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10864962/",
+            "kind": "civil"
+          },
+          {
+            "date": "2026-05-14",
+            "case_name": "Zanayed v. Mufarreh",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10858923/",
+            "kind": "civil"
+          }
+        ],
+        "changed": 16,
+        "rate": 0.23529411764705882,
+        "expected": 0.2916941176470588,
+        "diff": -0.056400000000000006,
+        "lo": -0.16443641415328605,
+        "hi": 0.05163641415328604
+      },
       "campaign": null
     },
     {
@@ -4848,6 +6651,10 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 0,
+        "summary": "No Illinois Appellate Court decisions reviewing this judge since 2015."
+      },
       "campaign": {
         "raised_from_others": 1750.0,
         "self_funded": 0.0,
@@ -5026,6 +6833,53 @@
         }
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 4,
+        "n_merits": 3,
+        "counts": {
+          "affirmed": 1,
+          "affirmed in part": 0,
+          "reversed": 1,
+          "vacated": 1,
+          "dismissed": 1
+        },
+        "recent": [
+          {
+            "date": "2025-11-13",
+            "case_name": "People v. Hicks",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10735987/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2024-08-30",
+            "case_name": "People v. Claver",
+            "outcome": "dismissed",
+            "url": "https://www.courtlistener.com/opinion/10099635/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2023-11-15",
+            "case_name": "Murphy v. Kinnally Flaherty Krentz Loran Hodge & Masur, P.C.",
+            "outcome": "vacated",
+            "url": "https://www.courtlistener.com/opinion/9441316/",
+            "kind": "civil"
+          },
+          {
+            "date": "2022-12-09",
+            "case_name": "Dahlman v. Michalak",
+            "outcome": "reversed",
+            "url": "https://www.courtlistener.com/opinion/9329037/",
+            "kind": "civil"
+          }
+        ],
+        "changed": 2,
+        "rate": 0.6666666666666666,
+        "expected": 0.28750000000000003,
+        "diff": 0.3791666666666666,
+        "lo": -0.13294177676043922,
+        "hi": 0.8912751100937724
+      },
       "campaign": {
         "raised_from_others": 8500.0,
         "self_funded": 25228.0,
@@ -5126,6 +6980,60 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 5,
+        "n_merits": 5,
+        "counts": {
+          "affirmed": 2,
+          "affirmed in part": 1,
+          "reversed": 2,
+          "vacated": 0,
+          "dismissed": 0
+        },
+        "recent": [
+          {
+            "date": "2025-06-20",
+            "case_name": "Bulletproof Plumbing Corp. v. Ohlson",
+            "outcome": "reversed",
+            "url": "https://www.courtlistener.com/opinion/10614397/",
+            "kind": "civil"
+          },
+          {
+            "date": "2025-05-01",
+            "case_name": "All American Construction & Services, Inc. v. Consolidated Management, Inc.",
+            "outcome": "affirmed in part",
+            "url": "https://www.courtlistener.com/opinion/10439671/",
+            "kind": "civil"
+          },
+          {
+            "date": "2025-03-24",
+            "case_name": "M&J Asphalt Paving Co., Inc. v. First Midwest Bank",
+            "outcome": "reversed",
+            "url": "https://www.courtlistener.com/opinion/10362590/",
+            "kind": "civil"
+          },
+          {
+            "date": "2020-04-16",
+            "case_name": "Hayden v. Adams",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9504282/",
+            "kind": "civil"
+          },
+          {
+            "date": "2015-09-24",
+            "case_name": "GX Chicago, LLC v. Galaxy Environmental, Inc.",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/3003490/",
+            "kind": "civil"
+          }
+        ],
+        "changed": 3,
+        "rate": 0.6,
+        "expected": 0.2921,
+        "diff": 0.30789999999999995,
+        "lo": -0.0906867006672451,
+        "hi": 0.7064867006672451
+      },
       "campaign": null
     },
     {
@@ -5208,6 +7116,10 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 0,
+        "summary": "No Illinois Appellate Court decisions reviewing this judge since 2015."
+      },
       "campaign": {
         "raised_from_others": 14633.42,
         "self_funded": 0.0,
@@ -5329,6 +7241,67 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 11,
+        "n_merits": 10,
+        "counts": {
+          "affirmed": 9,
+          "affirmed in part": 1,
+          "reversed": 0,
+          "vacated": 0,
+          "dismissed": 1
+        },
+        "recent": [
+          {
+            "date": "2025-05-22",
+            "case_name": "In re Sheila R.",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10589904/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2025-03-14",
+            "case_name": "Garcia v. Bawcum",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10356578/",
+            "kind": "civil"
+          },
+          {
+            "date": "2024-11-04",
+            "case_name": "In re Application of the County Treasurer & ex-officio County Collector of Cook County",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10237380/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2024-10-11",
+            "case_name": "Hwang v. Pathway LaGrange Property Owner, LLC",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10136762/",
+            "kind": "civil"
+          },
+          {
+            "date": "2024-08-09",
+            "case_name": "Johnson v. The Village of Palatine",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10035828/",
+            "kind": "civil"
+          },
+          {
+            "date": "2022-12-30",
+            "case_name": "In re Application of the County Treasurer & ex officio County Collector",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9355946/",
+            "kind": "juvenile/family"
+          }
+        ],
+        "changed": 1,
+        "rate": 0.1,
+        "expected": 0.28154,
+        "diff": -0.18154,
+        "lo": -0.460182769770328,
+        "hi": 0.09710276977032797
+      },
       "campaign": {
         "raised_from_others": 7399.2,
         "self_funded": 62661.94,
@@ -5481,6 +7454,67 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Republican",
+      "appellate": {
+        "n_decisions": 8,
+        "n_merits": 6,
+        "counts": {
+          "affirmed": 4,
+          "affirmed in part": 0,
+          "reversed": 1,
+          "vacated": 1,
+          "dismissed": 2
+        },
+        "recent": [
+          {
+            "date": "2026-07-10",
+            "case_name": "Vazquez v. Navarrete",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10925741/",
+            "kind": "civil"
+          },
+          {
+            "date": "2025-02-04",
+            "case_name": "Cortese v. Ejsmont",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10326857/",
+            "kind": "civil"
+          },
+          {
+            "date": "2024-02-16",
+            "case_name": "Colony Country on Wimbolton Condominium Ass'n. v. Porter",
+            "outcome": "vacated",
+            "url": "https://www.courtlistener.com/opinion/9476249/",
+            "kind": "civil"
+          },
+          {
+            "date": "2023-12-15",
+            "case_name": "Amaba v. RFJ Land Management, LLC",
+            "outcome": "reversed",
+            "url": "https://www.courtlistener.com/opinion/9452563/",
+            "kind": "civil"
+          },
+          {
+            "date": "2022-01-21",
+            "case_name": "Board of Education of River Trails School District 26 v. Park View Montessori School",
+            "outcome": "dismissed",
+            "url": "https://www.courtlistener.com/opinion/6244470/",
+            "kind": "civil"
+          },
+          {
+            "date": "2020-09-30",
+            "case_name": "Kent v. Wells",
+            "outcome": "dismissed",
+            "url": "https://www.courtlistener.com/opinion/10022153/",
+            "kind": "civil"
+          }
+        ],
+        "changed": 2,
+        "rate": 0.3333333333333333,
+        "expected": 0.2921,
+        "diff": 0.04123333333333329,
+        "lo": -0.32262487846168264,
+        "hi": 0.4050915451283492
+      },
       "campaign": null
     },
     {
@@ -5564,6 +7598,67 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 12,
+        "n_merits": 12,
+        "counts": {
+          "affirmed": 9,
+          "affirmed in part": 1,
+          "reversed": 2,
+          "vacated": 0,
+          "dismissed": 0
+        },
+        "recent": [
+          {
+            "date": "2025-03-31",
+            "case_name": "Kroft v. Viper Trans, Inc.",
+            "outcome": "reversed",
+            "url": "https://www.courtlistener.com/opinion/10369029/",
+            "kind": "civil"
+          },
+          {
+            "date": "2024-11-25",
+            "case_name": "3SIX5 Logistics, LLC v. Renko",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10283021/",
+            "kind": "civil"
+          },
+          {
+            "date": "2024-09-24",
+            "case_name": "Goldberg v. Peckler",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10124559/",
+            "kind": "civil"
+          },
+          {
+            "date": "2023-11-15",
+            "case_name": "Martin v. City of Chicago",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9441167/",
+            "kind": "civil"
+          },
+          {
+            "date": "2023-06-12",
+            "case_name": "Bitsky v. City of Chicago",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9405777/",
+            "kind": "civil"
+          },
+          {
+            "date": "2021-06-30",
+            "case_name": "Victim A. v. Chung Song",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9504769/",
+            "kind": "civil"
+          }
+        ],
+        "changed": 3,
+        "rate": 0.25,
+        "expected": 0.2921,
+        "diff": -0.042100000000000026,
+        "lo": -0.2993866089506668,
+        "hi": 0.21518660895066677
+      },
       "campaign": null
     },
     {
@@ -5640,6 +7735,39 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 2,
+        "n_merits": 1,
+        "counts": {
+          "affirmed": 1,
+          "affirmed in part": 0,
+          "reversed": 0,
+          "vacated": 0,
+          "dismissed": 1
+        },
+        "recent": [
+          {
+            "date": "2026-01-08",
+            "case_name": "Marriage of Chapman Hardeman",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10771236/",
+            "kind": "civil"
+          },
+          {
+            "date": "2025-08-25",
+            "case_name": "In re Marriage of Thompson",
+            "outcome": "dismissed",
+            "url": "https://www.courtlistener.com/opinion/10660255/",
+            "kind": "juvenile/family"
+          }
+        ],
+        "changed": 0,
+        "rate": 0.0,
+        "expected": 0.2921,
+        "diff": -0.2921,
+        "lo": -1.1833669576193206,
+        "hi": 0.5991669576193206
+      },
       "campaign": {
         "raised_from_others": 7250.0,
         "self_funded": 0.0,
@@ -5756,6 +7884,10 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 0,
+        "summary": "No Illinois Appellate Court decisions reviewing this judge since 2015."
+      },
       "campaign": {
         "raised_from_others": 24400.0,
         "self_funded": 4000.0,
@@ -5888,6 +8020,46 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 3,
+        "n_merits": 2,
+        "counts": {
+          "affirmed": 0,
+          "affirmed in part": 1,
+          "reversed": 1,
+          "vacated": 0,
+          "dismissed": 1
+        },
+        "recent": [
+          {
+            "date": "2026-04-15",
+            "case_name": "Lewis v. Rice",
+            "outcome": "affirmed in part",
+            "url": "https://www.courtlistener.com/opinion/10843538/",
+            "kind": "civil"
+          },
+          {
+            "date": "2022-12-06",
+            "case_name": "Bouvel v. Duggan",
+            "outcome": "dismissed",
+            "url": "https://www.courtlistener.com/opinion/9327998/",
+            "kind": "civil"
+          },
+          {
+            "date": "2015-09-30",
+            "case_name": "Solomon v. Ramsey",
+            "outcome": "reversed",
+            "url": "https://www.courtlistener.com/opinion/3006302/",
+            "kind": "civil"
+          }
+        ],
+        "changed": 2,
+        "rate": 1.0,
+        "expected": 0.2921,
+        "diff": 0.7079,
+        "lo": 0.07767909041987509,
+        "hi": 1.338120909580125
+      },
       "campaign": {
         "raised_from_others": 13050.0,
         "self_funded": 63300.0,
@@ -6033,6 +8205,60 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 5,
+        "n_merits": 5,
+        "counts": {
+          "affirmed": 2,
+          "affirmed in part": 2,
+          "reversed": 1,
+          "vacated": 0,
+          "dismissed": 0
+        },
+        "recent": [
+          {
+            "date": "2021-02-03",
+            "case_name": "In re Jaheim W.",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/4853377/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2019-05-17",
+            "case_name": "In re Jawan S.",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/4621080/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2019-02-25",
+            "case_name": "In re K.M.",
+            "outcome": "affirmed in part",
+            "url": "https://www.courtlistener.com/opinion/4593558/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2018-09-26",
+            "case_name": "In re Maurice J.",
+            "outcome": "reversed",
+            "url": "https://www.courtlistener.com/opinion/4538566/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2018-02-05",
+            "case_name": "In re Omar F.",
+            "outcome": "affirmed in part",
+            "url": "https://www.courtlistener.com/opinion/4465189/",
+            "kind": "juvenile/family"
+          }
+        ],
+        "changed": 3,
+        "rate": 0.6,
+        "expected": 0.2657,
+        "diff": 0.3343,
+        "lo": -0.05287170454876988,
+        "hi": 0.7214717045487699
+      },
       "campaign": null
     },
     {
@@ -6114,6 +8340,67 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 18,
+        "n_merits": 14,
+        "counts": {
+          "affirmed": 10,
+          "affirmed in part": 2,
+          "reversed": 1,
+          "vacated": 1,
+          "dismissed": 4
+        },
+        "recent": [
+          {
+            "date": "2025-09-30",
+            "case_name": "In re Marriage of Lebovich",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10681938/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2025-08-29",
+            "case_name": "Watkins v. Chua",
+            "outcome": "dismissed",
+            "url": "https://www.courtlistener.com/opinion/10663256/",
+            "kind": "civil"
+          },
+          {
+            "date": "2024-12-23",
+            "case_name": "In re Marriage of May",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10303164/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2024-07-24",
+            "case_name": "In re Marriage of Dumortier",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10013353/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2024-05-02",
+            "case_name": "In re Marriage of Parrillo",
+            "outcome": "affirmed in part",
+            "url": "https://www.courtlistener.com/opinion/9498967/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2023-08-18",
+            "case_name": "In re Marriage of Musiejuk",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9421279/",
+            "kind": "juvenile/family"
+          }
+        ],
+        "changed": 4,
+        "rate": 0.2857142857142857,
+        "expected": 0.2732428571428572,
+        "diff": 0.012471428571428522,
+        "lo": -0.22087734690425292,
+        "hi": 0.24582020404710997
+      },
       "campaign": null
     },
     {
@@ -6212,6 +8499,67 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 7,
+        "n_merits": 7,
+        "counts": {
+          "affirmed": 4,
+          "affirmed in part": 1,
+          "reversed": 1,
+          "vacated": 1,
+          "dismissed": 0
+        },
+        "recent": [
+          {
+            "date": "2026-02-04",
+            "case_name": "People v. Arrieta",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10784209/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2025-02-25",
+            "case_name": "People v. Mondragon",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10338955/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2024-01-23",
+            "case_name": "People v. Shaw",
+            "outcome": "vacated",
+            "url": "https://www.courtlistener.com/opinion/9468334/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2023-09-29",
+            "case_name": "People v. Clark",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9429222/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2021-06-01",
+            "case_name": "People v. Stiegler",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9504570/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2021-02-05",
+            "case_name": "People v. Carbajal",
+            "outcome": "affirmed in part",
+            "url": "https://www.courtlistener.com/opinion/10023016/",
+            "kind": "criminal"
+          }
+        ],
+        "changed": 3,
+        "rate": 0.42857142857142855,
+        "expected": 0.2783,
+        "diff": 0.15027142857142856,
+        "lo": -0.1817315707644208,
+        "hi": 0.4822744279072779
+      },
       "campaign": null
     },
     {
@@ -6297,6 +8645,67 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 31,
+        "n_merits": 30,
+        "counts": {
+          "affirmed": 25,
+          "affirmed in part": 1,
+          "reversed": 4,
+          "vacated": 0,
+          "dismissed": 1
+        },
+        "recent": [
+          {
+            "date": "2023-11-02",
+            "case_name": "McDermott v. Peters",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9436937/",
+            "kind": "civil"
+          },
+          {
+            "date": "2023-09-06",
+            "case_name": "Kunst v. Cicero Public School District 99",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9424942/",
+            "kind": "civil"
+          },
+          {
+            "date": "2023-05-08",
+            "case_name": "Glorioso v. Sun-Times Media Holdings, LLC",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9397374/",
+            "kind": "civil"
+          },
+          {
+            "date": "2023-03-28",
+            "case_name": "Kothawala v. LG Chem, Ltd.",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9387169/",
+            "kind": "civil"
+          },
+          {
+            "date": "2022-09-30",
+            "case_name": "Calusinski v. Alden-Poplar Creek Rehabilitation & Health Care Center, Inc.",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/8245586/",
+            "kind": "civil"
+          },
+          {
+            "date": "2022-08-19",
+            "case_name": "Cossio v. Tourtelot",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/7858328/",
+            "kind": "civil"
+          }
+        ],
+        "changed": 5,
+        "rate": 0.16666666666666666,
+        "expected": 0.2921000000000001,
+        "diff": -0.12543333333333342,
+        "lo": -0.2881556724823677,
+        "hi": 0.037289005815700826
+      },
       "campaign": null
     },
     {
@@ -6371,6 +8780,67 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 12,
+        "n_merits": 12,
+        "counts": {
+          "affirmed": 8,
+          "affirmed in part": 1,
+          "reversed": 3,
+          "vacated": 0,
+          "dismissed": 0
+        },
+        "recent": [
+          {
+            "date": "2026-08-21",
+            "case_name": "In re G.H.",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10954625/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2025-12-15",
+            "case_name": "In re A.M.",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10758513/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2025-09-16",
+            "case_name": "In re J.A.",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10672557/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2024-12-27",
+            "case_name": "In re D.F.",
+            "outcome": "reversed",
+            "url": "https://www.courtlistener.com/opinion/10305043/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2024-12-03",
+            "case_name": "In re K.C.",
+            "outcome": "affirmed in part",
+            "url": "https://www.courtlistener.com/opinion/10286962/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2024-08-26",
+            "case_name": "In re A.C.",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10081900/",
+            "kind": "juvenile/family"
+          }
+        ],
+        "changed": 4,
+        "rate": 0.3333333333333333,
+        "expected": 0.2723,
+        "diff": 0.06103333333333333,
+        "lo": -0.19074723092319007,
+        "hi": 0.3128138975898567
+      },
       "campaign": {
         "raised_from_others": 1000.0,
         "self_funded": 9000.0,
@@ -6484,6 +8954,60 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 5,
+        "n_merits": 4,
+        "counts": {
+          "affirmed": 3,
+          "affirmed in part": 0,
+          "reversed": 1,
+          "vacated": 0,
+          "dismissed": 1
+        },
+        "recent": [
+          {
+            "date": "2025-03-19",
+            "case_name": "In re D.L.",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10358077/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2024-07-23",
+            "case_name": "In re the Interests of C.T.",
+            "outcome": "dismissed",
+            "url": "https://www.courtlistener.com/opinion/10012040/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2023-06-08",
+            "case_name": "In re H.C.",
+            "outcome": "reversed",
+            "url": "https://www.courtlistener.com/opinion/9404947/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2023-03-27",
+            "case_name": "In re V.M.",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9386959/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2022-12-20",
+            "case_name": "In re J.R.",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9353450/",
+            "kind": "juvenile/family"
+          }
+        ],
+        "changed": 1,
+        "rate": 0.25,
+        "expected": 0.2657,
+        "diff": -0.015699999999999992,
+        "lo": -0.44857112516775705,
+        "hi": 0.41717112516775706
+      },
       "campaign": null
     },
     {
@@ -6558,6 +9082,67 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 10,
+        "n_merits": 10,
+        "counts": {
+          "affirmed": 9,
+          "affirmed in part": 0,
+          "reversed": 0,
+          "vacated": 1,
+          "dismissed": 0
+        },
+        "recent": [
+          {
+            "date": "2026-09-21",
+            "case_name": "Wilson v. Trans Union, LLC",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10978321/",
+            "kind": "civil"
+          },
+          {
+            "date": "2026-03-31",
+            "case_name": "People v. Cole",
+            "outcome": "vacated",
+            "url": "https://www.courtlistener.com/opinion/10830741/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2025-09-12",
+            "case_name": "Bulthaup v. Young",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10670769/",
+            "kind": "civil"
+          },
+          {
+            "date": "2025-01-31",
+            "case_name": "Cole v. Yanoff",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10324881/",
+            "kind": "civil"
+          },
+          {
+            "date": "2024-12-17",
+            "case_name": "Bank of America, NA v. Narayana",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10294659/",
+            "kind": "civil"
+          },
+          {
+            "date": "2024-09-19",
+            "case_name": "Family Properties of Chicago, LLC v. Ring",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10122049/",
+            "kind": "civil"
+          }
+        ],
+        "changed": 1,
+        "rate": 0.1,
+        "expected": 0.29072000000000003,
+        "diff": -0.19072000000000003,
+        "lo": -0.4721590351154581,
+        "hi": 0.09071903511545801
+      },
       "campaign": {
         "raised_from_others": 49834.6,
         "self_funded": 663.09,
@@ -6668,6 +9253,67 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 8,
+        "n_merits": 6,
+        "counts": {
+          "affirmed": 5,
+          "affirmed in part": 1,
+          "reversed": 0,
+          "vacated": 0,
+          "dismissed": 2
+        },
+        "recent": [
+          {
+            "date": "2025-07-17",
+            "case_name": "Carsella v. Charles",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10635206/",
+            "kind": "civil"
+          },
+          {
+            "date": "2024-10-17",
+            "case_name": "Devon Realty, Inc. v. 7124 North Clark, Inc.",
+            "outcome": "dismissed",
+            "url": "https://www.courtlistener.com/opinion/10145017/",
+            "kind": "civil"
+          },
+          {
+            "date": "2024-03-28",
+            "case_name": "Haried v. Colley",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9489056/",
+            "kind": "civil"
+          },
+          {
+            "date": "2023-06-23",
+            "case_name": "U.S. Bank, As Trustee for LSF9 Master Participation Trust v. Unknown Occupants",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9409189/",
+            "kind": "civil"
+          },
+          {
+            "date": "2023-05-19",
+            "case_name": "New Capital Home, Inc v. Kogut",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9400742/",
+            "kind": "civil"
+          },
+          {
+            "date": "2023-03-30",
+            "case_name": "2242 Archer Court, LLC v. Roberts",
+            "outcome": "dismissed",
+            "url": "https://www.courtlistener.com/opinion/9388155/",
+            "kind": "civil"
+          }
+        ],
+        "changed": 1,
+        "rate": 0.16666666666666666,
+        "expected": 0.2921,
+        "diff": -0.12543333333333337,
+        "lo": -0.48929154512834927,
+        "hi": 0.23842487846168256
+      },
       "campaign": {
         "raised_from_others": 9213.25,
         "self_funded": 8104.39,
@@ -6781,6 +9427,53 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "",
+      "appellate": {
+        "n_decisions": 4,
+        "n_merits": 4,
+        "counts": {
+          "affirmed": 4,
+          "affirmed in part": 0,
+          "reversed": 0,
+          "vacated": 0,
+          "dismissed": 0
+        },
+        "recent": [
+          {
+            "date": "2026-03-27",
+            "case_name": "Washington Law Offices v. Hoff",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10826432/",
+            "kind": "civil"
+          },
+          {
+            "date": "2025-09-29",
+            "case_name": "Steen v. Direct Auto Insurance",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10679740/",
+            "kind": "civil"
+          },
+          {
+            "date": "2023-12-08",
+            "case_name": "Sanner v. The Warranty Group, Inc.",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9450657/",
+            "kind": "civil"
+          },
+          {
+            "date": "2023-09-14",
+            "case_name": "John Hancock Life Insurance Co. v. Barinholtz",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9426353/",
+            "kind": "civil"
+          }
+        ],
+        "changed": 0,
+        "rate": 0.0,
+        "expected": 0.2921,
+        "diff": -0.2921,
+        "lo": -0.7377334788096603,
+        "hi": 0.15353347880966028
+      },
       "campaign": {
         "raised_from_others": 7660.14,
         "self_funded": 0.0,
@@ -7019,6 +9712,67 @@
         }
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 123,
+        "n_merits": 120,
+        "counts": {
+          "affirmed": 94,
+          "affirmed in part": 6,
+          "reversed": 16,
+          "vacated": 4,
+          "dismissed": 2
+        },
+        "recent": [
+          {
+            "date": "2026-09-25",
+            "case_name": "People v. Garcia",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10984046/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2026-09-25",
+            "case_name": "People v. Reese",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10984043/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2026-08-07",
+            "case_name": "People v. Booker",
+            "outcome": "affirmed in part",
+            "url": "https://www.courtlistener.com/opinion/10942327/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2026-08-03",
+            "case_name": "People v. Hill",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10938620/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2026-07-15",
+            "case_name": "People v. Blalock",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10931095/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2026-06-30",
+            "case_name": "People v. Sabbs",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10882980/",
+            "kind": "criminal"
+          }
+        ],
+        "changed": 26,
+        "rate": 0.21666666666666667,
+        "expected": 0.2783,
+        "diff": -0.06163333333333332,
+        "lo": -0.14181967573734458,
+        "hi": 0.018553009070677945
+      },
       "campaign": null
     },
     {
@@ -7095,6 +9849,53 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 4,
+        "n_merits": 3,
+        "counts": {
+          "affirmed": 3,
+          "affirmed in part": 0,
+          "reversed": 0,
+          "vacated": 0,
+          "dismissed": 1
+        },
+        "recent": [
+          {
+            "date": "2026-02-10",
+            "case_name": "Doroff v. First Midwest Realty, LLC",
+            "outcome": "dismissed",
+            "url": "https://www.courtlistener.com/opinion/10786631/",
+            "kind": "civil"
+          },
+          {
+            "date": "2025-08-11",
+            "case_name": "Burnette v. Burnette",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10651531/",
+            "kind": "civil"
+          },
+          {
+            "date": "2024-06-07",
+            "case_name": "Zaya v. Garcia",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9513843/",
+            "kind": "civil"
+          },
+          {
+            "date": "2024-05-03",
+            "case_name": "Barber v. Kokhan",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9499305/",
+            "kind": "civil"
+          }
+        ],
+        "changed": 0,
+        "rate": 0.0,
+        "expected": 0.2921,
+        "diff": -0.2921,
+        "lo": -0.8066732179013336,
+        "hi": 0.22247321790133356
+      },
       "campaign": {
         "raised_from_others": 2600.0,
         "self_funded": 2480.0,
@@ -7288,6 +10089,67 @@
         }
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 18,
+        "n_merits": 17,
+        "counts": {
+          "affirmed": 11,
+          "affirmed in part": 0,
+          "reversed": 4,
+          "vacated": 2,
+          "dismissed": 1
+        },
+        "recent": [
+          {
+            "date": "2026-09-04",
+            "case_name": "People v. Colbert",
+            "outcome": "vacated",
+            "url": "https://www.courtlistener.com/opinion/10967518/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2026-08-31",
+            "case_name": "People v. Porter",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10962981/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2026-02-09",
+            "case_name": "People v. Lyda",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10786165/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2026-01-26",
+            "case_name": "People v. Duffy",
+            "outcome": "dismissed",
+            "url": "https://www.courtlistener.com/opinion/10779502/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2025-12-15",
+            "case_name": "People v. Sanders",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10758501/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2025-10-14",
+            "case_name": "People v. Vining",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10703726/",
+            "kind": "criminal"
+          }
+        ],
+        "changed": 6,
+        "rate": 0.35294117647058826,
+        "expected": 0.27607647058823526,
+        "diff": 0.076864705882353,
+        "lo": -0.1356395265665374,
+        "hi": 0.28936893833124344
+      },
       "campaign": {
         "raised_from_others": 4386.88,
         "self_funded": 0.0,
@@ -7397,6 +10259,67 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 8,
+        "n_merits": 7,
+        "counts": {
+          "affirmed": 5,
+          "affirmed in part": 0,
+          "reversed": 2,
+          "vacated": 0,
+          "dismissed": 1
+        },
+        "recent": [
+          {
+            "date": "2023-04-13",
+            "case_name": "In re Adoption of A.M.H.",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9391414/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2022-08-04",
+            "case_name": "In re John F.",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/7854005/",
+            "kind": "juvenile/family"
+          },
+          {
+            "date": "2022-06-13",
+            "case_name": "King v. Illinois State Board of Elections",
+            "outcome": "dismissed",
+            "url": "https://www.courtlistener.com/opinion/6477292/",
+            "kind": "civil"
+          },
+          {
+            "date": "2021-10-29",
+            "case_name": "Maddy v. Mazzola",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10024429/",
+            "kind": "civil"
+          },
+          {
+            "date": "2020-03-11",
+            "case_name": "Harned v. Evanston Municipal Officers Electoral Board",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/9504123/",
+            "kind": "civil"
+          },
+          {
+            "date": "2015-09-30",
+            "case_name": "Palos Bank and Trust Company v. Illinois Property Tax Appeal Board",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/3006308/",
+            "kind": "civil"
+          }
+        ],
+        "changed": 2,
+        "rate": 0.2857142857142857,
+        "expected": 0.2807857142857143,
+        "diff": 0.004928571428571393,
+        "lo": -0.3278383106014767,
+        "hi": 0.3376954534586195
+      },
       "campaign": null
     },
     {
@@ -7558,6 +10481,67 @@
         }
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 25,
+        "n_merits": 24,
+        "counts": {
+          "affirmed": 18,
+          "affirmed in part": 1,
+          "reversed": 4,
+          "vacated": 1,
+          "dismissed": 1
+        },
+        "recent": [
+          {
+            "date": "2026-06-12",
+            "case_name": "People v. Simmons",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10874347/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2026-04-21",
+            "case_name": "People v. Boyce",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10846305/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2025-12-19",
+            "case_name": "People v. Phillips",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10763246/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2025-12-10",
+            "case_name": "People v. Terry",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10751317/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2025-10-22",
+            "case_name": "People v. Winding",
+            "outcome": "dismissed",
+            "url": "https://www.courtlistener.com/opinion/10709100/",
+            "kind": "criminal"
+          },
+          {
+            "date": "2025-10-16",
+            "case_name": "People v. Moneyham",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10705328/",
+            "kind": "criminal"
+          }
+        ],
+        "changed": 6,
+        "rate": 0.25,
+        "expected": 0.2762,
+        "diff": -0.0262,
+        "lo": -0.20507416722564123,
+        "hi": 0.15267416722564123
+      },
       "campaign": null
     },
     {
@@ -7641,6 +10625,67 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
+      "appellate": {
+        "n_decisions": 12,
+        "n_merits": 11,
+        "counts": {
+          "affirmed": 10,
+          "affirmed in part": 1,
+          "reversed": 0,
+          "vacated": 0,
+          "dismissed": 1
+        },
+        "recent": [
+          {
+            "date": "2026-09-25",
+            "case_name": "Spence PC v. Affordable Welding, Inc.",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10984038/",
+            "kind": "civil"
+          },
+          {
+            "date": "2026-08-13",
+            "case_name": "Grabowski v. City Of Chicago",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10947299/",
+            "kind": "civil"
+          },
+          {
+            "date": "2026-06-22",
+            "case_name": "Pal v. Office of the Public Access Counselor",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10878238/",
+            "kind": "civil"
+          },
+          {
+            "date": "2026-05-20",
+            "case_name": "Administrative District Council 1 of Illinois of the International Union of Bricklayers and Allied Craftworkers v. Przada",
+            "outcome": "affirmed in part",
+            "url": "https://www.courtlistener.com/opinion/10862316/",
+            "kind": "civil"
+          },
+          {
+            "date": "2026-03-27",
+            "case_name": "Jones v. Cook County Department of Corrections",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10826446/",
+            "kind": "civil"
+          },
+          {
+            "date": "2026-03-13",
+            "case_name": "Legacy Re, Ltd. v. 401 Properties Limited Partnership",
+            "outcome": "affirmed",
+            "url": "https://www.courtlistener.com/opinion/10808661/",
+            "kind": "civil"
+          }
+        ],
+        "changed": 1,
+        "rate": 0.09090909090909091,
+        "expected": 0.2921,
+        "diff": -0.20119090909090911,
+        "lo": -0.46991800786044313,
+        "hi": 0.06753618967862493
+      },
       "campaign": {
         "raised_from_others": 1000.0,
         "self_funded": 0.0,

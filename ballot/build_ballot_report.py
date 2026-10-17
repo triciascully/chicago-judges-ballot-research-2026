@@ -49,6 +49,10 @@ def main() -> None:
                    if extraction_file.exists() else {})
     data_through = df.sentence_date.quantile(0.999).date().isoformat()
 
+    # Appellate track record (from ballot.build_appellate_bulk).
+    appeals = json.loads((OUT / "appellate_decisions.json").read_text()) if (OUT / "appellate_decisions.json").exists() else []
+    appeal_baseline = json.loads((OUT / "appellate_baseline.json").read_text()) if (OUT / "appellate_baseline.json").exists() else None
+
     # Campaign money: needs `python -m ballot.build_campaign_finance` to have fetched the receipts.
     isbe = RAW.parent / "isbe"
     receipts = None
@@ -82,6 +86,8 @@ def main() -> None:
                                                     extractions.get(isba_name), n),
                        "sentencing": profile.sentencing_section(n, profiles.get(row.name), args.since, data_through),
                        "party": parties.get(row.name, ""),
+                       "appellate": profile.appellate_section([a for a in appeals if a["judge"] == row.name],
+                                                              appeal_baseline) if appeal_baseline else None,
                        "campaign": _with_leanings(il_campaign_finance.judge_summary(receipts, row.name), leanings)
                                     if receipts is not None and row.name in set(receipts.judge) else None})
 
@@ -93,6 +99,7 @@ def main() -> None:
 
     out = OUT / f"{Path(args.ballot).stem}_judges.json"
     meta = {"source": cook_county.SOURCE_URL, "since": args.since, "data_through": data_through,
+            "appellate_baseline": appeal_baseline,
             "isba_extractions": str(extraction_file.name) if extractions else None}
     out.write_text(json.dumps({**meta, "judges": report, "population": population}, indent=2, default=float))
 

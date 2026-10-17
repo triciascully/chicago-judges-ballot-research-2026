@@ -53,15 +53,17 @@ def page_data(report: dict) -> dict:
             "criminal_court_experience": j["criminal_court_experience"],
             "background": j["background"], "attorney_criticism": j["attorney_criticism"],
             "attorney_feedback": j["attorney_feedback"], "campaign": j.get("campaign"), "party": j.get("party", ""),
+            "appellate": j.get("appellate"),
             "isba_evaluation": j["isba_evaluation"], "sentencing": s,
         })
     return {"source": report["source"], "since": report["since"], "data_through": report["data_through"],
             "built": date.today().strftime("%B %-d, %Y"), "judges": judges,
-            "population": report["population"]}
+            "population": report["population"], "appellate_baseline": report.get("appellate_baseline")}
 
 
 def main() -> None:
-    data = json.dumps(page_data(json.loads(REPORT.read_text())), separators=(",", ":"))
+    # allow_nan=False: NaN would make the page's JSON unparseable and stop every script on it.
+    data = json.dumps(page_data(json.loads(REPORT.read_text())), separators=(",", ":"), allow_nan=False)
     data = data.replace("</", "<\\/")  # can't close the <script> tag early
     page = TEMPLATE.read_text().replace("/*DATA*/", data)
     PAGE.write_text(page)
