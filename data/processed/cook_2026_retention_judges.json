@@ -797,7 +797,8 @@
         "n_sentences": 247,
         "period": "2021-11-17 to 2024-11-04",
         "findings": [
-          "Gave treatment-based sentences (mental health, drug, or veterans court probation, second-chance probation) more often than expected: 5.7% vs 3.5% (+2.2 points; 95% range +0.0 points to +4.4 points)."
+          "Sent people to prison less often than expected for comparable charges: 44% of cases vs 51% expected (-6.8 points; 95% range -11.8 points to -1.8 points).",
+          "Gave treatment-based sentences (mental health, drug, or veterans court probation, second-chance probation) more often than expected: 5.7% vs 2.7% (+3.0 points; 95% range +1.1 points to +5.0 points)."
         ],
         "notes": [],
         "details": {
@@ -809,42 +810,42 @@
           "prison": {
             "n": 247,
             "rate": 0.43724696356275305,
-            "expected": 0.47365633065281776,
-            "diff": -0.036409367090064704,
-            "lo": -0.08631957177314512,
-            "hi": 0.013500837593015715
+            "expected": 0.505018741295135,
+            "diff": -0.06777177773238197,
+            "lo": -0.1175863971942285,
+            "hi": -0.01795715827053542
           },
           "treatment": {
             "n": 247,
             "rate": 0.05668016194331984,
-            "expected": 0.034692592251018055,
-            "diff": 0.021987569692301784,
-            "lo": 8.068704979983035e-05,
-            "hi": 0.04389445233480374
+            "expected": 0.026508363051375067,
+            "diff": 0.03017179889194477,
+            "lo": 0.010789715935511947,
+            "hi": 0.0495538818483776
           },
           "likely_specialty_court": false,
           "prison_length_ratio": {
             "n": 108,
-            "ratio": 0.9135417592302727,
-            "lo": 0.811715090042461,
-            "hi": 1.028142209126463
+            "ratio": 0.9050969038563856,
+            "lo": 0.804271008784754,
+            "hi": 1.0185626442114575
           },
           "prison_by_race": {
             "Black": {
               "n": 202,
               "rate": 0.4752475247524752,
-              "expected": 0.48430331779899916,
-              "diff": -0.00905579304652393,
-              "lo": -0.06347221069833121,
-              "hi": 0.04536062460528335
+              "expected": 0.5140616330329336,
+              "diff": -0.03881410828045839,
+              "lo": -0.09307445699484135,
+              "hi": 0.015446240433924556
             },
             "Latino": {
               "n": 35,
               "rate": 0.2571428571428571,
-              "expected": 0.4014890884224418,
-              "diff": -0.14434623127958468,
-              "lo": -0.278671893529956,
-              "hi": -0.010020569029213333
+              "expected": 0.44453136638558166,
+              "diff": -0.18738850924272454,
+              "lo": -0.32231427100619126,
+              "hi": -0.052462747479257804
             }
           }
         }
@@ -1336,8 +1337,7 @@
         "n_sentences": 999,
         "period": "2019-01-02 to 2024-11-12",
         "findings": [
-          "Sent people to prison more often than expected for comparable charges: 49% of cases vs 44% expected (+4.9 points; 95% range +2.3 points to +7.5 points).",
-          "Gave treatment-based sentences (mental health, drug, or veterans court probation, second-chance probation) less often than expected: 2.8% vs 4.9% (-2.1 points; 95% range -3.4 points to -0.8 points)."
+          "No sentencing measure stood out from comparable cases."
         ],
         "notes": [],
         "details": {
@@ -1349,56 +1349,56 @@
           "prison": {
             "n": 999,
             "rate": 0.4854854854854855,
-            "expected": 0.436616247223037,
-            "diff": 0.04886923826244849,
-            "lo": 0.022887910420827523,
-            "hi": 0.07485056610406945
+            "expected": 0.47136657229727486,
+            "diff": 0.014118913188210624,
+            "lo": -0.01182444296013025,
+            "hi": 0.0400622693365515
           },
           "treatment": {
             "n": 999,
             "rate": 0.028028028028028028,
-            "expected": 0.04915699232925506,
-            "diff": -0.02112896430122703,
-            "lo": -0.033953826295525,
-            "hi": -0.008304102306929061
+            "expected": 0.035320594436604666,
+            "diff": -0.007292566408576638,
+            "lo": -0.018396446914244406,
+            "hi": 0.0038113140970911317
           },
           "likely_specialty_court": false,
           "prison_length_ratio": {
             "n": 480,
-            "ratio": 0.9897693052982296,
-            "lo": 0.9572798539605875,
-            "hi": 1.0233614273374996
+            "ratio": 0.9707920861029686,
+            "lo": 0.9389635123117326,
+            "hi": 1.0036995709448482
           },
           "prison_by_race": {
             "Black": {
               "n": 769,
               "rate": 0.5019505851755527,
-              "expected": 0.44408890638749493,
-              "diff": 0.05786167878805776,
-              "lo": 0.028176541157159726,
-              "hi": 0.08754681641895579
+              "expected": 0.4771326335226509,
+              "diff": 0.024817951652901793,
+              "lo": -0.004825453117459983,
+              "hi": 0.054461356423263566
             },
             "Latino": {
               "n": 161,
               "rate": 0.422360248447205,
-              "expected": 0.40669905775475595,
-              "diff": 0.015661190692449034,
-              "lo": -0.046258535119320175,
-              "hi": 0.07758091650421825
+              "expected": 0.4477140715483128,
+              "diff": -0.025353823101107786,
+              "lo": -0.08714461903459228,
+              "hi": 0.03643697283237671
             },
             "White": {
               "n": 61,
               "rate": 0.39344262295081966,
-              "expected": 0.42469292962250393,
-              "diff": -0.03125030667168427,
-              "lo": -0.14372567176578926,
-              "hi": 0.08122505842242074
+              "expected": 0.46314454027099056,
+              "diff": -0.06970191732017089,
+              "lo": -0.18241099768440783,
+              "hi": 0.04300716304406603
             }
           },
           "black_white_prison_gap": {
-            "gap": 0.08911198545974203,
-            "lo": -0.027214774785773152,
-            "hi": 0.20543874570525722
+            "gap": 0.09451986897307268,
+            "lo": -0.02202226179057659,
+            "hi": 0.21106199973672196
           }
         }
       },
@@ -1722,7 +1722,7 @@
         "n_sentences": 875,
         "period": "2019-01-11 to 2024-11-25",
         "findings": [
-          "Sent people to prison less often than expected for comparable charges: 40% of cases vs 47% expected (-6.7 points; 95% range -9.5 points to -4.0 points)."
+          "No sentencing measure stood out from comparable cases."
         ],
         "notes": [],
         "details": {
@@ -1734,56 +1734,56 @@
           "prison": {
             "n": 875,
             "rate": 0.4,
-            "expected": 0.467294890051079,
-            "diff": -0.06729489005107897,
-            "lo": -0.09505167442538937,
-            "hi": -0.03953810567676858
+            "expected": 0.4039113447351455,
+            "diff": -0.003911344735145483,
+            "lo": -0.03068149461773947,
+            "hi": 0.022858805147448504
           },
           "treatment": {
             "n": 875,
             "rate": 0.045714285714285714,
-            "expected": 0.053684395136503575,
-            "diff": -0.007970109422217861,
-            "lo": -0.02214847772702186,
-            "hi": 0.006208258882586139
+            "expected": 0.04881570797809565,
+            "diff": -0.0031014222638099387,
+            "lo": -0.016596890707126097,
+            "hi": 0.01039404617950622
           },
           "likely_specialty_court": false,
           "prison_length_ratio": {
             "n": 348,
-            "ratio": 0.9887284868735874,
-            "lo": 0.9379484232744725,
-            "hi": 1.0422577579932268
+            "ratio": 1.003582777830357,
+            "lo": 0.952478167782805,
+            "hi": 1.0574293732130604
           },
           "prison_by_race": {
             "Black": {
               "n": 751,
               "rate": 0.41278295605858856,
-              "expected": 0.4737796655458144,
-              "diff": -0.06099670948722585,
-              "lo": -0.0909079897023054,
-              "hi": -0.031085429272146307
+              "expected": 0.408858414377556,
+              "diff": 0.003924541681032567,
+              "lo": -0.02488433876751575,
+              "hi": 0.032733422129580886
             },
             "Latino": {
               "n": 56,
               "rate": 0.3392857142857143,
-              "expected": 0.4354433044995113,
-              "diff": -0.096157590213797,
-              "lo": -0.20183077479010955,
-              "hi": 0.009515594362515561
+              "expected": 0.390941996693715,
+              "diff": -0.05165628240800069,
+              "lo": -0.15581734980111484,
+              "hi": 0.052504784985113476
             },
             "White": {
               "n": 57,
               "rate": 0.3333333333333333,
-              "expected": 0.43067496089680984,
-              "diff": -0.09734162756347653,
-              "lo": -0.21025400256856297,
-              "hi": 0.015570747441609925
+              "expected": 0.3771958488685528,
+              "diff": -0.04386251553521947,
+              "lo": -0.1538883603314039,
+              "hi": 0.06616332926096498
             }
           },
           "black_white_prison_gap": {
-            "gap": 0.036344918076250676,
-            "lo": -0.08046214127118038,
-            "hi": 0.15315197742368175
+            "gap": 0.04778705721625204,
+            "lo": -0.0659478895495192,
+            "hi": 0.16152200398202327
           }
         }
       },
@@ -3673,8 +3673,7 @@
         "n_sentences": 765,
         "period": "2019-02-14 to 2024-11-19",
         "findings": [
-          "Sent people to prison more often than expected for comparable charges: 42% of cases vs 39% expected (+3.1 points; 95% range +0.1 points to +6.0 points).",
-          "Black defendants went to prison more often than white defendants facing comparable charges: +8.4 points (95% range +1.4 points to +15.5 points)."
+          "Black defendants went to prison more often than white defendants facing comparable charges: +7.9 points (95% range +0.9 points to +14.9 points)."
         ],
         "notes": [],
         "details": {
@@ -3686,64 +3685,64 @@
           "prison": {
             "n": 765,
             "rate": 0.42091503267973857,
-            "expected": 0.39028462529756314,
-            "diff": 0.03063040738217543,
-            "lo": 0.001398464305795783,
-            "hi": 0.05986235045855508
+            "expected": 0.41232784827167873,
+            "diff": 0.008587184408059834,
+            "lo": -0.02047214615023353,
+            "hi": 0.0376465149663532
           },
           "treatment": {
             "n": 765,
             "rate": 0.07973856209150326,
-            "expected": 0.07151418065214515,
-            "diff": 0.008224381439358108,
-            "lo": -0.009155033544267114,
-            "hi": 0.02560379642298333
+            "expected": 0.07537452083796632,
+            "diff": 0.0043640412535369405,
+            "lo": -0.013414387803701171,
+            "hi": 0.022142470310775052
           },
           "likely_specialty_court": false,
           "prison_length_ratio": {
             "n": 322,
-            "ratio": 0.9734653935191632,
-            "lo": 0.9355371677071473,
-            "hi": 1.0129312924059675
+            "ratio": 0.9626237300261743,
+            "lo": 0.925501510993528,
+            "hi": 1.0012349354402998
           },
           "prison_by_race": {
             "Asian": {
               "n": 37,
               "rate": 0.2972972972972973,
-              "expected": 0.30335045867007265,
-              "diff": -0.00605316137277534,
-              "lo": -0.1283712768418002,
-              "hi": 0.11626495409624951
+              "expected": 0.3261124256420659,
+              "diff": -0.02881512834476857,
+              "lo": -0.15048904691082654,
+              "hi": 0.09285879022128939
             },
             "Black": {
               "n": 363,
               "rate": 0.5261707988980716,
-              "expected": 0.4318709857967598,
-              "diff": 0.0942998131013118,
-              "lo": 0.05061029826914534,
-              "hi": 0.13798932793347826
+              "expected": 0.4598046346431114,
+              "diff": 0.06636616425496022,
+              "lo": 0.022804044058914487,
+              "hi": 0.10992828445100597
             },
             "Latino": {
               "n": 150,
               "rate": 0.2866666666666667,
-              "expected": 0.3581563904470257,
-              "diff": -0.071489723780359,
-              "lo": -0.1358803410746357,
-              "hi": -0.007099106486082321
+              "expected": 0.36622471994796046,
+              "diff": -0.07955805328129378,
+              "lo": -0.14299360753262452,
+              "hi": -0.01612249902996303
             },
             "White": {
               "n": 202,
               "rate": 0.36633663366336633,
-              "expected": 0.35635488138499294,
-              "diff": 0.00998175227837339,
-              "lo": -0.04537140262019027,
-              "hi": 0.06533490717693705
+              "expected": 0.3788160290020892,
+              "diff": -0.012479395338722887,
+              "lo": -0.0675993605431964,
+              "hi": 0.042640569865750634
             }
           },
           "black_white_prison_gap": {
-            "gap": 0.08431806082293841,
-            "lo": 0.013800364721218844,
-            "hi": 0.15483575692465798
+            "gap": 0.07884555959368311,
+            "lo": 0.008589820467850076,
+            "hi": 0.14910129871951616
           }
         }
       },
@@ -3906,8 +3905,7 @@
         "n_sentences": 56,
         "period": "2021-01-25 to 2024-11-01",
         "findings": [
-          "Sent people to prison less often than expected for comparable charges: 21% of cases vs 48% expected (-26.3 points; 95% range -38.0 points to -14.5 points).",
-          "Gave treatment-based sentences (mental health, drug, or veterans court probation, second-chance probation) more often than expected: 32.1% vs 7.6% (+24.6 points; 95% range +17.9 points to +31.3 points)."
+          "Gave treatment-based sentences (mental health, drug, or veterans court probation, second-chance probation) more often than expected: 32.1% vs 10.7% (+21.5 points; 95% range +13.7 points to +29.2 points)."
         ],
         "notes": [
           "Limited record (56 sentences); treat these numbers as rough.",
@@ -3922,18 +3920,18 @@
           "prison": {
             "n": 56,
             "rate": 0.21428571428571427,
-            "expected": 0.47685362291198574,
-            "diff": -0.26256790862627144,
-            "lo": -0.3804262099945427,
-            "hi": -0.14470960725800017
+            "expected": 0.32169450930551896,
+            "diff": -0.10740879501980469,
+            "lo": -0.21515871123360167,
+            "hi": 0.00034112119399229424
           },
           "treatment": {
             "n": 56,
             "rate": 0.32142857142857145,
-            "expected": 0.07579063069067844,
-            "diff": 0.24563794073789302,
-            "lo": 0.17857244350437612,
-            "hi": 0.3127034379714099
+            "expected": 0.10656544606855665,
+            "diff": 0.21486312536001478,
+            "lo": 0.13742516879716574,
+            "hi": 0.29230108192286386
           },
           "likely_specialty_court": true,
           "prison_by_race": {}
@@ -4091,8 +4089,7 @@
         "n_sentences": 461,
         "period": "2019-01-03 to 2022-08-01",
         "findings": [
-          "Gave treatment-based sentences (mental health, drug, or veterans court probation, second-chance probation) more often than expected: 15.0% vs 9.4% (+5.6 points; 95% range +3.0 points to +8.1 points).",
-          "Prison terms were shorter than for comparable charges: 0.93x (95% range 0.88x to 0.97x, 186 prison sentences)."
+          "No sentencing measure stood out from comparable cases."
         ],
         "notes": [],
         "details": {
@@ -4104,56 +4101,56 @@
           "prison": {
             "n": 461,
             "rate": 0.403470715835141,
-            "expected": 0.386607031775207,
-            "diff": 0.016863684059933992,
-            "lo": -0.0226758057980155,
-            "hi": 0.056403173917883485
+            "expected": 0.40541727547873896,
+            "diff": -0.001946559643597967,
+            "lo": -0.04071255204216113,
+            "hi": 0.036819432754965194
           },
           "treatment": {
             "n": 461,
             "rate": 0.14967462039045554,
-            "expected": 0.09395654106595365,
-            "diff": 0.05571807932450189,
-            "lo": 0.030369828971410384,
-            "hi": 0.08106632967759339
+            "expected": 0.13099666971209634,
+            "diff": 0.0186779506783592,
+            "lo": -0.009512850389844348,
+            "hi": 0.04686875174656275
           },
           "likely_specialty_court": false,
           "prison_length_ratio": {
             "n": 186,
-            "ratio": 0.9262084776107072,
-            "lo": 0.881692478726454,
-            "hi": 0.9729720562401402
+            "ratio": 0.9679182681110652,
+            "lo": 0.9219928206954926,
+            "hi": 1.016131311127143
           },
           "prison_by_race": {
             "Black": {
               "n": 213,
               "rate": 0.431924882629108,
-              "expected": 0.39091543757683145,
-              "diff": 0.04100944505227655,
-              "lo": -0.0169520276070306,
-              "hi": 0.0989709177115837
+              "expected": 0.4172804348113228,
+              "diff": 0.014644447817785178,
+              "lo": -0.041857549345697694,
+              "hi": 0.07114644498126804
             },
             "Latino": {
               "n": 60,
               "rate": 0.35,
-              "expected": 0.37284906875802837,
-              "diff": -0.02284906875802839,
-              "lo": -0.12696830618920696,
-              "hi": 0.08127016867315016
+              "expected": 0.3964648325543253,
+              "diff": -0.04646483255432532,
+              "lo": -0.14966368644986427,
+              "hi": 0.056734021341213636
             },
             "White": {
               "n": 184,
               "rate": 0.391304347826087,
-              "expected": 0.38708337721754166,
-              "diff": 0.004220970608545316,
-              "lo": -0.05959662691687148,
-              "hi": 0.06803856813396211
+              "expected": 0.3962174617107614,
+              "diff": -0.004913113884674414,
+              "lo": -0.06768731242188455,
+              "hi": 0.05786108465253573
             }
           },
           "black_white_prison_gap": {
-            "gap": 0.036788474443731234,
-            "lo": -0.04942183855159256,
-            "hi": 0.12299878743905503
+            "gap": 0.01955756170245959,
+            "lo": -0.06489997606327984,
+            "hi": 0.10401509946819902
           }
         }
       },
@@ -4328,8 +4325,9 @@
         "n_sentences": 771,
         "period": "2019-02-28 to 2024-11-18",
         "findings": [
-          "Gave treatment-based sentences (mental health, drug, or veterans court probation, second-chance probation) less often than expected: 2.5% vs 4.7% (-2.2 points; 95% range -3.7 points to -0.8 points).",
-          "Black defendants went to prison more often than white defendants facing comparable charges: +12.5 points (95% range +0.3 points to +24.7 points)."
+          "Sent people to prison less often than expected for comparable charges: 43% of cases vs 47% expected (-3.9 points; 95% range -6.7 points to -1.0 points).",
+          "Prison terms were shorter than for comparable charges: 0.94x (95% range 0.89x to 0.99x, 333 prison sentences).",
+          "Black defendants went to prison more often than white defendants facing comparable charges: +12.9 points (95% range +0.7 points to +25.2 points)."
         ],
         "notes": [],
         "details": {
@@ -4341,56 +4339,56 @@
           "prison": {
             "n": 771,
             "rate": 0.43320363164721143,
-            "expected": 0.43692192106242184,
-            "diff": -0.0037182894152104073,
-            "lo": -0.03194832795461902,
-            "hi": 0.02451174912419821
+            "expected": 0.4718436405310999,
+            "diff": -0.038640008883888466,
+            "lo": -0.06679816881430857,
+            "hi": -0.010481848953468365
           },
           "treatment": {
             "n": 771,
             "rate": 0.02464332036316472,
-            "expected": 0.04713274831028548,
-            "diff": -0.02248942794712076,
-            "lo": -0.0367335674862907,
-            "hi": -0.008245288407950826
+            "expected": 0.03554655799680023,
+            "diff": -0.010903237633635512,
+            "lo": -0.023539731658330332,
+            "hi": 0.001733256391059309
           },
           "likely_specialty_court": false,
           "prison_length_ratio": {
             "n": 333,
-            "ratio": 0.9518031682629926,
-            "lo": 0.9031913948024991,
-            "hi": 1.0030313356933278
+            "ratio": 0.9357704913997232,
+            "lo": 0.8880233563106705,
+            "hi": 0.9860848888169695
           },
           "prison_by_race": {
             "Black": {
               "n": 589,
               "rate": 0.4533106960950764,
-              "expected": 0.4512134394477007,
-              "diff": 0.0020972566473757004,
-              "lo": -0.03026373757098679,
-              "hi": 0.03445825086573819
+              "expected": 0.4845768171028332,
+              "diff": -0.031266121007756775,
+              "lo": -0.06346490422865067,
+              "hi": 0.0009326622131371268
             },
             "Latino": {
               "n": 128,
               "rate": 0.390625,
-              "expected": 0.37338542348227866,
-              "diff": 0.017239576517721344,
-              "lo": -0.050161582674089905,
-              "hi": 0.0846407357095326
+              "expected": 0.4127397750819358,
+              "diff": -0.022114775081935822,
+              "lo": -0.08980990523224544,
+              "hi": 0.045580355068373796
             },
             "White": {
               "n": 49,
               "rate": 0.32653061224489793,
-              "expected": 0.4491985049732839,
-              "diff": -0.12266789272838596,
-              "lo": -0.24018038931781216,
-              "hi": -0.005155396138959753
+              "expected": 0.48681018294919937,
+              "diff": -0.16027957070430143,
+              "lo": -0.27846346658103843,
+              "hi": -0.04209567482756443
             }
           },
           "black_white_prison_gap": {
-            "gap": 0.12476514937576166,
-            "lo": 0.0028782312857517367,
-            "hi": 0.2466520674657716
+            "gap": 0.12901344969654466,
+            "lo": 0.006521838206167363,
+            "hi": 0.25150506118692195
           }
         }
       },
@@ -4570,28 +4568,28 @@
           "prison": {
             "n": 112,
             "rate": 0.008928571428571428,
-            "expected": 0.024075619383477315,
-            "diff": -0.015147047954905887,
-            "lo": -0.04114087790342395,
-            "hi": 0.010846781993612178
+            "expected": 0.017143170812559026,
+            "diff": -0.008214599383987598,
+            "lo": -0.029230146947904566,
+            "hi": 0.01280094817992937
           },
           "treatment": {
             "n": 112,
             "rate": 0.0,
-            "expected": 0.008301502072800407,
-            "diff": -0.008301502072800407,
-            "lo": -0.024611457948576918,
-            "hi": 0.008008453802976104
+            "expected": 0.007098665808009489,
+            "diff": -0.007098665808009489,
+            "lo": -0.022094557321564564,
+            "hi": 0.007897225705545585
           },
           "likely_specialty_court": false,
           "prison_by_race": {
             "Black": {
               "n": 81,
               "rate": 0.0,
-              "expected": 0.029387097536167032,
-              "diff": -0.029387097536167032,
-              "lo": -0.06269171810375256,
-              "hi": 0.0039175230314184885
+              "expected": 0.020031814480200347,
+              "diff": -0.020031814480200347,
+              "lo": -0.04598005971172367,
+              "hi": 0.005916430751322973
             }
           }
         }
@@ -4996,8 +4994,8 @@
         "n_sentences": 41,
         "period": "2021-03-22 to 2024-09-10",
         "findings": [
-          "Sent people to prison less often than expected for comparable charges: 5% of cases vs 45% expected (-40.3 points; 95% range -55.2 points to -25.4 points).",
-          "Gave treatment-based sentences (mental health, drug, or veterans court probation, second-chance probation) more often than expected: 36.6% vs 11.4% (+25.2 points; 95% range +15.7 points to +34.7 points)."
+          "Sent people to prison less often than expected for comparable charges: 5% of cases vs 34% expected (-29.6 points; 95% range -43.4 points to -15.7 points).",
+          "Gave treatment-based sentences (mental health, drug, or veterans court probation, second-chance probation) more often than expected: 36.6% vs 10.2% (+26.4 points; 95% range +17.4 points to +35.5 points)."
         ],
         "notes": [
           "Limited record (41 sentences); treat these numbers as rough.",
@@ -5012,28 +5010,28 @@
           "prison": {
             "n": 41,
             "rate": 0.04878048780487805,
-            "expected": 0.4517000440300993,
-            "diff": -0.40291955622522124,
-            "lo": -0.5516855105111313,
-            "hi": -0.25415360193931114
+            "expected": 0.34445210309478863,
+            "diff": -0.2956716152899106,
+            "lo": -0.4343889605275035,
+            "hi": -0.1569542700523177
           },
           "treatment": {
             "n": 41,
             "rate": 0.36585365853658536,
-            "expected": 0.11377695603567776,
-            "diff": 0.2520767025009076,
-            "lo": 0.15677803961534412,
-            "hi": 0.34737536538647107
+            "expected": 0.1016849049894189,
+            "diff": 0.26416875354716646,
+            "lo": 0.17370464946354716,
+            "hi": 0.3546328576307858
           },
           "likely_specialty_court": true,
           "prison_by_race": {
             "Black": {
               "n": 32,
               "rate": 0.0625,
-              "expected": 0.44683994141087846,
-              "diff": -0.38433994141087846,
-              "lo": -0.5520902173421843,
-              "hi": -0.2165896654795726
+              "expected": 0.3321151740557655,
+              "diff": -0.2696151740557655,
+              "lo": -0.424756655414953,
+              "hi": -0.114473692696578
             }
           }
         }
@@ -6854,7 +6852,7 @@
         "n_sentences": 139,
         "period": "2022-05-12 to 2024-11-22",
         "findings": [
-          "Sent people to prison more often than expected for comparable charges: 51% of cases vs 42% expected (+8.9 points; 95% range +2.0 points to +15.7 points)."
+          "Sent people to prison more often than expected for comparable charges: 51% of cases vs 44% expected (+7.0 points; 95% range +0.2 points to +13.8 points)."
         ],
         "notes": [],
         "details": {
@@ -6866,42 +6864,42 @@
           "prison": {
             "n": 139,
             "rate": 0.5107913669064749,
-            "expected": 0.4222440263744887,
-            "diff": 0.08854734053198615,
-            "lo": 0.020126695983938944,
-            "hi": 0.15696798508003335
+            "expected": 0.4409430270386702,
+            "diff": 0.06984833986780464,
+            "lo": 0.0019118552557824964,
+            "hi": 0.1377848244798268
           },
           "treatment": {
             "n": 139,
             "rate": 0.05755395683453238,
-            "expected": 0.06965891302366731,
-            "diff": -0.01210495618913493,
-            "lo": -0.052416256497758267,
-            "hi": 0.028206344119488407
+            "expected": 0.07535863170959992,
+            "diff": -0.01780467487506754,
+            "lo": -0.05944097290832244,
+            "hi": 0.023831623158187362
           },
           "likely_specialty_court": false,
           "prison_length_ratio": {
             "n": 71,
-            "ratio": 0.9746045299976208,
-            "lo": 0.9005836573197782,
-            "hi": 1.0547093345206133
+            "ratio": 0.9761406409778498,
+            "lo": 0.9006844082983371,
+            "hi": 1.0579183365335123
           },
           "prison_by_race": {
             "Black": {
               "n": 70,
               "rate": 0.6571428571428571,
-              "expected": 0.4710957644195521,
-              "diff": 0.18604709272330505,
-              "lo": 0.08790194268150882,
-              "hi": 0.2841922427651013
+              "expected": 0.5000070899292189,
+              "diff": 0.1571357672136382,
+              "lo": 0.05964560907379167,
+              "hi": 0.2546259253534847
             },
             "Latino": {
               "n": 34,
               "rate": 0.4117647058823529,
-              "expected": 0.3932652188981032,
-              "diff": 0.018499486984249747,
-              "lo": -0.11683246462094429,
-              "hi": 0.1538314385894438
+              "expected": 0.39883364424982787,
+              "diff": 0.012931061632525054,
+              "lo": -0.12076314748587522,
+              "hi": 0.14662527075092532
             }
           }
         }
@@ -9754,9 +9752,8 @@
         "n_sentences": 1127,
         "period": "2019-01-03 to 2024-11-25",
         "findings": [
-          "Sent people to prison more often than expected for comparable charges: 50% of cases vs 46% expected (+4.1 points; 95% range +1.7 points to +6.5 points).",
-          "Gave treatment-based sentences (mental health, drug, or veterans court probation, second-chance probation) less often than expected: 2.6% vs 4.9% (-2.4 points; 95% range -3.6 points to -1.2 points).",
-          "Prison terms were longer than for comparable charges: 1.08x (95% range 1.04x to 1.12x, 563 prison sentences)."
+          "Gave treatment-based sentences (mental health, drug, or veterans court probation, second-chance probation) less often than expected: 2.6% vs 3.7% (-1.2 points; 95% range -2.2 points to -0.1 points).",
+          "Prison terms were longer than for comparable charges: 1.06x (95% range 1.02x to 1.10x, 563 prison sentences)."
         ],
         "notes": [],
         "details": {
@@ -9768,56 +9765,56 @@
           "prison": {
             "n": 1127,
             "rate": 0.49955634427684115,
-            "expected": 0.45863444692762534,
-            "diff": 0.04092189734921581,
-            "lo": 0.017284671815946798,
-            "hi": 0.06455912288248482
+            "expected": 0.4935610861681303,
+            "diff": 0.005995258108710821,
+            "lo": -0.017514083964354166,
+            "hi": 0.02950460018177581
           },
           "treatment": {
             "n": 1127,
             "rate": 0.025732031943212066,
-            "expected": 0.04938344498334083,
-            "diff": -0.023651413040128764,
-            "lo": -0.03578334463824959,
-            "hi": -0.01151948144200794
+            "expected": 0.03725116038363424,
+            "diff": -0.011519128440422174,
+            "lo": -0.02225365501620913,
+            "hi": -0.0007846018646352187
           },
           "likely_specialty_court": false,
           "prison_length_ratio": {
             "n": 563,
-            "ratio": 1.0805318667697974,
-            "lo": 1.0417457979853655,
-            "hi": 1.1207620106200085
+            "ratio": 1.0599351022526846,
+            "lo": 1.0217646328908498,
+            "hi": 1.0995315210792027
           },
           "prison_by_race": {
             "Black": {
               "n": 857,
               "rate": 0.5122520420070011,
-              "expected": 0.47009492060885044,
-              "diff": 0.0421571213981507,
-              "lo": 0.015299254759023294,
-              "hi": 0.0690149880372781
+              "expected": 0.5025984581644592,
+              "diff": 0.00965358384254189,
+              "lo": -0.01704087666448756,
+              "hi": 0.03634804434957134
             },
             "Latino": {
               "n": 185,
               "rate": 0.4648648648648649,
-              "expected": 0.42864797891880296,
-              "diff": 0.03621688594606193,
-              "lo": -0.02293565775593217,
-              "hi": 0.09536942964805603
+              "expected": 0.4716431136385008,
+              "diff": -0.00677824877363592,
+              "lo": -0.06565824414907939,
+              "hi": 0.05210174660180756
             },
             "White": {
               "n": 80,
               "rate": 0.4375,
-              "expected": 0.41157629758373826,
-              "diff": 0.02592370241626174,
-              "lo": -0.0688047949864345,
-              "hi": 0.12065219981895799
+              "expected": 0.45295067422209623,
+              "diff": -0.015450674222096228,
+              "lo": -0.11021816802386798,
+              "hi": 0.07931681957967553
             }
           },
           "black_white_prison_gap": {
-            "gap": 0.01623341898188896,
-            "lo": -0.08222892519383022,
-            "hi": 0.11469576315760814
+            "gap": 0.02510425806463812,
+            "lo": -0.0733511740009935,
+            "hi": 0.12355969013026974
           }
         }
       },
@@ -10150,7 +10147,7 @@
         "n_sentences": 245,
         "period": "2021-02-19 to 2024-11-20",
         "findings": [
-          "Gave treatment-based sentences (mental health, drug, or veterans court probation, second-chance probation) less often than expected: 1.2% vs 4.3% (-3.1 points; 95% range -5.5 points to -0.6 points)."
+          "No sentencing measure stood out from comparable cases."
         ],
         "notes": [],
         "details": {
@@ -10162,42 +10159,42 @@
           "prison": {
             "n": 245,
             "rate": 0.42448979591836733,
-            "expected": 0.4087721222813261,
-            "diff": 0.01571767363704124,
-            "lo": -0.03500331158015491,
-            "hi": 0.06643865885423739
+            "expected": 0.4385360707131143,
+            "diff": -0.01404627479474696,
+            "lo": -0.06469689224027808,
+            "hi": 0.036604342650784154
           },
           "treatment": {
             "n": 245,
             "rate": 0.012244897959183673,
-            "expected": 0.042779394251286205,
-            "diff": -0.03053449629210253,
-            "lo": -0.05480373441896433,
-            "hi": -0.006265258165240737
+            "expected": 0.03339843486623469,
+            "diff": -0.021153536907051018,
+            "lo": -0.0429313243133934,
+            "hi": 0.0006242504992913685
           },
           "likely_specialty_court": false,
           "prison_length_ratio": {
             "n": 104,
-            "ratio": 1.0725193023858004,
-            "lo": 0.9822735291371444,
-            "hi": 1.1710563502618019
+            "ratio": 1.0537135160239732,
+            "lo": 0.9651766538169576,
+            "hi": 1.1503719753898762
           },
           "prison_by_race": {
             "Black": {
               "n": 188,
               "rate": 0.4734042553191489,
-              "expected": 0.4231279782817932,
-              "diff": 0.05027627703735571,
-              "lo": -0.009244391198576535,
-              "hi": 0.10979694527328795
+              "expected": 0.45442456037012985,
+              "diff": 0.018979694949019077,
+              "lo": -0.04056719906679042,
+              "hi": 0.07852658896482857
             },
             "Latino": {
               "n": 42,
               "rate": 0.2857142857142857,
-              "expected": 0.37386679529445593,
-              "diff": -0.08815250958017024,
-              "lo": -0.19425804600240662,
-              "hi": 0.01795302684206615
+              "expected": 0.3933619087258024,
+              "diff": -0.1076476230115167,
+              "lo": -0.21251091836398028,
+              "hi": -0.0027843276590531207
             }
           }
         }
@@ -10531,9 +10528,10 @@
         "n_sentences": 888,
         "period": "2019-01-03 to 2024-11-21",
         "findings": [
-          "Sent people to prison more often than expected for comparable charges: 51% of cases vs 43% expected (+7.8 points; 95% range +5.1 points to +10.4 points).",
-          "Gave treatment-based sentences (mental health, drug, or veterans court probation, second-chance probation) more often than expected: 6.5% vs 4.9% (+1.6 points; 95% range +0.2 points to +3.0 points).",
-          "Black defendants went to prison more often than white defendants facing comparable charges: +16.2 points (95% range +0.9 points to +31.6 points)."
+          "Sent people to prison more often than expected for comparable charges: 51% of cases vs 47% expected (+4.4 points; 95% range +1.8 points to +7.1 points).",
+          "Gave treatment-based sentences (mental health, drug, or veterans court probation, second-chance probation) more often than expected: 6.5% vs 3.9% (+2.6 points; 95% range +1.4 points to +3.9 points).",
+          "Prison terms were shorter than for comparable charges: 0.95x (95% range 0.92x to 0.99x, 452 prison sentences).",
+          "Black defendants went to prison more often than white defendants facing comparable charges: +16.9 points (95% range +1.6 points to +32.3 points)."
         ],
         "notes": [],
         "details": {
@@ -10545,56 +10543,56 @@
           "prison": {
             "n": 888,
             "rate": 0.5112612612612613,
-            "expected": 0.43375054608778646,
-            "diff": 0.0775107151734748,
-            "lo": 0.05074343474214037,
-            "hi": 0.10427799560480923
+            "expected": 0.46689332327088046,
+            "diff": 0.0443679379903808,
+            "lo": 0.017687602575925068,
+            "hi": 0.07104827340483653
           },
           "treatment": {
             "n": 888,
             "rate": 0.06531531531531531,
-            "expected": 0.049267397908431036,
-            "diff": 0.016047917406884278,
-            "lo": 0.002356528360815291,
-            "hi": 0.029739306452953265
+            "expected": 0.03884271881328564,
+            "diff": 0.026472596502029676,
+            "lo": 0.014159587339810192,
+            "hi": 0.038785605664249156
           },
           "likely_specialty_court": false,
           "prison_length_ratio": {
             "n": 452,
-            "ratio": 0.9662264125831216,
-            "lo": 0.9320277885290814,
-            "hi": 1.0016798767841872
+            "ratio": 0.9503382246451982,
+            "lo": 0.9167407632683054,
+            "hi": 0.9851669931224185
           },
           "prison_by_race": {
             "Black": {
               "n": 708,
               "rate": 0.5451977401129944,
-              "expected": 0.44203108779184597,
-              "diff": 0.10316665232114841,
-              "lo": 0.0731666347597369,
-              "hi": 0.13316666988255993
+              "expected": 0.4745836406827369,
+              "diff": 0.07061409943025748,
+              "lo": 0.04075213417437086,
+              "hi": 0.1004760646861441
             },
             "Latino": {
               "n": 148,
               "rate": 0.38513513513513514,
-              "expected": 0.4011685972706326,
-              "diff": -0.016033462135497445,
-              "lo": -0.080855679413536,
-              "hi": 0.04878875514254111
+              "expected": 0.43598612821815064,
+              "diff": -0.050850993083015494,
+              "lo": -0.11579882221227662,
+              "hi": 0.014096836046245634
             },
             "White": {
               "n": 31,
               "rate": 0.3548387096774194,
-              "expected": 0.41396236806655423,
-              "diff": -0.05912365838913486,
-              "lo": -0.20966640783356233,
-              "hi": 0.09141909105529261
+              "expected": 0.45360558553369107,
+              "diff": -0.0987668758562717,
+              "lo": -0.2497060351084734,
+              "hi": 0.05217228339593
             }
           },
           "black_white_prison_gap": {
-            "gap": 0.16229031071028327,
-            "lo": 0.00878747534893673,
-            "hi": 0.3157931460716298
+            "gap": 0.16938097528652918,
+            "lo": 0.01551620750421559,
+            "hi": 0.3232457430688428
           }
         }
       },
@@ -10835,24 +10833,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        0.1,
-        -2.8,
-        3.0
+        -2.4,
+        -5.3,
+        0.5
       ],
       "treatment": [
-        0.5,
-        -1.0,
-        1.9
+        1.2,
+        -0.1,
+        2.5
       ],
       "length": [
-        3.6,
-        -1.9,
-        9.4
+        1.7,
+        -3.7,
+        7.5
       ],
       "gap": [
-        2.6,
-        -10.5,
-        15.8
+        2.2,
+        -10.9,
+        15.3
       ]
     },
     {
@@ -10863,24 +10861,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        -3.1,
-        -5.7,
-        -0.5
+        -4.8,
+        -7.4,
+        -2.2
       ],
       "treatment": [
-        5.4,
-        3.9,
-        6.9
+        4.7,
+        3.1,
+        6.2
       ],
       "length": [
-        -1.0,
-        -4.2,
-        2.4
+        -1.2,
+        -4.5,
+        2.1
       ],
       "gap": [
-        10.8,
-        3.6,
-        18.0
+        9.9,
+        2.8,
+        17.0
       ]
     },
     {
@@ -10891,24 +10889,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        -3.5,
-        -6.1,
-        -0.8
+        -7.2,
+        -9.9,
+        -4.5
       ],
       "treatment": [
-        -2.0,
-        -3.3,
-        -0.6
+        -0.7,
+        -1.9,
+        0.5
       ],
       "length": [
-        10.0,
-        5.6,
-        14.6
+        8.2,
+        3.9,
+        12.7
       ],
       "gap": [
-        11.4,
-        -1.2,
-        24.1
+        11.5,
+        -1.1,
+        24.2
       ]
     },
     {
@@ -10919,24 +10917,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        8.1,
-        5.2,
-        10.9
+        4.4,
+        1.5,
+        7.2
       ],
       "treatment": [
+        0.6,
         -0.7,
-        -2.1,
-        0.7
+        1.8
       ],
       "length": [
-        4.5,
-        0.5,
-        8.7
+        2.6,
+        -1.4,
+        6.7
       ],
       "gap": [
-        5.8,
-        -8.5,
-        20.0
+        6.6,
+        -7.7,
+        20.8
       ]
     },
     {
@@ -10947,24 +10945,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        3.1,
-        0.1,
-        6.0
+        0.9,
+        -2.0,
+        3.8
       ],
       "treatment": [
-        0.8,
-        -0.9,
-        2.6
+        0.4,
+        -1.3,
+        2.2
       ],
       "length": [
-        -2.7,
-        -6.4,
-        1.3
+        -3.7,
+        -7.4,
+        0.1
       ],
       "gap": [
-        8.4,
-        1.4,
-        15.5
+        7.9,
+        0.9,
+        14.9
       ]
     },
     {
@@ -10975,13 +10973,13 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        -0.8,
-        -3.1,
-        1.6
+        -0.3,
+        -2.4,
+        1.9
       ],
       "treatment": [
-        -0.5,
-        -1.7,
+        -0.6,
+        -1.8,
         0.6
       ],
       "length": null,
@@ -10995,19 +10993,19 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        2.2,
-        -1.8,
-        6.2
+        -0.3,
+        -4.3,
+        3.7
       ],
       "treatment": [
-        0.2,
-        -1.8,
-        2.3
+        1.2,
+        -0.7,
+        3.0
       ],
       "length": [
-        -4.7,
-        -9.9,
-        0.8
+        -6.4,
+        -11.5,
+        -1.0
       ],
       "gap": null
     },
@@ -11019,19 +11017,19 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        -1.4,
-        -4.7,
-        1.9
+        -4.1,
+        -7.5,
+        -0.8
       ],
       "treatment": [
-        -2.9,
-        -4.5,
-        -1.2
+        -1.8,
+        -3.3,
+        -0.3
       ],
       "length": [
-        -6.7,
-        -12.9,
-        -0.1
+        -8.3,
+        -14.3,
+        -1.8
       ],
       "gap": null
     },
@@ -11043,23 +11041,23 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        -5.4,
-        -8.9,
-        -1.9
+        0.7,
+        -2.7,
+        4.0
       ],
       "treatment": [
-        1.4,
-        -0.5,
-        3.3
+        1.9,
+        0.2,
+        3.7
       ],
       "length": [
-        -0.2,
-        -7.0,
-        7.1
+        1.3,
+        -5.5,
+        8.6
       ],
       "gap": [
-        -2.4,
-        -15.3,
+        -1.8,
+        -14.1,
         10.4
       ]
     },
@@ -11071,24 +11069,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        -6.8,
-        -9.6,
-        -3.9
+        -0.7,
+        -3.4,
+        2.0
       ],
       "treatment": [
-        -1.2,
-        -2.7,
-        0.3
+        -0.7,
+        -2.2,
+        0.7
       ],
       "length": [
-        -9.6,
-        -13.7,
-        -5.2
+        -8.2,
+        -12.5,
+        -3.8
       ],
       "gap": [
-        14.9,
-        3.5,
-        26.3
+        11.8,
+        1.2,
+        22.5
       ]
     },
     {
@@ -11099,20 +11097,20 @@
       "specialty": true,
       "limited": false,
       "prison": [
-        -26.2,
-        -33.8,
-        -18.5
+        -27.2,
+        -34.5,
+        -19.8
       ],
       "treatment": [
-        47.1,
-        41.9,
-        52.3
+        42.9,
+        37.1,
+        48.8
       ],
       "length": null,
       "gap": [
-        0.6,
-        -16.6,
-        17.8
+        -4.4,
+        -21.1,
+        12.3
       ]
     },
     {
@@ -11123,24 +11121,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        4.0,
-        1.4,
-        6.7
+        0.7,
+        -1.9,
+        3.3
       ],
       "treatment": [
-        -1.1,
-        -2.4,
-        0.2
+        -0.2,
+        -1.3,
+        1.0
       ],
       "length": [
-        -1.9,
-        -5.8,
-        2.2
+        -3.7,
+        -7.5,
+        0.3
       ],
       "gap": [
-        26.7,
-        13.7,
-        39.8
+        26.4,
+        13.5,
+        39.4
       ]
     },
     {
@@ -11151,24 +11149,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        3.4,
-        0.3,
-        6.5
+        1.3,
+        -1.8,
+        4.4
       ],
       "treatment": [
-        0.5,
-        -1.3,
-        2.2
+        -0.6,
+        -2.5,
+        1.2
       ],
       "length": [
-        8.6,
-        4.3,
-        13.0
+        7.6,
+        3.4,
+        12.0
       ],
       "gap": [
-        10.6,
-        0.3,
-        20.8
+        9.6,
+        -0.5,
+        19.7
       ]
     },
     {
@@ -11179,24 +11177,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        -1.8,
-        -4.6,
-        1.0
+        -5.4,
+        -8.2,
+        -2.6
       ],
       "treatment": [
-        -0.9,
-        -2.4,
-        0.7
+        0.7,
+        -0.7,
+        2.1
       ],
       "length": [
-        18.9,
-        14.1,
-        23.9
+        16.7,
+        12.0,
+        21.6
       ],
       "gap": [
-        10.9,
-        -1.1,
-        22.9
+        11.0,
+        -0.9,
+        23.0
       ]
     },
     {
@@ -11207,24 +11205,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        10.1,
-        5.9,
-        14.2
+        7.1,
+        3.0,
+        11.1
       ],
       "treatment": [
-        -1.1,
-        -3.5,
-        1.3
+        -4.1,
+        -6.8,
+        -1.5
       ],
       "length": [
-        -5.1,
-        -9.4,
-        -0.7
+        -1.5,
+        -5.8,
+        3.1
       ],
       "gap": [
-        5.6,
-        -3.6,
-        14.8
+        6.0,
+        -3.0,
+        15.0
       ]
     },
     {
@@ -11235,19 +11233,19 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        7.5,
-        2.7,
-        12.3
+        3.8,
+        -1.0,
+        8.6
       ],
       "treatment": [
-        -3.8,
-        -6.4,
-        -1.1
+        -2.5,
+        -4.8,
+        -0.1
       ],
       "length": [
-        12.8,
-        4.5,
-        21.9
+        10.9,
+        2.7,
+        19.7
       ],
       "gap": null
     },
@@ -11259,24 +11257,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        -0.4,
-        -3.2,
-        2.5
+        -3.9,
+        -6.7,
+        -1.0
       ],
       "treatment": [
-        -2.2,
-        -3.7,
-        -0.8
+        -1.1,
+        -2.4,
+        0.2
       ],
       "length": [
-        -4.8,
-        -9.7,
-        0.3
+        -6.4,
+        -11.2,
+        -1.4
       ],
       "gap": [
-        12.5,
-        0.3,
-        24.7
+        12.9,
+        0.7,
+        25.2
       ]
     },
     {
@@ -11287,19 +11285,19 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        3.5,
-        -3.0,
-        10.0
+        0.1,
+        -6.3,
+        6.6
       ],
       "treatment": [
-        -2.3,
-        -5.4,
-        0.9
+        -1.1,
+        -3.9,
+        1.7
       ],
       "length": [
-        9.2,
-        -2.8,
-        22.7
+        7.4,
+        -4.4,
+        20.7
       ],
       "gap": null
     },
@@ -11311,24 +11309,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        7.3,
-        4.7,
-        10.0
+        3.9,
+        1.2,
+        6.6
       ],
       "treatment": [
+        -1.1,
         -2.3,
-        -3.7,
-        -1.0
+        0.1
       ],
       "length": [
-        -0.1,
-        -4.7,
-        4.6
+        -2.0,
+        -6.5,
+        2.6
       ],
       "gap": [
-        7.9,
-        -3.8,
-        19.6
+        8.5,
+        -3.3,
+        20.3
       ]
     },
     {
@@ -11339,24 +11337,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        0.1,
-        -4.7,
-        4.8
+        -2.1,
+        -6.7,
+        2.6
       ],
       "treatment": [
-        1.0,
-        -1.6,
-        3.6
+        0.6,
+        -2.1,
+        3.3
       ],
       "length": [
-        0.7,
-        -6.7,
-        8.6
+        -0.2,
+        -7.3,
+        7.5
       ],
       "gap": [
-        8.6,
-        -4.5,
-        21.8
+        8.0,
+        -5.2,
+        21.2
       ]
     },
     {
@@ -11367,19 +11365,19 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        -0.6,
-        -5.8,
-        4.5
+        -4.3,
+        -9.5,
+        0.8
       ],
       "treatment": [
-        1.8,
-        -1.0,
-        4.6
+        3.3,
+        0.8,
+        5.8
       ],
       "length": [
-        2.6,
-        -4.2,
-        9.9
+        0.9,
+        -5.8,
+        8.1
       ],
       "gap": null
     },
@@ -11391,24 +11389,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        -14.5,
-        -18.3,
-        -10.7
+        -2.7,
+        -6.2,
+        0.7
       ],
       "treatment": [
-        -3.7,
-        -5.7,
-        -1.8
+        -4.7,
+        -6.7,
+        -2.7
       ],
       "length": [
-        -9.4,
-        -20.4,
-        3.2
+        -6.0,
+        -17.4,
+        7.0
       ],
       "gap": [
-        12.2,
-        1.4,
-        23.1
+        13.2,
+        3.5,
+        22.8
       ]
     },
     {
@@ -11419,24 +11417,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        -13.7,
-        -15.6,
-        -11.8
+        -3.7,
+        -5.5,
+        -1.9
       ],
       "treatment": [
-        1.7,
-        0.7,
-        2.7
+        0.6,
+        -0.5,
+        1.7
       ],
       "length": [
-        -5.5,
-        -9.2,
-        -1.8
+        -1.8,
+        -5.6,
+        2.1
       ],
       "gap": [
-        5.9,
-        0.3,
-        11.4
+        8.2,
+        3.0,
+        13.4
       ]
     },
     {
@@ -11447,24 +11445,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        -6.1,
-        -8.9,
-        -3.4
+        -0.4,
+        -3.0,
+        2.3
       ],
       "treatment": [
-        -2.6,
-        -3.9,
-        -1.2
+        -2.1,
+        -3.4,
+        -0.8
       ],
       "length": [
-        -11.5,
-        -17.3,
-        -5.2
+        -10.2,
+        -16.1,
+        -3.9
       ],
       "gap": [
-        -3.7,
-        -14.8,
-        7.3
+        -1.3,
+        -12.1,
+        9.4
       ]
     },
     {
@@ -11475,24 +11473,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        -12.1,
-        -15.4,
-        -8.9
+        -2.8,
+        -5.8,
+        0.2
       ],
       "treatment": [
-        -0.7,
-        -2.4,
-        1.0
+        -1.6,
+        -3.3,
+        0.2
       ],
       "length": [
-        -6.2,
-        -13.4,
-        1.5
+        -3.2,
+        -10.6,
+        4.7
       ],
       "gap": [
-        1.2,
-        -8.2,
-        10.5
+        2.3,
+        -6.3,
+        10.9
       ]
     },
     {
@@ -11503,24 +11501,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        6.1,
-        3.5,
-        8.8
+        2.9,
+        0.2,
+        5.5
       ],
       "treatment": [
-        -1.4,
-        -2.8,
-        0.0
+        0.1,
+        -1.1,
+        1.3
       ],
       "length": [
-        12.0,
-        7.2,
-        17.1
+        9.7,
+        4.9,
+        14.6
       ],
       "gap": [
-        -5.4,
+        -5.2,
         -16.8,
-        6.1
+        6.4
       ]
     },
     {
@@ -11531,24 +11529,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        8.5,
-        5.6,
-        11.3
+        4.8,
+        2.0,
+        7.7
       ],
       "treatment": [
+        -1.7,
         -3.0,
-        -4.4,
-        -1.6
+        -0.5
       ],
       "length": [
-        0.3,
-        -3.6,
-        4.5
+        -1.5,
+        -5.4,
+        2.5
       ],
       "gap": [
-        8.8,
+        8.7,
         -2.8,
-        20.4
+        20.2
       ]
     },
     {
@@ -11559,19 +11557,19 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        -1.6,
-        -7.9,
-        4.7
+        -4.9,
+        -11.2,
+        1.5
       ],
       "treatment": [
-        0.6,
-        -2.5,
-        3.7
+        1.6,
+        -1.1,
+        4.4
       ],
       "length": [
-        3.7,
-        -8.4,
-        17.3
+        2.1,
+        -9.6,
+        15.3
       ],
       "gap": null
     },
@@ -11583,19 +11581,19 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        13.9,
-        10.3,
-        17.5
+        10.9,
+        7.3,
+        14.4
       ],
       "treatment": [
-        -1.3,
-        -3.0,
-        0.4
+        -2.8,
+        -4.6,
+        -0.9
       ],
       "length": [
-        -2.4,
-        -6.7,
-        2.1
+        0.5,
+        -3.8,
+        5.0
       ],
       "gap": null
     },
@@ -11607,19 +11605,19 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        1.2,
-        -3.0,
-        5.5
+        -2.1,
+        -6.2,
+        2.1
       ],
       "treatment": [
-        -3.7,
-        -5.8,
-        -1.6
+        -2.5,
+        -4.4,
+        -0.6
       ],
       "length": [
-        -4.1,
-        -8.6,
-        0.7
+        -5.7,
+        -10.1,
+        -1.0
       ],
       "gap": null
     },
@@ -11631,19 +11629,19 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        1.4,
-        -2.4,
-        5.2
+        -1.7,
+        -5.5,
+        2.1
       ],
       "treatment": [
-        -0.6,
-        -2.4,
-        1.3
+        0.2,
+        -1.4,
+        1.9
       ],
       "length": [
-        4.1,
-        -1.8,
-        10.4
+        2.4,
+        -3.4,
+        8.6
       ],
       "gap": null
     },
@@ -11655,24 +11653,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        -24.3,
-        -28.5,
-        -20.0
+        -13.4,
+        -17.3,
+        -9.5
       ],
       "treatment": [
-        -3.6,
-        -5.9,
-        -1.3
+        -3.9,
+        -6.2,
+        -1.5
       ],
       "length": [
-        -10.6,
-        -21.5,
-        1.7
+        -7.6,
+        -18.9,
+        5.2
       ],
       "gap": [
-        0.9,
-        -11.5,
-        13.2
+        3.6,
+        -7.7,
+        14.9
       ]
     },
     {
@@ -11683,24 +11681,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        -12.1,
-        -14.1,
-        -10.2
+        -2.9,
+        -4.7,
+        -1.1
       ],
       "treatment": [
-        5.7,
-        4.6,
-        6.8
+        2.0,
+        0.7,
+        3.2
       ],
       "length": [
-        -8.2,
-        -11.0,
-        -5.4
+        -4.4,
+        -7.3,
+        -1.4
       ],
       "gap": [
-        12.9,
-        7.8,
-        17.9
+        11.7,
+        7.0,
+        16.3
       ]
     },
     {
@@ -11711,24 +11709,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        5.6,
-        1.9,
-        9.3
+        1.8,
+        -1.9,
+        5.5
       ],
       "treatment": [
-        -1.1,
-        -3.0,
-        0.8
+        0.3,
+        -1.4,
+        1.9
       ],
       "length": [
-        13.2,
-        7.0,
-        19.7
+        11.1,
+        5.0,
+        17.5
       ],
       "gap": [
-        -13.5,
-        -29.8,
-        2.8
+        -12.2,
+        -28.5,
+        4.2
       ]
     },
     {
@@ -11739,19 +11737,19 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        10.5,
-        7.9,
-        13.2
+        7.1,
+        4.5,
+        9.7
       ],
       "treatment": [
-        -1.6,
-        -2.9,
-        -0.2
+        -0.3,
+        -1.5,
+        0.9
       ],
       "length": [
-        -0.7,
-        -4.5,
-        3.2
+        -2.6,
+        -6.3,
+        1.2
       ],
       "gap": null
     },
@@ -11763,24 +11761,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        1.7,
-        -2.3,
-        5.6
+        -0.2,
+        -4.1,
+        3.7
       ],
       "treatment": [
-        5.6,
-        3.0,
-        8.1
+        1.9,
+        -1.0,
+        4.7
       ],
       "length": [
-        -7.4,
-        -11.8,
-        -2.7
+        -3.2,
+        -7.8,
+        1.6
       ],
       "gap": [
-        3.7,
-        -4.9,
-        12.3
+        2.0,
+        -6.5,
+        10.4
       ]
     },
     {
@@ -11791,19 +11789,19 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        -3.6,
-        -8.6,
-        1.4
+        -6.8,
+        -11.8,
+        -1.8
       ],
       "treatment": [
-        2.2,
-        0.0,
-        4.4
+        3.0,
+        1.1,
+        5.0
       ],
       "length": [
-        -8.6,
-        -18.8,
-        2.8
+        -9.5,
+        -19.6,
+        1.9
       ],
       "gap": null
     },
@@ -11815,24 +11813,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        2.8,
-        -0.0,
-        5.6
+        1.4,
+        -1.4,
+        4.1
       ],
       "treatment": [
-        -1.7,
-        -3.2,
-        -0.2
+        -2.3,
+        -3.8,
+        -0.7
       ],
       "length": [
-        -5.2,
-        -9.4,
-        -0.8
+        -5.0,
+        -9.1,
+        -0.6
       ],
       "gap": [
-        9.7,
-        1.6,
-        17.8
+        9.1,
+        1.1,
+        17.1
       ]
     },
     {
@@ -11843,24 +11841,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        1.8,
-        -1.0,
-        4.6
+        -1.3,
+        -4.1,
+        1.5
       ],
       "treatment": [
-        0.6,
-        -0.9,
-        2.0
+        1.7,
+        0.4,
+        3.0
       ],
       "length": [
-        3.6,
-        -0.6,
-        8.0
+        2.0,
+        -2.1,
+        6.3
       ],
       "gap": [
-        21.4,
-        9.3,
-        33.6
+        23.0,
+        10.8,
+        35.2
       ]
     },
     {
@@ -11871,14 +11869,14 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        0.4,
-        -0.8,
-        1.6
+        -0.1,
+        -1.6,
+        1.4
       ],
       "treatment": [
-        -1.9,
-        -3.8,
-        0.0
+        -0.6,
+        -1.7,
+        0.5
       ],
       "length": null,
       "gap": null
@@ -11891,19 +11889,19 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        8.9,
-        2.0,
-        15.7
+        7.0,
+        0.2,
+        13.8
       ],
       "treatment": [
-        -1.2,
-        -5.2,
-        2.8
+        -1.8,
+        -5.9,
+        2.4
       ],
       "length": [
-        -2.5,
+        -2.4,
         -9.9,
-        5.5
+        5.8
       ],
       "gap": null
     },
@@ -11915,24 +11913,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        -13.7,
-        -16.7,
-        -10.6
+        -5.2,
+        -8.1,
+        -2.4
       ],
       "treatment": [
-        -0.4,
-        -2.1,
-        1.3
+        -3.1,
+        -5.0,
+        -1.2
       ],
       "length": [
-        -0.7,
-        -7.8,
-        6.9
+        3.6,
+        -3.7,
+        11.4
       ],
       "gap": [
-        7.8,
-        -0.3,
-        16.0
+        9.3,
+        1.8,
+        16.8
       ]
     },
     {
@@ -11943,24 +11941,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        -3.4,
-        -6.4,
-        -0.4
+        -6.0,
+        -8.9,
+        -3.1
       ],
       "treatment": [
-        2.3,
-        0.6,
-        4.0
+        0.3,
+        -1.5,
+        2.2
       ],
       "length": [
-        -5.1,
-        -8.9,
-        -1.0
+        -3.8,
+        -7.7,
+        0.2
       ],
       "gap": [
-        13.8,
-        6.7,
-        20.9
+        13.9,
+        6.9,
+        20.8
       ]
     },
     {
@@ -11971,24 +11969,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        4.2,
         1.5,
-        6.9
+        -1.2,
+        4.1
       ],
       "treatment": [
-        -1.3,
-        -2.8,
-        0.2
+        0.3,
+        -1.1,
+        1.6
       ],
       "length": [
-        -4.2,
-        -8.7,
-        0.4
+        -6.0,
+        -10.4,
+        -1.4
       ],
       "gap": [
-        6.9,
-        -8.9,
-        22.7
+        7.5,
+        -8.3,
+        23.3
       ]
     },
     {
@@ -11999,24 +11997,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        5.2,
-        2.4,
-        7.9
+        1.7,
+        -1.0,
+        4.5
       ],
       "treatment": [
-        -1.7,
-        -3.1,
-        -0.4
+        -0.7,
+        -1.9,
+        0.5
       ],
       "length": [
-        2.7,
-        -1.5,
-        7.1
+        0.9,
+        -3.2,
+        5.2
       ],
       "gap": [
-        0.9,
-        -12.7,
-        14.5
+        1.5,
+        -12.0,
+        15.1
       ]
     },
     {
@@ -12027,24 +12025,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        4.8,
-        2.3,
-        7.4
+        1.6,
+        -1.0,
+        4.1
       ],
       "treatment": [
-        -1.0,
-        -2.2,
-        0.2
+        -0.0,
+        -1.1,
+        1.1
       ],
       "length": [
-        4.4,
-        0.5,
-        8.4
+        2.7,
+        -1.1,
+        6.7
       ],
       "gap": [
-        24.5,
-        11.9,
-        37.0
+        24.6,
+        12.1,
+        37.1
       ]
     },
     {
@@ -12055,24 +12053,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        6.2,
-        3.1,
-        9.2
+        2.5,
+        -0.6,
+        5.5
       ],
       "treatment": [
-        -3.5,
-        -5.0,
-        -2.0
+        -2.3,
+        -3.6,
+        -1.0
       ],
       "length": [
-        0.4,
-        -3.8,
-        4.7
+        -1.5,
+        -5.6,
+        2.7
       ],
       "gap": [
-        21.3,
-        5.9,
-        36.7
+        23.3,
+        7.9,
+        38.6
       ]
     },
     {
@@ -12083,24 +12081,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        4.4,
-        1.8,
-        7.0
+        3.3,
+        0.7,
+        5.8
       ],
       "treatment": [
-        0.4,
-        -1.0,
-        1.8
+        -0.3,
+        -1.7,
+        1.2
       ],
       "length": [
-        -2.2,
-        -5.3,
-        1.1
+        -1.6,
+        -4.8,
+        1.6
       ],
       "gap": [
-        9.6,
-        1.8,
-        17.4
+        9.2,
+        1.5,
+        17.0
       ]
     },
     {
@@ -12111,19 +12109,19 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        7.1,
-        4.4,
-        9.9
+        3.5,
+        0.8,
+        6.3
       ],
       "treatment": [
-        -0.9,
-        -2.0,
-        0.3
+        -1.7,
+        -3.0,
+        -0.5
       ],
       "length": [
-        1.6,
-        -1.6,
-        4.9
+        2.6,
+        -0.5,
+        5.9
       ],
       "gap": null
     },
@@ -12135,24 +12133,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        -4.8,
-        -7.8,
-        -1.7
+        2.3,
+        -0.6,
+        5.2
       ],
       "treatment": [
-        -0.6,
-        -2.3,
-        1.0
+        -0.1,
+        -1.7,
+        1.4
       ],
       "length": [
-        0.7,
-        -4.3,
-        5.8
+        2.9,
+        -2.1,
+        8.2
       ],
       "gap": [
-        -0.6,
-        -12.1,
-        10.8
+        -0.9,
+        -11.8,
+        9.9
       ]
     },
     {
@@ -12163,19 +12161,19 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        -4.7,
-        -11.1,
-        1.7
+        -8.2,
+        -14.5,
+        -1.9
       ],
       "treatment": [
-        -2.0,
-        -5.0,
-        1.0
+        -3.6,
+        -7.0,
+        -0.2
       ],
       "length": [
-        -0.9,
-        -7.5,
-        6.2
+        -1.7,
+        -8.5,
+        5.6
       ],
       "gap": null
     },
@@ -12187,24 +12185,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        5.2,
-        2.6,
-        7.7
+        1.7,
+        -0.9,
+        4.3
       ],
       "treatment": [
-        3.6,
-        2.2,
-        5.0
+        5.0,
+        3.8,
+        6.2
       ],
       "length": [
-        5.8,
-        1.8,
-        9.9
+        3.7,
+        -0.2,
+        7.7
       ],
       "gap": [
-        6.3,
-        -4.7,
-        17.4
+        7.3,
+        -3.6,
+        18.2
       ]
     },
     {
@@ -12215,19 +12213,19 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        -4.4,
-        -11.4,
-        2.7
+        -7.1,
+        -14.1,
+        -0.1
       ],
       "treatment": [
-        -3.2,
-        -6.8,
-        0.5
+        -1.8,
+        -4.9,
+        1.3
       ],
       "length": [
-        2.7,
-        -6.0,
-        12.1
+        1.4,
+        -7.2,
+        10.7
       ],
       "gap": null
     },
@@ -12239,19 +12237,19 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        10.4,
-        2.1,
-        18.6
+        6.2,
+        -1.9,
+        14.3
       ],
       "treatment": [
-        0.2,
-        -3.9,
-        4.2
+        1.4,
+        -2.2,
+        4.9
       ],
       "length": [
-        -4.7,
-        -13.6,
-        5.2
+        -6.5,
+        -15.4,
+        3.3
       ],
       "gap": null
     },
@@ -12263,24 +12261,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        -5.7,
-        -9.8,
-        -1.7
+        5.7,
+        1.9,
+        9.4
       ],
       "treatment": [
-        3.7,
-        1.4,
-        5.9
+        2.6,
+        0.2,
+        5.0
       ],
       "length": [
-        -3.7,
-        -9.2,
-        2.2
+        -0.2,
+        -6.0,
+        5.8
       ],
       "gap": [
-        12.0,
-        1.1,
-        22.9
+        14.3,
+        4.3,
+        24.2
       ]
     },
     {
@@ -12291,19 +12289,19 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        5.1,
-        -0.2,
-        10.5
+        1.4,
+        -3.8,
+        6.7
       ],
       "treatment": [
-        -3.0,
-        -5.5,
-        -0.4
+        -1.8,
+        -4.1,
+        0.5
       ],
       "length": [
-        -0.0,
-        -6.0,
-        6.3
+        -2.0,
+        -7.9,
+        4.2
       ],
       "gap": null
     },
@@ -12315,24 +12313,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        -6.7,
-        -9.5,
-        -4.0
+        -0.4,
+        -3.1,
+        2.3
       ],
       "treatment": [
-        -0.8,
-        -2.2,
-        0.6
+        -0.3,
+        -1.7,
+        1.0
       ],
       "length": [
-        -1.1,
-        -6.2,
-        4.2
+        0.4,
+        -4.8,
+        5.7
       ],
       "gap": [
-        3.6,
-        -8.0,
-        15.3
+        4.8,
+        -6.6,
+        16.2
       ]
     },
     {
@@ -12343,24 +12341,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        -0.9,
-        -4.4,
-        2.5
+        -3.5,
+        -7.0,
+        -0.0
       ],
       "treatment": [
-        -2.5,
-        -4.6,
-        -0.4
+        -2.6,
+        -4.7,
+        -0.5
       ],
       "length": [
-        -4.5,
-        -8.7,
-        -0.2
+        -5.4,
+        -9.5,
+        -1.1
       ],
       "gap": [
-        6.6,
-        -1.8,
-        15.0
+        5.0,
+        -3.4,
+        13.5
       ]
     },
     {
@@ -12371,24 +12369,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        3.5,
-        1.1,
-        5.9
+        0.2,
+        -2.2,
+        2.6
       ],
       "treatment": [
-        -2.2,
-        -3.5,
-        -1.0
+        -1.0,
+        -2.1,
+        0.1
       ],
       "length": [
-        0.1,
-        -4.5,
-        4.8
+        -1.8,
+        -6.3,
+        2.8
       ],
       "gap": [
-        -3.3,
-        -13.2,
-        6.6
+        -2.3,
+        -12.2,
+        7.5
       ]
     },
     {
@@ -12399,24 +12397,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        -9.6,
-        -12.1,
-        -7.1
+        0.6,
+        -1.7,
+        2.8
       ],
       "treatment": [
-        -1.6,
-        -2.9,
-        -0.3
+        -2.5,
+        -3.9,
+        -1.1
       ],
       "length": [
-        -0.9,
-        -7.0,
-        5.5
+        3.0,
+        -3.2,
+        9.5
       ],
       "gap": [
-        4.9,
-        -2.1,
-        11.9
+        6.3,
+        -0.2,
+        12.8
       ]
     },
     {
@@ -12427,13 +12425,13 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        -1.5,
-        -4.1,
-        1.1
+        -0.8,
+        -2.9,
+        1.3
       ],
       "treatment": [
-        -0.8,
-        -2.5,
+        -0.7,
+        -2.2,
         0.8
       ],
       "length": null,
@@ -12447,24 +12445,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        -8.2,
-        -12.6,
-        -3.9
+        1.6,
+        -2.4,
+        5.5
       ],
       "treatment": [
-        2.2,
-        -0.0,
-        4.5
+        -1.3,
+        -3.9,
+        1.4
       ],
       "length": [
+        -7.6,
         -12.3,
-        -17.0,
-        -7.4
+        -2.6
       ],
       "gap": [
-        12.7,
-        1.9,
-        23.6
+        9.6,
+        -0.3,
+        19.5
       ]
     },
     {
@@ -12475,24 +12473,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        1.5,
-        -1.0,
-        3.9
+        -0.2,
+        -2.6,
+        2.3
       ],
       "treatment": [
-        0.5,
-        -0.9,
-        1.8
+        -0.1,
+        -1.5,
+        1.4
       ],
       "length": [
-        3.7,
-        -0.0,
-        7.6
+        4.2,
+        0.4,
+        8.2
       ],
       "gap": [
-        1.8,
-        -5.8,
-        9.3
+        1.2,
+        -6.3,
+        8.6
       ]
     },
     {
@@ -12503,24 +12501,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        -5.8,
-        -9.2,
-        -2.4
+        -8.9,
+        -12.3,
+        -5.5
       ],
       "treatment": [
-        -0.9,
-        -2.8,
-        1.1
+        0.6,
+        -1.1,
+        2.4
       ],
       "length": [
-        -6.2,
-        -11.4,
-        -0.6
+        -7.9,
+        -13.1,
+        -2.4
       ],
       "gap": [
-        -2.7,
-        -17.7,
-        12.4
+        -1.4,
+        -16.5,
+        13.8
       ]
     },
     {
@@ -12531,20 +12529,20 @@
       "specialty": true,
       "limited": false,
       "prison": [
-        -17.0,
-        -21.3,
-        -12.8
+        -10.0,
+        -13.8,
+        -6.2
       ],
       "treatment": [
-        18.1,
-        15.5,
-        20.7
+        16.3,
+        13.3,
+        19.3
       ],
       "length": null,
       "gap": [
-        0.3,
-        -11.0,
-        11.5
+        0.4,
+        -9.6,
+        10.3
       ]
     },
     {
@@ -12555,24 +12553,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        3.7,
-        1.1,
-        6.3
+        0.4,
+        -2.2,
+        3.0
       ],
       "treatment": [
-        -1.7,
-        -3.0,
-        -0.4
+        -0.7,
+        -1.8,
+        0.5
       ],
       "length": [
-        3.8,
-        0.1,
-        7.6
+        2.1,
+        -1.6,
+        5.9
       ],
       "gap": [
-        -2.7,
-        -16.2,
-        10.8
+        -2.2,
+        -15.5,
+        11.0
       ]
     },
     {
@@ -12583,24 +12581,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        7.8,
-        5.1,
-        10.4
+        4.4,
+        1.8,
+        7.1
       ],
       "treatment": [
-        1.6,
-        0.2,
-        3.0
+        2.6,
+        1.4,
+        3.9
       ],
       "length": [
-        -3.4,
-        -6.8,
-        0.2
+        -5.0,
+        -8.3,
+        -1.5
       ],
       "gap": [
-        16.2,
-        0.9,
-        31.6
+        16.9,
+        1.6,
+        32.3
       ]
     },
     {
@@ -12611,24 +12609,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        -2.0,
-        -5.2,
-        1.1
+        6.5,
+        3.6,
+        9.4
       ],
       "treatment": [
-        3.7,
-        2.0,
-        5.4
+        0.8,
+        -1.1,
+        2.7
       ],
       "length": [
-        -4.4,
-        -8.4,
-        -0.3
+        -0.4,
+        -4.5,
+        3.9
       ],
       "gap": [
-        4.9,
-        -3.4,
-        13.1
+        2.9,
+        -4.7,
+        10.6
       ]
     },
     {
@@ -12639,24 +12637,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        0.8,
-        -1.6,
-        3.3
+        -1.2,
+        -3.6,
+        1.2
       ],
       "treatment": [
-        2.1,
-        0.6,
-        3.6
+        -0.8,
+        -2.4,
+        0.8
       ],
       "length": [
-        -4.4,
-        -7.8,
-        -0.9
+        -1.1,
+        -4.5,
+        2.4
       ],
       "gap": [
-        5.3,
-        -0.1,
-        10.8
+        3.9,
+        -1.4,
+        9.2
       ]
     },
     {
@@ -12667,24 +12665,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        -1.6,
-        -4.7,
-        1.5
+        -4.1,
+        -7.2,
+        -1.1
       ],
       "treatment": [
-        3.2,
-        1.3,
-        5.0
+        0.8,
+        -1.2,
+        2.7
       ],
       "length": [
-        -7.8,
-        -11.6,
-        -3.8
+        -5.2,
+        -9.2,
+        -1.1
       ],
       "gap": [
-        0.6,
-        -6.4,
-        7.7
+        0.3,
+        -6.6,
+        7.2
       ]
     },
     {
@@ -12695,19 +12693,19 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        1.6,
-        -2.4,
-        5.5
+        -2.0,
+        -5.9,
+        2.0
       ],
       "treatment": [
-        -1.6,
-        -3.4,
-        0.3
+        -0.6,
+        -2.3,
+        1.0
       ],
       "length": [
-        7.1,
-        0.3,
-        14.2
+        4.9,
+        -1.7,
+        11.9
       ],
       "gap": null
     },
@@ -12719,9 +12717,9 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        8.7,
-        5.9,
-        11.5
+        5.3,
+        2.5,
+        8.1
       ],
       "treatment": [
         -2.7,
@@ -12729,9 +12727,9 @@
         -1.3
       ],
       "length": [
-        -0.7,
-        -4.1,
-        2.7
+        -0.8,
+        -4.0,
+        2.5
       ],
       "gap": null
     },
@@ -12743,24 +12741,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        4.9,
-        2.3,
-        7.5
+        1.4,
+        -1.2,
+        4.0
       ],
       "treatment": [
-        -2.1,
-        -3.4,
-        -0.8
+        -0.7,
+        -1.8,
+        0.4
       ],
       "length": [
-        -1.0,
-        -4.3,
-        2.3
+        -2.9,
+        -6.1,
+        0.4
       ],
       "gap": [
-        8.9,
-        -2.7,
-        20.5
+        9.5,
+        -2.2,
+        21.1
       ]
     },
     {
@@ -12771,19 +12769,19 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        -10.8,
-        -15.0,
-        -6.7
+        -4.2,
+        -8.1,
+        -0.2
       ],
       "treatment": [
-        0.1,
-        -1.8,
-        2.1
+        0.8,
+        -1.0,
+        2.5
       ],
       "length": [
-        0.3,
-        -7.1,
-        8.4
+        2.4,
+        -5.2,
+        10.6
       ],
       "gap": null
     },
@@ -12795,24 +12793,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        -0.7,
-        -4.3,
-        2.9
+        -2.6,
+        -6.2,
+        1.0
       ],
       "treatment": [
-        0.4,
-        -1.7,
-        2.5
+        -0.0,
+        -2.2,
+        2.1
       ],
       "length": [
-        1.5,
-        -5.5,
-        9.1
+        0.8,
+        -6.1,
+        8.3
       ],
       "gap": [
-        14.7,
-        5.9,
-        23.4
+        13.7,
+        5.0,
+        22.4
       ]
     },
     {
@@ -12823,23 +12821,23 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        1.7,
-        -0.7,
-        4.0
+        -1.6,
+        -3.9,
+        0.8
       ],
       "treatment": [
-        -2.1,
-        -3.4,
-        -0.8
+        -0.8,
+        -1.9,
+        0.3
       ],
       "length": [
-        1.0,
-        -3.1,
-        5.2
+        -1.2,
+        -5.2,
+        2.9
       ],
       "gap": [
-        10.9,
-        1.1,
+        11.0,
+        1.3,
         20.7
       ]
     },
@@ -12851,19 +12849,19 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        1.6,
-        -3.5,
-        6.6
+        -1.4,
+        -6.5,
+        3.7
       ],
       "treatment": [
-        -3.1,
-        -5.5,
-        -0.6
+        -2.1,
+        -4.3,
+        0.1
       ],
       "length": [
-        7.3,
-        -1.8,
-        17.1
+        5.4,
+        -3.5,
+        15.0
       ],
       "gap": null
     },
@@ -12875,24 +12873,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        4.1,
-        1.7,
-        6.5
+        0.6,
+        -1.8,
+        3.0
       ],
       "treatment": [
-        -2.4,
-        -3.6,
-        -1.2
+        -1.2,
+        -2.2,
+        -0.1
       ],
       "length": [
-        8.1,
-        4.2,
-        12.1
+        6.0,
+        2.2,
+        10.0
       ],
       "gap": [
-        1.6,
-        -8.2,
-        11.5
+        2.5,
+        -7.3,
+        12.4
       ]
     },
     {
@@ -12903,19 +12901,19 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        11.3,
-        7.9,
-        14.8
+        7.5,
+        4.1,
+        10.9
       ],
       "treatment": [
+        0.2,
         -1.4,
-        -3.2,
-        0.4
+        1.7
       ],
       "length": [
-        4.5,
-        0.3,
-        8.9
+        2.5,
+        -1.6,
+        6.8
       ],
       "gap": null
     },
@@ -12927,24 +12925,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        5.6,
-        2.9,
-        8.4
+        2.2,
+        -0.5,
+        5.0
       ],
       "treatment": [
-        -1.2,
-        -2.6,
-        0.1
+        -0.2,
+        -1.4,
+        1.0
       ],
       "length": [
-        1.1,
-        -3.5,
-        5.9
+        -0.6,
+        -5.1,
+        4.1
       ],
       "gap": [
-        20.7,
-        7.6,
-        33.9
+        22.2,
+        8.7,
+        35.6
       ]
     },
     {
@@ -12955,23 +12953,23 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        3.0,
-        -0.0,
-        6.1
+        -0.3,
+        -3.3,
+        2.8
       ],
       "treatment": [
-        1.6,
-        0.1,
-        3.2
+        2.7,
+        1.4,
+        4.1
       ],
       "length": [
-        4.8,
-        0.0,
-        9.9
+        2.6,
+        -2.1,
+        7.5
       ],
       "gap": [
         -0.3,
-        -15.1,
+        -15.2,
         14.5
       ]
     },
@@ -12983,19 +12981,19 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        5.6,
         2.0,
-        9.2
+        -1.6,
+        5.6
       ],
       "treatment": [
-        -2.7,
-        -4.4,
-        -1.0
+        -1.5,
+        -3.1,
+        -0.0
       ],
       "length": [
-        -0.3,
-        -7.8,
-        7.7
+        -2.1,
+        -9.4,
+        5.8
       ],
       "gap": null
     },
@@ -13007,24 +13005,24 @@
       "specialty": false,
       "limited": false,
       "prison": [
-        11.7,
-        6.7,
-        16.8
+        9.2,
+        4.2,
+        14.2
       ],
       "treatment": [
-        -1.2,
-        -4.0,
-        1.5
+        -1.7,
+        -4.5,
+        1.2
       ],
       "length": [
-        18.3,
-        11.8,
-        25.2
+        16.9,
+        10.5,
+        23.6
       ],
       "gap": [
-        -3.2,
-        -18.9,
-        12.4
+        -4.2,
+        -19.7,
+        11.2
       ]
     },
     {
@@ -13035,14 +13033,14 @@
       "specialty": true,
       "limited": true,
       "prison": [
-        -40.3,
-        -55.2,
-        -25.4
+        -29.6,
+        -43.4,
+        -15.7
       ],
       "treatment": [
-        25.2,
-        15.7,
-        34.7
+        26.4,
+        17.4,
+        35.5
       ],
       "length": null,
       "gap": null
@@ -13055,14 +13053,14 @@
       "specialty": true,
       "limited": true,
       "prison": [
-        -26.3,
-        -38.0,
-        -14.5
+        -10.7,
+        -21.5,
+        0.0
       ],
       "treatment": [
-        24.6,
-        17.9,
-        31.3
+        21.5,
+        13.7,
+        29.2
       ],
       "length": null,
       "gap": null

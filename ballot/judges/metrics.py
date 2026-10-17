@@ -3,12 +3,13 @@
 Input is the common sentencing schema that every adapter produces, one row per
 defendant per case:
     judge, sentence_date, offense_class, offense_category (may be NaN), race,
-    prison (bool), treatment (bool), prison_months (NaN unless a prison term)
+    prison (bool), treatment (bool), prison_months (NaN unless a prison term),
+    place (optional: courthouse or other venue, may be NaN)
 
 Each judge is compared against what the whole court would be expected to do
 with the same mix of cases (indirect standardization). Cases are grouped by
-offense class x offense category, falling back to class alone when a group is
-too small. A judge whose cases are mostly murders isn't "harsh" just because
+courthouse x offense class x offense category, falling back to class x category
+countywide, then class alone, when a group is too small. A judge whose cases are mostly murders isn't "harsh" just because
 their prison rate is high.
 
 Known limits: no criminal-history control (most sources lack it), plea deals
@@ -28,12 +29,21 @@ SPECIALTY_TREATMENT_SHARE = 0.2
 Z = 1.96
 
 
-def _stratum_baseline(df: pd.DataFrame, value: pd.Series) -> pd.Series:
+# Comparable-case groups, finest first. A row uses the first group with enough cases.
+STRATA = [["place", "offense_class", "offense_category"], ["offense_class", "offense_category"], ["offense_class"]]
+
+
+def _stratum_baseline(df: pd.DataFrame, value: pd.Series, strata=STRATA) -> pd.Series:
     """Court-wide mean of `value` for each row's comparable cases."""
-    fine = value.groupby([df.offense_class, df.offense_category]).transform("mean")
-    fine_n = value.groupby([df.offense_class, df.offense_category]).transform("count")
-    coarse = value.groupby(df.offense_class).transform("mean")
-    return fine.where(fine_n >= MIN_STRATUM, coarse).fillna(coarse)
+    out = pd.Series(np.nan, index=df.index)
+    for keys in strata:
+        if not all(k in df for k in keys):
+            continue
+        groups = value.groupby([df[k] for k in keys])
+        mean, n = groups.transform("mean"), groups.transform("count")
+        out = out.fillna(mean.where(n >= MIN_STRATUM))
+    # Last resort, so every row with a value has an expectation.
+    return out.fillna(value.groupby(df.offense_class).transform("mean"))
 
 
 def _excess_rate(observed: pd.Series, expected: pd.Series) -> dict:
@@ -45,12 +55,12 @@ def _excess_rate(observed: pd.Series, expected: pd.Series) -> dict:
             "diff": diff, "lo": diff - Z * se, "hi": diff + Z * se}
 
 
-def add_baselines(df: pd.DataFrame) -> pd.DataFrame:
+def add_baselines(df: pd.DataFrame, strata=STRATA) -> pd.DataFrame:
     df = df.copy()
-    df["exp_prison"] = _stratum_baseline(df, df.prison.astype(float))
-    df["exp_treatment"] = _stratum_baseline(df, df.treatment.astype(float))
+    df["exp_prison"] = _stratum_baseline(df, df.prison.astype(float), strata)
+    df["exp_treatment"] = _stratum_baseline(df, df.treatment.astype(float), strata)
     log_months = np.log(df.prison_months)
-    df["log_len_resid"] = log_months - _stratum_baseline(df, log_months)
+    df["log_len_resid"] = log_months - _stratum_baseline(df, log_months, strata)
     return df
 
 
@@ -93,13 +103,14 @@ def judge_profile(cases: pd.DataFrame) -> dict:
     return profile
 
 
-def all_profiles(df: pd.DataFrame, since: str, judges=None, min_cases: int = MIN_CASES) -> list[dict]:
+def all_profiles(df: pd.DataFrame, since: str, judges=None, min_cases: int = MIN_CASES,
+                 strata=STRATA) -> list[dict]:
     """Profiles for every judge (or just `judges`) with at least `min_cases`
     sentences on or after `since`.
 
     Baselines use every judge in the window, so judges are compared to their contemporaries.
     """
-    window = add_baselines(df[df.sentence_date >= since])
+    window = add_baselines(df[df.sentence_date >= since], strata)
     counts = window.judge.value_counts()
     eligible = counts[counts >= min_cases].index
     if judges is not None:

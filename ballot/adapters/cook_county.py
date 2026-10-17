@@ -90,6 +90,12 @@ def load(path: Path) -> pd.DataFrame:
     category = df.updated_offense_category.where(df.updated_offense_category != "PROMIS Conversion")
     df["offense_category"] = category
 
+    # Where the case was heard and which Chicago police district made the arrest. Felony
+    # courtrooms take cases from fixed geographic districts, so these shape a judge's docket.
+    df["place"] = df.court_facility.str.strip().replace({"PROMIS": None})
+    df["police_district"] = df.unit.where(
+        (df.law_enforcement_agency == "CHICAGO PD") & df.unit.str.startswith("District", na=False))
+
     df["race"] = df.race.map(_RACE).fillna("Other/Unknown")
     df["prison"] = df.sentence_type == "Prison"
     df["treatment"] = df.commitment_type.isin(_TREATMENT) | df.sentence_type.isin(_TREATMENT)
@@ -108,5 +114,6 @@ def load(path: Path) -> pd.DataFrame:
         [
             "case_id", "judge", "sentence_date", "offense_class", "offense_category",
             "race", "prison", "treatment", "prison_months", "life_sentence", "court_name",
+            "place", "police_district",
         ]
     ].reset_index(drop=True)
