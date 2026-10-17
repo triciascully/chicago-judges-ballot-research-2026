@@ -188,7 +188,7 @@ FLAG_PATTERNS = {
     # counts judges with sentencing records (see ballot.build_ballot_report).
     "criminal_bench": ("bench_experience",
                        r"criminal|felony|felonies|misdemeanor|juvenile justice|delinquen|domestic violence"
-                       r"|preliminary hearing|narcotics|bond court|pretrial division|first appearance"),
+                       r"|preliminary hearing|narcotics|bond court|pre-?trial division|first appearance"),
     "treatment_court": ("bench_experience",
                         r"mental health|drug court|drug treatment|veteran|problem[- ]solving|treatment court"),
 }
@@ -222,7 +222,11 @@ def flag_evidence(extraction: dict, text: str) -> dict[str, list[str]]:
     def quotes(items: list[dict], keep) -> list[str]:
         return list(dict.fromkeys(i["evidence"] for i in items if is_grounded(i["evidence"], text) and keep(i)))
 
-    evidence = {flag: quotes(extraction[field], lambda i, p=pattern: re.search(p, normalize(i["evidence"])))
+    # The model sometimes puts a bench assignment only in current_assignment ("Pre-trial Division"),
+    # so that counts as bench evidence too, under the same verbatim and wording checks.
+    fields = {**extraction, "bench_experience": extraction["bench_experience"]
+              + ([{"evidence": extraction["current_assignment"]}] if extraction.get("current_assignment") else [])}
+    evidence = {flag: quotes(fields[field], lambda i, p=pattern: re.search(p, normalize(i["evidence"])))
                 for flag, (field, pattern) in FLAG_PATTERNS.items()}
     evidence["has_criticism"] = quotes(
         extraction["attorney_feedback"],
@@ -235,9 +239,9 @@ def derive_flags(extraction: dict, text: str) -> dict[str, bool]:
     return {flag: bool(quotes) for flag, quotes in flag_evidence(extraction, text).items()}
 
 
-def output_path(backend_name: str) -> Path:
+def output_path(backend_name: str, open_seats: bool = False) -> Path:
     from ballot.build_judge_profiles import OUT
-    return OUT / f"isba_extractions_{backend_name}.json"
+    return OUT / f"isba_extractions_{backend_name}{'_open_seats' if open_seats else ''}.json"
 
 
 def main() -> None:
@@ -247,17 +251,20 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--backend", choices=BACKENDS, default="llama")
     parser.add_argument("--limit", type=int, help="only the first N judges (for a quick test)")
+    parser.add_argument("--open-seats", action="store_true",
+                        help="the open-seat candidates' evaluations instead of the retention judges'")
     args = parser.parse_args()
     backend = BACKENDS[args.backend]()
 
-    ratings = cook_bar_ratings.load(RAW.parent / "bar_ratings")
+    ratings = (cook_bar_ratings.load_contested if args.open_seats else cook_bar_ratings.load)(RAW.parent / "bar_ratings")
     isba = ratings[ratings.source == "Illinois State Bar Association"].head(args.limit)
     evaluations = dict(zip(isba.name, isba.summary))
 
     extractions = extract_all(evaluations, OUT / "cache" / f"isba_extractions_{backend.name}.json", backend)
     rows = [{"name": n, "flags": derive_flags(e, evaluations[n]), "extraction": e} for n, e in extractions.items()]
-    output_path(backend.name).write_text(json.dumps({"model": backend.model, "judges": rows}, indent=2))
-    print(f"{backend.model}: {len(rows)} judges -> {output_path(backend.name)}")
+    out = output_path(backend.name, args.open_seats)
+    out.write_text(json.dumps({"model": backend.model, "judges": rows}, indent=2))
+    print(f"{backend.model}: {len(rows)} judges -> {out}")
 
     import pandas as pd
     table = pd.DataFrame([{"name": r["name"], **r["flags"]} for r in rows])

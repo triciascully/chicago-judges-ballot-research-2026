@@ -181,6 +181,8 @@ details.more > div { margin-top: 0.6rem; display: grid; gap: 0.5rem; }
 .choice span.on::before { background: var(--ink); border-color: var(--ink); }
 .sheet-empty { font: 400 0.95rem var(--sans); color: var(--muted); padding: 1rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
 .sheet-foot { font: 400 0.8rem/1.5 var(--sans); color: var(--muted); }
+.sheet-h { font: 700 0.8rem var(--sans); letter-spacing: 0.04em; text-transform: uppercase; margin: 1rem 0 0.25rem; }
+.os-group { font: 700 0.8rem var(--sans); letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); margin: 1.4rem 0 0.2rem; }
 
 /* Printing shows only the choices sheet. */
 @media print {
@@ -228,9 +230,9 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
 <div class="wrap">
   <header>
     <nav class="topnav"><a href="about.html">About this project</a></nav>
-    <div class="eyebrow">Cook County judicial retention · Nov. 3, 2026</div>
-    <h1>What the record shows about the 61 judges on your ballot</h1>
-    <p class="lede">Every Cook County voter decides whether these sitting judges keep their seats. Here is what sentencing records, bar associations, campaign filings and the attorneys who appear before them say about each one, with the source for every claim.</p>
+    <div class="eyebrow">Cook County judges · Nov. 3, 2026</div>
+    <h1>What the record shows about the judges on your ballot</h1>
+    <p class="lede">Every Cook County voter decides whether 61 sitting judges keep their seats, and votes for new judges in open-seat races. <a href="#open-seats">Jump to the open seats</a>. Here is what sentencing records, bar associations, campaign filings and the attorneys who appear before them say about each one, with the source for every claim.</p>
     <p class="dateline">Compiled from public records: Cook County State's Attorney sentencing data, bar association evaluations and Illinois State Board of Elections filings. Updated <span data-built></span>.</p>
     <div class="howto">
       <div><strong>Yes or No, judge by judge</strong><span>Each judge is a separate question. You can vote on any or all of them.</span></div>
@@ -320,12 +322,22 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
 
   <section class="list" id="list" aria-live="polite"></section>
 
+  <section class="compare" id="open-seats" aria-labelledby="open-h">
+    <h2 id="open-h">Open seats: new judges</h2>
+    <p class="intro">Above the retention questions, your ballot lists races for empty judgeships. Everyone in Cook County votes on the appellate and countywide seats; each voter sees only one subcircuit's races (your sample ballot names your subcircuit). Every candidate won the March Democratic primary and no other party fielded a candidate, so each is unopposed. You can vote for the candidate or leave the race blank.</p>
+    <div class="chart-controls">
+      <label for="os-district">Show</label><select id="os-district"></select>
+      <span class="count" id="os-count"></span>
+    </div>
+    <div class="list" id="os-list"></div>
+  </section>
+
   <section class="my-ballot" id="my-ballot" aria-labelledby="my-ballot-h">
     <div class="sheet-head">
       <h2 id="my-ballot-h">My ballot choices</h2>
-      <p class="sheet-sub">Cook County judicial retention · General election, Nov. 3, 2026</p>
+      <p class="sheet-sub">Cook County judges · General election, Nov. 3, 2026</p>
     </div>
-    <p class="note screen-only">Mark Yes or No beside any judge in the list above. Your choices stay in this browser; nothing is sent anywhere. Bring this list to the polls and use the ballot numbers to find each judge.</p>
+    <p class="note screen-only">Mark Yes or No beside any retention judge, or Vote or Blank beside an open-seat candidate. Your choices stay in this browser; nothing is sent anywhere. Bring this list to the polls and use the ballot numbers to find each judge.</p>
     <div class="sheet-controls screen-only">
       <button type="button" class="btn primary" id="print-btn">Print my ballot choices</button>
       <button type="button" class="btn" id="copy-btn">Copy as text</button>
@@ -335,7 +347,7 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
     <p class="note screen-only" id="print-note" hidden>Printing isn't available in this preview. Copy your choices or take a screenshot, or print from the shared website.</p>
     <p class="note" id="copy-status" role="status"></p>
     <div id="sheet"></div>
-    <p class="sheet-foot">A judge needs at least 60% Yes votes to stay. Leaving a judge blank is not the same as voting No.</p>
+    <p class="sheet-foot">Ballot numbers for subcircuit races repeat across subcircuits; your sample ballot shows yours. A retention judge needs at least 60% Yes votes to stay. Leaving a judge blank is not the same as voting No.</p>
   </section>
 
   <section class="method" id="method">
@@ -349,6 +361,7 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
       <li><strong>Background and attorney criticism</strong> are quotes from each judge's ISBA evaluation. A local AI model pulled them out, and code accepts a quote only if it appears word for word in the evaluation. Checked against 30 hand-labeled evaluations, it made no false claims; it occasionally misses an assignment.</li>
       <li><strong>Appellate track record</strong> comes from every Illinois Appellate Court decision since 2015 in CourtListener's bulk data (Free Law Project), matched to judges by the name in each decision's caption. It counts how often the appeals court changed a ruling at least in part, compared with the countywide rate for the same case types. Only appealed cases are included.</li>
       <li><strong>Campaign money</strong> comes from the Illinois State Board of Elections and covers each judge's own committee since 2020. The page shows totals and donors' employers but not individual donors' names.</li>
+      <li><strong>Open-seat candidates</strong> come from the Chicago Bar Association's general-election guide, which also gives ballot numbers. Their ratings use each group's own scale (Qualified, Highly Qualified, Not Recommended and so on). The Alliance rates candidates who skip its evaluation "Not Recommended," so a solid row of those usually means the candidate didn't take part. Campaign money comes from each candidate's own committees, matched by name and checked against the committee's name. Most candidates aren't judges yet, so there's no sentencing or appellate record to show.</li>
       <li><strong>Nothing here is an endorsement.</strong> The page shows what the records say. How to weigh them is up to you.</li>
     </ul>
   </section>
@@ -374,7 +387,8 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
   document.querySelectorAll("[data-built]").forEach((e) => (e.textContent = DATA.built));
   document.querySelector('[data-src="sao"]').href = DATA.source;
 
-  const barNo = (j) => j.bar_ratings.some((r) => r.rating === "No" || r.rating === "Not Recommended" || /say no/.test(r.rating));
+  const barNo = (j) => j.bar_ratings.some((r) => /^(No|Not )/.test(r.rating) || /say (no|not)/.test(r.rating));
+  const openSeats = DATA.open_seats || [];
   const hasRecord = (j) => j.sentencing.status !== "no record";
 
   function chips(j) {
@@ -491,6 +505,31 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
       </div>`;
   }
 
+  function openProfileHTML(c) {
+    const ratings = c.bar_ratings.map((r) => `<div class="rating"><b>${esc(r.source)}</b><span>${esc(r.rating)}</span></div>`).join("");
+    const bg = c.background.map((b) => `<div class="bg-item"><strong>${esc(b.label)}</strong>${b.evidence.map((q) => `<blockquote>${esc(q)}</blockquote>`).join("")}</div>`).join("");
+    const crit = c.attorney_criticism.map((q) => `<blockquote>${esc(q)}</blockquote>`).join("");
+    return `
+      <div class="profile">
+        <div class="section"><h3>Bar association ratings</h3>${ratings || '<p class="note">Not found in any bar rating source.</p>'}</div>
+        <div class="section"><h3>Campaign money since 2020</h3>${c.campaign ? campaignHTML(c.campaign).replace(/this judge's/g, "this candidate's").replace("Judge's own money", "Candidate's own money") : '<p class="note">No campaign committee contributions found in Illinois State Board of Elections filings.</p>'}</div>
+        ${c.sentencing ? `<div class="section"><h3>Sentencing record</h3>${sentencingHTML(c.sentencing)}</div>` : ""}
+        ${bg ? `<div class="section"><h3>Career background (ISBA)</h3>${bg}</div>` : ""}
+        ${crit ? `<div class="section"><h3>Attorney criticism (ISBA)</h3>${crit}</div>` : ""}
+        ${c.isba_evaluation ? `<div class="section"><h3>ISBA evaluation</h3><p>${esc(c.isba_evaluation)}</p></div>` : ""}
+        ${c.injustice_watch_url ? `<div class="section"><h3>Reporting on this candidate</h3><p class="note"><a href="${esc(c.injustice_watch_url)}">Injustice Watch's guide to ${esc(c.name)}</a>: independent newsroom reporting, including the candidate's survey answers.</p></div>` : ""}
+      </div>`;
+  }
+  function openChips(c) {
+    const out = [];
+    if (!c.bar_ratings.length) out.push('<span class="chip quiet">No bar ratings found</span>');
+    else if (barNo(c)) out.push(`<span class="chip flag">${esc(c.bar_ratings.filter((r) => /^(No|Not )|say (no|not)/.test(r.rating)).map((r) => `${r.source.startsWith("Alliance") ? "Alliance" : r.source.startsWith("Illinois") ? "ISBA" : "CBA"}: ${r.rating.replace(/ \(.*\)/, "")}`).join(" · "))}</span>`);
+    else out.push('<span class="chip">All bar groups rate qualified</span>');
+    if (c.attorney_criticism.length) out.push('<span class="chip flag">Criticized by attorneys</span>');
+    if (c.sentencing) out.push(`<span class="chip">${c.sentencing.n_sentences.toLocaleString()} sentences on record</span>`);
+    return out.join("");
+  }
+
   const list = $("#list");
   list.innerHTML = judges.map((j, i) => `
     <details class="judge" id="${j.ballot_number ? "b" + j.ballot_number : "j" + i}" data-i="${i}">
@@ -508,48 +547,91 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
       </summary>
     </details>`).join("");
 
+  const DISTRICT_ORDER = (d) => d.startsWith("Appellate") ? 0 : d === "Countywide" ? 1 : 1 + parseInt(d, 10);
+  const districts = [...new Set(openSeats.map((c) => c.district))].sort((a, b) => DISTRICT_ORDER(a) - DISTRICT_ORDER(b));
+  const osList = $("#os-list");
+  if (!openSeats.length) $("#open-seats").hidden = true;
+  osList.innerHTML = districts.map((d) => `<h3 class="os-group" data-d="${esc(d)}">${esc(d.startsWith("Appellate") ? d + " (all Cook County voters)" : d === "Countywide" ? "Circuit Court, countywide (all Cook County voters)" : "Circuit Court, " + d)}</h3>` +
+    openSeats.map((c, i) => [c, i]).filter(([c]) => c.district === d).map(([c, i]) => `
+    <details class="judge os" data-os="${i}" data-d="${esc(d)}">
+      <summary>
+        <span class="num">${c.ballot_number}</span>
+        <span class="who">
+          <span class="name">${esc(c.name)}</span>
+          <span class="assign">${esc(c.seat)}${c.party ? " · " + esc(c.party) : ""}</span>
+          <span class="chips">${openChips(c)}</span>
+        </span>
+        <span class="vote" role="group" aria-label="Your choice for ${esc(c.name)}">
+          <button type="button" class="opt" data-v="vote" aria-pressed="false">Vote</button>
+          <button type="button" class="opt" data-v="blank" aria-pressed="false">Blank</button>
+        </span>
+      </summary>
+    </details>`).join("")).join("");
+  $("#os-district").innerHTML = `<option value="">All races</option><option value="__county">Appellate and countywide only</option>` +
+    districts.filter((d) => d.endsWith("Subcircuit")).map((d) => `<option value="${esc(d)}">Countywide + ${esc(d)}</option>`).join("");
+  function applyOpen() {
+    const v = $("#os-district").value;
+    const show = (d) => !v || d.startsWith("Appellate") || d === "Countywide" || (v !== "__county" && d === v);
+    let n = 0;
+    osList.querySelectorAll("[data-d]").forEach((el) => { el.hidden = !show(el.dataset.d); if (!el.hidden && el.dataset.os) n++; });
+    $("#os-count").textContent = `Showing ${n} of ${openSeats.length} candidates`;
+  }
+  $("#os-district").addEventListener("change", applyOpen);
+  applyOpen();
+
   // Ballot choices: kept only in this browser (localStorage), never sent anywhere.
   const KEY = "cook-2026-retention-choices";
   let choices = {};
   try { choices = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { choices = {}; }
   const save = () => { try { localStorage.setItem(KEY, JSON.stringify(choices)); } catch (e) { /* private mode: keep in memory */ } };
   const keyOf = (j) => String(j.ballot_number ?? j.name);
+  const osKey = (c) => "open:" + c.name;  // subcircuit ballot numbers repeat, so key by name
+  const rowKey = (el) => el.dataset.os !== undefined ? osKey(openSeats[+el.dataset.os]) : keyOf(judges[+el.dataset.i]);
 
   function paintRow(el) {
-    const j = judges[+el.dataset.i], v = choices[keyOf(j)];
+    const v = choices[rowKey(el)];
     el.querySelectorAll(".opt").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.v === v)));
   }
-  list.addEventListener("click", (e) => {
+  const onVote = (e) => {
     const b = e.target.closest(".opt");
     if (!b) return;
     e.preventDefault(); e.stopPropagation();  // don't open or close the profile
-    const row = b.closest(".judge"), j = judges[+row.dataset.i], k = keyOf(j);
+    const row = b.closest(".judge"), k = rowKey(row);
     if (choices[k] === b.dataset.v) delete choices[k]; else choices[k] = b.dataset.v;
     save(); paintRow(row); renderSheet();
-  });
+  };
+  list.addEventListener("click", onVote);
+  osList.addEventListener("click", onVote);
 
   function renderSheet() {
     const includeBlank = $("#include-blank").checked;
     const rows = judges.filter((j) => includeBlank || choices[keyOf(j)]);
+    const osRows = openSeats.filter((c) => includeBlank || choices[osKey(c)]);
     const host = $("#sheet"); host.replaceChildren();
-    if (!rows.length) {
+    if (!rows.length && !osRows.length) {
       const p = document.createElement("p"); p.className = "sheet-empty";
       p.textContent = "No choices yet. Mark Yes or No beside a judge above and it will appear here.";
       host.appendChild(p); return;
     }
-    const t = document.createElement("table"); t.className = "sheet-table";
-    const body = t.createTBody();
-    for (const j of rows) {
-      const v = choices[keyOf(j)], r = body.insertRow();
-      const bn = r.insertCell(); bn.className = "bn"; bn.textContent = j.ballot_number ?? "";
-      const jn = r.insertCell(); jn.className = "jn"; jn.textContent = j.name;
-      const ch = r.insertCell(); ch.className = "ch";
-      const box = document.createElement("span"); box.className = "choice";
-      for (const opt of ["yes", "no"]) { const s = document.createElement("span"); s.textContent = opt.toUpperCase(); if (v === opt) s.className = "on"; box.appendChild(s); }
-      box.setAttribute("aria-label", v ? `Your choice: ${v}` : "No choice");
-      ch.appendChild(box);
-    }
-    host.appendChild(t);
+    const table = (title, items, key, label, opts) => {
+      const h = document.createElement("h3"); h.className = "sheet-h"; h.textContent = title; host.appendChild(h);
+      const t = document.createElement("table"); t.className = "sheet-table";
+      const body = t.createTBody();
+      for (const j of items) {
+        const v = choices[key(j)], r = body.insertRow();
+        const bn = r.insertCell(); bn.className = "bn"; bn.textContent = j.ballot_number ?? "";
+        const jn = r.insertCell(); jn.className = "jn"; jn.textContent = label(j);
+        const ch = r.insertCell(); ch.className = "ch";
+        const box = document.createElement("span"); box.className = "choice";
+        for (const opt of opts) { const s = document.createElement("span"); s.textContent = opt.toUpperCase(); if (v === opt) s.className = "on"; box.appendChild(s); }
+        box.setAttribute("aria-label", v ? `Your choice: ${v}` : "No choice");
+        ch.appendChild(box);
+      }
+      host.appendChild(t);
+    };
+    // Ballot order: open seats come before the retention questions.
+    if (osRows.length) table("Open seats (vote for one in each race)", osRows, osKey, (c) => `${c.name} · ${c.district === "Countywide" ? c.seat : c.district}`, ["vote", "blank"]);
+    if (rows.length) table("Retention (Yes or No for each judge)", rows, keyOf, (j) => j.name, ["yes", "no"]);
   }
 
   // Inside a framed preview the browser blocks the print dialog, so offer copying instead.
@@ -558,19 +640,28 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
   $("#print-btn").addEventListener("click", () => window.print());
   $("#include-blank").addEventListener("change", renderSheet);
   $("#clear-btn").addEventListener("click", () => {
-    choices = {}; save(); list.querySelectorAll(".judge").forEach(paintRow); renderSheet();
+    choices = {}; save(); document.querySelectorAll(".judge").forEach(paintRow); renderSheet();
     $("#copy-status").textContent = "Cleared.";
   });
   $("#copy-btn").addEventListener("click", () => {
-    const lines = judges.filter((j) => choices[keyOf(j)]).map((j) => `#${j.ballot_number ?? "?"}  ${j.name}: ${choices[keyOf(j)].toUpperCase()}`);
-    const text = ["My Cook County retention ballot choices (Nov. 3, 2026)", ...lines].join("\n");
+    const lines = [
+      ...openSeats.filter((c) => choices[osKey(c)]).map((c) => `#${c.ballot_number}  ${c.name} (${c.district}): ${choices[osKey(c)].toUpperCase()}`),
+      ...judges.filter((j) => choices[keyOf(j)]).map((j) => `#${j.ballot_number ?? "?"}  ${j.name}: ${choices[keyOf(j)].toUpperCase()}`)];
+    const text = ["My Cook County judicial ballot choices (Nov. 3, 2026)", ...lines].join("\n");
     const done = () => { $("#copy-status").textContent = lines.length ? `Copied ${lines.length} choices.` : "No choices to copy yet."; };
     navigator.clipboard?.writeText(text).then(done, () => {
       $("#copy-status").textContent = "Copy isn't allowed here. Select the list below and copy it, or take a screenshot.";
     }) ?? done();
   });
-  list.querySelectorAll(".judge").forEach(paintRow);
+  document.querySelectorAll(".judge").forEach(paintRow);
   renderSheet();
+  osList.addEventListener("toggle", (e) => {
+    const el = e.target;
+    if (el.classList?.contains("judge") && el.open && !el.dataset.rendered) {
+      el.insertAdjacentHTML("beforeend", openProfileHTML(openSeats[+el.dataset.os]));
+      el.dataset.rendered = "1";
+    }
+  }, true);
 
   list.addEventListener("toggle", (e) => {
     const el = e.target;

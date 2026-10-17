@@ -1,4 +1,4 @@
-"""Fetch campaign receipts for the judges on the ballot (about 10 minutes: it streams a 1 GB file).
+"""Fetch campaign receipts for the judges and open-seat candidates on the ballot (about 10 minutes: it streams a 1 GB file).
 
     python -m ballot.build_campaign_finance
     python -m ballot.build_ballot_report      # then rebuild profiles to include campaign money
@@ -6,7 +6,7 @@
 import pandas as pd
 
 from ballot.adapters import il_campaign_finance
-from ballot.build_ballot_report import DEFAULT_BALLOT
+from ballot.build_ballot_report import DEFAULT_BALLOT, OPEN_SEATS
 from ballot.build_judge_profiles import RAW
 
 SINCE = "2020-01-01"  # the current judges' last retention campaign through now
@@ -15,7 +15,8 @@ SINCE = "2020-01-01"  # the current judges' last retention campaign through now
 def main() -> None:
     isbe = RAW.parent / "isbe"
     il_campaign_finance.fetch_lookups(isbe, refresh=True)
-    committees = il_campaign_finance.judge_committees(isbe, pd.read_csv(DEFAULT_BALLOT).name)
+    names = pd.concat([pd.read_csv(p).name for p in (DEFAULT_BALLOT, OPEN_SEATS) if p.exists()]).drop_duplicates()
+    committees = il_campaign_finance.judge_committees(isbe, names)
     committees.to_csv(isbe / "judge_committees.csv", index=False)
     print(f"{len(committees)} committees for {committees.judge.nunique()} judges; streaming receipts...")
     path = il_campaign_finance.fetch_receipts(set(committees.committee_id), isbe / "judge_receipts.csv", SINCE)

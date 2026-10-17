@@ -50,6 +50,13 @@ def _same_person(ballot_name: str, first: str, last: str) -> bool:
     return any(x.startswith(y) or y.startswith(x) for x in b_given for y in c_given if min(len(x), len(y)) >= 3)
 
 
+def _names_person(committee: str, person: str) -> bool:
+    """Whether a committee's name includes the person's surname or first given name."""
+    given, surnames = name_parts(person)
+    words = set(re.findall(r"[a-z]+", committee.lower().replace("'", "")))
+    return bool(surnames & words or (given and len(given[0]) >= 3 and given[0] in words))
+
+
 def judge_committees(lookup_dir: Path, ballot_names) -> pd.DataFrame:
     """One row per (ballot judge, committee) for judicial candidates, joint committees excluded."""
     cand, links, cmte = (_read(lookup_dir / n) for n in ("Candidates.txt", "CmteCandidateLinks.txt", "Committees.txt"))
@@ -61,6 +68,8 @@ def judge_committees(lookup_dir: Path, ballot_names) -> pd.DataFrame:
             if cid in JOINT_COMMITTEES:
                 continue
             c = cmte[cmte.ID == cid].iloc[0]
+            if not _names_person(c.Name, name):
+                continue  # a slate or party committee linked to the candidate, not their own campaign
             rows.append({"judge": name, "committee_id": cid, "committee": c.Name, "status": c.Status})
     return pd.DataFrame(rows)
 

@@ -57,8 +57,18 @@ def page_data(report: dict) -> dict:
             "also_running": j.get("also_running"),
             "isba_evaluation": j["isba_evaluation"], "sentencing": s,
         })
+    open_seats = [{
+        "name": j["name"], "ballot_number": j["ballot_number"], "court": j["court"], "seat": j["assignment"],
+        "district": j["district"], "party": j.get("party") or j.get("party_1", ""),
+        "bar_ratings": [{k: r[k] for k in ("source", "rating") if k in r} for r in j["bar_ratings"]],
+        "isba_evaluation": j["isba_evaluation"], "campaign": j.get("campaign"),
+        "background": j["background"], "attorney_criticism": j["attorney_criticism"],
+        "criminal_court_experience": j["criminal_court_experience"],
+        "sentencing": j["sentencing"] if j["sentencing"]["status"] != "no record" else None,
+        "injustice_watch_url": j.get("injustice_watch_url"),
+    } for j in report.get("open_seats", [])]
     return {"source": report["source"], "since": report["since"], "data_through": report["data_through"],
-            "built": date.today().strftime("%B %-d, %Y"), "judges": judges,
+            "built": date.today().strftime("%B %-d, %Y"), "judges": judges, "open_seats": open_seats,
             "population": report["population"], "appellate_baseline": report.get("appellate_baseline")}
 
 

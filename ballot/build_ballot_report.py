@@ -16,6 +16,7 @@ from ballot.judges import match, metrics, profile
 from ballot.judges.extract import output_path
 
 DEFAULT_BALLOT = OUT.parent / "ballot" / "cook_2026_retention.csv"
+OPEN_SEATS = OUT.parent / "ballot" / "cook_2026_open_seats.csv"
 
 
 def main() -> None:
@@ -30,10 +31,13 @@ def main() -> None:
     ratings.to_csv(OUT.parent / "ballot" / f"{Path(args.ballot).stem}_bar_ratings.csv", index=False)
     df = cook_county.load(cook_county.fetch(RAW))
     record_names = df.judge.unique()
+    # Candidates for open seats (contested races). Some are already judges with a record.
+    open_seats = pd.read_csv(OPEN_SEATS).fillna("") if Path(OPEN_SEATS).exists() else pd.DataFrame(columns=["name"])
+    contested_ratings = cook_bar_ratings.load_contested(RAW.parent / "bar_ratings") if len(open_seats) else ratings.iloc[:0]
 
     # Relabel matching records with the ballot spelling so variants are pooled.
     relabel, matched = {}, {}
-    for name in ballot.name:
+    for name in pd.concat([ballot.name, open_seats.name]).drop_duplicates():
         matched[name] = match.find_records(name, record_names)
         relabel.update({r: name for r in matched[name]})
     df["judge"] = df.judge.replace(relabel)
@@ -41,7 +45,8 @@ def main() -> None:
     recent = df[df.sentence_date >= args.since].judge.value_counts()
     profiles = {
         p["judge"]: p
-        for p in metrics.all_profiles(df, since=args.since, judges=ballot.name, min_cases=metrics.MIN_GROUP)
+        for p in metrics.all_profiles(df, since=args.since, judges=list(ballot.name) + list(open_seats.name),
+                                      min_cases=metrics.MIN_GROUP)
     }
 
     isba = ratings[ratings.source == "Illinois State Bar Association"]
@@ -82,7 +87,8 @@ def main() -> None:
     if (isbe / "judge_receipts.csv").exists() and (isbe / "judge_committees.csv").exists():
         committees = pd.read_csv(isbe / "judge_committees.csv", dtype=str)
         receipts = il_campaign_finance.load_receipts(isbe / "judge_receipts.csv", committees)
-    parties = il_campaign_finance.judge_party(isbe, ballot.name) if (isbe / "Candidates.txt").exists() else {}
+    parties = (il_campaign_finance.judge_party(isbe, pd.concat([ballot.name, open_seats.name]))
+               if (isbe / "Candidates.txt").exists() else {})
     # Where the judges' organizational donors give elsewhere (needs org_giving.csv; see
     # ballot.build_campaign_finance). The judges' own committees are excluded from that measure.
     leanings = {}
@@ -91,30 +97,42 @@ def main() -> None:
         leanings = il_campaign_finance.org_leanings(isbe / "org_giving.csv",
                                                     il_campaign_finance.committee_parties(isbe), own)
 
-    report = []
-    for row in ballot.itertuples(index=False):
+    open_file = output_path(args.extractions, open_seats=True)
+    open_extractions = ({j["name"]: j["extraction"] for j in json.loads(open_file.read_text())["judges"]}
+                        if open_file.exists() else {})
+
+    def entry(row, rating_rows: pd.DataFrame, isba_rows: pd.DataFrame, extracted: dict) -> dict:
         n = int(recent.get(row.name, 0))
         status = "profile" if n >= metrics.MIN_CASES else "limited" if n >= metrics.MIN_GROUP else "no record"
-        judge_ratings = ratings[[match.matches(row.name, r) for r in ratings.name]]
+        judge_ratings = rating_rows[[match.matches(row.name, r) for r in rating_rows.name]]
         ballot_numbers = judge_ratings.ballot_number.dropna()
-        isba_row = isba[[match.matches(row.name, r) for r in isba.name]]
+        isba_row = isba_rows[[match.matches(row.name, r) for r in isba_rows.name]]
         isba_name = isba_row.name.iloc[0] if len(isba_row) else None
-        report.append({**row._asdict(),
-                       "ballot_number": int(ballot_numbers.iloc[0]) if len(ballot_numbers) else None,
-                       "record_names": matched[row.name], "n_sentences": n, "status": status,
-                       "bar_ratings": [{k: v for k, v in r.items() if pd.notna(v) and k != "summary"}
-                                       for r in judge_ratings.to_dict("records")],
-                       "bar_summary": bar_summary(judge_ratings),
-                       **profile.background_section(isba_row.summary.iloc[0] if isba_name else None,
-                                                    extractions.get(isba_name), n),
-                       "sentencing": profile.sentencing_section(n, profiles.get(row.name), args.since, data_through),
-                       "party": parties.get(row.name, ""),
-                       "injustice_watch_url": iw_url(row.name),
-                       "also_running": also_running.get(row.name),
-                       "appellate": profile.appellate_section([a for a in appeals if a["judge"] == row.name],
-                                                              appeal_baseline) if appeal_baseline else None,
-                       "campaign": _with_leanings(il_campaign_finance.judge_summary(receipts, row.name), leanings)
-                                    if receipts is not None and row.name in set(receipts.judge) else None})
+        return {**row._asdict(),
+                "ballot_number": int(ballot_numbers.iloc[0]) if len(ballot_numbers) else None,
+                "record_names": matched[row.name], "n_sentences": n, "status": status,
+                "bar_ratings": [{k: v for k, v in r.items() if pd.notna(v) and k not in ("summary", "seat", "party")}
+                                for r in judge_ratings.to_dict("records")],
+                "bar_summary": bar_summary(judge_ratings),
+                **profile.background_section(isba_row.summary.iloc[0] if isba_name else None,
+                                             extracted.get(isba_name), n),
+                "sentencing": profile.sentencing_section(n, profiles.get(row.name), args.since, data_through),
+                "party": parties.get(row.name) or getattr(row, "party", ""),
+                "injustice_watch_url": iw_url(row.name),
+                "also_running": also_running.get(row.name),
+                "appellate": profile.appellate_section([a for a in appeals if a["judge"] == row.name],
+                                                       appeal_baseline) if appeal_baseline else None,
+                "campaign": _with_leanings(il_campaign_finance.judge_summary(receipts, row.name), leanings)
+                             if receipts is not None and row.name in set(receipts.judge) else None}
+
+    report = [entry(row, ratings, isba, extractions) for row in ballot.itertuples(index=False)]
+    contested_isba = contested_ratings[contested_ratings.source == "Illinois State Bar Association"]
+    open_report = []
+    for row in open_seats.itertuples(index=False):
+        e = entry(row, contested_ratings, contested_isba, open_extractions)
+        e["ballot_number"] = int(row.ballot_number)  # the CBA list repeats numbers across subcircuits
+        e.pop("appellate")  # the appellate matching covers retention judges only
+        open_report.append(e)
 
     # Every judge with a full record, plus ballot judges with a limited one, for the comparison chart.
     numbers = {r["name"]: r["ballot_number"] for r in report}
@@ -126,7 +144,8 @@ def main() -> None:
     meta = {"source": cook_county.SOURCE_URL, "since": args.since, "data_through": data_through,
             "appellate_baseline": appeal_baseline,
             "isba_extractions": str(extraction_file.name) if extractions else None}
-    out.write_text(json.dumps({**meta, "judges": report, "population": population}, indent=2, default=float))
+    out.write_text(json.dumps({**meta, "judges": report, "open_seats": open_report, "population": population},
+                              indent=2, default=float))
 
     table = pd.DataFrame(report)[["ballot_number", "name", "assignment", "n_sentences", "status", "bar_summary"]]
     table["ballot_number"] = table.ballot_number.astype("Int64")
@@ -135,6 +154,8 @@ def main() -> None:
     print(table.sort_values("ballot_number").to_string(index=False))
     print(f"\n{(table.status == 'profile').sum()} full profiles, {(table.status == 'limited').sum()} limited, "
           f"{(table.status == 'no record').sum()} without a sentencing record since {args.since} -> {out}")
+    print(f"{len(open_report)} open-seat candidates; with campaign money: {sum(bool(e['campaign']) for e in open_report)}, "
+          f"with a sentencing record: {sum(e['status'] != 'no record' for e in open_report)}")
     for r in sorted(report, key=lambda r: -r["n_sentences"]):
         if "details" in r["sentencing"]:
             print("\n" + format_profile(r["sentencing"]["details"]))
