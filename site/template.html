@@ -487,6 +487,7 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
         <div class="section"><h3>Criminal court experience</h3>${crimHTML}</div>
         <div class="section"><h3>Career background (ISBA)</h3>${bg}${j.party ? `<p class="note">Ran for judge as: ${esc(j.party)} (Illinois State Board of Elections candidate records).</p>` : ""}</div>
         ${j.isba_evaluation ? `<details class="more"><summary>Read the full ISBA evaluation</summary><div><p>${esc(j.isba_evaluation)}</p></div></details>` : ""}
+        ${j.injustice_watch_url ? `<div class="section"><h3>Reporting on this judge</h3><p class="note"><a href="${esc(j.injustice_watch_url)}">Injustice Watch's guide to ${esc(j.name)}</a>: independent newsroom reporting on this judge's record, including court records, attorney interviews and the judge's survey answers.</p></div>` : ""}
       </div>`;
   }
 
