@@ -18,7 +18,7 @@ import pandas as pd
 from ballot.judges.match import name_parts
 
 BASE = "https://elections.il.gov/campaigndisclosuredatafiles"
-LOOKUPS = ["Committees.txt", "Candidates.txt", "CmteCandidateLinks.txt", "CanElections.txt"]
+LOOKUPS = ["Committees.txt", "Candidates.txt", "CmteCandidateLinks.txt"]
 JOINT_COMMITTEES = {"6505"}  # Committee for Retention of Judges in Cook County
 RECEIPT_FIELDS = ["ID", "CommitteeID", "LastOnlyName", "FirstName", "RcvDate", "Amount", "Occupation",
                   "Employer", "City", "State", "D2Part", "Description", "Archived"]
@@ -50,26 +50,13 @@ def _same_person(ballot_name: str, first: str, last: str) -> bool:
     return any(x.startswith(y) or y.startswith(x) for x in b_given for y in c_given if min(len(x), len(y)) >= 3)
 
 
-def judge_committees(lookup_dir: Path, ballot_names, retention_year: str | None = "2026") -> pd.DataFrame:
-    """One row per (ballot judge, committee) for judicial candidates, joint committees excluded.
-
-    Names alone aren't enough: two people named Judith C. Rice were both on 2026 ballots. When a
-    judge has a candidate record up for retention in `retention_year`, records that ran in some
-    other race that year are someone else. Older records stay: ISBE opens a new candidate record
-    for each run, so a judge's first-election committee sits under a different ID."""
+def judge_committees(lookup_dir: Path, ballot_names) -> pd.DataFrame:
+    """One row per (ballot judge, committee) for judicial candidates, joint committees excluded."""
     cand, links, cmte = (_read(lookup_dir / n) for n in ("Candidates.txt", "CmteCandidateLinks.txt", "Committees.txt"))
     judges = cand[cand.Office.str.contains(r"Judge|Justice", case=False)]
-    retained, other_race = set(), set()
-    if retention_year and (lookup_dir / "CanElections.txt").exists():
-        el = _read(lookup_dir / "CanElections.txt")
-        el = el[el.ElectionYear == retention_year]
-        is_ret = el.IncChallOpen.str.strip() == "Ret"
-        retained, other_race = set(el[is_ret].CandidateID), set(el[~is_ret].CandidateID)
     rows = []
     for name in ballot_names:
         ids = judges[[_same_person(name, f, l) for f, l in zip(judges.FirstName, judges.LastName)]].ID
-        if set(ids) & retained:
-            ids = [i for i in ids if i in retained or i not in other_race]
         for cid in links[links.CandidateID.isin(ids)].CommitteeID.unique():
             if cid in JOINT_COMMITTEES:
                 continue

@@ -50,6 +50,14 @@ def main() -> None:
                    if extraction_file.exists() else {})
     data_through = df.sentence_date.quantile(0.999).date().isoformat()
 
+    # Judges also running for another seat this year. Their campaign committees for that race are
+    # still their money, so they stay in the totals; this note says where it came from.
+    also_running = {
+        "Judith C. Rice": "Also on the November ballot, unopposed, for the Illinois Appellate Court, First District "
+                          "(won the March 2026 primary). Her committee for that race, Citizens for Judge Judith C. Rice "
+                          "(opened August 2025), is included in these totals.",
+    }
+
     # Injustice Watch's guide pages (their public sitemap). Where two pages share a name, the
     # retention judge's has the higher id: the guide numbered retention pages from 35786 up.
     iw_pages = []
@@ -102,6 +110,7 @@ def main() -> None:
                        "sentencing": profile.sentencing_section(n, profiles.get(row.name), args.since, data_through),
                        "party": parties.get(row.name, ""),
                        "injustice_watch_url": iw_url(row.name),
+                       "also_running": also_running.get(row.name),
                        "appellate": profile.appellate_section([a for a in appeals if a["judge"] == row.name],
                                                               appeal_baseline) if appeal_baseline else None,
                        "campaign": _with_leanings(il_campaign_finance.judge_summary(receipts, row.name), leanings)

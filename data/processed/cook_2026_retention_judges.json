@@ -111,6 +111,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/bertina-e-lampkin-35640",
+      "also_running": null,
       "appellate": {
         "n_decisions": 0,
         "summary": "No Illinois Appellate Court decisions reviewing this judge since 2015."
@@ -205,6 +206,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/julie-bess-aimen-35871",
+      "also_running": null,
       "appellate": {
         "n_decisions": 5,
         "n_merits": 3,
@@ -360,6 +362,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/john-michael-allegretti-35841",
+      "also_running": null,
       "appellate": {
         "n_decisions": 3,
         "n_merits": 3,
@@ -495,6 +498,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/erin-haggerty-antonietti-35833",
+      "also_running": null,
       "appellate": {
         "n_decisions": 2,
         "n_merits": 2,
@@ -635,6 +639,7 @@
       },
       "party": "",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/edward-a-arce-35893",
+      "also_running": null,
       "appellate": {
         "n_decisions": 7,
         "n_merits": 5,
@@ -846,6 +851,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/laura-ayala-gonzalez-35786",
+      "also_running": null,
       "appellate": {
         "n_decisions": 19,
         "n_merits": 19,
@@ -1035,6 +1041,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/andrea-m-buford-35788",
+      "also_running": null,
       "appellate": {
         "n_decisions": 28,
         "n_merits": 28,
@@ -1176,6 +1183,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/krista-d-butler-35825",
+      "also_running": null,
       "appellate": {
         "n_decisions": 3,
         "n_merits": 3,
@@ -1396,6 +1404,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/thomas-j-byrne-35790",
+      "also_running": null,
       "appellate": {
         "n_decisions": 92,
         "n_merits": 92,
@@ -1561,6 +1570,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/thomas-j-carroll-35792",
+      "also_running": null,
       "appellate": {
         "n_decisions": 5,
         "n_merits": 3,
@@ -1779,6 +1789,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/patrick-kevin-coughlin-35905",
+      "also_running": null,
       "appellate": {
         "n_decisions": 41,
         "n_merits": 40,
@@ -1932,6 +1943,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/thomas-m-cushing-35873",
+      "also_running": null,
       "appellate": {
         "n_decisions": 14,
         "n_merits": 12,
@@ -2205,6 +2217,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/marie-aileen-dempsey-35881",
+      "also_running": null,
       "appellate": {
         "n_decisions": 19,
         "n_merits": 16,
@@ -2449,6 +2462,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/sondra-n-denmark-35829",
+      "also_running": null,
       "appellate": {
         "n_decisions": 5,
         "n_merits": 5,
@@ -2670,6 +2684,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/jamie-guerra-dickler-35843",
+      "also_running": null,
       "appellate": {
         "n_decisions": 4,
         "n_merits": 2,
@@ -2879,6 +2894,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/patricia-maria-fallon-35895",
+      "also_running": null,
       "appellate": {
         "n_decisions": 6,
         "n_merits": 6,
@@ -3144,6 +3160,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/michael-a-forti-35849",
+      "also_running": null,
       "appellate": {
         "n_decisions": 11,
         "n_merits": 11,
@@ -3291,6 +3308,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/megan-elizabeth-goldish-35875",
+      "also_running": null,
       "appellate": {
         "n_decisions": 3,
         "n_merits": 3,
@@ -3420,6 +3438,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/jonathan-clark-green-35851",
+      "also_running": null,
       "appellate": {
         "n_decisions": 6,
         "n_merits": 6,
@@ -3545,11 +3564,11 @@
             "name": "CITIZENS FOR TUNNEY",
             "total": 500.0,
             "elsewhere": {
-              "total": 200827.64,
-              "democratic": 158977.64,
+              "total": 200327.64,
+              "democratic": 158477.64,
               "republican": 0.0,
               "no_party": 41850.0,
-              "recipients": 50,
+              "recipients": 49,
               "dem_share": 1.0
             }
           }
@@ -3730,6 +3749,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/anjana-mj-hansen-35877",
+      "also_running": null,
       "appellate": {
         "n_decisions": 19,
         "n_merits": 11,
@@ -3921,6 +3941,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/sheree-d-henry-35794",
+      "also_running": null,
       "appellate": {
         "n_decisions": 2,
         "n_merits": 2,
@@ -4138,6 +4159,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/kerry-m-kennedy-35796",
+      "also_running": null,
       "appellate": {
         "n_decisions": 8,
         "n_merits": 8,
@@ -4374,6 +4396,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/diana-l-kenworthy-35883",
+      "also_running": null,
       "appellate": {
         "n_decisions": 52,
         "n_merits": 50,
@@ -4575,6 +4598,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/robert-d-kuzas-35853",
+      "also_running": null,
       "appellate": {
         "n_decisions": 5,
         "n_merits": 5,
@@ -4717,6 +4741,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/anthony-c-tony-kyriakopoulos-35885",
+      "also_running": null,
       "appellate": {
         "n_decisions": 10,
         "n_merits": 10,
@@ -4834,6 +4859,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/john-j-mahoney-35845",
+      "also_running": null,
       "appellate": {
         "n_decisions": 1,
         "n_merits": 1,
@@ -5014,6 +5040,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/daniel-edward-maloney-35835",
+      "also_running": null,
       "appellate": {
         "n_decisions": 0,
         "summary": "No Illinois Appellate Court decisions reviewing this judge since 2015."
@@ -5112,6 +5139,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/maritza-martinez-35798",
+      "also_running": null,
       "appellate": {
         "n_decisions": 54,
         "n_merits": 49,
@@ -5265,6 +5293,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/mary-catherine-marubio-35887",
+      "also_running": null,
       "appellate": {
         "n_decisions": 3,
         "n_merits": 3,
@@ -5428,11 +5457,11 @@
             "name": "CITIZENS FOR TUNNEY",
             "total": 200.0,
             "elsewhere": {
-              "total": 200827.64,
-              "democratic": 158977.64,
+              "total": 200327.64,
+              "democratic": 158477.64,
               "republican": 0.0,
               "no_party": 41850.0,
-              "recipients": 50,
+              "recipients": 49,
               "dem_share": 1.0
             }
           }
@@ -5523,6 +5552,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/celestia-l-mays-35800",
+      "also_running": null,
       "appellate": {
         "n_decisions": 2,
         "n_merits": 2,
@@ -5665,6 +5695,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/terrence-j-mcguire-35837",
+      "also_running": null,
       "appellate": {
         "n_decisions": 13,
         "n_merits": 11,
@@ -5818,6 +5849,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/maura-mcmahon-zeller-35823",
+      "also_running": null,
       "appellate": {
         "n_decisions": 1,
         "n_merits": 1,
@@ -6024,6 +6056,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/regina-a-mescall-35839",
+      "also_running": null,
       "appellate": {
         "n_decisions": 11,
         "n_merits": 7,
@@ -6205,6 +6238,7 @@
       },
       "party": "Non Partisan",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/bridget-anne-mitchell-35802",
+      "also_running": null,
       "appellate": {
         "n_decisions": 12,
         "n_merits": 11,
@@ -6382,6 +6416,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/teresa-molina-gonzalez-35804",
+      "also_running": null,
       "appellate": {
         "n_decisions": 3,
         "n_merits": 3,
@@ -6524,6 +6559,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/caroline-kate-moreland-35806",
+      "also_running": null,
       "appellate": {
         "n_decisions": 71,
         "n_merits": 68,
@@ -6688,6 +6724,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/john-g-mulroe-35889",
+      "also_running": null,
       "appellate": {
         "n_decisions": 0,
         "summary": "No Illinois Appellate Court decisions reviewing this judge since 2015."
@@ -6871,6 +6908,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/lorraine-mary-murphy-35808",
+      "also_running": null,
       "appellate": {
         "n_decisions": 4,
         "n_merits": 3,
@@ -7019,6 +7057,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/lewis-nixon-35869",
+      "also_running": null,
       "appellate": {
         "n_decisions": 5,
         "n_merits": 5,
@@ -7156,6 +7195,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/eileen-marie-oconnor-35847",
+      "also_running": null,
       "appellate": {
         "n_decisions": 0,
         "summary": "No Illinois Appellate Court decisions reviewing this judge since 2015."
@@ -7282,6 +7322,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/nichole-c-patton-35903",
+      "also_running": null,
       "appellate": {
         "n_decisions": 11,
         "n_merits": 10,
@@ -7496,6 +7537,7 @@
       },
       "party": "Republican",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/james-p-pieczonka-35897",
+      "also_running": null,
       "appellate": {
         "n_decisions": 8,
         "n_merits": 6,
@@ -7641,6 +7683,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/joan-e-powell-35867",
+      "also_running": null,
       "appellate": {
         "n_decisions": 12,
         "n_merits": 12,
@@ -7779,6 +7822,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/jill-rose-quinn-35865",
+      "also_running": null,
       "appellate": {
         "n_decisions": 2,
         "n_merits": 1,
@@ -7929,6 +7973,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/pamela-reaves-harris-35855",
+      "also_running": null,
       "appellate": {
         "n_decisions": 0,
         "summary": "No Illinois Appellate Court decisions reviewing this judge since 2015."
@@ -8066,6 +8111,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/judith-c-rice-35857",
+      "also_running": "Also on the November ballot, unopposed, for the Illinois Appellate Court, First District (won the March 2026 primary). Her committee for that race, Citizens for Judge Judith C. Rice (opened August 2025), is included in these totals.",
       "appellate": {
         "n_decisions": 3,
         "n_merits": 2,
@@ -8106,7 +8152,61 @@
         "lo": 0.07767909041987509,
         "hi": 1.338120909580125
       },
-      "campaign": null
+      "campaign": {
+        "raised_from_others": 13050.0,
+        "self_funded": 63300.0,
+        "from_individuals": 12550.0,
+        "with_employer": 2000.0,
+        "from_legal": 1000.0,
+        "from_organizations": 500.0,
+        "n_contributions": 27,
+        "first": "2025-08-24",
+        "last": "2026-03-12",
+        "top_employers": [
+          {
+            "employer": "CIRCUIT COURT",
+            "total": 1000.0,
+            "donors": 1,
+            "legal": true,
+            "elsewhere": null
+          },
+          {
+            "employer": "ULLICO",
+            "total": 1000.0,
+            "donors": 1,
+            "legal": false,
+            "elsewhere": {
+              "total": 148048.84,
+              "democratic": 122750.0,
+              "republican": 0.0,
+              "no_party": 25298.84,
+              "recipients": 15,
+              "dem_share": 1.0
+            }
+          }
+        ],
+        "top_organizations": [
+          {
+            "name": "CITIZENS FOR TUNNEY",
+            "total": 500.0,
+            "elsewhere": {
+              "total": 200327.64,
+              "democratic": 158477.64,
+              "republican": 0.0,
+              "no_party": 41850.0,
+              "recipients": 49,
+              "dem_share": 1.0
+            }
+          }
+        ],
+        "by_group": {
+          "Employer not reported": 10250.0,
+          "Businesses and other employers": 1000.0,
+          "Judges and court staff": 1000.0,
+          "Politicians' committees": 500.0,
+          "Private law firms": 300.0
+        }
+      }
     },
     {
       "name": "Kristal Royce Rivers",
@@ -8198,6 +8298,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/kristal-r-rivers-35863",
+      "also_running": null,
       "appellate": {
         "n_decisions": 5,
         "n_merits": 5,
@@ -8334,6 +8435,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/abbey-fishman-romanek-35879",
+      "also_running": null,
       "appellate": {
         "n_decisions": 18,
         "n_merits": 14,
@@ -8494,6 +8596,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/kristyna-colleen-ryan-35861",
+      "also_running": null,
       "appellate": {
         "n_decisions": 7,
         "n_merits": 7,
@@ -8641,6 +8744,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/patricia-obrien-sheahan-35859",
+      "also_running": null,
       "appellate": {
         "n_decisions": 31,
         "n_merits": 30,
@@ -8777,6 +8881,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/levander-smith-jr-35813",
+      "also_running": null,
       "appellate": {
         "n_decisions": 12,
         "n_merits": 12,
@@ -8952,6 +9057,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/tiesha-l-smith-35811",
+      "also_running": null,
       "appellate": {
         "n_decisions": 5,
         "n_merits": 4,
@@ -9081,6 +9187,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/chris-stacey-35815",
+      "also_running": null,
       "appellate": {
         "n_decisions": 10,
         "n_merits": 10,
@@ -9253,6 +9360,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/perla-tirado-35899",
+      "also_running": null,
       "appellate": {
         "n_decisions": 8,
         "n_merits": 6,
@@ -9428,6 +9536,7 @@
       },
       "party": "",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/gerardo-tristan-jr-35901",
+      "also_running": null,
       "appellate": {
         "n_decisions": 4,
         "n_merits": 4,
@@ -9714,6 +9823,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/ursula-walowski-35891",
+      "also_running": null,
       "appellate": {
         "n_decisions": 123,
         "n_merits": 120,
@@ -9852,6 +9962,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/elizabeth-anne-walsh-35817",
+      "also_running": null,
       "appellate": {
         "n_decisions": 4,
         "n_merits": 3,
@@ -10093,6 +10204,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/tyria-b-walton-35827",
+      "also_running": null,
       "appellate": {
         "n_decisions": 18,
         "n_merits": 17,
@@ -10264,6 +10376,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/maureen-ward-kirby-35819",
+      "also_running": null,
       "appellate": {
         "n_decisions": 8,
         "n_merits": 7,
@@ -10487,6 +10600,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/steven-g-watkins-35831",
+      "also_running": null,
       "appellate": {
         "n_decisions": 25,
         "n_merits": 24,
@@ -10632,6 +10746,7 @@
       },
       "party": "Democratic",
       "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/lynn-weaver-boyle-35821",
+      "also_running": null,
       "appellate": {
         "n_decisions": 12,
         "n_merits": 11,

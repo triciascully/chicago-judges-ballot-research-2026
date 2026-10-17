@@ -483,7 +483,7 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
         <div class="section"><h3>Sentencing record</h3>${sentencingHTML(j.sentencing)}</div>
         <div class="section"><h3>Appellate track record</h3>${appellateHTML(j.appellate)}</div>
         <div class="section"><h3>Attorney criticism (ISBA)</h3>${crit}</div>
-        <div class="section"><h3>Campaign money since 2020</h3>${campaignHTML(j.campaign)}</div>
+        <div class="section"><h3>Campaign money since 2020</h3>${j.also_running ? `<p class="note">${esc(j.also_running)}</p>` : ""}${campaignHTML(j.campaign)}</div>
         <div class="section"><h3>Criminal court experience</h3>${crimHTML}</div>
         <div class="section"><h3>Career background (ISBA)</h3>${bg}${j.party ? `<p class="note">Ran for judge as: ${esc(j.party)} (Illinois State Board of Elections candidate records).</p>` : ""}</div>
         ${j.isba_evaluation ? `<details class="more"><summary>Read the full ISBA evaluation</summary><div><p>${esc(j.isba_evaluation)}</p></div></details>` : ""}

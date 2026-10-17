@@ -54,6 +54,7 @@ def page_data(report: dict) -> dict:
             "background": j["background"], "attorney_criticism": j["attorney_criticism"],
             "attorney_feedback": j["attorney_feedback"], "campaign": j.get("campaign"), "party": j.get("party", ""),
             "appellate": j.get("appellate"), "injustice_watch_url": j.get("injustice_watch_url"),
+            "also_running": j.get("also_running"),
             "isba_evaluation": j["isba_evaluation"], "sentencing": s,
         })
     return {"source": report["source"], "since": report["since"], "data_through": report["data_through"],
