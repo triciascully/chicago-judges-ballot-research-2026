@@ -366,6 +366,428 @@
       "criminal_bench": true
     }
   ],
+  "injustice_watch_check": [
+    {
+      "judge": "Bertina E. Lampkin",
+      "iw_prosecutor": true,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Lewis Nixon",
+      "iw_prosecutor": true,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Kerry M. Kennedy",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": true,
+      "our_criminal_defense": true
+    },
+    {
+      "judge": "Joan E. Powell",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Maureen Ward Kirby",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Edward A. Arce",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Thomas J. Byrne",
+      "iw_prosecutor": true,
+      "our_prosecutor": true,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Diana L. Kenworthy",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": true,
+      "our_criminal_defense": true
+    },
+    {
+      "judge": "Kristyna Colleen Ryan",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Ursula Walowski",
+      "iw_prosecutor": true,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Anthony C. Kyriakopoulos",
+      "iw_prosecutor": true,
+      "our_prosecutor": true,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Caroline Kate Moreland",
+      "iw_prosecutor": true,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Thomas J. Carroll",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": true,
+      "our_criminal_defense": true
+    },
+    {
+      "judge": "Andrea M. Buford",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "John Michael Allegretti",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Kristal Rivers",
+      "iw_prosecutor": true,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Steven G. Watkins",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Abbey Fishman Romanek",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Judith C. Rice",
+      "iw_prosecutor": true,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Patrick Kevin Coughlin",
+      "iw_prosecutor": true,
+      "our_prosecutor": true,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Megan Elizabeth Goldish",
+      "iw_prosecutor": true,
+      "our_prosecutor": true,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Anjana Hansen",
+      "iw_prosecutor": true,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Robert D. Kuzas",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": true
+    },
+    {
+      "judge": "Maritza Martinez",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Terrence J. McGuire",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Bridget Anne Mitchell",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "James Paul Pieczonka",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Patricia O\u2019Brien Sheahan",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Michael A. Forti",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Nichole C. Patton",
+      "iw_prosecutor": true,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Sondra Nicole Denmark",
+      "iw_prosecutor": true,
+      "our_prosecutor": true,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Gerardo Tristan, Jr.",
+      "iw_prosecutor": true,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Lynn Weaver Boyle",
+      "iw_prosecutor": true,
+      "our_prosecutor": true,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Daniel Edward Maloney",
+      "iw_prosecutor": true,
+      "our_prosecutor": true,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Thomas M. Cushing",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "John G. Mulroe",
+      "iw_prosecutor": true,
+      "our_prosecutor": true,
+      "iw_public_defender": false,
+      "our_criminal_defense": true
+    },
+    {
+      "judge": "Tyria B. Walton",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": true,
+      "our_criminal_defense": true
+    },
+    {
+      "judge": "Erin Haggerty Antonietti",
+      "iw_prosecutor": true,
+      "our_prosecutor": true,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Teresa Molina - Gonzalez",
+      "iw_prosecutor": true,
+      "our_prosecutor": true,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Patricia M. Fallon",
+      "iw_prosecutor": false,
+      "our_prosecutor": true,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Sheree Desiree Henry",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": true,
+      "our_criminal_defense": true
+    },
+    {
+      "judge": "Celestia L. Mays",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Levander Smith, Jr.",
+      "iw_prosecutor": true,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Julie Bess Aimen",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": true,
+      "our_criminal_defense": true
+    },
+    {
+      "judge": "Laura Ayala - Gonzalez",
+      "iw_prosecutor": true,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Krista D. Butler",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Maire Aileen Dempsey",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Jamie Guerra Dickler",
+      "iw_prosecutor": true,
+      "our_prosecutor": true,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Jonathan Clark Green",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Mary Catherine Marubio",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Regina Ann Mescall",
+      "iw_prosecutor": true,
+      "our_prosecutor": true,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Lorraine Mary Murphy",
+      "iw_prosecutor": true,
+      "our_prosecutor": true,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Eileen Marie O\u2019Connor",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Jill Rose Quinn",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Pamela Reaves - Harris",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Tiesha L. Smith",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": true,
+      "our_criminal_defense": true
+    },
+    {
+      "judge": "Christ Stacey",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Perla Tirado",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": true,
+      "our_criminal_defense": true
+    },
+    {
+      "judge": "Elizabeth Anne Walsh",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    },
+    {
+      "judge": "Maura McMahon Zeller",
+      "iw_prosecutor": false,
+      "our_prosecutor": false,
+      "iw_public_defender": false,
+      "our_criminal_defense": false
+    }
+  ],
   "labels": {
     "tuning set": [
       {

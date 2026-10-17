@@ -10,7 +10,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from ballot.adapters import cook_bar_ratings, cook_county, il_campaign_finance
+from ballot.adapters import cook_bar_ratings, cook_county, il_campaign_finance, injustice_watch
 from ballot.build_judge_profiles import OUT, RAW, format_profile
 from ballot.judges import match, metrics, profile
 from ballot.judges.extract import output_path
@@ -63,19 +63,37 @@ def main() -> None:
                           "(opened August 2025), is included in these totals.",
     }
 
-    # Injustice Watch's guide pages (their public sitemap). Where two pages share a name, the
-    # retention judge's has the higher id: the guide numbered retention pages from 35786 up.
-    iw_pages = []
-    if (OUT.parent / "ballot" / "injustice_watch_2026_pages.txt").exists():
-        iw_pages = (OUT.parent / "ballot" / "injustice_watch_2026_pages.txt").read_text().split()
+    # Facts from Injustice Watch's guide (see ballot.adapters.injustice_watch).
+    iw_file = RAW.parent / "injustice_watch" / "current-en.json"
+    try:
+        guide = injustice_watch.load(injustice_watch.fetch(iw_file))
+    except OSError as e:  # offline: build without it rather than fail
+        print(f"Injustice Watch guide unavailable ({e}); building without it")
+        guide = []
 
-    def iw_url(name: str) -> str | None:
-        slug = lambda u: re.sub(r"-\d+/?$", "", u.rstrip("/").split("/")[-1]).replace("-", " ")
-        hits = [u for u in iw_pages if match.matches(name, slug(u))]
-        if not hits:
-            return None
-        best = max(hits, key=lambda u: int(re.search(r"-(\d+)/?$", u).group(1)))
-        return best.replace(".org/", ".org/candidate/", 1)
+    # Injustice Watch's flags that match our background labels. Their reporters draw on more than
+    # the ISBA text: 10 of 11 former prosecutors they flag that we didn't are never mentioned in
+    # the ISBA evaluation (see ballot.judges.eval_extraction, check 5).
+    iw_background = {"former-states-attorney": "Former prosecutor",
+                     "former-public-defender": "Former criminal defense attorney"}
+
+    def with_iw_background(background: list[dict], name: str, race_type: str) -> list[dict]:
+        g = injustice_watch.find(guide, name, race_type)
+        for slug in (g or {}).get("flag_slugs", []):
+            if slug not in iw_background:
+                continue
+            label = iw_background[slug]
+            item = next((b for b in background if b["label"] == label), None)
+            note = "Injustice Watch guide" + (" (public defender)" if slug == "former-public-defender" else "")
+            if item:
+                item["also"] = note
+            else:
+                background.append({"label": label, "evidence": [], "via": note})
+        return background
+
+    def iw_facts(name: str, race_type: str) -> dict | None:
+        g = injustice_watch.find(guide, name, race_type)
+        return {k: v for k, v in g.items() if k not in ("name", "flag_slugs")} if g else None
 
     # Appellate track record (from ballot.build_appellate_bulk).
     appeals = json.loads((OUT / "appellate_decisions.json").read_text()) if (OUT / "appellate_decisions.json").exists() else []
@@ -117,8 +135,12 @@ def main() -> None:
                 **profile.background_section(isba_row.summary.iloc[0] if isba_name else None,
                                              extracted.get(isba_name), n),
                 "sentencing": profile.sentencing_section(n, profiles.get(row.name), args.since, data_through),
+                "background": with_iw_background(
+                    profile.background_section(isba_row.summary.iloc[0] if isba_name else None,
+                                               extracted.get(isba_name), n)["background"],
+                    row.name, getattr(row, "race_type", "retention")),
                 "party": parties.get(row.name) or getattr(row, "party", ""),
-                "injustice_watch_url": iw_url(row.name),
+                "injustice_watch": iw_facts(row.name, getattr(row, "race_type", "retention")),
                 "also_running": also_running.get(row.name),
                 "appellate": profile.appellate_section([a for a in appeals if a["judge"] == row.name],
                                                        appeal_baseline) if appeal_baseline else None,

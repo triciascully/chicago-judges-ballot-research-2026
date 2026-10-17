@@ -61,6 +61,27 @@ def sentencing_check(rows: list[dict]) -> pd.DataFrame:
     return pd.DataFrame(out)
 
 
+def injustice_watch_check(rows: list[dict]) -> pd.DataFrame:
+    """Injustice Watch's reporters flag former prosecutors and public defenders independently,
+    from more sources than the ISBA text, so each disagreement is worth reading: a miss by the
+    model, a fact the evaluation doesn't mention, or a difference in definition (our prosecutor
+    flag excludes the State's Attorney's civil division; their public-defender flag is narrower
+    than our criminal-defense flag, so only their yes is checked there)."""
+    from ballot.adapters import injustice_watch
+    from ballot.build_judge_profiles import RAW
+    guide = injustice_watch.load(injustice_watch.fetch(RAW.parent / "injustice_watch" / "current-en.json"))
+    out = []
+    for r in rows:
+        g = injustice_watch.find(guide, r["name"], "retention")
+        if g is None:
+            continue
+        out.append({"judge": r["name"],
+                    "iw_prosecutor": "former-states-attorney" in g["flag_slugs"], "our_prosecutor": r["flags"]["former_prosecutor"],
+                    "iw_public_defender": "former-public-defender" in g["flag_slugs"],
+                    "our_criminal_defense": r["flags"]["former_criminal_defense"]})
+    return pd.DataFrame(out)
+
+
 JUDGE_SYSTEM = """You audit facts extracted from a bar association evaluation of a judge. For each numbered claim, decide whether its evidence quote, read in the context of the full evaluation, establishes the claim.
 
 supported: a careful reader would agree the evaluation says this.
@@ -208,6 +229,19 @@ def main() -> None:
     for name in check.judge[~found]:
         print(f"   missed: {name}")
     report["sentencing_check"] = check.to_dict("records")
+
+    iw = injustice_watch_check(rows)
+    if len(iw):
+        both = (iw.iw_prosecutor == iw.our_prosecutor).sum()
+        print(f"\n5. Injustice Watch cross-check ({len(iw)} judges): former prosecutor agrees for {both}/{len(iw)}; "
+              f"their former public defenders flagged as criminal defense by us: "
+              f"{(iw.iw_public_defender & iw.our_criminal_defense).sum()}/{iw.iw_public_defender.sum()}")
+        for label, mask in [("prosecutor, they yes / we no", iw.iw_prosecutor & ~iw.our_prosecutor),
+                            ("prosecutor, we yes / they no", ~iw.iw_prosecutor & iw.our_prosecutor),
+                            ("public defender, they yes / our criminal defense no", iw.iw_public_defender & ~iw.our_criminal_defense)]:
+            if mask.any():
+                print(f"   {label}: {', '.join(iw.judge[mask])}")
+        report["injustice_watch_check"] = iw.to_dict("records")
 
     report["labels"] = {}
     for title, path in [("tuning set", GOLD), ("held-out set", HOLDOUT)]:

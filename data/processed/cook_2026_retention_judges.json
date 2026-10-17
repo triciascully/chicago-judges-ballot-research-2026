@@ -73,7 +73,13 @@
           }
         ]
       },
-      "background": [],
+      "background": [
+        {
+          "label": "Former prosecutor",
+          "evidence": [],
+          "via": "Injustice Watch guide"
+        }
+      ],
       "attorney_criticism": [],
       "attorney_feedback": {
         "Temperament": {
@@ -110,7 +116,30 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/bertina-e-lampkin-35640",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Lampkin",
+        "court": "Appellate Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/bertina-e-lampkin-35640",
+        "judge_since": "1987",
+        "law_school": "DePaul University",
+        "graduation_year": "1974",
+        "age": 77,
+        "flags": [
+          "Former prosecutor",
+          "Notable controversy",
+          "Highly qualified ratings"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Well qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 0,
@@ -160,7 +189,8 @@
           "label": "Former criminal defense attorney",
           "evidence": [
             "a sole practitioner with concentrations in criminal defense"
-          ]
+          ],
+          "also": "Injustice Watch guide (public defender)"
         }
       ],
       "attorney_criticism": [],
@@ -205,7 +235,28 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/julie-bess-aimen-35871",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Aimen",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/julie-bess-aimen-35871",
+        "judge_since": "2020",
+        "law_school": "IIT Chicago-Kent",
+        "graduation_year": "1984",
+        "age": 69,
+        "flags": [
+          "Former public defender"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 5,
@@ -361,7 +412,26 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/john-michael-allegretti-35841",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Allegretti",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/john-michael-allegretti-35841",
+        "judge_since": "2014",
+        "law_school": "St. Thomas University",
+        "graduation_year": "1995",
+        "age": 61,
+        "flags": [],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 3,
@@ -456,7 +526,8 @@
           "label": "Former prosecutor",
           "evidence": [
             "After a career as a prosecutor"
-          ]
+          ],
+          "also": "Injustice Watch guide"
         }
       ],
       "attorney_criticism": [],
@@ -497,7 +568,29 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/erin-haggerty-antonietti-35833",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Antonietti",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/erin-haggerty-antonietti-35833",
+        "judge_since": "2019",
+        "law_school": "DePaul University",
+        "graduation_year": "1991",
+        "age": 60,
+        "flags": [
+          "Former prosecutor",
+          "Negative ratings"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": false,
+        "has_survey": true
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 2,
@@ -638,7 +731,26 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/edward-a-arce-35893",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Arce",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/edward-a-arce-35893",
+        "judge_since": "2008",
+        "law_school": "IIT Chicago-Kent",
+        "graduation_year": "1985",
+        "age": 67,
+        "flags": [],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 7,
@@ -755,7 +867,13 @@
           }
         ]
       },
-      "background": [],
+      "background": [
+        {
+          "label": "Former prosecutor",
+          "evidence": [],
+          "via": "Injustice Watch guide"
+        }
+      ],
       "attorney_criticism": [],
       "attorney_feedback": {
         "Temperament": {
@@ -851,7 +969,28 @@
         }
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/laura-ayala-gonzalez-35786",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Ayala-Gonzalez",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/laura-ayala-gonzalez-35786",
+        "judge_since": "2020",
+        "law_school": "UIC Law (formerly John Marshall Law School)",
+        "graduation_year": "2002",
+        "age": 50,
+        "flags": [
+          "Former prosecutor"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 19,
@@ -1041,7 +1180,26 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/andrea-m-buford-35788",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Buford",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/andrea-m-buford-35788",
+        "judge_since": "2013",
+        "law_school": "IIT Chicago-Kent",
+        "graduation_year": "1986",
+        "age": 70,
+        "flags": [],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 28,
@@ -1183,7 +1341,26 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/krista-d-butler-35825",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Butler",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/krista-d-butler-35825",
+        "judge_since": "2020",
+        "law_school": "IIT Chicago-Kent",
+        "graduation_year": "1993",
+        "age": 61,
+        "flags": [],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 3,
@@ -1299,7 +1476,8 @@
           "label": "Former prosecutor",
           "evidence": [
             "After a career as a prosecutor"
-          ]
+          ],
+          "also": "Injustice Watch guide"
         }
       ],
       "attorney_criticism": [],
@@ -1403,7 +1581,29 @@
         }
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/thomas-j-byrne-35790",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Byrne",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/thomas-j-byrne-35790",
+        "judge_since": "2008",
+        "law_school": "Loyola University Chicago",
+        "graduation_year": "1989",
+        "age": 64,
+        "flags": [
+          "Former prosecutor",
+          "Notable reversals"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 92,
@@ -1520,7 +1720,8 @@
           "evidence": [
             "he was a private attorney focusing on criminal defense",
             "several years as an assistant public defender"
-          ]
+          ],
+          "also": "Injustice Watch guide (public defender)"
         },
         {
           "label": "Represented children, poor clients, or people with disabilities",
@@ -1569,7 +1770,28 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/thomas-j-carroll-35792",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Carroll",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/thomas-j-carroll-35792",
+        "judge_since": "2011",
+        "law_school": "IIT Chicago-Kent",
+        "graduation_year": "1988",
+        "age": 66,
+        "flags": [
+          "Former public defender"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 5,
@@ -1685,7 +1907,8 @@
           "label": "Former prosecutor",
           "evidence": [
             "After a career as a prosecutor"
-          ]
+          ],
+          "also": "Injustice Watch guide"
         }
       ],
       "attorney_criticism": [],
@@ -1789,7 +2012,28 @@
         }
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/patrick-kevin-coughlin-35905",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Coughlin",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/patrick-kevin-coughlin-35905",
+        "judge_since": "2014",
+        "law_school": "DePaul University",
+        "graduation_year": "1996",
+        "age": 57,
+        "flags": [
+          "Former prosecutor"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 41,
@@ -1943,7 +2187,28 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/thomas-m-cushing-35873",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Cushing",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/thomas-m-cushing-35873",
+        "judge_since": "2019",
+        "law_school": "Loyola University Chicago",
+        "graduation_year": "1988",
+        "age": 65,
+        "flags": [
+          "Notable reversals"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 14,
@@ -2217,7 +2482,26 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/marie-aileen-dempsey-35881",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Dempsey",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/marie-aileen-dempsey-35881",
+        "judge_since": "2020",
+        "law_school": "University of Illinois",
+        "graduation_year": "2002",
+        "age": 49,
+        "flags": [],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 19,
@@ -2420,7 +2704,8 @@
           "label": "Former prosecutor",
           "evidence": [
             "she had been an Assistant State\u2019s Attorney in Will County for ten years"
-          ]
+          ],
+          "also": "Injustice Watch guide"
         }
       ],
       "attorney_criticism": [],
@@ -2462,7 +2747,28 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/sondra-n-denmark-35829",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Denmark",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/sondra-n-denmark-35829",
+        "judge_since": "2018",
+        "law_school": "Northern Illinois University",
+        "graduation_year": "2004",
+        "age": 53,
+        "flags": [
+          "Former prosecutor"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 5,
@@ -2639,7 +2945,8 @@
           "label": "Former prosecutor",
           "evidence": [
             "After a career as a prosecutor"
-          ]
+          ],
+          "also": "Injustice Watch guide"
         }
       ],
       "attorney_criticism": [],
@@ -2684,7 +2991,28 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/jamie-guerra-dickler-35843",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Dickler",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/jamie-guerra-dickler-35843",
+        "judge_since": "2020",
+        "law_school": "DePaul University",
+        "graduation_year": "2005",
+        "age": 47,
+        "flags": [
+          "Former prosecutor"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 4,
@@ -2894,7 +3222,26 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/patricia-maria-fallon-35895",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Fallon",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/patricia-maria-fallon-35895",
+        "judge_since": "2019",
+        "law_school": "IIT Chicago-Kent",
+        "graduation_year": "2000",
+        "age": 54,
+        "flags": [],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 6,
@@ -3160,7 +3507,26 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/michael-a-forti-35849",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Forti",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/michael-a-forti-35849",
+        "judge_since": "2016",
+        "law_school": "Northwestern University",
+        "graduation_year": "1980",
+        "age": 72,
+        "flags": [],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 11,
@@ -3269,7 +3635,8 @@
           "label": "Former prosecutor",
           "evidence": [
             "After a career as a prosecutor"
-          ]
+          ],
+          "also": "Injustice Watch guide"
         }
       ],
       "attorney_criticism": [],
@@ -3308,7 +3675,29 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/megan-elizabeth-goldish-35875",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Goldish",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/megan-elizabeth-goldish-35875",
+        "judge_since": "2014",
+        "law_school": "Northwestern University",
+        "graduation_year": "1996",
+        "age": 55,
+        "flags": [
+          "Former prosecutor",
+          "Notable controversy"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 3,
@@ -3438,7 +3827,26 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/jonathan-clark-green-35851",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Green",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/jonathan-clark-green-35851",
+        "judge_since": "2020",
+        "law_school": "IIT Chicago-Kent",
+        "graduation_year": "1986",
+        "age": 65,
+        "flags": [],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 6,
@@ -3636,7 +4044,13 @@
           }
         ]
       },
-      "background": [],
+      "background": [
+        {
+          "label": "Former prosecutor",
+          "evidence": [],
+          "via": "Injustice Watch guide"
+        }
+      ],
       "attorney_criticism": [],
       "attorney_feedback": {
         "Temperament": {
@@ -3749,7 +4163,28 @@
         }
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/anjana-mj-hansen-35877",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Hansen",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/anjana-m-j-hansen-35877",
+        "judge_since": "2014",
+        "law_school": "UIC Law (formerly John Marshall Law School)",
+        "graduation_year": "1997",
+        "age": 54,
+        "flags": [
+          "Former prosecutor"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 19,
@@ -3865,7 +4300,8 @@
           "label": "Former criminal defense attorney",
           "evidence": [
             "After a career as an assistant public defender"
-          ]
+          ],
+          "also": "Injustice Watch guide (public defender)"
         },
         {
           "label": "Represented children, poor clients, or people with disabilities",
@@ -3940,7 +4376,28 @@
         }
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/sheree-d-henry-35794",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Henry",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/sheree-d-henry-35794",
+        "judge_since": "2019",
+        "law_school": "Northern Illinois University",
+        "graduation_year": "1994",
+        "age": 57,
+        "flags": [
+          "Former public defender"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 2,
@@ -4045,7 +4502,8 @@
           "label": "Former criminal defense attorney",
           "evidence": [
             "After a career as an assistant public defender"
-          ]
+          ],
+          "also": "Injustice Watch guide (public defender)"
         },
         {
           "label": "Represented children, poor clients, or people with disabilities",
@@ -4157,7 +4615,29 @@
         }
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/kerry-m-kennedy-35796",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Kennedy",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/kerry-m-kennedy-35796",
+        "judge_since": "2002",
+        "law_school": "Northern Illinois University",
+        "graduation_year": "1978",
+        "age": 75,
+        "flags": [
+          "Former public defender",
+          "Notable reversals"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 8,
@@ -4281,7 +4761,8 @@
           "evidence": [
             "she had focused on criminal defense as both a private practitioner",
             "an assistant public defender"
-          ]
+          ],
+          "also": "Injustice Watch guide (public defender)"
         },
         {
           "label": "Represented children, poor clients, or people with disabilities",
@@ -4396,7 +4877,28 @@
         }
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/diana-l-kenworthy-35883",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Kenworthy",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/diana-l-kenworthy-35883",
+        "judge_since": "2008",
+        "law_school": "Ohio State University",
+        "graduation_year": "1995",
+        "age": 58,
+        "flags": [
+          "Former public defender"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 52,
@@ -4599,7 +5101,26 @@
         }
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/robert-d-kuzas-35853",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Kuzas",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/robert-d-kuzas-35853",
+        "judge_since": "2014",
+        "law_school": "UIC Law (formerly John Marshall Law School)",
+        "graduation_year": "1988",
+        "age": 65,
+        "flags": [],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 5,
@@ -4701,7 +5222,8 @@
           "label": "Former prosecutor",
           "evidence": [
             "After a career as a prosecutor"
-          ]
+          ],
+          "also": "Injustice Watch guide"
         }
       ],
       "attorney_criticism": [],
@@ -4742,7 +5264,28 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/anthony-c-tony-kyriakopoulos-35885",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Kyriakopoulos",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/anthony-c-tony-kyriakopoulos-35885",
+        "judge_since": "2010",
+        "law_school": "UIC Law (formerly John Marshall Law School)",
+        "graduation_year": "1989",
+        "age": 63,
+        "flags": [
+          "Former prosecutor"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 10,
@@ -4860,7 +5403,26 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/john-j-mahoney-35845",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Mahoney",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/john-j-mahoney-35845",
+        "judge_since": null,
+        "law_school": null,
+        "graduation_year": null,
+        "age": null,
+        "flags": [],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 1,
@@ -4948,7 +5510,8 @@
           "label": "Former prosecutor",
           "evidence": [
             "He spent the majority of his career as an Assistant State\u2019s Attorney in Cook County"
-          ]
+          ],
+          "also": "Injustice Watch guide"
         },
         {
           "label": "Has presided over a treatment court (mental health, drug, or veterans)",
@@ -5042,7 +5605,28 @@
         }
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/daniel-edward-maloney-35835",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Maloney",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/daniel-edward-maloney-35835",
+        "judge_since": "2019",
+        "law_school": "Valparaiso University",
+        "graduation_year": "2001",
+        "age": 50,
+        "flags": [
+          "Former prosecutor"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 0,
@@ -5141,7 +5725,28 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/maritza-martinez-35798",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Martinez",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/maritza-martinez-35798",
+        "judge_since": "2014",
+        "law_school": "Loyola University Chicago",
+        "graduation_year": "1989",
+        "age": 61,
+        "flags": [
+          "Notable controversy"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 54,
@@ -5295,7 +5900,26 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/mary-catherine-marubio-35887",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Marubio",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/mary-catherine-marubio-35887",
+        "judge_since": "2016",
+        "law_school": "DePaul University",
+        "graduation_year": "1996",
+        "age": 56,
+        "flags": [],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 3,
@@ -5554,7 +6178,26 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/celestia-l-mays-35800",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Mays",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/celestia-l-mays-35800",
+        "judge_since": "2019",
+        "law_school": "University of Detroit Mercy",
+        "graduation_year": "1986",
+        "age": 65,
+        "flags": [],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 2,
@@ -5697,7 +6340,26 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/terrence-j-mcguire-35837",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Mcguire",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/terrence-j-mcguire-35837",
+        "judge_since": "2014",
+        "law_school": "Loyola University Chicago",
+        "graduation_year": "1991",
+        "age": 62,
+        "flags": [],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": false,
+        "has_survey": true
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 13,
@@ -5851,7 +6513,26 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/maura-mcmahon-zeller-35823",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Zeller",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/maura-mcmahon-zeller-35823",
+        "judge_since": "2020",
+        "law_school": "DePaul University",
+        "graduation_year": "1993",
+        "age": 62,
+        "flags": [],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": false,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 1,
@@ -6013,7 +6694,8 @@
           "evidence": [
             "she was a prosecutor in New Mexico from 2002 until 2007",
             "became an Assistant State\u2019s Attorney in the Felony Trial Division"
-          ]
+          ],
+          "also": "Injustice Watch guide"
         }
       ],
       "attorney_criticism": [
@@ -6058,7 +6740,28 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/regina-a-mescall-35839",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Mescall",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/regina-a-mescall-35839",
+        "judge_since": "2020",
+        "law_school": "UIC Law (formerly John Marshall Law School)",
+        "graduation_year": "2001",
+        "age": 49,
+        "flags": [
+          "Former prosecutor"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 11,
@@ -6240,7 +6943,26 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Non Partisan",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/bridget-anne-mitchell-35802",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Mitchell",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/bridget-anne-mitchell-35802",
+        "judge_since": "2014",
+        "law_school": "IIT Chicago-Kent",
+        "graduation_year": "1981",
+        "age": 69,
+        "flags": [],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 12,
@@ -6371,7 +7093,8 @@
           "evidence": [
             "she was a Cook County Assistant State\u2019s Attorney in the Child Support Enforcement Division and the Felony Trial Division",
             "Chief of Real Estate Prosecutions for the Illinois Department of Financial and Professional Regulation"
-          ]
+          ],
+          "also": "Injustice Watch guide"
         },
         {
           "label": "Has presided over a treatment court (mental health, drug, or veterans)",
@@ -6418,7 +7141,29 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/teresa-molina-gonzalez-35804",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Molina-Gonzalez",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/teresa-molina-gonzalez-35804",
+        "judge_since": "2019",
+        "law_school": "Ohio State University",
+        "graduation_year": "2001",
+        "age": 52,
+        "flags": [
+          "Former prosecutor",
+          "Negative ratings"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 3,
@@ -6517,7 +7262,13 @@
         "value": false,
         "basis": []
       },
-      "background": [],
+      "background": [
+        {
+          "label": "Former prosecutor",
+          "evidence": [],
+          "via": "Injustice Watch guide"
+        }
+      ],
       "attorney_criticism": [],
       "attorney_feedback": {
         "Temperament": {
@@ -6561,7 +7312,28 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/caroline-kate-moreland-35806",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Moreland",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/caroline-kate-moreland-35806",
+        "judge_since": "2010",
+        "law_school": "Catholic University of America",
+        "graduation_year": "1995",
+        "age": 59,
+        "flags": [
+          "Former prosecutor"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 71,
@@ -6676,7 +7448,8 @@
           "label": "Former prosecutor",
           "evidence": [
             "He started his career as a Cook County State\u2019s Attorney."
-          ]
+          ],
+          "also": "Injustice Watch guide"
         },
         {
           "label": "Former criminal defense attorney",
@@ -6727,7 +7500,28 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/john-g-mulroe-35889",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Mulroe",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/john-g-mulroe-35889",
+        "judge_since": "2019",
+        "law_school": "Loyola University Chicago",
+        "graduation_year": "1988",
+        "age": 67,
+        "flags": [
+          "Former prosecutor"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 0,
@@ -6814,7 +7608,8 @@
           "label": "Former prosecutor",
           "evidence": [
             "career Assistant State\u2019s Attorney assigned to the Leighton Criminal Courthouse in the Appeals Division and at the Sixth Municipal District (Markham)"
-          ]
+          ],
+          "also": "Injustice Watch guide"
         }
       ],
       "attorney_criticism": [
@@ -6912,7 +7707,29 @@
         }
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/lorraine-mary-murphy-35808",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Murphy",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/lorraine-mary-murphy-35808",
+        "judge_since": "2020",
+        "law_school": "IIT Chicago-Kent",
+        "graduation_year": "2003",
+        "age": 50,
+        "flags": [
+          "Former prosecutor",
+          "Negative ratings"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 4,
@@ -7019,7 +7836,13 @@
         "value": false,
         "basis": []
       },
-      "background": [],
+      "background": [
+        {
+          "label": "Former prosecutor",
+          "evidence": [],
+          "via": "Injustice Watch guide"
+        }
+      ],
       "attorney_criticism": [],
       "attorney_feedback": {
         "Temperament": {
@@ -7061,7 +7884,28 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/lewis-nixon-35869",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Nixon",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/lewis-nixon-35869",
+        "judge_since": "2001",
+        "law_school": "DePaul University",
+        "graduation_year": "1974",
+        "age": 77,
+        "flags": [
+          "Former prosecutor"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 5,
@@ -7199,7 +8043,26 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/eileen-marie-oconnor-35847",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain O'Connor",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/eileen-marie-oconnor-35847",
+        "judge_since": "2020",
+        "law_school": "IIT Chicago-Kent",
+        "graduation_year": "2006",
+        "age": 46,
+        "flags": [],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": false,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 0,
@@ -7288,6 +8151,11 @@
           "evidence": [
             "From 2018 until 2023, she was assigned to the County Division, hearing mental health, real estate taxation, civil asset forfeiture, and election law cases"
           ]
+        },
+        {
+          "label": "Former prosecutor",
+          "evidence": [],
+          "via": "Injustice Watch guide"
         }
       ],
       "attorney_criticism": [],
@@ -7326,7 +8194,28 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/nichole-c-patton-35903",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Patton",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/nichole-c-patton-35903",
+        "judge_since": "2018",
+        "law_school": "UIC Law (formerly John Marshall Law School)",
+        "graduation_year": "1996",
+        "age": 54,
+        "flags": [
+          "Former prosecutor"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 11,
@@ -7541,7 +8430,26 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Republican",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/james-p-pieczonka-35897",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Pieczonka",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/james-p-pieczonka-35897",
+        "judge_since": "2014",
+        "law_school": "UIC Law (formerly John Marshall Law School)",
+        "graduation_year": "1983",
+        "age": 70,
+        "flags": [],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 8,
@@ -7687,7 +8595,28 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/joan-e-powell-35867",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Powell",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/joan-e-powell-35867",
+        "judge_since": "2006",
+        "law_school": "UIC Law (formerly John Marshall Law School)",
+        "graduation_year": "1992",
+        "age": 78,
+        "flags": [
+          "Notable reversals"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 12,
@@ -7826,7 +8755,26 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/jill-rose-quinn-35865",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Quinn",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/jill-rose-quinn-35865",
+        "judge_since": "2020",
+        "law_school": "UIC Law (formerly John Marshall Law School)",
+        "graduation_year": "1983",
+        "age": 71,
+        "flags": [],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 2,
@@ -7977,7 +8925,26 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/pamela-reaves-harris-35855",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Reaves-Harris",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/pamela-reaves-harris-35855",
+        "judge_since": "2020",
+        "law_school": "IIT Chicago-Kent",
+        "graduation_year": "1992",
+        "age": 67,
+        "flags": [],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 0,
@@ -8075,7 +9042,13 @@
         "value": false,
         "basis": []
       },
-      "background": [],
+      "background": [
+        {
+          "label": "Former prosecutor",
+          "evidence": [],
+          "via": "Injustice Watch guide"
+        }
+      ],
       "attorney_criticism": [],
       "attorney_feedback": {
         "Temperament": {
@@ -8115,7 +9088,28 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/judith-c-rice-35857",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Rice",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/judith-c-rice-35857",
+        "judge_since": "2014",
+        "law_school": "UIC Law (formerly John Marshall Law School)",
+        "graduation_year": "1988",
+        "age": 68,
+        "flags": [
+          "Former prosecutor"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": "Also on the November ballot, unopposed, for the Illinois Appellate Court, First District (won the March 2026 primary). Her committee for that race, Citizens for Judge Judith C. Rice (opened August 2025), is included in these totals.",
       "appellate": {
         "n_decisions": 3,
@@ -8259,7 +9253,13 @@
           }
         ]
       },
-      "background": [],
+      "background": [
+        {
+          "label": "Former prosecutor",
+          "evidence": [],
+          "via": "Injustice Watch guide"
+        }
+      ],
       "attorney_criticism": [],
       "attorney_feedback": {
         "Temperament": {
@@ -8303,7 +9303,28 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/kristal-r-rivers-35863",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Rivers",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/kristal-r-rivers-35863",
+        "judge_since": "2014",
+        "law_school": "Drake University",
+        "graduation_year": "1996",
+        "age": 55,
+        "flags": [
+          "Former prosecutor"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 5,
@@ -8440,7 +9461,26 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/abbey-fishman-romanek-35879",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Romanek",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/abbey-fishman-romanek-35879",
+        "judge_since": "2014",
+        "law_school": "IIT Chicago-Kent",
+        "graduation_year": "1987",
+        "age": 65,
+        "flags": [],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 18,
@@ -8601,7 +9641,26 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/kristyna-colleen-ryan-35861",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Ryan",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/kristyna-colleen-ryan-35861",
+        "judge_since": "2008",
+        "law_school": "IIT Chicago-Kent",
+        "graduation_year": "2000",
+        "age": 54,
+        "flags": [],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": false,
+        "has_survey": true
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 7,
@@ -8749,7 +9808,26 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/patricia-obrien-sheahan-35859",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Sheahan",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/patricia-obrien-sheahan-35859",
+        "judge_since": "2014",
+        "law_school": "IIT Chicago-Kent",
+        "graduation_year": "1996",
+        "age": 57,
+        "flags": [],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 31,
@@ -8851,7 +9929,13 @@
         "value": false,
         "basis": []
       },
-      "background": [],
+      "background": [
+        {
+          "label": "Former prosecutor",
+          "evidence": [],
+          "via": "Injustice Watch guide"
+        }
+      ],
       "attorney_criticism": [],
       "attorney_feedback": {
         "Temperament": {
@@ -8886,7 +9970,29 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/levander-smith-jr-35813",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Smith, Jr.",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/levander-smith-jr-35813",
+        "judge_since": "2019",
+        "law_school": "University of Kansas",
+        "graduation_year": "1991",
+        "age": 63,
+        "flags": [
+          "Former prosecutor",
+          "Notable reversals"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 12,
@@ -9016,7 +10122,8 @@
           "label": "Former criminal defense attorney",
           "evidence": [
             "she worked in several areas of civil law: expungements, insurance defense, and mortgage counseling until becoming an Assistant Public Defender in 2010 where she practiced prior to her election."
-          ]
+          ],
+          "also": "Injustice Watch guide (public defender)"
         },
         {
           "label": "Represented children, poor clients, or people with disabilities",
@@ -9063,7 +10170,29 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/tiesha-l-smith-35811",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Smith",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/tiesha-l-smith-35811",
+        "judge_since": "2020",
+        "law_school": "IIT Chicago-Kent",
+        "graduation_year": "2006",
+        "age": 51,
+        "flags": [
+          "Former public defender",
+          "Negative ratings"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 5,
@@ -9193,7 +10322,29 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/chris-stacey-35815",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Stacey",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/chris-stacey-35815",
+        "judge_since": "2020",
+        "law_school": "UIC Law (formerly John Marshall Law School)",
+        "graduation_year": "1982",
+        "age": 69,
+        "flags": [
+          "Notable controversy",
+          "Notable reversals"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 10,
@@ -9319,7 +10470,8 @@
             "She began her career in the Domestic Violence Court in the Public Defenders\u2019 Office.",
             "She worked briefly for a white collar criminal defense firm before establishing her own practice in criminal defense, immigration, and traffic cases.",
             "From 2016 until her election in 2020, Judge Tirado was a supervisor in the Community Activism Law Alliance, dealing with criminal defense, traffic and immigration cases."
-          ]
+          ],
+          "also": "Injustice Watch guide (public defender)"
         },
         {
           "label": "Represented children, poor clients, or people with disabilities",
@@ -9366,7 +10518,28 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/perla-tirado-35899",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Tirado",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/perla-tirado-35899",
+        "judge_since": "2020",
+        "law_school": "DePaul University",
+        "graduation_year": "2005",
+        "age": 50,
+        "flags": [
+          "Former public defender"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 8,
@@ -9505,7 +10678,13 @@
         "value": false,
         "basis": []
       },
-      "background": [],
+      "background": [
+        {
+          "label": "Former prosecutor",
+          "evidence": [],
+          "via": "Injustice Watch guide"
+        }
+      ],
       "attorney_criticism": [],
       "attorney_feedback": {
         "Temperament": {
@@ -9542,7 +10721,29 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/gerardo-tristan-jr-35901",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Tristan, Jr.",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/gerardo-tristan-jr-35901",
+        "judge_since": "2019",
+        "law_school": "DePaul University",
+        "graduation_year": "2002",
+        "age": 56,
+        "flags": [
+          "Former prosecutor",
+          "Notable controversy"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 4,
@@ -9718,7 +10919,13 @@
           }
         ]
       },
-      "background": [],
+      "background": [
+        {
+          "label": "Former prosecutor",
+          "evidence": [],
+          "via": "Injustice Watch guide"
+        }
+      ],
       "attorney_criticism": [
         "comments about poor temperament",
         "impatience"
@@ -9829,7 +11036,29 @@
         }
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/ursula-walowski-35891",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Walowski",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/ursula-walowski-35891",
+        "judge_since": "2008",
+        "law_school": "IIT Chicago-Kent",
+        "graduation_year": "1993",
+        "age": 57,
+        "flags": [
+          "Former prosecutor",
+          "Notable reversals"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 123,
@@ -9968,7 +11197,26 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/elizabeth-anne-walsh-35817",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Walsh",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/elizabeth-anne-walsh-35817",
+        "judge_since": "2020",
+        "law_school": "UIC Law (formerly John Marshall Law School)",
+        "graduation_year": "2006",
+        "age": 47,
+        "flags": [],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": false,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 4,
@@ -10114,7 +11362,8 @@
           "label": "Former criminal defense attorney",
           "evidence": [
             "She briefly had her own practice before joining the Office of the Cook County Public Defender, where she was assigned to the Markham courthouse as a trial attorney"
-          ]
+          ],
+          "also": "Injustice Watch guide (public defender)"
         },
         {
           "label": "Represented children, poor clients, or people with disabilities",
@@ -10211,7 +11460,28 @@
         }
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/tyria-b-walton-35827",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Walton",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/tyria-b-walton-35827",
+        "judge_since": "2019",
+        "law_school": "Loyola University Chicago",
+        "graduation_year": "1997",
+        "age": 55,
+        "flags": [
+          "Former public defender"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 18,
@@ -10383,7 +11653,26 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/maureen-ward-kirby-35819",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Ward Kirby",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/maureen-ward-kirby-35819",
+        "judge_since": "2007",
+        "law_school": "Loyola University Chicago",
+        "graduation_year": "1989",
+        "age": 62,
+        "flags": [],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 8,
@@ -10609,7 +11898,28 @@
         }
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/steven-g-watkins-35831",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Watkins",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/steven-g-watkins-35831",
+        "judge_since": "2014",
+        "law_school": "DePaul University",
+        "graduation_year": "1991",
+        "age": 62,
+        "flags": [
+          "Notable controversy"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": true,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 25,
@@ -10716,7 +12026,8 @@
           "label": "Former prosecutor",
           "evidence": [
             "She began her legal career in the Cook County State\u2019s Attorney\u2019s Office"
-          ]
+          ],
+          "also": "Injustice Watch guide"
         }
       ],
       "attorney_criticism": [],
@@ -10755,7 +12066,28 @@
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
       "party": "Democratic",
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/lynn-weaver-boyle-35821",
+      "injustice_watch": {
+        "race_type": "retention",
+        "race": "Retain Weaver Boyle",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/lynn-weaver-boyle-35821",
+        "judge_since": "2019",
+        "law_school": "DePaul University",
+        "graduation_year": "1990",
+        "age": 61,
+        "flags": [
+          "Former prosecutor"
+        ],
+        "endorsements": [],
+        "other_ratings": [
+          {
+            "source": "Chicago Council of Lawyers",
+            "rating": "Qualified"
+          }
+        ],
+        "has_notable": false,
+        "has_survey": false
+      },
       "also_running": null,
       "appellate": {
         "n_decisions": 12,
@@ -10922,7 +12254,23 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/judith-c-rice-35857",
+      "injustice_watch": {
+        "race_type": "open seat",
+        "race": "Hoffman Vacancy",
+        "court": "Appellate Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/judith-c-rice-35286",
+        "judge_since": null,
+        "law_school": "UIC Law (formerly John Marshall Law School)",
+        "graduation_year": "1988",
+        "age": 68,
+        "flags": [],
+        "endorsements": [
+          "Chicago Federation of Labor"
+        ],
+        "other_ratings": [],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": "Also on the November ballot, unopposed, for the Illinois Appellate Court, First District (won the March 2026 primary). Her committee for that race, Citizens for Judge Judith C. Rice (opened August 2025), is included in these totals.",
       "campaign": {
         "raised_from_others": 13050.0,
@@ -11052,7 +12400,23 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/steven-q-mckenzie-35323",
+      "injustice_watch": {
+        "race_type": "open seat",
+        "race": "Burke Vacancy",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/steven-q-mckenzie-35323",
+        "judge_since": null,
+        "law_school": "IIT Chicago-Kent",
+        "graduation_year": "1997",
+        "age": 59,
+        "flags": [],
+        "endorsements": [
+          "Chicago Federation of Labor"
+        ],
+        "other_ratings": [],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "campaign": {
         "raised_from_others": 39750.0,
@@ -11290,7 +12654,24 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/luz-maria-toledo-35599",
+      "injustice_watch": {
+        "race_type": "open seat",
+        "race": "Cobbs Vacancy",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/luz-maria-toledo-35599",
+        "judge_since": null,
+        "law_school": "UIC Law (Formerly John Marshall Law School)",
+        "graduation_year": "2006",
+        "age": 46,
+        "flags": [],
+        "endorsements": [
+          "Chicago Federation of Labor",
+          "Personal PAC"
+        ],
+        "other_ratings": [],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "campaign": {
         "raised_from_others": 29650.0,
@@ -11452,7 +12833,24 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/ashonta-c-rice-35600",
+      "injustice_watch": {
+        "race_type": "open seat",
+        "race": "Coghlan Vacancy",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/ashonta-c-rice-35600",
+        "judge_since": null,
+        "law_school": "Loyola University New Orleans",
+        "graduation_year": "2004",
+        "age": 47,
+        "flags": [],
+        "endorsements": [
+          "Independent Voters of Illinois-Independent Precinct Organization",
+          "Personal PAC"
+        ],
+        "other_ratings": [],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "campaign": {
         "raised_from_others": 20638.0,
@@ -11673,7 +13071,24 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/ava-george-stewart-35601",
+      "injustice_watch": {
+        "race_type": "open seat",
+        "race": "Hooks Vacancy",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/ava-george-stewart-35601",
+        "judge_since": null,
+        "law_school": "University of Illinois",
+        "graduation_year": "2003",
+        "age": 58,
+        "flags": [],
+        "endorsements": [
+          "Chicago Federation of Labor",
+          "Personal PAC"
+        ],
+        "other_ratings": [],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "campaign": {
         "raised_from_others": 29820.0,
@@ -11832,7 +13247,23 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/danthony-tony-thedford-35602",
+      "injustice_watch": {
+        "race_type": "open seat",
+        "race": "Karkula Vacancy",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/d-anthony-tony-thedford-35602",
+        "judge_since": null,
+        "law_school": "University of Alabama",
+        "graduation_year": "1996",
+        "age": 55,
+        "flags": [],
+        "endorsements": [
+          "Chicago Federation of Labor"
+        ],
+        "other_ratings": [],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "campaign": {
         "raised_from_others": 59680.24,
@@ -12050,7 +13481,23 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/radiance-ward-35345",
+      "injustice_watch": {
+        "race_type": "open seat",
+        "race": "Balanoff Vacancy",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/radiance-ward-35345",
+        "judge_since": null,
+        "law_school": "Loyola University Chicago",
+        "graduation_year": "2007",
+        "age": 43,
+        "flags": [],
+        "endorsements": [
+          "Chicago Federation of Labor"
+        ],
+        "other_ratings": [],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "campaign": {
         "raised_from_others": 35573.0,
@@ -12240,7 +13687,25 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/ashley-greer-shambley-35603",
+      "injustice_watch": {
+        "race_type": "open seat",
+        "race": "Walker Vacancy",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/ashley-greer-shambley-35603",
+        "judge_since": null,
+        "law_school": "DePaul University",
+        "graduation_year": "2010",
+        "age": 41,
+        "flags": [],
+        "endorsements": [
+          "Chicago Federation of Labor",
+          "Personal PAC",
+          "Independent Voters of Illinois-Independent Precinct Organization"
+        ],
+        "other_ratings": [],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "campaign": {
         "raised_from_others": 80589.16,
@@ -12414,7 +13879,23 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/john-carroll-35604",
+      "injustice_watch": {
+        "race_type": "open seat",
+        "race": "Murphy Vacancy",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/john-carroll-35604",
+        "judge_since": null,
+        "law_school": "Loyola University Chicago",
+        "graduation_year": "1999",
+        "age": 55,
+        "flags": [],
+        "endorsements": [
+          "Fraternal Order of Police Lodge 7"
+        ],
+        "other_ratings": [],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "campaign": {
         "raised_from_others": 21950.0,
@@ -12567,7 +14048,21 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/rachel-marrello-35313",
+      "injustice_watch": {
+        "race_type": "open seat",
+        "race": "Sherlock Vacancy",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/rachel-marrello-35313",
+        "judge_since": null,
+        "law_school": "IIT Chicago-Kent",
+        "graduation_year": "2000",
+        "age": 51,
+        "flags": [],
+        "endorsements": [],
+        "other_ratings": [],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "campaign": {
         "raised_from_others": 1500.0,
@@ -12658,7 +14153,21 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/stephanie-s-kelly-35582",
+      "injustice_watch": {
+        "race_type": "open seat",
+        "race": "Ross Vacancy",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/stephanie-s-kelly-35582",
+        "judge_since": null,
+        "law_school": "IIT Chicago-Kent",
+        "graduation_year": "2001",
+        "age": 52,
+        "flags": [],
+        "endorsements": [],
+        "other_ratings": [],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "campaign": null
     },
@@ -12743,7 +14252,23 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/kathleen-cunniff-ori-35605",
+      "injustice_watch": {
+        "race_type": "open seat",
+        "race": "Gamrath Vacancy",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/kathleen-cunniff-ori-35605",
+        "judge_since": null,
+        "law_school": "Loyola University Chicago",
+        "graduation_year": "2007",
+        "age": 46,
+        "flags": [],
+        "endorsements": [
+          "Personal PAC"
+        ],
+        "other_ratings": [],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "campaign": {
         "raised_from_others": 75680.65,
@@ -12928,7 +14453,24 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/lester-finkle-35346",
+      "injustice_watch": {
+        "race_type": "open seat",
+        "race": "Mikva Vacancy",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/lester-finkle-35346",
+        "judge_since": null,
+        "law_school": "DePaul University",
+        "graduation_year": "1982",
+        "age": 68,
+        "flags": [],
+        "endorsements": [
+          "Personal PAC",
+          "Independent Voters of Illinois-Independent Precinct Organization"
+        ],
+        "other_ratings": [],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "campaign": {
         "raised_from_others": 13691.77,
@@ -13058,7 +14600,24 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/jarrett-knox-35606",
+      "injustice_watch": {
+        "race_type": "open seat",
+        "race": "Meyerson Vacancy",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/jarrett-knox-35606",
+        "judge_since": null,
+        "law_school": "DePaul University",
+        "graduation_year": "2008",
+        "age": 44,
+        "flags": [],
+        "endorsements": [
+          "Personal PAC",
+          "Independent Voters of Illinois-Independent Precinct Organization"
+        ],
+        "other_ratings": [],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "campaign": {
         "raised_from_others": 19950.0,
@@ -13199,7 +14758,25 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/kim-przekota-35607",
+      "injustice_watch": {
+        "race_type": "open seat",
+        "race": "Roberts Vacancy",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/kim-przekota-35607",
+        "judge_since": null,
+        "law_school": "DePaul University",
+        "graduation_year": "2008",
+        "age": 43,
+        "flags": [],
+        "endorsements": [
+          "Chicago Federation of Labor",
+          "Personal PAC",
+          "Fraternal Order of Police Lodge 7"
+        ],
+        "other_ratings": [],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "campaign": {
         "raised_from_others": 63448.0,
@@ -13394,7 +14971,24 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/robert-bob-groebner-35628",
+      "injustice_watch": {
+        "race_type": "open seat",
+        "race": "Curry, Jr. Vacancy",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/robert-bob-groebner-35628",
+        "judge_since": null,
+        "law_school": "IIT Chicago-Kent",
+        "graduation_year": "1999",
+        "age": 54,
+        "flags": [],
+        "endorsements": [
+          "Chicago Federation of Labor",
+          "Personal PAC"
+        ],
+        "other_ratings": [],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "campaign": {
         "raised_from_others": 5540.04,
@@ -13510,7 +15104,24 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/brittany-michelle-pedersen-35464",
+      "injustice_watch": {
+        "race_type": "open seat",
+        "race": "Martin C. Kelley Vacancy",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/brittany-michelle-pedersen-35464",
+        "judge_since": null,
+        "law_school": "Loyola University Chicago",
+        "graduation_year": "2008",
+        "age": 46,
+        "flags": [],
+        "endorsements": [
+          "Chicago Federation of Labor",
+          "Personal PAC"
+        ],
+        "other_ratings": [],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "campaign": {
         "raised_from_others": 258621.33,
@@ -13711,7 +15322,24 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/william-f-kelley-35314",
+      "injustice_watch": {
+        "race_type": "open seat",
+        "race": "Thomas J. Kelley Vacancy",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/william-f-kelley-35314",
+        "judge_since": null,
+        "law_school": "Loyola University Chicago",
+        "graduation_year": "1980",
+        "age": 71,
+        "flags": [],
+        "endorsements": [
+          "Chicago Federation of Labor",
+          "Personal PAC"
+        ],
+        "other_ratings": [],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "campaign": {
         "raised_from_others": 9700.0,
@@ -13841,7 +15469,24 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/dan-naranjo-35474",
+      "injustice_watch": {
+        "race_type": "open seat",
+        "race": "O'Malley Vacancy",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/dan-naranjo-35474",
+        "judge_since": null,
+        "law_school": "University of Miami",
+        "graduation_year": "1997",
+        "age": 53,
+        "flags": [],
+        "endorsements": [
+          "Chicago Federation of Labor",
+          "Personal PAC"
+        ],
+        "other_ratings": [],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "campaign": {
         "raised_from_others": 14277.0,
@@ -13993,7 +15638,23 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/julian-sanchez-crozier-35629",
+      "injustice_watch": {
+        "race_type": "open seat",
+        "race": "Baird Vacancy",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/julian-sanchez-crozier-35629",
+        "judge_since": null,
+        "law_school": "UIC Law (formerly John Marshall Law School)",
+        "graduation_year": "2013",
+        "age": 40,
+        "flags": [],
+        "endorsements": [
+          "Chicago Federation of Labor"
+        ],
+        "other_ratings": [],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "campaign": {
         "raised_from_others": 33626.19,
@@ -14178,7 +15839,23 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/jessica-karina-velez-35630",
+      "injustice_watch": {
+        "race_type": "open seat",
+        "race": "Mendoza Vacancy",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/jessica-karina-velez-35630",
+        "judge_since": null,
+        "law_school": "IIT Chicago-Kent",
+        "graduation_year": "2012",
+        "age": 41,
+        "flags": [],
+        "endorsements": [
+          "Chicago Federation of Labor"
+        ],
+        "other_ratings": [],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "campaign": {
         "raised_from_others": 12951.49,
@@ -14334,7 +16011,21 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/natalia-moore-35291",
+      "injustice_watch": {
+        "race_type": "open seat",
+        "race": "Brooks Vacancy",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/natalia-moore-35291",
+        "judge_since": null,
+        "law_school": "Thomas Cooley Law School",
+        "graduation_year": "2006",
+        "age": 54,
+        "flags": [],
+        "endorsements": [],
+        "other_ratings": [],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "campaign": {
         "raised_from_others": 1000.0,
@@ -14452,7 +16143,23 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/bianca-b-brown-35292",
+      "injustice_watch": {
+        "race_type": "open seat",
+        "race": "Carroll Vacancy",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/bianca-b-brown-35292",
+        "judge_since": null,
+        "law_school": "Thomas Cooley Law School",
+        "graduation_year": "2010",
+        "age": 40,
+        "flags": [],
+        "endorsements": [
+          "Personal PAC"
+        ],
+        "other_ratings": [],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "campaign": {
         "raised_from_others": 15216.39,
@@ -14606,7 +16313,21 @@
         "n_sentences": 1,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/juan-ponce-de-leon-35631",
+      "injustice_watch": {
+        "race_type": "open seat",
+        "race": "Chrones Vacancy",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/juan-ponce-de-leon-35631",
+        "judge_since": null,
+        "law_school": "Northern Illinois University",
+        "graduation_year": "2009",
+        "age": 42,
+        "flags": [],
+        "endorsements": [],
+        "other_ratings": [],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "campaign": {
         "raised_from_others": 13433.47,
@@ -14729,7 +16450,23 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/sam-bae-35306",
+      "injustice_watch": {
+        "race_type": "open seat",
+        "race": "Andreou Vacancy",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/sam-bae-35306",
+        "judge_since": null,
+        "law_school": "UIC Law (formerly John Marshall Law School)",
+        "graduation_year": "1998",
+        "age": 54,
+        "flags": [],
+        "endorsements": [
+          "Chicago Federation of Labor"
+        ],
+        "other_ratings": [],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "campaign": {
         "raised_from_others": 61400.0,
@@ -14932,7 +16669,25 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/sara-mcgann-35584",
+      "injustice_watch": {
+        "race_type": "open seat",
+        "race": "Fairman Vacancy",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/sara-mcgann-35584",
+        "judge_since": null,
+        "law_school": "UIC Law (formerly John Marshall Law School)",
+        "graduation_year": "2009",
+        "age": 47,
+        "flags": [],
+        "endorsements": [
+          "Chicago Federation of Labor",
+          "Personal PAC",
+          "Fraternal Order of Police Lodge 7"
+        ],
+        "other_ratings": [],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "campaign": {
         "raised_from_others": 21450.0,
@@ -15122,7 +16877,23 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/monica-somerville-35567",
+      "injustice_watch": {
+        "race_type": "open seat",
+        "race": "Kane Vacancy",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/monica-somerville-35567",
+        "judge_since": null,
+        "law_school": "UIC Law (formerly John Marshall Law School)",
+        "graduation_year": "1989",
+        "age": 64,
+        "flags": [],
+        "endorsements": [
+          "Personal PAC"
+        ],
+        "other_ratings": [],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "campaign": {
         "raised_from_others": 10540.0,
@@ -15231,7 +17002,24 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/michael-j-zink-35368",
+      "injustice_watch": {
+        "race_type": "open seat",
+        "race": "Haracz Vacancy",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/michael-j-zink-35368",
+        "judge_since": null,
+        "law_school": "DePaul University",
+        "graduation_year": "2004",
+        "age": 46,
+        "flags": [],
+        "endorsements": [
+          "Chicago Federation of Labor",
+          "Personal PAC"
+        ],
+        "other_ratings": [],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "campaign": {
         "raised_from_others": 116326.19,
@@ -15507,7 +17295,25 @@
         "n_sentences": 0,
         "summary": "No usable sentencing record in county data (2019\u20132024)."
       },
-      "injustice_watch_url": "https://2026retention.injusticewatch.org/candidate/jon-stromsta-35362",
+      "injustice_watch": {
+        "race_type": "open seat",
+        "race": "Miller Vacancy",
+        "court": "Circuit Court",
+        "url": "https://2026retention.injusticewatch.org/candidate/jon-stromsta-35362",
+        "judge_since": null,
+        "law_school": "University of Minnesota",
+        "graduation_year": "1984",
+        "age": 66,
+        "flags": [],
+        "endorsements": [
+          "Chicago Federation of Labor",
+          "Personal PAC",
+          "Independent Voters of Illinois-Independent Precinct Organization"
+        ],
+        "other_ratings": [],
+        "has_notable": true,
+        "has_survey": true
+      },
       "also_running": null,
       "campaign": {
         "raised_from_others": 61394.36,

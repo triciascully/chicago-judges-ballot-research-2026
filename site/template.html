@@ -181,6 +181,8 @@ details.more > div { margin-top: 0.6rem; display: grid; gap: 0.5rem; }
 .choice span.on::before { background: var(--ink); border-color: var(--ink); }
 .sheet-empty { font: 400 0.95rem var(--sans); color: var(--muted); padding: 1rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
 .sheet-foot { font: 400 0.8rem/1.5 var(--sans); color: var(--muted); }
+.src { display: block; font: 400 0.75rem var(--sans); color: var(--muted); margin-top: 0.15rem; }
+.rating .src { display: inline; margin: 0 0 0 0.3rem; }
 .sheet-h { font: 700 0.8rem var(--sans); letter-spacing: 0.04em; text-transform: uppercase; margin: 1rem 0 0.25rem; }
 .os-group { font: 700 0.8rem var(--sans); letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); margin: 1.4rem 0 0.2rem; }
 
@@ -316,6 +318,7 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
       <label><input type="checkbox" id="f-criticism"> Criticized by attorneys</label>
       <label><input type="checkbox" id="f-barno"> A bar group said No</label>
       <label><input type="checkbox" id="f-criminal"> Criminal court experience</label>
+      <label><input type="checkbox" id="f-iw"> Injustice Watch flagged reversals or controversy</label>
       <span class="count" id="count"></span>
     </div>
   </section>
@@ -362,6 +365,7 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
       <li><strong>Appellate track record</strong> comes from every Illinois Appellate Court decision since 2015 in CourtListener's bulk data (Free Law Project), matched to judges by the name in each decision's caption. It counts how often the appeals court changed a ruling at least in part, compared with the countywide rate for the same case types. Only appealed cases are included.</li>
       <li><strong>Campaign money</strong> comes from the Illinois State Board of Elections and covers each judge's own committee since 2020. The page shows totals and donors' employers but not individual donors' names.</li>
       <li><strong>Open-seat candidates</strong> come from the Chicago Bar Association's general-election guide, which also gives ballot numbers. Their ratings use each group's own scale (Qualified, Highly Qualified, Not Recommended and so on). The Alliance rates candidates who skip its evaluation "Not Recommended," so a solid row of those usually means the candidate didn't take part. Campaign money comes from each candidate's own committees, matched by name and checked against the committee's name. Most candidates aren't judges yet, so there's no sentencing or appellate record to show.</li>
+      <li><strong>Injustice Watch</strong>, a nonprofit newsroom, publishes its own guide to these races. This page uses facts from it: when each judge took the bench, law school, age, endorsements, the Chicago Council of Lawyers rating, and Injustice Watch's flags (such as former prosecutor, notable reversals or notable controversy). Their written reporting stays on their site; each profile links to it. Their flags filled gaps in the ISBA evaluations: they identify 10 former prosecutors whose ISBA evaluations don't mention it.</li>
       <li><strong>Nothing here is an endorsement.</strong> The page shows what the records say. How to weigh them is up to you.</li>
     </ul>
   </section>
@@ -390,6 +394,7 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
   const barNo = (j) => j.bar_ratings.some((r) => /^(No|Not )/.test(r.rating) || /say (no|not)/.test(r.rating));
   const openSeats = DATA.open_seats || [];
   const hasRecord = (j) => j.sentencing.status !== "no record";
+  const iwNotable = (j) => (j.injustice_watch?.flags || []).filter((f) => /^Notable/.test(f));
 
   function chips(j) {
     const out = [];
@@ -403,6 +408,7 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
       out.push(`<span class="chip flag">${esc(parts.join(" · "))}</span>`);
     } else out.push('<span class="chip">All bar groups say Yes</span>');
     if (j.attorney_criticism.length) out.push('<span class="chip flag">Criticized by attorneys</span>');
+    for (const f of iwNotable(j)) out.push(`<span class="chip flag">Injustice Watch: ${esc(f.toLowerCase())}</span>`);
     if (hasRecord(j)) out.push(`<span class="chip">${j.sentencing.n_sentences.toLocaleString()} sentences on record</span>`);
     return out.join("");
   }
@@ -478,15 +484,30 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
       <p class="note">Illinois reports a donor's employer mainly for larger contributions, so legal-job totals cover only those donors.</p>`;
   }
 
+  const bgItem = (b) => `<div class="bg-item"><strong>${esc(b.label)}</strong>${b.evidence.length ? '<span class="src">ISBA evaluation</span>' : ""}${b.evidence.map((q) => `<blockquote>${esc(q)}</blockquote>`).join("")}${b.via ? `<span class="src">Source: ${esc(b.via)}</span>` : ""}${b.also ? `<span class="src">Also reported by the ${esc(b.also)}</span>` : ""}</div>`;
+  // Facts from Injustice Watch's guide; their reporting itself stays on their site.
+  function iwHTML(w, who) {
+    if (!w) return "";
+    const facts = [w.judge_since && `On the bench since ${esc(w.judge_since)}`, w.law_school && `${esc(w.law_school)}${w.graduation_year ? " law graduate, " + esc(w.graduation_year) : ""}`, w.age && `Age ${w.age}`].filter(Boolean);
+    const flags = w.flags.filter((f) => !/^Former (prosecutor|public defender)$/.test(f));
+    const covers = [w.has_notable && "notable cases", "experience", w.has_survey && "the candidate's survey answers"].filter(Boolean).join(", ");
+    return `<div class="section"><h3>From Injustice Watch's guide</h3>
+      ${facts.length ? `<p class="note">${facts.join(" · ")}</p>` : ""}
+      ${flags.length ? `<p class="chips">${flags.map((f) => `<span class="chip${/Notable|Negative/.test(f) ? " flag" : ""}">${esc(f)}</span>`).join("")}</p>` : ""}
+      ${w.endorsements.length ? `<p class="note">Endorsed by: ${w.endorsements.map(esc).join(", ")}.</p>` : ""}
+      <p class="note"><a href="${esc(w.url)}">Read Injustice Watch's profile of ${esc(who)}</a> for their reporting on ${covers}. Injustice Watch is an independent nonprofit newsroom covering Cook County courts.</p></div>`;
+  }
+
   function profileHTML(j) {
     const ratings = j.bar_ratings.map((r) => `
-      <div class="rating"><b>${esc(r.source)}</b><span>${esc(r.rating)}${r.bars_saying_no ? `: ${esc(r.bars_saying_no)}` : ""}</span></div>`).join("");
+      <div class="rating"><b>${esc(r.source)}</b><span>${esc(r.rating)}${r.bars_saying_no ? `: ${esc(r.bars_saying_no)}` : ""}</span></div>`).join("")
+      + (j.injustice_watch?.other_ratings || []).map((r) => `<div class="rating"><b>${esc(r.source)}</b><span>${esc(r.rating)} <span class="src">via Injustice Watch</span></span></div>`).join("");
     const crim = j.criminal_court_experience;
     const crimHTML = crim.value
       ? crim.basis.map((b) => `<div class="bg-item"><strong>${esc(b.source)}</strong>${b.source.startsWith("ISBA") ? b.evidence.map((q) => `<blockquote>${esc(q)}</blockquote>`).join("") : `<span>${esc(b.evidence[0])}</span>`}</div>`).join("")
       : '<p class="note">Neither the ISBA evaluation nor county sentencing records show criminal cases.</p>';
     const bg = j.background.length
-      ? j.background.map((b) => `<div class="bg-item"><strong>${esc(b.label)}</strong>${b.evidence.map((q) => `<blockquote>${esc(q)}</blockquote>`).join("")}</div>`).join("")
+      ? j.background.map((b) => bgItem(b)).join("")
       : '<p class="note">The ISBA evaluation doesn\'t describe prosecution, criminal defense, or work for vulnerable clients.</p>';
     const crit = j.attorney_criticism.length
       ? j.attorney_criticism.map((q) => `<blockquote>${esc(q)}</blockquote>`).join("")
@@ -499,25 +520,26 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
         <div class="section"><h3>Attorney criticism (ISBA)</h3>${crit}</div>
         <div class="section"><h3>Campaign money since 2020</h3>${j.also_running ? `<p class="note">${esc(j.also_running)}</p>` : ""}${campaignHTML(j.campaign)}</div>
         <div class="section"><h3>Criminal court experience</h3>${crimHTML}</div>
-        <div class="section"><h3>Career background (ISBA)</h3>${bg}${j.party ? `<p class="note">Ran for judge as: ${esc(j.party)} (Illinois State Board of Elections candidate records).</p>` : ""}</div>
+        <div class="section"><h3>Career background</h3>${bg}${j.party ? `<p class="note">Ran for judge as: ${esc(j.party)} (Illinois State Board of Elections candidate records).</p>` : ""}</div>
         ${j.isba_evaluation ? `<details class="more"><summary>Read the full ISBA evaluation</summary><div><p>${esc(j.isba_evaluation)}</p></div></details>` : ""}
-        ${j.injustice_watch_url ? `<div class="section"><h3>Reporting on this judge</h3><p class="note"><a href="${esc(j.injustice_watch_url)}">Injustice Watch's guide to ${esc(j.name)}</a>: independent newsroom reporting on this judge's record, including court records, attorney interviews and the judge's survey answers.</p></div>` : ""}
+        ${iwHTML(j.injustice_watch, j.name)}
       </div>`;
   }
 
   function openProfileHTML(c) {
-    const ratings = c.bar_ratings.map((r) => `<div class="rating"><b>${esc(r.source)}</b><span>${esc(r.rating)}</span></div>`).join("");
-    const bg = c.background.map((b) => `<div class="bg-item"><strong>${esc(b.label)}</strong>${b.evidence.map((q) => `<blockquote>${esc(q)}</blockquote>`).join("")}</div>`).join("");
+    const ratings = c.bar_ratings.map((r) => `<div class="rating"><b>${esc(r.source)}</b><span>${esc(r.rating)}</span></div>`).join("")
+      + (c.injustice_watch?.other_ratings || []).map((r) => `<div class="rating"><b>${esc(r.source)}</b><span>${esc(r.rating)} <span class="src">via Injustice Watch</span></span></div>`).join("");
+    const bg = c.background.map((b) => bgItem(b)).join("");
     const crit = c.attorney_criticism.map((q) => `<blockquote>${esc(q)}</blockquote>`).join("");
     return `
       <div class="profile">
         <div class="section"><h3>Bar association ratings</h3>${ratings || '<p class="note">Not found in any bar rating source.</p>'}</div>
         <div class="section"><h3>Campaign money since 2020</h3>${c.campaign ? campaignHTML(c.campaign).replace(/this judge's/g, "this candidate's").replace("Judge's own money", "Candidate's own money") : '<p class="note">No campaign committee contributions found in Illinois State Board of Elections filings.</p>'}</div>
         ${c.sentencing ? `<div class="section"><h3>Sentencing record</h3>${sentencingHTML(c.sentencing)}</div>` : ""}
-        ${bg ? `<div class="section"><h3>Career background (ISBA)</h3>${bg}</div>` : ""}
+        ${bg ? `<div class="section"><h3>Career background</h3>${bg}</div>` : ""}
         ${crit ? `<div class="section"><h3>Attorney criticism (ISBA)</h3>${crit}</div>` : ""}
         ${c.isba_evaluation ? `<div class="section"><h3>ISBA evaluation</h3><p>${esc(c.isba_evaluation)}</p></div>` : ""}
-        ${c.injustice_watch_url ? `<div class="section"><h3>Reporting on this candidate</h3><p class="note"><a href="${esc(c.injustice_watch_url)}">Injustice Watch's guide to ${esc(c.name)}</a>: independent newsroom reporting, including the candidate's survey answers.</p></div>` : ""}
+        ${iwHTML(c.injustice_watch, c.name)}
       </div>`;
   }
   function openChips(c) {
@@ -671,7 +693,7 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
     }
   }, true);
 
-  const ids = ["f-sentencing", "f-criticism", "f-barno", "f-criminal"];
+  const ids = ["f-sentencing", "f-criticism", "f-barno", "f-criminal", "f-iw"];
   function apply() {
     const q = $("#q").value.trim().toLowerCase();
     const on = Object.fromEntries(ids.map((id) => [id, $("#" + id).checked]));
@@ -683,7 +705,8 @@ footer { color: var(--muted); font: 400 0.8rem/1.55 var(--sans); display: grid; 
         && (!on["f-sentencing"] || hasRecord(j))
         && (!on["f-criticism"] || j.attorney_criticism.length)
         && (!on["f-barno"] || barNo(j))
-        && (!on["f-criminal"] || j.criminal_court_experience.value);
+        && (!on["f-criminal"] || j.criminal_court_experience.value)
+        && (!on["f-iw"] || iwNotable(j).length);
       el.hidden = !ok;
       if (ok) shown++;
     });
