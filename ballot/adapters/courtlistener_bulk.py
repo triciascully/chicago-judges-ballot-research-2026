@@ -10,7 +10,7 @@ Cook County guide, Michigan for the Detroit guide), tagged by court:
     clusters (2.5 GB) -> their decisions since 2015        -> clusters.parquet
     opinions (55 GB)  -> those decisions' text             -> opinions.parquet
 
-    python -m ballot.adapters.courtlistener_bulk dockets|clusters|opinions|all
+    python -m ballot.adapters.courtlistener_bulk dockets|clusters|opinions|all [--set cities]
 
 Download the dumps first (data/raw/courtlistener/bulk/, e.g. with aria2c); they can be
 deleted once the Parquet files exist.
@@ -37,6 +37,21 @@ COURTS = {
     "michctapp": "Michigan Court of Appeals",    # reviews Wayne County judges
     "mich": "Michigan Supreme Court",            # also decides judicial discipline
 }
+# A second set for cities being considered next; saved with its own file prefix.
+CITY_COURTS = {
+    "texapp": "Court of Appeals of Texas",  # Houston: 1st and 14th Districts
+    "texcrimapp": "Court of Criminal Appeals of Texas",
+    "calctapp": "California Court of Appeal",  # Los Angeles: 2nd District
+    "nyappdiv": "Appellate Division, New York Supreme Court",  # NYC: 1st and 2nd Departments
+    "nyappterm": "Appellate Term, New York Supreme Court",
+    "fladistctapp*": "Florida District Courts of Appeal",  # Miami: 3rd DCA
+    "wisctapp": "Court of Appeals of Wisconsin",  # Milwaukee: District I
+}
+SETS = {"il_mi": (COURTS, ""), "cities": (CITY_COURTS, "cities_")}
+
+
+def _in(court: str, courts: dict) -> bool:
+    return court in courts or any(k.endswith("*") and court.startswith(k[:-1]) for k in courts)
 SINCE = "2015-01-01"
 BATCH = 2000
 csv.field_size_limit(sys.maxsize)
@@ -83,13 +98,13 @@ def _write(path: Path, columns: list[str], keep, source) -> int:
     return kept
 
 
-def dockets() -> None:
+def dockets(courts: dict = COURTS, prefix: str = "") -> None:
     cols = ["id", "court_id", "docket_number", "case_name", "appeal_from_str", "date_filed"]
-    _write(OUT / "dockets.parquet", cols, lambda r: r[1] in COURTS, rows("dockets", cols))
+    _write(OUT / f"{prefix}dockets.parquet", cols, lambda r: _in(r[1], courts), rows("dockets", cols))
 
 
-def clusters() -> None:
-    d = pq.read_table(OUT / "dockets.parquet", columns=["id", "court_id"]).to_pydict()
+def clusters(courts: dict = COURTS, prefix: str = "") -> None:
+    d = pq.read_table(OUT / f"{prefix}dockets.parquet", columns=["id", "court_id"]).to_pydict()
     court_of = dict(zip(d["id"], d["court_id"]))
     cols = ["id", "docket_id", "date_filed", "case_name", "precedential_status", "disposition", "judges"]
 
@@ -97,7 +112,7 @@ def clusters() -> None:
         for r in source:
             yield r + [court_of.get(r[1], "")]
 
-    _write(OUT / "clusters.parquet", cols + ["court_id"], lambda r: r[-1] in COURTS and r[2] >= SINCE,
+    _write(OUT / f"{prefix}clusters.parquet", cols + ["court_id"], lambda r: _in(r[-1], courts) and r[2] >= SINCE,
            tagged(rows("opinion-clusters", cols)))
 
 
@@ -105,8 +120,8 @@ def _plain(html: str) -> str:
     return re.sub(r"[ \t]+", " ", re.sub(r"<[^>]+>", " ", html))
 
 
-def opinions() -> None:
-    ids = set(pq.read_table(OUT / "clusters.parquet", columns=["id"]).column("id").to_pylist())
+def opinions(courts: dict = COURTS, prefix: str = "") -> None:
+    ids = set(pq.read_table(OUT / f"{prefix}clusters.parquet", columns=["id"]).column("id").to_pylist())
     src = ["id", "cluster_id", "type", "plain_text", "html_with_citations", "html"]
     out = ["id", "cluster_id", "type", "text"]
 
@@ -117,14 +132,15 @@ def opinions() -> None:
             else:
                 yield None  # still counted, so progress shows rows read
 
-    _write(OUT / "opinions.parquet", out, lambda r: r is not None, slim(rows("opinions", src)))
+    _write(OUT / f"{prefix}opinions.parquet", out, lambda r: r is not None, slim(rows("opinions", src)))
 
 
 def main() -> None:
     step = sys.argv[1] if len(sys.argv) > 1 else "all"
+    courts, prefix = SETS[sys.argv[sys.argv.index("--set") + 1] if "--set" in sys.argv else "il_mi"]
     for name, fn in (("dockets", dockets), ("clusters", clusters), ("opinions", opinions)):
         if step in (name, "all"):
-            fn()
+            fn(courts, prefix)
 
 
 if __name__ == "__main__":
